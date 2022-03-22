@@ -1,5 +1,5 @@
 # General Setup
-#add_library(eps_mcu ${SRC_LIST})
+add_library(eps_mcu ${SRC_LIST})
 
 
 #FreeRTOS Configuration
