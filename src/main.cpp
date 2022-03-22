@@ -1,5 +1,6 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
+#include <FreeRTOS.h>
 
 void delayLoop (int n) {
     for (int i = 0; i < n * 1000; ++i)
