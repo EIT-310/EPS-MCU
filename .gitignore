@@ -5,4 +5,4 @@
 .vscode/launch.json
 .vscode/ipch
 CMakeListsPrivate.txt
-*-build-*
+*build*

@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": true,
+    "cmake.configureSettings": {
+        "COMPILER": "arm-none-eabi-gcc",
+        "CMAKE_C_COMPILER_WORKS": "TRUE",
+        "VENDOR": "st",
+        "BOARD": "l432kc"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
