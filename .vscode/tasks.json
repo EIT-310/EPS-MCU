@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: arm-none-eabi-gcc.exe build active file",
+			"command": "C:/Users/alber/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-mcpu=cortex-m4",
+				"-mthumb",
+				"-mabi=aapcs",
+				"-mfp16-format=ieee",
+				"-isystem",
+				"C:/Users/alber/.platformio/packages/framework-zephyr/lib/libc/minimal/include",
+				"-isystem",
+				"c:/users/alber/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include",
+				"-isystem",
+				"c:/users/alber/.platformio/packages/toolchain-gccarmnoneeabi/bin/../lib/gcc/arm-none-eabi/8.2.1/include-fixed",
+				""
+			],
+			"options": {
+				"cwd": "C:/Users/alber/.platformio/packages/toolchain-gccarmnoneeabi/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:/Users/alber/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe"
+		}
+	]
+}
