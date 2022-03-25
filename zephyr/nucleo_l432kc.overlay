@@ -1,0 +1,14 @@
+// &timers1 {
+//     status = "okay";
+//     pwm {
+//         status = "okay";
+//         label = "PWM_1";
+//     };
+// };
+// &timers15 {
+//     status = "okay";
+//     pwm {
+//         status = "okay";
+//         label = "PWM_15";
+//     };
+// };

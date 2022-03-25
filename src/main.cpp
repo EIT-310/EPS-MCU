@@ -1,25 +1,82 @@
+/*
+ * Copyright (c) 2016 Intel Corporation
+ * Copyright (c) 2020 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * @file Sample app to demonstrate PWM.
+ */
+
 #include <zephyr.h>
+#include <sys/printk.h>
 #include <device.h>
-#include <devicetree.h>
-#include <drivers/gpio.h>
+#include <drivers/pwm.h>
 
-#define LED0_NODE DT_ALIAS(led0)
+#define PWM_LABEL	"PWM_1"
+#define PWM_CHANNEL	1
+#define PWM_FLAGS	0
 
-#define LED0    DT_GPIO_LABEL(LED0_NODE, gpios)
-#define PIN     DT_GPIO_PIN(LED0_NODE, gpios)
-#define FLAGS   DT_GPIO_FLAGS(LED0_NODE, gpios)
+#define MIN_PERIOD_USEC	(USEC_PER_SEC / 128U)
+#define MAX_PERIOD_USEC	USEC_PER_SEC
+void main(void)
+{
+	const struct device *pwm;
+	uint32_t max_period;
+	uint32_t period;
+	uint8_t dir = 0U;
+	int ret;
 
-void main () {
-    struct device const* dev = device_get_binding(LED0);
-    if (dev == NULL)
-        return;
-    if (gpio_pin_configure(dev, PIN, GPIO_OUTPUT_ACTIVE|FLAGS) < 0)
-        return;
+	printk("PWM-based blinky\n");
 
-    while (true) {
-        gpio_pin_set(dev, PIN, 1);
-        k_msleep(100);
-        gpio_pin_set(dev, PIN, 0);
-        k_msleep(500);
-    }
+	pwm = device_get_binding(PWM_LABEL);
+	if (!device_is_ready(pwm)) {
+		printk("Error: PWM device %s is not ready\n", pwm->name);
+		return;
+	}
+
+	/*
+	 * In case the default MAX_PERIOD_USEC value cannot be set for
+	 * some PWM hardware, decrease its value until it can.
+	 *
+	 * Keep its value at least MIN_PERIOD_USEC * 4 to make sure
+	 * the sample changes frequency at least once.
+	 */
+	printk("Calibrating for channel %d...\n", PWM_CHANNEL);
+	max_period = MAX_PERIOD_USEC;
+	while (pwm_pin_set_usec(pwm, PWM_CHANNEL,
+				max_period, max_period / 2U, PWM_FLAGS)) {
+		max_period /= 2U;
+		if (max_period < (4U * MIN_PERIOD_USEC)) {
+			printk("Error: PWM device "
+			       "does not support a period at least %u\n",
+			       4U * MIN_PERIOD_USEC);
+			return;
+		}
+	}
+
+	printk("Done calibrating; maximum/minimum periods %u/%u usec\n",
+	       max_period, MIN_PERIOD_USEC);
+
+	period = max_period;
+	while (1) {
+		ret = pwm_pin_set_usec(pwm, PWM_CHANNEL,
+				       period, period / 2U, PWM_FLAGS);
+		if (ret) {
+			printk("Error %d: failed to set pulse width\n", ret);
+			return;
+		}
+
+		period = dir ? (period * 2U) : (period / 2U);
+		if (period > max_period) {
+			period = max_period / 2U;
+			dir = 0U;
+		} else if (period < MIN_PERIOD_USEC) {
+			period = MIN_PERIOD_USEC * 2U;
+			dir = 1U;
+		}
+
+		k_sleep(K_SECONDS(4U));
+	}
 }
