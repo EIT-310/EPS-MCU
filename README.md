@@ -40,6 +40,7 @@ Lastly you need to install `OpenOCD` version 0.11.0 or higher:
 
 For VSCode to load Zephyr correctly, remember to activate the virtual python environment before opening the workspace like so:
 ```
-EPS-MCU$ source ~/zephyrproject/.venv/bin/activate
-EPS-MCU$ code .
+cd <path/to/EPS-MCU>
+source ~/zephyrproject/.venv/bin/activate
+code .
 ``` 
