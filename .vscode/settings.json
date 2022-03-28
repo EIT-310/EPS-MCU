@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "zephyr.h": "c"
+    },
+    "debug.onTaskErrors": "debugAnyway"
+}
