@@ -14,6 +14,6 @@ int main()
         // printf("Analog Read: ");                 // Show the text between " "
         printf("%d\n", adc_value);         // Show the voltage value [0 to 65535]
     
-        ThisThread::sleep_for()                         // Wait 1ms between reads for stability
+        ThisThread::sleep_for();                  // Wait 1ms between reads for stability
     }
 }
