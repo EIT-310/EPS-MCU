@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "marus25.cortex-debug",
-        "ms-vscode.cpptools-extension-pack"
+        "ms-vscode.cpptools-extension-pack",
+        "trond-snekvik.devicetree",
+        "trond-snekvik.kconfig-lang"
     ]
 }

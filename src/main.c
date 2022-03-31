@@ -1,132 +1,127 @@
-/* main.c - Hello World demo */
-
 /*
- * Copyright (c) 2012-2014 Wind River Systems, Inc.
+ * Copyright (c) 2020 Libre Solar Technologies GmbH
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
 #include <zephyr.h>
 #include <sys/printk.h>
+#include <drivers/adc.h>
 
-/*
- * The hello world demo has two threads that utilize semaphores and sleeping
- * to take turns printing a greeting message at a controlled rate. The demo
- * shows both the static and dynamic approaches for spawning a thread; a real
- * world application would likely use the static approach for both threads.
- */
-
-#define PIN_THREADS (IS_ENABLED(CONFIG_SMP)		  \
-		     && IS_ENABLED(CONFIG_SCHED_CPU_MASK) \
-		     && (CONFIG_MP_NUM_CPUS > 1))
-
-/* size of stack area used by each thread */
-#define STACKSIZE 1024
-
-/* scheduling priority used by each thread */
-#define PRIORITY 7
-
-/* delay between greetings (in ms) */
-#define SLEEPTIME 500
-
-
-/*
- * @param my_name      thread identification string
- * @param my_sem       thread's own semaphore
- * @param other_sem    other thread's semaphore
- */
-void helloLoop(const char *my_name,
-	       struct k_sem *my_sem, struct k_sem *other_sem)
-{
-	const char *tname;
-	uint8_t cpu;
-	struct k_thread *current_thread;
-
-	while (1) {
-		/* take my semaphore */
-		k_sem_take(my_sem, K_FOREVER);
-
-		current_thread = k_current_get();
-		tname = k_thread_name_get(current_thread);
-#if CONFIG_SMP
-		cpu = arch_curr_cpu()->id;
-#else
-		cpu = 0;
+#if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) || \
+	!DT_NODE_HAS_PROP(DT_PATH(zephyr_user), io_channels)
+#error "No suitable devicetree overlay specified"
 #endif
-		/* say "hello" */
-		if (tname == NULL) {
-			printk("%s: Hello World from cpu %d on %s!\n",
-				my_name, cpu, CONFIG_BOARD);
-		} else {
-			printk("%s: Hello World from cpu %d on %s!\n",
-				tname, cpu, CONFIG_BOARD);
-		}
 
-		/* wait a while, then let other thread have a turn */
-		k_busy_wait(100000);
-		k_msleep(SLEEPTIME);
-		k_sem_give(other_sem);
-	}
-}
+#define ADC_NUM_CHANNELS	DT_PROP_LEN(DT_PATH(zephyr_user), io_channels)
 
-/* define semaphores */
+#if ADC_NUM_CHANNELS > 2
+#error "Currently only 1 or 2 channels supported in this sample"
+#endif
 
-K_SEM_DEFINE(threadA_sem, 1, 1);	/* starts off "available" */
-K_SEM_DEFINE(threadB_sem, 0, 1);	/* starts off "not available" */
+#if ADC_NUM_CHANNELS == 2 && !DT_SAME_NODE( \
+	DT_PHANDLE_BY_IDX(DT_PATH(zephyr_user), io_channels, 0), \
+	DT_PHANDLE_BY_IDX(DT_PATH(zephyr_user), io_channels, 1))
+#error "Channels have to use the same ADC."
+#endif
 
+#define ADC_NODE		DT_PHANDLE(DT_PATH(zephyr_user), io_channels)
 
-/* threadB is a dynamic thread that is spawned by threadA */
+/* Common settings supported by most ADCs */
+#define ADC_RESOLUTION		12
+#define ADC_GAIN		ADC_GAIN_1
+#define ADC_REFERENCE		ADC_REF_INTERNAL
+#define ADC_ACQUISITION_TIME	ADC_ACQ_TIME_DEFAULT
 
-void threadB(void *dummy1, void *dummy2, void *dummy3)
-{
-	ARG_UNUSED(dummy1);
-	ARG_UNUSED(dummy2);
-	ARG_UNUSED(dummy3);
+#ifdef CONFIG_ADC_NRFX_SAADC
+#define ADC_INPUT_POS_OFFSET SAADC_CH_PSELP_PSELP_AnalogInput0
+#else
+#define ADC_INPUT_POS_OFFSET 0
+#endif
 
-	/* invoke routine to ping-pong hello messages with threadA */
-	helloLoop(__func__, &threadB_sem, &threadA_sem);
-}
+/* Get the numbers of up to two channels */
+static uint8_t channel_ids[ADC_NUM_CHANNELS] = {
+	DT_IO_CHANNELS_INPUT_BY_IDX(DT_PATH(zephyr_user), 0),
+#if ADC_NUM_CHANNELS == 2
+	DT_IO_CHANNELS_INPUT_BY_IDX(DT_PATH(zephyr_user), 1)
+#endif
+};
 
-K_THREAD_STACK_DEFINE(threadA_stack_area, STACKSIZE);
-static struct k_thread threadA_data;
+static int16_t sample_buffer[ADC_NUM_CHANNELS];
 
-K_THREAD_STACK_DEFINE(threadB_stack_area, STACKSIZE);
-static struct k_thread threadB_data;
+struct adc_channel_cfg channel_cfg = {
+	.gain = ADC_GAIN,
+	.reference = ADC_REFERENCE,
+	.acquisition_time = ADC_ACQUISITION_TIME,
+	/* channel ID will be overwritten below */
+	.channel_id = 0,
+	.differential = 0
+};
 
-/* threadA is a static thread that is spawned automatically */
-
-void threadA(void *dummy1, void *dummy2, void *dummy3)
-{
-	ARG_UNUSED(dummy1);
-	ARG_UNUSED(dummy2);
-	ARG_UNUSED(dummy3);
-
-	/* invoke routine to ping-pong hello messages with threadB */
-	helloLoop(__func__, &threadA_sem, &threadB_sem);
-}
+struct adc_sequence sequence = {
+	/* individual channels will be added below */
+	.channels    = 0,
+	.buffer      = sample_buffer,
+	/* buffer size in bytes, not number of samples */
+	.buffer_size = sizeof(sample_buffer),
+	.resolution  = ADC_RESOLUTION,
+};
 
 void main(void)
 {
-	k_thread_create(&threadA_data, threadA_stack_area,
-			K_THREAD_STACK_SIZEOF(threadA_stack_area),
-			threadA, NULL, NULL, NULL,
-			PRIORITY, 0, K_FOREVER);
-	k_thread_name_set(&threadA_data, "thread_a");
-#if PIN_THREADS
-	k_thread_cpu_mask_clear(&threadA_data);
-	k_thread_cpu_mask_enable(&threadA_data, 0);
+	int err;
+	const struct device *dev_adc = DEVICE_DT_GET(ADC_NODE);
+
+	if (!device_is_ready(dev_adc)) {
+		printk("ADC device not found\n");
+		return;
+	}
+
+	/*
+	 * Configure channels individually prior to sampling
+	 */
+	for (uint8_t i = 0; i < ADC_NUM_CHANNELS; i++) {
+		channel_cfg.channel_id = channel_ids[i];
+#ifdef CONFIG_ADC_CONFIGURABLE_INPUTS
+		channel_cfg.input_positive = ADC_INPUT_POS_OFFSET + channel_ids[i];
 #endif
 
-	k_thread_create(&threadB_data, threadB_stack_area,
-			K_THREAD_STACK_SIZEOF(threadB_stack_area),
-			threadB, NULL, NULL, NULL,
-			PRIORITY, 0, K_FOREVER);
-	k_thread_name_set(&threadB_data, "thread_b");
-#if PIN_THREADS
-	k_thread_cpu_mask_clear(&threadB_data);
-	k_thread_cpu_mask_enable(&threadB_data, 1);
-#endif
+		adc_channel_setup(dev_adc, &channel_cfg);
 
-	k_thread_start(&threadA_data);
-	k_thread_start(&threadB_data);
+		sequence.channels |= BIT(channel_ids[i]);
+	}
+
+	int32_t adc_vref = adc_ref_internal(dev_adc);
+
+	while (1) {
+		/*
+		 * Read sequence of channels (fails if not supported by MCU)
+		 */
+		err = adc_read(dev_adc, &sequence);
+		if (err != 0) {
+			printk("ADC reading failed with error %d.\n", err);
+			return;
+		}
+
+		printk("ADC reading:");
+		for (uint8_t i = 0; i < ADC_NUM_CHANNELS; i++) {
+			int32_t raw_value = sample_buffer[i];
+
+			printk(" %d", raw_value);
+			if (adc_vref > 0) {
+				/*
+				 * Convert raw reading to millivolts if driver
+				 * supports reading of ADC reference voltage
+				 */
+				int32_t mv_value = raw_value;
+
+				adc_raw_to_millivolts(adc_vref, ADC_GAIN,
+					ADC_RESOLUTION, &mv_value);
+				printk(" = %d mV  ", mv_value);
+			}
+		}
+		printk("\n");
+
+		k_sleep(K_MSEC(1000));
+	}
 }
