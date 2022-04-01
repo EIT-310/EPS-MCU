@@ -37,8 +37,7 @@ int main()
 {
     while (1)
     {
-    
-            printf("Nothing so far %\n");
         // hal_sleep();
+        ThisThread::sleep_for(5);
     }
 }
