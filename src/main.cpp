@@ -1,19 +1,42 @@
 #include "mbed.h"
- 
-AnalogIn analog_sensor(A0);                      // Create the analog pin object
- 
+
+// class ISR {
+// public:
+//     ISR(PinName pin) : _interrupt(pin)          // create the InterruptIn on the pin specified to Counter
+//     {
+//         _interrupt.rise(callback(this, &ISR::handle)); // attach increment function of this counter instance
+//     }
+
+//     void handle()
+//     {
+
+//     }
+// private:
+//     InterruptIn _interrupt;
+//     DigitalOut
+// };
+struct ISRPIN
+{
+    InterruptIn chnl;
+    DigitalOut pin;
+
+    ISRPIN(const PinName interruptPin, const PinName GPIOPin) 
+    : chnl(interruptPin), pin(GPIOPin)
+    {}
+    void doInter(){
+        pin=1;
+    }
+}
+isr1(A0,A1);
+    
+
 int main()
 {
-    uint16_t adc_value;                          // ADC value for analog read variable
-    float voltage_value;                         // Voltage value for analog read variable
-    float percent_value;                         // Percent value for analog read variable
-    
-    while(1)
+    while (1)
     {
-        adc_value = analog_sensor.read_u16();    // Read the ADC analog input value [0 to 65535]
-        // printf("Analog Read: ");                 // Show the text between " "
-        printf("%d\n", adc_value);         // Show the voltage value [0 to 65535]
+        isr1.chnl.rise(isr1.doInter);
     
-        ThisThread::sleep_for();                  // Wait 1ms between reads for stability
+            printf("Nothing so far %\n");
+        // hal_sleep();
     }
 }
