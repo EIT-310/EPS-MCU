@@ -24,8 +24,8 @@ int main()
 {
     while (1)
     {
-        printf("Jeg Lever");
-        ThisThread::sleep_for(5);
+        printf("Jeg Lever\n");
+        ThisThread::sleep_for(500);
         hal_sleep();
     }
 }
