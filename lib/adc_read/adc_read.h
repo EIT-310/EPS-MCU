@@ -5,6 +5,8 @@
 #ifndef EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_
 #define EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_
 
+#include "mbed.h"
+
 class AdcRead {
  public:
   enum ADC_NAME {
@@ -17,8 +19,15 @@ class AdcRead {
     seven,
     eight
   };
+    float read(ADC_NAME name);
+
+    uint16_t read_int(ADC_NAME name);
  private:
-  float _get_float(ADC_NAME name);
+    static AnalogIn *get_device_(ADC_NAME name);
+
+    static float read_float_(AnalogIn *_device);
+
+    static uint16_t read_u16_(AnalogIn *_device);
 };
 
 #endif //EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_
