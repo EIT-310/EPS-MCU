@@ -15,12 +15,12 @@
 UnbufferedSerial serial(USBTX, USBRX, 2e6);
 AdcRead adc;
 
+//TODO: samle dem her i noget smart
 DigitalOut obc(OBCPIN);
 DigitalOut radio(RADIOPIN);
 DigitalOut adcs(ADCSPIN);
 DigitalOut payload(PAYLOADPIN);
 
-// identify state by nr (0,1,2,3)
 int state;
 int vBat = 6; // TODO: Måske float?
 
@@ -38,12 +38,11 @@ void batMidLow();
 void batLow();
 
 void (*getStateFunc[])(int *ss) = {
-  getbatHigh, 
-  getbatMidHigh, 
-  getbatMid, 
-  getbatMidLow, 
-  getbatLow
-  };
+getbatHigh,
+getbatMidHigh, 
+getbatMid, 
+getbatMidLow, 
+getbatLow};
 
 void (*stateFunc[])() = {
   batHigh, 
@@ -57,7 +56,8 @@ void getbatHigh(int *stateInfo)
 {
 
   printf("\ngetHIGH\n");
-  vBat= adc.read_int(adc.one);
+  vBat = adc.read_int(adc.one);
+  
 
 
   if (vBat < 5)
@@ -220,12 +220,6 @@ int main()
     (*getStateFunc[state])(&state);
   // Reager på state:
     (*stateFunc[state])();
-
-while (true)
-{
-  printf("alive\n");
-  ThisThread::sleep_for(1s);
-}
 
   //Pet watchdog
     watchdog.kick();
