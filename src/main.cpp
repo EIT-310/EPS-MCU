@@ -1,24 +1,5 @@
 #include "mbed.h"
-
-// class ISR {
-// public:
-//     ISR(PinName pin, PinName sPin) : _interrupt(pin), swPin(sPin)           // create the InterruptIn on the pin specified to Counter
-    
-//     {
-//         _interrupt.rise(callback(this, &ISR::handle)); // attach increment function of this counter instance
-//     }
-
-//     void handle()
-//     {
-//         swPin=1;
-//     }
-// private:
-//     InterruptIn _interrupt;
-//     DigitalOut swPin;
-// };
-
-// ISR isr1(A0,A1);
-// ISR isr2(A2,A3);    
+#include "platform.h"
 
 int main()
 {
@@ -26,6 +7,8 @@ int main()
     {
         printf("Jeg Lever\n");
         ThisThread::sleep_for(500);
-        hal_sleep();
+        sleep_manager_unlock_deep_sleep();
+        
+
     }
 }
