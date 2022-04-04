@@ -10,6 +10,7 @@
 #define OBCPIN D1
 #define ADCSPIN D2
 #define PAYLOADPIN D3
+#define WATCHDOGTIMEOUT_MS 20000
 
 UnbufferedSerial serial(USBTX, USBRX, 2e6);
 AdcRead adc;
@@ -22,7 +23,6 @@ DigitalOut payload(PAYLOADPIN);
 // identify state by nr (0,1,2,3)
 int state;
 int vBat = 6; // TODO: Måske float?
-
 
 
 void getbatHigh(int *stateInfo);
@@ -207,18 +207,35 @@ void batLow()
 
 int main()
 {
-  state = BATMID;
-
+  //Init
   printf("\nstarting state machine\n");
-
+  Watchdog &watchdog = Watchdog::get_instance();
+  watchdog.start(WATCHDOGTIMEOUT_MS);
   while (1)
   {
-    printf("\nback in scheduler");
-    // Læs ADC
+  // Read State: 
+    state = BATMID;
 
+  // Læs ADC og skift State
     (*getStateFunc[state])(&state);
-
+  // Reager på state:
     (*stateFunc[state])();
+
+while (true)
+{
+  printf("alive\n");
+  ThisThread::sleep_for(1s);
+}
+
+  //Pet watchdog
+    watchdog.kick();
+
+  //Deeeeeep Sleeeeep
+  //TODO
+
+
   }
+
+
 }
 
