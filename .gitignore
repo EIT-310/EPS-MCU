@@ -6,3 +6,4 @@
 *build*
 .idea
 CMakeListsPrivate.txt
+CMakeLists.txt

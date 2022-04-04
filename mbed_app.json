@@ -1,0 +1,16 @@
+{
+  "target_overrides": {
+    "NUCLEO_L432KC": {
+      "target.features_add": [
+        "STORAGE"
+      ],
+      "target.components_add": [
+        "FLASH",
+        "FLASHIAP"
+      ],
+      "target.restrict_size": "0x40000",
+      "flashiap-block-device.base-address": "0x08020000",
+      "flashiap-block-device.size":            "0x10000"
+    }
+  }
+}

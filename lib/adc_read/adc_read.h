@@ -8,21 +8,25 @@
 #include "mbed.h"
 
 class AdcRead {
- public:
-  enum ADC_NAME {
-    one,
-    two,
-    three,
-    four,
-    five,
-    six,
-    seven,
-    eight
-  };
+public:
+//  TODO: give proper names
+    enum ADC_NAME {
+        one,
+        two,
+        three,
+        four,
+        five,
+        six,
+        seven,
+        eight
+    };
+
+//  TODO: make asynchronous
     float read(ADC_NAME name);
 
     uint16_t read_int(ADC_NAME name);
- private:
+
+private:
     static AnalogIn *get_device_(ADC_NAME name);
 
     static float read_float_(AnalogIn *_device);
