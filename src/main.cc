@@ -1,34 +1,73 @@
 #include "mbed.h"
-#include "FlashIAPBlockDevice.h"
-
+#include "FSM.h"
+#include "nv_store.h"
+#include "adc_read.h"
 // Create flash IAP block device
-FlashIAPBlockDevice bd;
 
-int main()
-{
-    bd.init();
-    printf("FlashIAPBlockDevice test\n");
+static DigitalInOut led(LED1);
+NVStore nvm;
+AdcRead adc;
+int main() {
+    printf("STATE MACHINE TEST\n");
+    FSM::state current_state;
+    nvm.read(nvm.sm_state,&current_state);
+    FSM sm(FSM::high);
 
-    // Read back what was stored
-    char *buffer = (char *)malloc(bd.get_erase_size());
-    bd.read(buffer, 0, bd.get_erase_size());
-    printf("%s", buffer);
 
-    // Initialize the flash IAP block device and print the memory layout
-    printf("Flash block device size: %llu\n",         bd.size());
-    printf("Flash block device read size: %llu\n",    bd.get_read_size());
-    printf("Flash block device program size: %llu\n", bd.get_program_size());
-    printf("Flash block device erase size: %llu\n",   bd.get_erase_size());
 
-    // Write "Hello World!" to the first block
-    sprintf(buffer, "Hello World!\n");
-    bd.erase(0, bd.get_erase_size());
-    bd.program(buffer, 0, bd.get_erase_size());
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
+    while (true) {
 
-    // Read back what was stored
-    bd.read(buffer, 0, bd.get_erase_size());
-    printf("%s", buffer);
+        nvm.read(nvm.sm_state, &current_state);
+        uint16_t adcVal = adc.read_int(adc.one);
+        printf("Current state: %s\n", sm.to_string().c_str());
+        printf("ADCVal: %d\n",adcVal);
+        if (((float) adcVal / UINT16_MAX)*3.3 > 3.0) {
+            sm.up_state();
+            current_state = sm.getCurrentState();
 
-    // Deinitialize the device
-    bd.deinit();
+        } else if (((float) adcVal / UINT16_MAX)*3.3 < 0.8) {
+            sm.down_state();
+            current_state = sm.getCurrentState();
+        }
+
+        sm.do_state();
+        nvm.write(nvm.sm_state, &current_state);
+        ThisThread::sleep_for(1s);
+    }
+#pragma clang diagnostic pop
+
+
+
+
+
+
+
+
+//    sm.down_state();
+//    current_state = sm.getCurrentState();
+//    printf("Current state: %s\n", sm.to_string().c_str());
+//    sm.do_state();
+//
+
+
+
+
 }
+
+// Hej Abber Labber :)
+//
+//▬▬▬.◙.▬▬▬
+//═▂▄▄▓▄▄▂
+//◢◤ █▀▀████▄▄▄▄◢◤
+//█▄ █ █▄ ███▀▀▀▀▀▀▀╬
+//◥█████◤
+//══╩══╩═
+//╬═╬
+//╬═╬
+//╬═╬
+//╬═╬       Hello?
+//╬═╬  ☻/
+//╬═╬ /▌
+//╬═╬ / \

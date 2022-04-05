@@ -70,6 +70,7 @@ float AdcRead::read_float_(AnalogIn *_device) {
     for (int i = 0; i < ADC_MEASURE_LOOPS; ++i) {
         sum += _device->read() / (float) ADC_MEASURE_LOOPS;
     }
+    return sum;
 }
 
 uint16_t AdcRead::read_u16_(AnalogIn *_device) {
