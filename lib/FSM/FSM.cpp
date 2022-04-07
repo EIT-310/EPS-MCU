@@ -175,3 +175,29 @@ void FSM::down_state() {
 FSM::state FSM::getCurrentState() const {
     return current_state_;
 }
+
+void FSM::determine_state(uint16_t voltage) {
+    float volt = ((float)voltage / UINT16_MAX) * 3.3f; //TODO: ret til noget andet end 3.3V
+    state target_state;
+
+    if (volt > VBAT_MID_HIGH) { //TODO: Add other dependencies
+        target_state = high;
+    } else if (volt > VBAT_MID) {
+        target_state = mid_high;
+    } else if (volt > VBAT_MID_LOW) {
+        target_state = mid;
+    } else if (volt > VBAT_EMERGENCY) {
+        target_state = mid_low;
+    } else {
+        target_state = emergency;
+    }
+    state_changer_(target_state);
+}
+
+void FSM::state_changer_(state target_state){
+    if (current_state_ < target_state) {
+        up_state();
+    } else if (target_state < current_state_) {
+        down_state();
+    }
+}

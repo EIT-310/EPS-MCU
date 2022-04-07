@@ -7,34 +7,30 @@
 static DigitalInOut led(LED1);
 NVStore nvm;
 AdcRead adc;
+Watchdog &watchdog=Watchdog::get_instance();
+
 int main() {
     printf("STATE MACHINE TEST\n");
     FSM::state current_state;
     nvm.read(nvm.sm_state,&current_state);
     FSM sm(FSM::high);
-
+    watchdog.start(WATCHDOG_TIMEOUT);
 
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "EndlessLoop"
     while (true) {
 
-        nvm.read(nvm.sm_state, &current_state);
-        uint16_t adcVal = adc.read_int(adc.one);
+        nvm.read(nvm.sm_state, &current_state);         //Læs state fra NVM
+        uint16_t adcVal = adc.read_int(adc.one);            //Læs ADC værdi
         printf("Current state: %s\n", sm.to_string().c_str());
         printf("ADCVal: %d\n",adcVal);
-        if (((float) adcVal / UINT16_MAX)*3.3 > 3.0) {
-            sm.up_state();
-            current_state = sm.getCurrentState();
+        sm.determine_state(adcVal);                        //Bestem state ud fra den målte ADC værdi
 
-        } else if (((float) adcVal / UINT16_MAX)*3.3 < 0.8) {
-            sm.down_state();
-            current_state = sm.getCurrentState();
-        }
-
-        sm.do_state();
-        nvm.write(nvm.sm_state, &current_state);
-        ThisThread::sleep_for(1s);
+        sm.do_state();                                            //Tænd og sluk for PR alt efter hvilken state
+        nvm.write(nvm.sm_state, &current_state);        //Skriv current state til NVM
+        watchdog.kick();                                          //Pet watchdog
+        ThisThread::sleep_for(1s);                        //Deep Sleep
     }
 #pragma clang diagnostic pop
 

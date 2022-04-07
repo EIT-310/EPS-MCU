@@ -35,6 +35,8 @@ public:
         };
     }
 
+    void determine_state(uint16_t voltage);
+
     void do_state();
 
     void up_state();
@@ -58,6 +60,7 @@ private:
 
     state current_state_;
 
+    void state_changer_(state target_state);
 };
 
 
