@@ -2,12 +2,12 @@
 // Created by stormand on 04/04/2022.
 //
 
-#include "nv_store.h"
+#include "NVStore.h"
 
 FlashIAPBlockDevice bd;
 TDBStore nvStore(&bd);
 
-std::string NVStore::get_key_str(NVStore::DATA_LOCATION name) {
+std::string NVStore::GetKeyStr(NVStore::DATA_LOCATION name) {
     std::string key;
     switch (name) {
         case sm_state:
@@ -31,7 +31,7 @@ int NVStore::write(NVStore::DATA_LOCATION key, void *value) {
         return ret;
     }
 
-    string key_str = get_key_str(key);
+    string key_str = GetKeyStr(key);
 
     ret = nvStore.set(key_str.c_str(), value, sizeof(value), 0);
     if (ret) {
@@ -61,7 +61,7 @@ int NVStore::read(NVStore::DATA_LOCATION key, void *value) {
         return ret;
     }
 
-    string key_str = get_key_str(key);
+    string key_str = GetKeyStr(key);
 
     ret = nvStore.get(key_str.c_str(), value, sizeof(value));
     if (ret) {

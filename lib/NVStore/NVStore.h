@@ -21,7 +21,7 @@ public:
     int read(DATA_LOCATION key, void *value);
 
 private:
-    static std::string get_key_str(DATA_LOCATION name);
+    static std::string GetKeyStr(DATA_LOCATION name);
 
 };
 

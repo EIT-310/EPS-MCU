@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+message send_reading {
+  required uint64 timestamp = 7;
+  required uint32 bat_v_1   = 1;
+  required uint32 bat_i_1   = 2;
+  optional uint32 mppt_v_1  = 3;
+  optional uint32 mppt_i_1  = 4;
+  optional uint32 sub_v_1   = 5;
+  optional uint32 sub_i_1   = 6;
+}
+
+message time_sync {
+  required uint64 current_time = 1;
+}
