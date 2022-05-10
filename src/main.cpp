@@ -24,7 +24,7 @@ NoMutexCAN can(CAN_RD_PIN, CAN_TD_PIN, CAN_BITRATE);
 CANMessage can_time_sync, can_req;
 Thread t_can_handler(osPriorityAboveNormal),
         oce_thread(osPriorityISR);
-OceIsr oce1(OCE_1_PIN, &OceQueue);
+OceIsr oce1(OCE_1_PIN, &OceQueue, PowerManage::SUB_1);
 CanCom cancom(&can);
 bool can_time_isr, can_req_isr;
 
@@ -66,8 +66,9 @@ void CanTimeSync(){
 }
 
 void Setup(){
+  // TODO læs module_override fra NVM
   Log::reporting_level_ = LOG_LEVEL; // TODO Hent fra config
-  time_t now = 0; // TODO lav tid implementering
+  time_t now = 0; // TODO anmod om tid
   set_time(now);
   oce_thread.start(callback(&OceQueue, &EventQueue::dispatch_forever));
   t_can_handler.start(CanHandler);

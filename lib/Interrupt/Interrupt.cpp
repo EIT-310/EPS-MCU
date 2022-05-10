@@ -20,22 +20,8 @@ void OceIsr::Handle() {
 }
 
 void OceIsr::EventHandler(){
-//  LOG(LOG_INFO, "Event Handler Context: ");
-  printf("\n\nHelløj\n\n");
-//  printf("Handle in context %p\n", ThisThread::get_id());
+  LOG(LOG_WARNING, "OCE on module: " + PowerManage::ToString(module_));
+  LOG(LOG_INFO, "Setting override on " + PowerManage::ToString(module_));
+  PowerManage::SetOverride(module_, false);
 };
 
-void OceIsr::Print(){
-    this->irq_happened_ = true;
-    // Do something
-};
-
-bool OceIsr::read_pin() const {
-  return irq_happened_;
-  Thread thread;
-}
-
-void OceIsr::reset_interrupt() {
-  irq_happened_ = false;
-
-}

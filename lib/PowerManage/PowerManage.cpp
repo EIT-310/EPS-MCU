@@ -6,6 +6,7 @@
 #include "PowerManage.h"
 
 bool PowerManage::enabled_modules_[SUBMODULES_NUM];
+bool PowerManage::module_override_[SUBMODULES_NUM];
 
 void PowerManage::UpdateEnabled() {
 
@@ -69,5 +70,11 @@ void PowerManage::SetOverride(PowerManage::Modules module, bool is_on) {
 //    case SUB_5:
 //            module_override_[4] = is_on;
       break;
+  }
+}
+string PowerManage::ToString(PowerManage::Modules module) {
+  switch (module) {
+    case SUB_1:return "Submodule 1";
+    default: return "Unknown";
   }
 }

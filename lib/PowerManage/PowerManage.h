@@ -19,12 +19,13 @@ class PowerManage {
 //    SUB_4,
 //    SUB_5
   };
-  void SetOverride(Modules module, bool is_on);
+  static string ToString(Modules module);
+  static void SetOverride(Modules module, bool is_on);
   static void UpdateEnabled();
 
  private:
   static bool enabled_modules_[SUBMODULES_NUM];
-  bool module_override_[SUBMODULES_NUM]; //TODO: skal gemmes i NVM
+  static bool module_override_[SUBMODULES_NUM]; //TODO: skal gemmes i NVM
 
 };
 

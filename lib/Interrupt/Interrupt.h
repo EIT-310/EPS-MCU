@@ -10,11 +10,13 @@
 #define EPS_MCU_INTERRUPT_H
 
 #endif //EPS_MCU_INTERRUPT_H
+#include "PowerManage.h"
 
 class OceIsr {
  public:
 
-  OceIsr(PinName isr_pin, EventQueue *queue) : interrupt_(isr_pin, PullDown){
+  OceIsr(PinName isr_pin, EventQueue *queue, PowerManage::Modules module) : interrupt_(isr_pin, PullDown){
+    module_ = module;
     irq_happened_ = false;
     queue_ = queue;
     interrupt_.rise(callback(this, &OceIsr::Handle));
@@ -24,19 +26,13 @@ class OceIsr {
   static EventQueue *queue_;
 
 
-//  Thread thread_;
-
-  bool read_pin() const;
-
-  void reset_interrupt();
   void Handle();
 
  private:
-//  DigitalOut sw_pin_;
+  PowerManage::Modules module_;
   InterruptIn interrupt_;
   bool irq_happened_;
 
-  void Print();
   void EventHandler();
 };
 
