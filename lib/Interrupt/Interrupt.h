@@ -15,7 +15,7 @@
 class OceIsr {
  public:
 
-  OceIsr(PinName isr_pin, EventQueue *queue, PowerManage::Modules module) : interrupt_(isr_pin, PullDown){
+  OceIsr(PinName irq_pin, EventQueue *queue, PowerManage::Modules module) : interrupt_(irq_pin, PullDown){
     module_ = module;
     irq_happened_ = false;
     queue_ = queue;

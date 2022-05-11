@@ -16,19 +16,47 @@ UnbufferedSerial serial(USBTX, USBRX);
 #endif
 
 Fsm fsm(FSM_START_STATE);
+EventQueue IsrQueue,
+    AdcQueue;
+NoMutexCAN can(CAN_RD_PIN, CAN_TD_PIN, CAN_BITRATE);
+Watchdog &watchdog = Watchdog::get_instance();
+CANMessage can_time_sync, can_req;
+Thread t_can_handler(osPriorityNormal,OS_STACK_SIZE, nullptr,"CAN Handler"),
+    t_ISR_handler(osPriorityISR, 1024, nullptr, "OCE Handler"),
+    t_adc_main(osPriorityNormal,1024, nullptr,"ADC Handler"),
+    t_state_subs(osPriorityNormal, 1024, nullptr,"State Updater");
+Ticker adc_ticker;
+OceIsr oce1(OCE_1_PIN, &IsrQueue, PowerManage::SUB_1);
+CanCom cancom(&can);
+Mail<AdcRead::adc_reading, 8> adc_mail;
+bool can_time_isr, can_req_isr;
+void ReadAdc();
+void UpdateSubs();
+void StartWatchdog();
+
 
 /// CAN stuff her da jeg ikke kan få det til at virke med
 /// med biblioteker
-EventQueue OceQueue;
-NoMutexCAN can(CAN_RD_PIN, CAN_TD_PIN, CAN_BITRATE);
-CANMessage can_time_sync, can_req;
-Thread t_can_handler(osPriorityAboveNormal),
-        oce_thread(osPriorityISR);
-OceIsr oce1(OCE_1_PIN, &OceQueue, PowerManage::SUB_1);
-CanCom cancom(&can);
-bool can_time_isr, can_req_isr;
 
+void CanTimeSync(){
+  time_sync time_packet;
+  pb_istream_t decode = pb_istream_from_buffer(\
+    can_time_sync.data, can_time_sync.len);
+  pb_decode(&decode, time_sync_fields, &time_packet);
+  set_time(time_packet.current_time);
+};
 
+void CanHandler(){
+    if (can_time_isr) {
+      LOG(LOG_DEBUG, "Received Time Sync CAN");
+      can_time_isr = false;
+      CanTimeSync();
+    } else if (can_req_isr) {
+      LOG(LOG_DEBUG, "Received Read Req CAN");
+      can_req_isr = false;
+      CanCom::SendReadings();
+    }
+}
 void OnCanRec() {
   CANMessage buf;
   can.read(buf);
@@ -39,30 +67,7 @@ void OnCanRec() {
     can_req_isr = true;
     can_req = buf;
   }
-}
-
-void CanTimeSync(){
-  time_sync time_packet;
-  pb_istream_t decode = pb_istream_from_buffer(\
-    can_time_sync.data, can_time_sync.len);
-  pb_decode(&decode, time_sync_fields, &time_packet);
-  set_time(time_packet.current_time);
-};
-
-[[noreturn]] void CanHandler(){
-  can.attach(OnCanRec);
-  while (true) {
-    if (can_time_isr) {
-      LOG(LOG_DEBUG, "Received CAN");
-      can_time_isr = false;
-      CanTimeSync();
-    } else if (can_req_isr) {
-      can_req_isr = false;
-      CanCom::SendReadings();
-    } else {
-      ThisThread::sleep_for(1ms);
-    }
-  }
+  IsrQueue.call(&CanHandler);
 }
 
 void Setup(){
@@ -70,70 +75,58 @@ void Setup(){
   Log::reporting_level_ = LOG_LEVEL; // TODO Hent fra config
   time_t now = 0; // TODO anmod om tid
   set_time(now);
-  oce_thread.start(callback(&OceQueue, &EventQueue::dispatch_forever));
-  t_can_handler.start(CanHandler);
+  t_ISR_handler.start(callback(&IsrQueue, &EventQueue::dispatch_forever));
+  StartWatchdog();
 }
 
-[[noreturn]] void Testing(){
-//  thread.start(callback(&eventQueue, &EventQueue::dispatch_forever));
-//  can.attach(OnCanRec);
+void StartWatchdog(){
+  //  Start Watchdog
+  uint32_t max_timeout = watchdog.get_max_timeout();
+  if (WATCHDOG_TIMEOUT > max_timeout) {
+    LOG(LOG_WARNING,"Watchdog timeout too long, setting to " + to_string(max_timeout));
 
-  while (true) {
-    LOG(LOG_INFO, "Thread: " + string(ThisThread::get_name()));
-    ThisThread::sleep_for(1s);
+    LOG(LOG_DEBUG, "Starting watchdog with timeout " + to_string(max_timeout));
+    watchdog.start(max_timeout);
+  } else {
+    LOG(LOG_DEBUG, "Starting watchdog with timeout " + to_string(WATCHDOG_TIMEOUT));
+    watchdog.start(WATCHDOG_TIMEOUT);
   }
-//  while (true) {
-//    if (isr) {
-//      LOG(LOG_INFO,"ISR ID: " + to_string(msg.id));
-//      CanTimeSync(&msg);
-//      isr = false;
-//    } else {
-//      LOG(LOG_INFO,"waiting");
-//    }
-//    ThisThread::sleep_for(1s);
-//  }
+}
 
-//  while (true) {
-//    LOG(LOG_INFO, "Waiting 1 sec.");
-//    if (CanIsr::can_rx_isr_) {
-//      LOG(LOG_INFO, "CAN recieved");
-//      CanIsr::can_rx_isr_ = false;
-////      auto *p_message = const_cast<CANMessage *>(CanIsr::last_message_);
-//      CanCom::CanTimeSync(&can_isr.last_message_);
-////      (CanIsr(&can));
-//    }
-//    ThisThread::sleep_for(1s);
-//  }
-//  for (int i = 0; i < 3; ++i) {
-//
-//    AdcRead::DoRead();
-//  }
-//    AdcRead::adc_reading reading{};
-//    AdcRead::adc_buffer_.peek(reading);
-//
-//    printf("%d, %d, %d, %d, %d, %d, %lld\n", \
-            reading.bat_v_1, reading.bat_i_1, \
-            reading.mppt_v_1, reading.mppt_i_1, \
-            reading.sub_v_1, reading.sub_i_1, \
-            reading.timestamp);
-//  CanCom::SendReadings();
+void ReadAdc(){
+  LOG(LOG_DEBUG, "Reading ADC values by state");
+//  Read ADC Values
+  AdcRead::adc_reading new_read = AdcRead::DoRead();
+  adc_mail.put(&new_read);
+}
 
-//  for (int i = 0; i < 5; ++i) {
-//    AdcRead::adc_reading rec = CanCom::GetReading();
-//    printf("%d, %d, %d, %d, %d, %d, %lld\n", \
-//          rec.bat_v_1, rec.bat_i_1, \
-//          rec.mppt_v_1, rec.mppt_i_1, \
-//          rec.sub_v_1, rec.sub_i_1, \
-//          rec.timestamp);
-//  }
-//  printf("\n");
+[[noreturn]] void NewState(){
+  while (true) {
+    if (adc_mail.empty()) {
+      continue;
+    }
+    AdcRead::adc_reading *new_read = adc_mail.try_get(); //TODO ikke 10s
+    LOG(LOG_DEBUG, "Updating state by ADC readings");
 
+    //  Set new State
+    Fsm::DetermineState(*new_read);
+    UpdateSubs();
+  }
+}
+
+void UpdateSubs(){
+  LOG(LOG_DEBUG, "Updating enabled power rails by state");
+//  Update enabled rails
+  PowerManage::UpdateEnabled();
+
+  LOG(LOG_DEBUG, "Kicking Watchdog");
+  watchdog.kick();
 }
 
 void Loop(){
 
 //  Start Watchdog
-  Watchdog &watchdog = Watchdog::get_instance();
+//  Watchdog &watchdog = Watchdog::get_instance();
   uint32_t max_timeout = watchdog.get_max_timeout();
   if (WATCHDOG_TIMEOUT > max_timeout) {
     LOG(LOG_WARNING,"Watchdog timeout too long, setting to " + to_string(max_timeout));
@@ -175,8 +168,20 @@ void Loop(){
 
 
 int main() {
+  LOG(LOG_INFO, "STARTING");
   Setup();
-  Testing();
+  can.attach(OnCanRec);
+  t_state_subs.start(NewState);
+  t_adc_main.start(callback(&AdcQueue, &EventQueue::dispatch_forever));
+  adc_ticker.attach(AdcQueue.event(ReadAdc), 5s); // TODO Skift tid til macro
+
+  while (true) {
+//    ...
+  }
+
+
+
+//  Testing();
 //#pragma clang diagnostic push
 //#pragma ide diagnostic ignored "EndlessLoop"
 //  while (true) {
