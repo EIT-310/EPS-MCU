@@ -1,0 +1,42 @@
+{
+  "target_overrides": {
+    "NUCLEO_L432KC": {
+      "target.features_add": [
+        "STORAGE"
+      ],
+      "target.components_add": [
+        "FLASH",
+        "FLASHIAP"
+      ],
+      "platform.cpu-stats-enabled": true,
+      "platform.callback-nontrivial": true,
+      "platform.default-serial-baud-rate": 115200,
+      "platform.error-filename-capture-enabled": true,
+      "target.macros_add": [
+        "MBED_TICKLESS"
+      ],
+      "target.restrict_size":                  "0x20000",
+      "flashiap-block-device.base-address": "0x08020000",
+      "flashiap-block-device.size":            "0x20000"
+    },
+    "NUCLEO_L496ZG": {
+      "target.features_add": [
+        "STORAGE"
+      ],
+      "target.components_add": [
+        "FLASH",
+        "FLASHIAP"
+      ],
+      "platform.cpu-stats-enabled": true,
+      "platform.callback-nontrivial": true,
+      "platform.default-serial-baud-rate": 115200,
+      "platform.error-filename-capture-enabled": true,
+      "target.macros_add": [
+        "MBED_TICKLESS"
+      ],
+      "target.restrict_size":                  "0x20000",
+      "flashiap-block-device.base-address": "0x08020000",
+      "flashiap-block-device.size":            "0x20000"
+    }
+  }
+}
