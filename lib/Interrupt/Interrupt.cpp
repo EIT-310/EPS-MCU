@@ -23,5 +23,8 @@ void OceIsr::EventHandler(){
   LOG(LOG_WARNING, "OCE on module: " + PowerManage::ToString(module_));
   LOG(LOG_INFO, "Setting override on " + PowerManage::ToString(module_));
   PowerManage::SetOverride(module_, false);
+
+  LOG(LOG_DEBUG, "Updating enabled modules");
+  PowerManage::UpdateEnabled();
 };
 
