@@ -100,7 +100,8 @@ void ReadAdc(){
   adc_mail.put(&new_read);
 }
 
-[[noreturn]] void NewState(){
+[[noreturn]]
+void NewState(){
   while (true) {
     if (adc_mail.empty()) {
       continue;

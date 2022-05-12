@@ -7,6 +7,9 @@
 
 bool PowerManage::enabled_modules_[SUBMODULES_NUM];
 bool PowerManage::module_override_[SUBMODULES_NUM];
+DigitalOut PowerManage::power_rails_[] = {
+    DigitalOut(RAIL_1_PIN)
+};
 
 void PowerManage::UpdateEnabled() {
 
@@ -52,6 +55,7 @@ void PowerManage::UpdateEnabled() {
 
       break;
   }
+  WriteSubState();
 }
 void PowerManage::SetOverride(PowerManage::Modules module, bool is_on) {
   switch (module) {
@@ -71,10 +75,16 @@ void PowerManage::SetOverride(PowerManage::Modules module, bool is_on) {
 //            module_override_[4] = is_on;
       break;
   }
+  WriteSubState();
 }
 string PowerManage::ToString(PowerManage::Modules module) {
   switch (module) {
     case SUB_1:return "Submodule 1";
     default: return "Unknown";
+  }
+}
+void PowerManage::WriteSubState() {
+  for (int i = 0; i < SUBMODULES_NUM; i++) {
+    power_rails_[i].write(enabled_modules_[i] and module_override_[i]);
   }
 }
