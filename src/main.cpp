@@ -11,9 +11,6 @@
 #include "reading.pb.h"
 #include "NoMutexCAN.h"
 #include "rtos.h"
-#if LOG_COM_TYPE == SERIAL
-UnbufferedSerial serial(USBTX, USBRX);
-#endif
 
 Fsm fsm(FSM_START_STATE);
 EventQueue IsrQueue,
@@ -72,11 +69,13 @@ void OnCanRec() {
 
 void Setup(){
   // TODO læs module_override fra NVM
+  Log::serial_.format(8, SerialBase::None, 1);
   Log::reporting_level_ = LOG_LEVEL; // TODO Hent fra config
   time_t now = 0; // TODO anmod om tid
   set_time(now);
   t_ISR_handler.start(callback(&IsrQueue, &EventQueue::dispatch_forever));
   StartWatchdog();
+  PowerManage::UpdateEnabled();
 }
 
 void StartWatchdog(){
@@ -104,6 +103,7 @@ void ReadAdc(){
 void NewState(){
   while (true) {
     if (adc_mail.empty()) {
+      ThisThread::sleep_for(500ms);
       continue;
     }
     AdcRead::adc_reading *new_read = adc_mail.try_get(); //TODO ikke 10s
@@ -176,9 +176,12 @@ int main() {
   t_adc_main.start(callback(&AdcQueue, &EventQueue::dispatch_forever));
   adc_ticker.attach(AdcQueue.event(ReadAdc), 5s); // TODO Skift tid til macro
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "EndlessLoop"
   while (true) {
-//    ...
+    ThisThread::sleep_for(5s);
   }
+#pragma clang diagnostic pop
 
 
 

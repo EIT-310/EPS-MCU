@@ -22,6 +22,7 @@ class PowerManage {
 
 
   static string ToString(Modules module);
+  static void OceFromIsr(Modules module);
   static void SetOverride(Modules module, bool is_on);
   static void UpdateEnabled();
   static void WriteSubState();

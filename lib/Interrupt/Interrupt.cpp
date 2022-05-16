@@ -13,10 +13,8 @@
 EventQueue *OceIsr::queue_;
 
 void OceIsr::Handle() {
-//  if (!irq_happened_) {
-//    irq_happened_ = true;
-    queue_->call(this, &OceIsr::EventHandler);
-//  }
+  PowerManage::OceFromIsr(module_);
+  queue_->call(this, &OceIsr::EventHandler);
 }
 
 void OceIsr::EventHandler(){
@@ -24,7 +22,7 @@ void OceIsr::EventHandler(){
   LOG(LOG_INFO, "Setting override on " + PowerManage::ToString(module_));
   PowerManage::SetOverride(module_, false);
 
-  LOG(LOG_DEBUG, "Updating enabled modules");
-  PowerManage::UpdateEnabled();
+//  LOG(LOG_DEBUG, "Updating enabled modules");
+//  PowerManage::UpdateEnabled();
 };
 

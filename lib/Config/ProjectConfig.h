@@ -21,7 +21,7 @@
 #define CAN_RD_PIN	        D10
 #define CAN_TD_PIN	        D2
 #define RAIL_1_PIN	        D4
-#define OCE_1_PIN	        D9
+#define OCE_1_PIN	        D11
 #define SUBMODULES_NUM      1
 
 

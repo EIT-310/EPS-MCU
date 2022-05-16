@@ -6,6 +6,8 @@
 #include "Log.h"
 Log::Log() = default;
 
+UnbufferedSerial Log::serial_(USBTX, USBRX);
+
 TLogLevel Log::reporting_level_;
 
 void Log::Get(TLogLevel level, std::string str) {
@@ -17,7 +19,8 @@ void Log::Get(TLogLevel level, std::string str) {
 
 Log::~Log() {
 #if LOG_COM_TYPE == SERIAL
-  printf("%s", msg_.c_str());
+  serial_.write(msg_.c_str(), msg_.length());
+//  printf("%s", msg_.c_str());
 #elif LOG_COM_TYPE == CAN
   //  TODO: CAN logging
 #endif
