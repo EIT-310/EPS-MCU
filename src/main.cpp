@@ -124,6 +124,21 @@ void UpdateSubs(){
   watchdog.kick();
 }
 
+int main() {
+  LOG(LOG_INFO, "STARTING");
+  Setup();
+  can.attach(OnCanRec);
+  t_state_subs.start(NewState);
+  t_adc_main.start(callback(&AdcQueue, &EventQueue::dispatch_forever));
+  adc_ticker.attach(AdcQueue.event(ReadAdc), 5s); // TODO Skift tid til macro
+
+  while (true) {
+//    ...
+  }
+
+}
+
+/*
 void Loop(){
 
 //  Start Watchdog
@@ -167,18 +182,7 @@ void Loop(){
 
 };
 
-
-int main() {
-  LOG(LOG_INFO, "STARTING");
-  Setup();
-  can.attach(OnCanRec);
-  t_state_subs.start(NewState);
-  t_adc_main.start(callback(&AdcQueue, &EventQueue::dispatch_forever));
-  adc_ticker.attach(AdcQueue.event(ReadAdc), 5s); // TODO Skift tid til macro
-
-  while (true) {
-//    ...
-  }
+*/
 
 
 
@@ -189,7 +193,6 @@ int main() {
 //    Loop();
 //  }
 //#pragma clang diagnostic pop
-}
 
 // Hej Abber Labber :)
 //
