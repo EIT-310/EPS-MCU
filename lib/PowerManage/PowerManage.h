@@ -1,5 +1,5 @@
 //
-// Created by stormand on 5/2/22.
+// Created by EIT-416 on 5/2/22.
 //
 
 #ifndef EPS_MCU_LIB_POWERMANAGE_POWERMANAGE_H_

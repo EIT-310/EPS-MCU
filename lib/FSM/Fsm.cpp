@@ -1,11 +1,16 @@
 //
-// Created by stormand on 04/04/2022.
+// Created by EIT-416 on 04/04/2022.
 //
 
 #include "Fsm.h"
 
 Fsm::State Fsm::current_state_;
-
+/**
+ * @brief Omdanner State enum til string
+ * 
+ * @param name state der ønskes navn på
+ * @return std::string String med navnet på staten
+ */
 std::string Fsm::GetString(Fsm::State name) {
   switch (name) {
 
@@ -25,9 +30,19 @@ std::string Fsm::GetString(Fsm::State name) {
   }
 }
 
+/**
+ * @brief Giver navnet på nuverende state
+ * 
+ * @return std::string 
+ */
 std::string Fsm::ToString() {
   return GetString(current_state_);
 }
+
+/**
+ * @brief Gå en state up. Hvis nuværende state er den højeste, gør intet.
+ * 
+ */
 
 void Fsm::UpState() {
   switch (current_state_) {
@@ -47,6 +62,11 @@ void Fsm::UpState() {
 
 }
 
+/**
+ * @brief Gå en state ned. Hvis nuværende state er den laveste, gør intet.
+ * 
+ */
+
 void Fsm::DownState() {
   switch (current_state_) {
 
@@ -65,9 +85,28 @@ void Fsm::DownState() {
 
 }
 
+/**
+ * @brief Getter for nuværende state
+ * 
+ * @return Fsm::State 
+ */
+
 Fsm::State Fsm::GetCurrentState() {
   return current_state_;
 }
+
+/**
+ * @brief Bedøm en ny target state på baggrund af ADC måling og kald StateChanger()
+ * 
+ * Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer
+ * og en target state bliver besluttet ud fra dette. Herefter betragtes den samlede 
+ * effekt fra MPPT'erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes 
+ * target state med 1. 
+ * 
+ * @note Aloritmen er simpel og mest til for at have et eksempel på en algoritme.
+ * 
+ * @param reading ADC måling at finde ny state på baggrund af.
+ */
 
 void Fsm::DetermineState(AdcRead::adc_reading reading) {
   State target_state;
@@ -105,6 +144,12 @@ void Fsm::DetermineState(AdcRead::adc_reading reading) {
   StateChanger(target_state);
 }
 
+/**
+ * @brief Incrementer eller decrementer current_state, alt efter
+ *        om den er lavere eller højere end target_state
+ * 
+ * @param target_state 
+ */
 void Fsm::StateChanger(State target_state) {
   if (current_state_ < target_state) {
     UpState();
@@ -112,6 +157,13 @@ void Fsm::StateChanger(State target_state) {
     DownState();
   }
 }
+
+/**
+ * @brief Beregn effekten for alle MPPT'er i en ADC måling.
+ * 
+ * @param reading ADC måling for hvilken vi vil finde MMPT effekten
+ * @return float  Effekt for samlet MPPT'er i watt
+ */
 
 float Fsm::GetPower(AdcRead::adc_reading reading) {
   uint16_t readings[][2]{

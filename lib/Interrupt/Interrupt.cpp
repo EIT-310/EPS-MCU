@@ -1,5 +1,5 @@
 //
-// Created by stormand on 12/04/2022.
+// Created by EIT-416 on 12/04/2022.
 //
 
 #include "Interrupt.h"
@@ -7,15 +7,24 @@
 #include "ProjectConfig.h"
 #include "Log.h"
 
-//volatile bool CanIsr::can_rx_isr_;
-//time_t CanIsr::current_time_;
-
 EventQueue *OceIsr::queue_;
 
+/**
+ * @brief ISR context der deactiverer modulet der blev målt OCE på.
+ *        Sætter EventHandler() i kø til de ting der skal foregå 
+ *        uden for ISR kontekst.
+ * 
+ */
 void OceIsr::Handle() {
   PowerManage::OceFromIsr(module_);
   queue_->call(this, &OceIsr::EventHandler);
 }
+
+/**
+ * @brief ISR deferred handler der logger OCE'et og gemmer hvilket ben der
+ *        blev målt oce på.
+ * 
+ */
 
 void OceIsr::EventHandler(){
   LOG(LOG_WARNING, "OCE on module: " + PowerManage::ToString(module_));

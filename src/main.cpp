@@ -31,10 +31,10 @@ void ReadAdc();
 void UpdateSubs();
 void StartWatchdog();
 
-
-/// CAN stuff her da jeg ikke kan få det til at virke med
-/// med biblioteker
-
+/**
+ * @brief ISR deferred handler for at decode time sync 
+ *        package og opdatere RTC med den modtagede værdi 
+ */
 void CanTimeSync(){
   time_sync time_packet;
   pb_istream_t decode = pb_istream_from_buffer(\
@@ -43,6 +43,13 @@ void CanTimeSync(){
   set_time(time_packet.current_time);
 };
 
+/**
+ * @brief ISR deferred handler der reagerer på flag fra OnCanRec()
+ *  
+ * @note Lettere overflødig og lævn fra tidligere metode 
+ *       uden brug af EventQueue
+ * 
+ */
 void CanHandler(){
     if (can_time_isr) {
       LOG(LOG_DEBUG, "Received Time Sync CAN");
@@ -54,6 +61,11 @@ void CanHandler(){
       CanCom::SendReadings();
     }
 }
+
+/**
+ * @brief ISR deferred handler til at beslutte handling
+ *        på baggrund af CAN framets ID
+ */
 void OnCanRec() {
   CANMessage buf;
   can.read(buf);
@@ -67,6 +79,11 @@ void OnCanRec() {
   IsrQueue.call(&CanHandler);
 }
 
+/**
+ * @brief Køres en enkelt gang når systemet starter
+ * 
+ */
+
 void Setup(){
   // TODO læs module_override fra NVM
   Log::serial_.format(8, SerialBase::None, 1);
@@ -77,6 +94,12 @@ void Setup(){
   StartWatchdog();
   PowerManage::UpdateEnabled();
 }
+
+/**
+ * @brief Starter Watchdog hvis timeout er for langt sættes den
+ *        istedet til den længste tilladte værdi
+ * 
+ */
 
 void StartWatchdog(){
   //  Start Watchdog
@@ -92,6 +115,13 @@ void StartWatchdog(){
   }
 }
 
+/**
+ * @brief Sætter ADC måling igang. Kører hvert 5. sekundt med mindre
+ *        en vigtigere thread pre-empt'er den. Lægger den nye måling
+ *        i kø til NewState()
+ * 
+ */
+
 void ReadAdc(){
   LOG(LOG_DEBUG, "Reading ADC values by state");
 //  Read ADC Values
@@ -99,14 +129,18 @@ void ReadAdc(){
   adc_mail.put(&new_read);
 }
 
-[[noreturn]]
+/**
+ * @brief Modtager ny måling fra ReadAdc() og bestemmer ny state på 
+ *        baggrund af disse data
+ * 
+ */
 void NewState(){
   while (true) {
     if (adc_mail.empty()) {
       ThisThread::sleep_for(500ms);
       continue;
     }
-    AdcRead::adc_reading *new_read = adc_mail.try_get(); //TODO ikke 10s
+    AdcRead::adc_reading *new_read = adc_mail.try_get();
     LOG(LOG_DEBUG, "Updating state by ADC readings");
 
     //  Set new State
@@ -114,6 +148,12 @@ void NewState(){
     UpdateSubs();
   }
 }
+
+/**
+ * @brief Opdaterer de aktiverede moduler på baggrund af ny state og
+ *        kicker watchdog
+ * 
+ */
 
 void UpdateSubs(){
   LOG(LOG_DEBUG, "Updating enabled power rails by state");
@@ -123,6 +163,12 @@ void UpdateSubs(){
   LOG(LOG_DEBUG, "Kicking Watchdog");
   watchdog.kick();
 }
+
+/**
+ * @brief Sætter threads igang og sover
+ * 
+ * @return int standard
+ */
 
 int main() {
   LOG(LOG_INFO, "STARTING");
@@ -135,7 +181,7 @@ int main() {
   while (true) {
     ThisThread::sleep_for(5s);
   }
-  
+
 }
 
 /*

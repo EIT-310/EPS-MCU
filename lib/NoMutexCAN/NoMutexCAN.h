@@ -27,7 +27,14 @@ SOFTWARE.
 
 #include "mbed.h"
 
-
+/**
+ * @brief class der overskriver mutex lock() og unlock() i Mbed.
+ *        Disse er overflødige ved nucleo STM32 boards.
+ * 
+ * @note Det er overflødig at bruge denne overskrivelse da vi bruger 
+ *       ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere.
+ * 
+ */
 class NoMutexCAN: public CAN {
  public:
   NoMutexCAN(PinName rd, PinName td): CAN(rd, td) {}

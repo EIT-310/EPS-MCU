@@ -1,5 +1,5 @@
 //
-// Created by stormand on 01/04/2022.
+// Created by EIT-416 on 01/04/2022.
 //
 
 #ifndef EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_

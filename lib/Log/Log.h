@@ -1,11 +1,10 @@
 //
-// Created by stormand on 5/2/22.
+// Created by EIT-416 on 5/2/22.
 //
 
 #ifndef EPS_MCU_LIB_LOG_LOG_H_
 #define EPS_MCU_LIB_LOG_LOG_H_
 
-//#include <sstream>
 #include "mbed.h"
 enum TLogLevel {LOG_ERROR, LOG_WARNING, LOG_INFO, LOG_DEBUG};
 
@@ -19,10 +18,8 @@ class Log
   Log();
   static UnbufferedSerial serial_;
   virtual ~Log();
-//  void Get(TLogLevel level = LOG_INFO, const std::string& msg);
   void Get(TLogLevel level, std::string str);
  public:
-//  static TLogLevel& ReportingLevel();
   static TLogLevel reporting_level_;
  protected:
   std::string msg_;

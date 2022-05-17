@@ -1,5 +1,5 @@
 //
-// Created by stormand on 5/3/22.
+// Created by EIT-416 on 5/3/22.
 //
 
 #include "CanCom.h"
@@ -11,12 +11,20 @@
 #include "ProjectConfig.h"
 #include "Log.h"
 
-//NoMutexCAN CanCom::can_(CAN_RD_PIN, CAN_TD_PIN,CAN_BITRATE);
-
-uint8_t CanCom::serialized_buffer_[sizeof(send_reading) * ADC_BUFFER_SIZE];
+uint8_t CanCom::serialized_buffer_[send_reading_size * ADC_BUFFER_SIZE];
 
 NoMutexCAN *CanCom::can_;
 
+/**
+ * @brief Send alle målinger i CircularBuffer'eren (adc_buffer_) over CAN.
+ * 
+ * Hver måling i adc_buffer_ enkodes med Google Protobuf structen _send_reading
+ * og serialiseres. De serialiserede bytes lægges ind i serialized_buffer_. Hvis der
+ * ikke blev målt på mppt og rails i en given måling sættes has_mppt_x_x og 
+ * has_sub_x_x bools'ne til False, og protobufs sørger for at serialiseringen
+ * fylder mindre.
+ * 
+ */
 void CanCom::SendReadings() {
   auto size = AdcRead::adc_buffer_.size();
 
@@ -56,6 +64,13 @@ void CanCom::SendReadings() {
   SendBuffer(encode.bytes_written);
 
 }
+
+/**
+ * @brief Sender fra serializeret buffer over CAN ved at dele hvert
+ *        frame op i 8 bytes
+ * 
+ * @param size Antale bytes at sende fra bufferen
+ */
 void CanCom::SendBuffer(size_t size) {
   auto bytes = size;
   auto can_frames = (bytes / 8) + ((bytes % 8) ? 1 : 0);
@@ -77,6 +92,13 @@ void CanCom::SendBuffer(size_t size) {
 
 }
 
+/**
+ * @brief Find størrelsen af en modtaget Protobuf pakke inden decode
+ * 
+ * @return size_t størrelsen af pakken i bytes
+ * 
+ * @note Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame
+ */
 size_t CanCom::GetFrameSize(){
   if (serialized_buffer_[0] != '\b') {
     LOG(LOG_ERROR,"Can read buffer did not start with STX");
@@ -91,15 +113,13 @@ size_t CanCom::GetFrameSize(){
   }
 }
 
-void CanCom::CanTimeSync(CANMessage *msg){
-  time_sync time_packet;
-  pb_istream_t decode = pb_istream_from_buffer(\
-    msg->data, msg->len);
-  pb_decode(&decode, time_sync_fields, &time_packet);
-  set_time(time_packet.current_time);
-//  delete msg;
-};
-
+/**
+ * @brief Modtag en enkelt ADC måling fra serialized_buffer_
+ * 
+ * @return AdcRead::adc_reading decoded adc reading
+ * 
+ * @note Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN
+ */
 AdcRead::adc_reading CanCom::GetReading() {
   AdcRead::adc_reading ret{};
   send_reading buf;
@@ -126,37 +146,15 @@ AdcRead::adc_reading CanCom::GetReading() {
   ShiftBuffer(frame_size);
   return ret;
 }
+
+/**
+ * @brief Rykker alle bytes i serialized_buffer_ med et antal pladser
+ * 
+ * @param shift_bytes antal pladser at rykke pladser i bufferen
+ */
 void CanCom::ShiftBuffer(size_t shift_bytes) {
-  for (uint i = shift_bytes; i < sizeof(serialized_buffer_) - shift_bytes; ++i) {
+  for (auto i = shift_bytes; i < sizeof(serialized_buffer_) - shift_bytes; ++i) {
     serialized_buffer_[i - shift_bytes] = serialized_buffer_[i];
     serialized_buffer_[i] = '\0';
   }
 }
-void CanCom::CanIsr() {
-  CANMessage frame;
-  time_sync packet;
-  can_->read(frame);
-  LOG(LOG_DEBUG,"Received message with id: " + to_string(frame.id));
-  if (frame.id == CAN_TIME_SYNC) {
-    pb_istream_t decode = pb_istream_from_buffer(\
-    frame.data, frame.len);
-    pb_decode(&decode, time_sync_fields, &packet);
-    time_t seconds = packet.current_time;
-    set_time(seconds);
-  }
-
-}
-//void CanCom::AttachIsr() {
-//
-//  can_.attach(callback(,&CanCom::CanIsr), CAN::RxIrq);
-//}
-
-//std::string CanCom::Serialize(char *data, int size) {
-////  const char *str[100];
-////  for (int i = 0; i < size; ++i) {
-//////    printf("%c", data[i]);
-////    str[i] = data[i]);
-////  }
-////  printf("%s", (" - size:" + ToString(size) + "\n").c_str());
-//  return "bob";
-//}

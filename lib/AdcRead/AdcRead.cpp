@@ -1,5 +1,5 @@
 //
-// Created by stormand on 01/04/2022.
+// Created by EIT-416 on 01/04/2022.
 //
 
 #include "AdcRead.h"
@@ -13,9 +13,13 @@ uint16_t adc_read_list[ADC_NUM_CHANNELS];
 
 Thread *t_adc_read[ADC_NUM_CHANNELS];
 AdcRead::adc_thread_args arg_list[ADC_NUM_CHANNELS];
-//Mutex adc_mutex;
 
-
+/**
+ * @brief Kalder AsyncADC med et antal ADC'er på baggrund af nuværende state.
+ *        Nye måling bliver lagt i CircularBuffer'en adc_buffer_
+ * 
+ * @return AdcRead::adc_reading Nye måling
+ */
 AdcRead::adc_reading AdcRead::DoRead() {
   Fsm::State current_state = Fsm::GetCurrentState();
   adc_reading new_read{};
@@ -49,6 +53,13 @@ AdcRead::adc_reading AdcRead::DoRead() {
   adc_buffer_.push(new_read);
   return new_read;
 }
+
+/**
+ * @brief Starter et givent antal threads der hver kører ReadU16()
+ *        med dets givet ADC ben
+ * 
+ * @param adc_count Antal ADC'er at måle på
+ */
 void AdcRead::AsyncADC(int adc_count) {
   for (int i = 0; i < adc_count; ++i) {
     arg_list[i] = {
@@ -68,6 +79,13 @@ void AdcRead::AsyncADC(int adc_count) {
   }
 }
 
+/**
+ * @brief Omdanner AdcName enum til pointer til ny AnalogIn object
+ *        for respektivt ADC ben
+ * 
+ * @param name enum for det ADC ben der skal måles på
+ * @return AnalogIn* pointer til oprettet device
+ */
 AnalogIn *AdcRead::GetDevice(AdcRead::AdcName name) {
 
   AnalogIn *device_ptr;
@@ -95,6 +113,14 @@ AnalogIn *AdcRead::GetDevice(AdcRead::AdcName name) {
   return device_ptr;
 }
 
+/**
+ * @brief Måler et givent antal gange på et givent device 
+ *        fra adc_thread_args og skriver middelværdi til 
+ *        adc_thread_args dest
+ * 
+ * @param args adc_thread_args med AnalogIn pointer til devicet og 
+ *             uint16_t pointer til resultatet
+ */
 void AdcRead::ReadU16(adc_thread_args *args) {
   float sum = 0;
   for (int i = 0; i < ADC_MEASURE_LOOPS; i++) {

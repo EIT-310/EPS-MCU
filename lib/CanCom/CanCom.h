@@ -1,5 +1,5 @@
 //
-// Created by stormand on 5/3/22.
+// Created by EIT-416 on 5/3/22.
 //
 
 #ifndef EPS_MCU_LIB_CANCOM_CANCOM_H_
@@ -26,20 +26,17 @@ class CanCom {
     CAN_LOG
   };
 
-  static uint8_t serialized_buffer_[sizeof(send_reading) * ADC_BUFFER_SIZE];
+  static uint8_t serialized_buffer_[send_reading_size * ADC_BUFFER_SIZE];
 
   static void SendBuffer(size_t size);
 
   static void SendReadings();
 
   static AdcRead::adc_reading GetReading();
-//  static std::string Serialize(char *data, int size);
 
-  static void CanTimeSync(CANMessage *msg);
   static NoMutexCAN *can_;
 
  private:
-  void CanIsr();
   static size_t GetFrameSize();
   static void ShiftBuffer(size_t shift_bytes);
 };
