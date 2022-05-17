@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reading_8pb_8h" xml:lang="en-US">
+<title>lib/Protobuf/reading.pb.h File Reference</title>
+<indexterm><primary>lib/Protobuf/reading.pb.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;pb.h&gt;
+</programlisting>Include dependency graph for reading.pb.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reading_8pb_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reading_8pb_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct__send__reading">_send_reading</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct__time__sync">_time_sync</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a4058268ee72bbec5d2cc62f7c707d435">send_reading_init_default</link>   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1ae72ccdf58f4ef4cb5eeffa0b9a0baf33">time_sync_init_default</link>   {0}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a3f63f16043c0f49d4ea5a87ebbf5cdfc">send_reading_init_zero</link>   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a8e8a6d974595ca8ad8f52cb5bc28f4ab">time_sync_init_zero</link>   {0}</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a8f0771dbc96b99905b4047cbc5bdce5f">send_reading_bat_v_1_tag</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1abeaecdf915ceea5ae507abb48b7b9fc9">send_reading_bat_i_1_tag</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1aa939d4d037926848233cd58b8d7c2889">send_reading_mppt_v_1_tag</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a47467bc4eff500d40d6b5580444c2959">send_reading_mppt_i_1_tag</link>   4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a5d816d0cddb07321182f9461c6d48acf">send_reading_sub_v_1_tag</link>   5</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a36d2a5d125271470f4dfd7928fd1415d">send_reading_sub_i_1_tag</link>   6</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a770eae91f2e4c337e7316d875eeec28a">send_reading_timestamp_tag</link>   7</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a4dd0422217daf32064298a0b023d7ee4">time_sync_current_time_tag</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a9e4081362476d7a454f8bcd531c5d946">send_reading_FIELDLIST</link>(X,  a)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1adccd0cc3cfa5b4545a4c87ef58e4c797">send_reading_CALLBACK</link>   NULL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a9379f9778bb3402ff975151e77dfc31d">send_reading_DEFAULT</link>   NULL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1af2e2902c5db1646d7e3d801504e33b74">time_sync_FIELDLIST</link>(X,  a)   X(a, STATIC,   REQUIRED, UINT64,   current_time,      1)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1abb8f58e69bade1aeae18bbd0cd669a92">time_sync_CALLBACK</link>   NULL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a39d27e3c8d544e8a3e417c9e27e24fe8">time_sync_DEFAULT</link>   NULL</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c">send_reading_fields</link>   &amp;<link linkend="_reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9">send_reading_msg</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a600c302fd20ee5bafbbf504dcc13f7ba">time_sync_fields</link>   &amp;<link linkend="_reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc">time_sync_msg</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf">send_reading_size</link>   47</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reading_8pb_8h_1a8f4c787fe64e1ef8c91196eb417d62f0">time_sync_size</link>   11</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct__send__reading">_send_reading</link> <link linkend="_reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca">send_reading</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_struct__time__sync">_time_sync</link> <link linkend="_reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2">time_sync</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const pb_msgdesc_t <link linkend="_reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9">send_reading_msg</link></para>
+</listitem>
+            <listitem><para>const pb_msgdesc_t <link linkend="_reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc">time_sync_msg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_reading_8pb_8h_1abeaecdf915ceea5ae507abb48b7b9fc9"/><section>
+    <title>send_reading_bat_i_1_tag</title>
+<indexterm><primary>send_reading_bat_i_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_bat_i_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_bat_i_1_tag   2</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a8f0771dbc96b99905b4047cbc5bdce5f"/><section>
+    <title>send_reading_bat_v_1_tag</title>
+<indexterm><primary>send_reading_bat_v_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_bat_v_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_bat_v_1_tag   1</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1adccd0cc3cfa5b4545a4c87ef58e4c797"/><section>
+    <title>send_reading_CALLBACK</title>
+<indexterm><primary>send_reading_CALLBACK</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_CALLBACK</secondary></indexterm>
+<para><computeroutput>#define send_reading_CALLBACK   NULL</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a9379f9778bb3402ff975151e77dfc31d"/><section>
+    <title>send_reading_DEFAULT</title>
+<indexterm><primary>send_reading_DEFAULT</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_DEFAULT</secondary></indexterm>
+<para><computeroutput>#define send_reading_DEFAULT   NULL</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a9e4081362476d7a454f8bcd531c5d946"/><section>
+    <title>send_reading_FIELDLIST</title>
+<indexterm><primary>send_reading_FIELDLIST</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_FIELDLIST</secondary></indexterm>
+<para><computeroutput>#define send_reading_FIELDLIST( X,  a)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT32,&#32;&#32;&#32;bat_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT32,&#32;&#32;&#32;bat_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;mppt_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;mppt_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;sub_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;sub_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6)&#32;\
+X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT64,&#32;&#32;&#32;timestamp,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7)
+</programlisting></section>
+<anchor xml:id="_reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c"/><section>
+    <title>send_reading_fields</title>
+<indexterm><primary>send_reading_fields</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_fields</secondary></indexterm>
+<para><computeroutput>#define send_reading_fields   &amp;<link linkend="_reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9">send_reading_msg</link></computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a4058268ee72bbec5d2cc62f7c707d435"/><section>
+    <title>send_reading_init_default</title>
+<indexterm><primary>send_reading_init_default</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_init_default</secondary></indexterm>
+<para><computeroutput>#define send_reading_init_default   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a3f63f16043c0f49d4ea5a87ebbf5cdfc"/><section>
+    <title>send_reading_init_zero</title>
+<indexterm><primary>send_reading_init_zero</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_init_zero</secondary></indexterm>
+<para><computeroutput>#define send_reading_init_zero   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a47467bc4eff500d40d6b5580444c2959"/><section>
+    <title>send_reading_mppt_i_1_tag</title>
+<indexterm><primary>send_reading_mppt_i_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_mppt_i_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_mppt_i_1_tag   4</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1aa939d4d037926848233cd58b8d7c2889"/><section>
+    <title>send_reading_mppt_v_1_tag</title>
+<indexterm><primary>send_reading_mppt_v_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_mppt_v_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_mppt_v_1_tag   3</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf"/><section>
+    <title>send_reading_size</title>
+<indexterm><primary>send_reading_size</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_size</secondary></indexterm>
+<para><computeroutput>#define send_reading_size   47</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a36d2a5d125271470f4dfd7928fd1415d"/><section>
+    <title>send_reading_sub_i_1_tag</title>
+<indexterm><primary>send_reading_sub_i_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_sub_i_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_sub_i_1_tag   6</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a5d816d0cddb07321182f9461c6d48acf"/><section>
+    <title>send_reading_sub_v_1_tag</title>
+<indexterm><primary>send_reading_sub_v_1_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_sub_v_1_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_sub_v_1_tag   5</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a770eae91f2e4c337e7316d875eeec28a"/><section>
+    <title>send_reading_timestamp_tag</title>
+<indexterm><primary>send_reading_timestamp_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_timestamp_tag</secondary></indexterm>
+<para><computeroutput>#define send_reading_timestamp_tag   7</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1abb8f58e69bade1aeae18bbd0cd669a92"/><section>
+    <title>time_sync_CALLBACK</title>
+<indexterm><primary>time_sync_CALLBACK</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_CALLBACK</secondary></indexterm>
+<para><computeroutput>#define time_sync_CALLBACK   NULL</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a4dd0422217daf32064298a0b023d7ee4"/><section>
+    <title>time_sync_current_time_tag</title>
+<indexterm><primary>time_sync_current_time_tag</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_current_time_tag</secondary></indexterm>
+<para><computeroutput>#define time_sync_current_time_tag   1</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a39d27e3c8d544e8a3e417c9e27e24fe8"/><section>
+    <title>time_sync_DEFAULT</title>
+<indexterm><primary>time_sync_DEFAULT</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_DEFAULT</secondary></indexterm>
+<para><computeroutput>#define time_sync_DEFAULT   NULL</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1af2e2902c5db1646d7e3d801504e33b74"/><section>
+    <title>time_sync_FIELDLIST</title>
+<indexterm><primary>time_sync_FIELDLIST</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_FIELDLIST</secondary></indexterm>
+<para><computeroutput>#define time_sync_FIELDLIST( X,  a)   X(a, STATIC,   REQUIRED, UINT64,   current_time,      1)</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a600c302fd20ee5bafbbf504dcc13f7ba"/><section>
+    <title>time_sync_fields</title>
+<indexterm><primary>time_sync_fields</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_fields</secondary></indexterm>
+<para><computeroutput>#define time_sync_fields   &amp;<link linkend="_reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc">time_sync_msg</link></computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1ae72ccdf58f4ef4cb5eeffa0b9a0baf33"/><section>
+    <title>time_sync_init_default</title>
+<indexterm><primary>time_sync_init_default</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_init_default</secondary></indexterm>
+<para><computeroutput>#define time_sync_init_default   {0}</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a8e8a6d974595ca8ad8f52cb5bc28f4ab"/><section>
+    <title>time_sync_init_zero</title>
+<indexterm><primary>time_sync_init_zero</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_init_zero</secondary></indexterm>
+<para><computeroutput>#define time_sync_init_zero   {0}</computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1a8f4c787fe64e1ef8c91196eb417d62f0"/><section>
+    <title>time_sync_size</title>
+<indexterm><primary>time_sync_size</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_size</secondary></indexterm>
+<para><computeroutput>#define time_sync_size   11</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca"/><section>
+    <title>send_reading</title>
+<indexterm><primary>send_reading</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_struct__send__reading">_send_reading</link> <link linkend="_reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca">send_reading</link></computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2"/><section>
+    <title>time_sync</title>
+<indexterm><primary>time_sync</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_struct__time__sync">_time_sync</link> <link linkend="_reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2">time_sync</link></computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9"/><section>
+    <title>send_reading_msg</title>
+<indexterm><primary>send_reading_msg</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>send_reading_msg</secondary></indexterm>
+<para><computeroutput>const pb_msgdesc_t send_reading_msg<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc"/><section>
+    <title>time_sync_msg</title>
+<indexterm><primary>time_sync_msg</primary><secondary>reading.pb.h</secondary></indexterm>
+<indexterm><primary>reading.pb.h</primary><secondary>time_sync_msg</secondary></indexterm>
+<para><computeroutput>const pb_msgdesc_t time_sync_msg<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

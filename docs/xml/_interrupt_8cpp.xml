@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_interrupt_8cpp" kind="file" language="C++">
+    <compoundname>Interrupt.cpp</compoundname>
+    <includes refid="_interrupt_8h" local="yes">Interrupt.h</includes>
+    <includes local="yes">mbed.h</includes>
+    <includes refid="_project_config_8h" local="yes">ProjectConfig.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+      </node>
+      <node id="11">
+        <label>Fsm.h</label>
+        <link refid="_fsm_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/Interrupt/Interrupt.cpp</label>
+        <link refid="_interrupt_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Interrupt.h</label>
+        <link refid="_interrupt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>NoMutexCAN.h</label>
+        <link refid="_no_mutex_c_a_n_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>PowerManage.h</label>
+        <link refid="_power_manage_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reading.pb.h</label>
+        <link refid="reading_8pb_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbed.h</label>
+      </node>
+      <node id="6">
+        <label>pb.h</label>
+      </node>
+      <node id="7">
+        <label>pb_decode.h</label>
+      </node>
+      <node id="8">
+        <label>rtos.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>12/04/2022.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_interrupt_8h" kindref="compound">Interrupt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_project_config_8h" kindref="compound">ProjectConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">EventQueue<sp/>*<ref refid="class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127" kindref="member">OceIsr::queue_</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd" kindref="member">OceIsr::Handle</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="class_power_manage_1a588ec30ab5aef350697f13706bb24bd1" kindref="member">PowerManage::OceFromIsr</ref>(<ref refid="class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd" kindref="member">module_</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127" kindref="member">queue_</ref>-&gt;call(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4" kindref="member">OceIsr::EventHandler</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4" kindref="member">OceIsr::EventHandler</ref>(){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="_log_8h_1a45213472c513e9160481979a237b50fe" kindref="member">LOG</ref>(<ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400" kindref="member">LOG_WARNING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;OCE<sp/>on<sp/>module:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_power_manage_1a0db524d4f8f5ac9a1b22917c81fd2015" kindref="member">PowerManage::ToString</ref>(<ref refid="class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd" kindref="member">module_</ref>));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="_log_8h_1a45213472c513e9160481979a237b50fe" kindref="member">LOG</ref>(<ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837" kindref="member">LOG_INFO</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>override<sp/>on<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_power_manage_1a0db524d4f8f5ac9a1b22917c81fd2015" kindref="member">PowerManage::ToString</ref>(<ref refid="class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd" kindref="member">module_</ref>));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="class_power_manage_1a35279ac0f18272c3c00bddfd1850f3d6" kindref="member">PowerManage::SetOverride</ref>(<ref refid="class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd" kindref="member">module_</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>LOG(LOG_DEBUG,<sp/>&quot;Updating<sp/>enabled<sp/>modules&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>PowerManage::UpdateEnabled();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/Interrupt/Interrupt.cpp"/>
+  </compounddef>
+</doxygen>

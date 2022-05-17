@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_struct__send__reading">_send_reading</link><link linkend="_struct__time__sync">_time_sync</link><link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link><link linkend="_struct_adc_read_1_1adc__thread__args">AdcRead::adc_thread_args</link><link linkend="_class_adc_read">AdcRead</link><link linkend="_class_can_com">CanCom</link><link linkend="_class_fsm">Fsm</link><link linkend="_class_log">Log</link><link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link>
+<para>Class der overskriver mutex <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock()</link> og <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock()</link> i Mbed. Disse er overflødige ved nucleo STM32 boards </para>
+<link linkend="_class_n_v_store">NVStore</link><link linkend="_class_oce_isr">OceIsr</link><link linkend="_class_power_manage">PowerManage</link></section>

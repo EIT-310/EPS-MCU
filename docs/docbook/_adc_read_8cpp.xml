@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__adc_read_8cpp" xml:lang="en-US">
+<title>lib/AdcRead/AdcRead.cpp File Reference</title>
+<indexterm><primary>lib/AdcRead/AdcRead.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;AdcRead.h&quot;
+#include &quot;../Config/ProjectConfig.h&quot;
+#include &lt;mbed.h&gt;
+#include &lt;rtos.h&gt;
+#include &quot;Fsm.h&quot;
+</programlisting>Include dependency graph for AdcRead.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_adc_read_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="__adc_read_8cpp_1ab80436562c076722bec925a029dcefa6">adc_read_list</link> [ADC_NUM_CHANNELS]</para>
+</listitem>
+            <listitem><para>Thread * <link linkend="__adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697">t_adc_read</link> [ADC_NUM_CHANNELS]</para>
+</listitem>
+            <listitem><para><link linkend="_struct_adc_read_1_1adc__thread__args">AdcRead::adc_thread_args</link> <link linkend="__adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a">arg_list</link> [ADC_NUM_CHANNELS]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__adc_read_8cpp_1ab80436562c076722bec925a029dcefa6"/><section>
+    <title>adc_read_list</title>
+<indexterm><primary>adc_read_list</primary><secondary>AdcRead.cpp</secondary></indexterm>
+<indexterm><primary>AdcRead.cpp</primary><secondary>adc_read_list</secondary></indexterm>
+<para><computeroutput>uint16_t adc_read_list[ADC_NUM_CHANNELS]</computeroutput></para></section>
+<anchor xml:id="__adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a"/><section>
+    <title>arg_list</title>
+<indexterm><primary>arg_list</primary><secondary>AdcRead.cpp</secondary></indexterm>
+<indexterm><primary>AdcRead.cpp</primary><secondary>arg_list</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_adc_read_1_1adc__thread__args">AdcRead::adc_thread_args</link> arg_list[ADC_NUM_CHANNELS]</computeroutput></para></section>
+<anchor xml:id="__adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697"/><section>
+    <title>t_adc_read</title>
+<indexterm><primary>t_adc_read</primary><secondary>AdcRead.cpp</secondary></indexterm>
+<indexterm><primary>AdcRead.cpp</primary><secondary>t_adc_read</secondary></indexterm>
+<para><computeroutput>Thread* t_adc_read[ADC_NUM_CHANNELS]</computeroutput></para></section>
+</section>
+</section>

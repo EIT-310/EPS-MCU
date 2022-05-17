@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_can_com_8cpp" kind="file" language="C++">
+    <compoundname>CanCom.cpp</compoundname>
+    <includes refid="_can_com_8h" local="yes">CanCom.h</includes>
+    <includes refid="_adc_read_8h" local="yes">AdcRead.h</includes>
+    <includes local="yes">mbed.h</includes>
+    <includes local="no">pb_encode.h</includes>
+    <includes local="no">pb_decode.h</includes>
+    <includes refid="reading_8pb_8h" local="yes">reading.pb.h</includes>
+    <includes refid="_project_config_8h" local="yes">ProjectConfig.h</includes>
+    <includes refid="_log_8h" local="yes">Log.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/CanCom/CanCom.cpp</label>
+        <link refid="_can_com_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CanCom.h</label>
+        <link refid="_can_com_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+      </node>
+      <node id="11">
+        <label>Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>NoMutexCAN.h</label>
+        <link refid="_no_mutex_c_a_n_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>reading.pb.h</label>
+        <link refid="reading_8pb_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mbed.h</label>
+      </node>
+      <node id="4">
+        <label>pb.h</label>
+      </node>
+      <node id="10">
+        <label>pb_decode.h</label>
+      </node>
+      <node id="9">
+        <label>pb_encode.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>5/3/22.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_can_com_8h" kindref="compound">CanCom.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_read_8h" kindref="compound">AdcRead.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pb_encode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pb_decode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="reading_8pb_8h" kindref="compound">reading.pb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_project_config_8h" kindref="compound">ProjectConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">uint8_t<sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">CanCom::serialized_buffer_</ref>[<ref refid="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" kindref="member">send_reading_size</ref><sp/>*<sp/><ref refid="_project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46" kindref="member">ADC_BUFFER_SIZE</ref>];</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="class_no_mutex_c_a_n" kindref="compound">NoMutexCAN</ref><sp/>*<ref refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" kindref="member">CanCom::can_</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" kindref="member">CanCom::SendReadings</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>=<sp/><ref refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kindref="member">AdcRead::adc_buffer_</ref>.size();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref><sp/>buf{};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="struct__send__reading" kindref="compound">send_reading</ref><sp/>to_send;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>pb_ostream_t<sp/>encode<sp/>=<sp/>pb_ostream_from_buffer(\</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kindref="member">AdcRead::adc_buffer_</ref>.pop(buf);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" kindref="member">bat_v_1</ref><sp/>=<sp/>buf.bat_v_1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" kindref="member">bat_i_1</ref><sp/>=<sp/>buf.bat_i_1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" kindref="member">timestamp</ref><sp/>=<sp/>buf.timestamp;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!buf.mppt_v_1)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>send<sp/>data<sp/>if<sp/>it<sp/>wasn&apos;t<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" kindref="member">has_mppt_v_1</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" kindref="member">has_mppt_i_1</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" kindref="member">has_sub_v_1</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" kindref="member">has_sub_i_1</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" kindref="member">has_mppt_v_1</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" kindref="member">has_mppt_i_1</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" kindref="member">has_sub_v_1</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" kindref="member">has_sub_i_1</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" kindref="member">mppt_v_1</ref><sp/>=<sp/>buf.mppt_v_1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" kindref="member">mppt_i_1</ref><sp/>=<sp/>buf.mppt_i_1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" kindref="member">sub_v_1</ref><sp/>=<sp/>buf.sub_v_1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>to_send.<ref refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" kindref="member">sub_i_1</ref><sp/>=<sp/>buf.sub_i_1;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>pb_encode(&amp;encode,<sp/><ref refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" kindref="member">send_reading_fields</ref>,<sp/>&amp;to_send);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" kindref="member">SendBuffer</ref>(encode.bytes_written);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" kindref="member">CanCom::SendBuffer</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bytes<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>can_frames<sp/>=<sp/>(bytes<sp/>/<sp/>8)<sp/>+<sp/>((bytes<sp/>%<sp/>8)<sp/>?<sp/>1<sp/>:<sp/>0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint8_t<sp/>framebuffer[8];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>CANMessage<sp/>*msg;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="_log_8h_1a45213472c513e9160481979a237b50fe" kindref="member">LOG</ref>(<ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" kindref="member">LOG_DEBUG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Sending<sp/>CAN&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>can_frames;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>frame_size<sp/>=<sp/>(bytes<sp/>/<sp/>8)<sp/>?<sp/>8<sp/>:<sp/>bytes;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>frame_size;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>framebuffer[j]<sp/>=<sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[j];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" kindref="member">ShiftBuffer</ref>(frame_size);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>CANMessage<sp/>msg(<ref refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" kindref="member">CAN_GET_READING</ref>,<sp/>framebuffer,<sp/>frame_size);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" kindref="member">can_</ref>-&gt;write(msg);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>bytes<sp/>-=<sp/>frame_size;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="_log_8h_1a45213472c513e9160481979a237b50fe" kindref="member">LOG</ref>(<ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" kindref="member">LOG_DEBUG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Done<sp/>Sending&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" kindref="member">CanCom::GetFrameSize</ref>(){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\b&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_log_8h_1a45213472c513e9160481979a237b50fe" kindref="member">LOG</ref>(<ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473" kindref="member">LOG_ERROR</ref>,</highlight><highlight class="stringliteral">&quot;Can<sp/>read<sp/>buffer<sp/>did<sp/>not<sp/>start<sp/>with<sp/>STX&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>better<sp/>Error<sp/>Reporting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/><ref refid="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" kindref="member">send_reading_size</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[i];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\b&apos;</highlight><highlight class="normal"><sp/>or<sp/>index<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i<sp/>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" refkind="member"><highlight class="normal"><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref><sp/><ref refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" kindref="member">CanCom::GetReading</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref><sp/>ret{};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><ref refid="struct__send__reading" kindref="compound">send_reading</ref><sp/>buf;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>frame_size<sp/>=<sp/><ref refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" kindref="member">GetFrameSize</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>pb_istream_t<sp/>decode<sp/>=<sp/>pb_istream_from_buffer(\</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>,<sp/>frame_size);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>pb_decode(&amp;decode,<sp/><ref refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" kindref="member">send_reading_fields</ref>,<sp/>&amp;buf);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>ret.bat_v_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" kindref="member">bat_v_1</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>ret.bat_i_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" kindref="member">bat_i_1</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>ret.timestamp<sp/>=<sp/>buf.<ref refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buf.<ref refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" kindref="member">has_mppt_v_1</ref>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>send<sp/>data<sp/>if<sp/>it<sp/>wasn&apos;t<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.mppt_v_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" kindref="member">mppt_v_1</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.mppt_i_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" kindref="member">mppt_i_1</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.sub_v_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" kindref="member">sub_v_1</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.sub_i_1<sp/>=<sp/>buf.<ref refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" kindref="member">sub_i_1</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Shift<sp/>buffer<sp/>by<sp/>amount<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><ref refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" kindref="member">ShiftBuffer</ref>(frame_size);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" kindref="member">CanCom::ShiftBuffer</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>shift_bytes)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>shift_bytes;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>)<sp/>-<sp/>shift_bytes;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[i<sp/>-<sp/>shift_bytes]<sp/>=<sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[i];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kindref="member">serialized_buffer_</ref>[i]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/CanCom/CanCom.cpp"/>
+  </compounddef>
+</doxygen>

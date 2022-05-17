@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct__time__sync" kind="struct" language="C++" prot="public">
+    <compoundname>_time_sync</compoundname>
+    <includes refid="reading_8pb_8h" local="no">reading.pb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t _time_sync::current_time</definition>
+        <argsstring></argsstring>
+        <name>current_time</name>
+        <qualifiedname>_time_sync::current_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="28" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1a051cb0babede35842fcb4822fe9102f7" compoundref="main_8cpp" startline="38" endline="44">CanTimeSync</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/Protobuf/reading.pb.h" line="27" column="1" bodyfile="lib/Protobuf/reading.pb.h" bodystart="27" bodyend="29"/>
+    <listofallmembers>
+      <member refid="struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6" prot="public" virt="non-virtual"><scope>_time_sync</scope><name>current_time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

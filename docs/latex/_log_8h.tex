@@ -1,0 +1,98 @@
+\hypertarget{_log_8h}{}\doxysection{lib/\+Log/\+Log.h File Reference}
+\label{_log_8h}\index{lib/Log/Log.h@{lib/Log/Log.h}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+Include dependency graph for Log.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{_log_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_log_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_log}{Log}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_log_8h_a45213472c513e9160481979a237b50fe}{LOG}}(level,  string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} \{ \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473}{LOG\+\_\+\+ERROR}}
+, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400}{LOG\+\_\+\+WARNING}}
+, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\+\_\+\+INFO}}
+, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e}{LOG\+\_\+\+DEBUG}}
+ \}
+\item 
+enum \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32}{TLog\+Device}} \{ \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a}{LOG\+\_\+\+SERIAL}}
+, \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f}{LOG\+\_\+\+CAN}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_log_8h_a45213472c513e9160481979a237b50fe}\label{_log_8h_a45213472c513e9160481979a237b50fe}} 
+\index{Log.h@{Log.h}!LOG@{LOG}}
+\index{LOG@{LOG}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{LOG}{LOG}}
+{\footnotesize\ttfamily \#define LOG(\begin{DoxyParamCaption}\item[{}]{level,  }\item[{}]{string }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} ((level) > \mbox{\hyperlink{class_log_aeb290934f14369d2969cd4f50f631d28}{Log::reporting\_level\_}}) ; \(\backslash\)}
+\DoxyCodeLine{else \mbox{\hyperlink{class_log}{Log}}().\mbox{\hyperlink{class_log_ab2abd944d9781f24461a70d010c3c36e}{Get}}(level, \textcolor{keywordtype}{string})}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32}\label{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32}} 
+\index{Log.h@{Log.h}!TLogDevice@{TLogDevice}}
+\index{TLogDevice@{TLogDevice}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{TLogDevice}{TLogDevice}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32}{TLog\+Device}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_SERIAL@{LOG\_SERIAL}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_SERIAL@{LOG\_SERIAL}}}\mbox{\Hypertarget{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a}\label{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a}} 
+LOG\+\_\+\+SERIAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_CAN@{LOG\_CAN}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_CAN@{LOG\_CAN}}}\mbox{\Hypertarget{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f}\label{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f}} 
+LOG\+\_\+\+CAN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}\label{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}} 
+\index{Log.h@{Log.h}!TLogLevel@{TLogLevel}}
+\index{TLogLevel@{TLogLevel}!Log.h@{Log.h}}
+\doxysubsubsection{\texorpdfstring{TLogLevel}{TLogLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ERROR@{LOG\_ERROR}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_ERROR@{LOG\_ERROR}}}\mbox{\Hypertarget{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473}\label{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473}} 
+LOG\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_WARNING@{LOG\_WARNING}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_WARNING@{LOG\_WARNING}}}\mbox{\Hypertarget{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400}\label{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400}} 
+LOG\+\_\+\+WARNING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_INFO@{LOG\_INFO}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_INFO@{LOG\_INFO}}}\mbox{\Hypertarget{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837}\label{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837}} 
+LOG\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_DEBUG@{LOG\_DEBUG}!Log.h@{Log.h}}\index{Log.h@{Log.h}!LOG\_DEBUG@{LOG\_DEBUG}}}\mbox{\Hypertarget{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e}\label{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e}} 
+LOG\+\_\+\+DEBUG&\\
+\hline
+
+\end{DoxyEnumFields}

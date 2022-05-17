@@ -1,0 +1,71 @@
+.TH "lib/Log/Log.h" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/Log/Log.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'mbed\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBLog\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG\fP(level,  string)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTLogLevel\fP { \fBLOG_ERROR\fP, \fBLOG_WARNING\fP, \fBLOG_INFO\fP, \fBLOG_DEBUG\fP }"
+.br
+.ti -1c
+.RI "enum \fBTLogDevice\fP { \fBLOG_SERIAL\fP, \fBLOG_CAN\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG(level, string)"
+\fBValue:\fP
+.PP
+.nf
+if ((level) > Log::reporting_level_) ; \
+else Log()\&.Get(level, string)
+.fi
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBTLogDevice\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOG_SERIAL \fP\fP
+.TP
+\fB\fILOG_CAN \fP\fP
+.SS "enum \fBTLogLevel\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOG_ERROR \fP\fP
+.TP
+\fB\fILOG_WARNING \fP\fP
+.TP
+\fB\fILOG_INFO \fP\fP
+.TP
+\fB\fILOG_DEBUG \fP\fP
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

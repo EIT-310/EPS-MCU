@@ -1,0 +1,6 @@
+<map id="PowerManage::ToString" name="PowerManage::ToString">
+<area shape="rect" id="node1" title="Omdanner modul til string med navnet for modulet." alt="" coords="508,5,668,32"/>
+<area shape="rect" id="node2" href="$class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4" title="ISR deferred handler der logger OCE&#39;et og gemmer hvilket ben der blev målt oce på." alt="" coords="316,5,460,32"/>
+<area shape="rect" id="node3" href="$class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd" title="ISR context der deactiverer modulet der blev målt OCE på. Sætter EventHandler() i kø til de ting der ..." alt="" coords="160,5,268,32"/>
+<area shape="rect" id="node4" href="$class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed" title="Construct a new Oce Isr object og attatcher IRQ benet til at køre Handle() ved rise." alt="" coords="5,5,112,32"/>
+</map>

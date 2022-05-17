@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct__send__reading" xml:lang="en-US">
+<title>_send_reading Struct Reference</title>
+<indexterm><primary>_send_reading</primary></indexterm>
+<para>
+<computeroutput>#include &lt;reading.pb.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5">bat_v_1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a">bat_i_1</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct__send__reading_1afa611efb561b6bc4e31d88255370be2d">has_mppt_v_1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1a37c526be254faf12e6340fce9916635f">mppt_v_1</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct__send__reading_1a081204da55c033ebd383b637107f15a8">has_mppt_i_1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580">mppt_i_1</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct__send__reading_1ab080dfddff3ab608c0108caa65535c58">has_sub_v_1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84">sub_v_1</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f">has_sub_i_1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7">sub_i_1</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100">timestamp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a"/><section>
+    <title>bat_i_1</title>
+<indexterm><primary>bat_i_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>bat_i_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::bat_i_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5"/><section>
+    <title>bat_v_1</title>
+<indexterm><primary>bat_v_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>bat_v_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::bat_v_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a081204da55c033ebd383b637107f15a8"/><section>
+    <title>has_mppt_i_1</title>
+<indexterm><primary>has_mppt_i_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>has_mppt_i_1</secondary></indexterm>
+<para><computeroutput>bool _send_reading::has_mppt_i_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1afa611efb561b6bc4e31d88255370be2d"/><section>
+    <title>has_mppt_v_1</title>
+<indexterm><primary>has_mppt_v_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>has_mppt_v_1</secondary></indexterm>
+<para><computeroutput>bool _send_reading::has_mppt_v_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f"/><section>
+    <title>has_sub_i_1</title>
+<indexterm><primary>has_sub_i_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>has_sub_i_1</secondary></indexterm>
+<para><computeroutput>bool _send_reading::has_sub_i_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1ab080dfddff3ab608c0108caa65535c58"/><section>
+    <title>has_sub_v_1</title>
+<indexterm><primary>has_sub_v_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>has_sub_v_1</secondary></indexterm>
+<para><computeroutput>bool _send_reading::has_sub_v_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580"/><section>
+    <title>mppt_i_1</title>
+<indexterm><primary>mppt_i_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>mppt_i_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::mppt_i_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a37c526be254faf12e6340fce9916635f"/><section>
+    <title>mppt_v_1</title>
+<indexterm><primary>mppt_v_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>mppt_v_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::mppt_v_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7"/><section>
+    <title>sub_i_1</title>
+<indexterm><primary>sub_i_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>sub_i_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::sub_i_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84"/><section>
+    <title>sub_v_1</title>
+<indexterm><primary>sub_v_1</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>sub_v_1</secondary></indexterm>
+<para><computeroutput>uint32_t _send_reading::sub_v_1</computeroutput></para></section>
+<anchor xml:id="_struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>_send_reading</secondary></indexterm>
+<indexterm><primary>_send_reading</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>uint64_t _send_reading::timestamp</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/Protobuf/<link linkend="_reading_8pb_8h">reading.pb.h</link></section>
+</section>

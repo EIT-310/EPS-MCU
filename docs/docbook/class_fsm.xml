@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_fsm" xml:lang="en-US">
+<title>Fsm Class Reference</title>
+<indexterm><primary>Fsm</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Fsm.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> { 
+<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db">EMERGENCY</link>
+, <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb">LOW</link>
+, <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9">MID_LOW</link>
+, <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885">MID</link>
+, 
+<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178">MID_HIGH</link>
+, <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717">HIGH</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_fsm_1a0707d788017e5a74113c4285c9c748b9">Fsm</link> (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> start_state)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_fsm_1a68a3b3e4232132f9e671eafb4a663af4">DetermineState</link> (<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> reading)</para>
+
+<para>Bedøm en ny target state på baggrund af ADC måling og kald <link linkend="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b">StateChanger()</link> </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4">UpState</link> ()</para>
+
+<para>Gå en state up. Hvis nuværende state er den højeste, gør intet. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220">DownState</link> ()</para>
+
+<para>Gå en state ned. Hvis nuværende state er den laveste, gør intet. </para>
+</listitem>
+            <listitem><para>static <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> <link linkend="_class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf">GetCurrentState</link> ()</para>
+
+<para>Getter for nuværende state. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_fsm_1adc5296fe861e5e938365b7afd0834950">ToString</link> ()</para>
+
+<para>Giver navnet på nuverende state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e">GetString</link> (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> name)</para>
+
+<para>Omdanner State enum til string. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b">StateChanger</link> (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> target_state)</para>
+
+<para>Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state. </para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1">GetPower</link> (<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> reading)</para>
+
+<para>Beregn effekten for alle MPPT&apos;er i en ADC måling. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> <link linkend="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1">current_state_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f"/><section>
+    <title>State</title>
+<indexterm><primary>State</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>State</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">Fsm::State</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>EMERGENCY</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>EMERGENCY</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db"/>EMERGENCY</entry><entry></entry></row><row><entry><indexterm><primary>LOW</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>LOW</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb"/>LOW</entry><entry></entry></row><row><entry><indexterm><primary>MID_LOW</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>MID_LOW</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9"/>MID_LOW</entry><entry></entry></row><row><entry><indexterm><primary>MID</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>MID</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885"/>MID</entry><entry></entry></row><row><entry><indexterm><primary>MID_HIGH</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>MID_HIGH</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178"/>MID_HIGH</entry><entry></entry></row><row><entry><indexterm><primary>HIGH</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>HIGH</secondary></indexterm>
+<anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717"/>HIGH</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_fsm_1a0707d788017e5a74113c4285c9c748b9"/><section>
+    <title>Fsm()</title>
+<indexterm><primary>Fsm</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>Fsm</secondary></indexterm>
+<para><computeroutput>Fsm::Fsm (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> start_state)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_fsm_1a68a3b3e4232132f9e671eafb4a663af4"/><section>
+    <title>DetermineState()</title>
+<indexterm><primary>DetermineState</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>DetermineState</secondary></indexterm>
+<para><computeroutput>void Fsm::DetermineState (<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> reading)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Bedøm en ny target state på baggrund af ADC måling og kald <link linkend="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b">StateChanger()</link> </para>
+</para>
+
+<para>Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer og en target state bliver besluttet ud fra dette. Herefter betragtes den samlede effekt fra MPPT&apos;erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes target state med 1.</para>
+
+<para><note><title>Note</title>
+
+<para>Aloritmen er simpel og mest til for at have et eksempel på en algoritme.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reading</entry><entry>
+<para>ADC måling at finde ny state på baggrund af. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a68a3b3e4232132f9e671eafb4a663af4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a68a3b3e4232132f9e671eafb4a663af4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220"/><section>
+    <title>DownState()</title>
+<indexterm><primary>DownState</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>DownState</secondary></indexterm>
+<para><computeroutput>void Fsm::DownState ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Gå en state ned. Hvis nuværende state er den laveste, gør intet. </para>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_adf20f20a6b2b7472bd718ac0eabbe220_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf"/><section>
+    <title>GetCurrentState()</title>
+<indexterm><primary>GetCurrentState</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>GetCurrentState</secondary></indexterm>
+<para><computeroutput><link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">Fsm::State</link> Fsm::GetCurrentState ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Getter for nuværende state. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">Fsm::State</link> </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_ae746f70aa1624110f8e1967d8bec6dcf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1"/><section>
+    <title>GetPower()</title>
+<indexterm><primary>GetPower</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>GetPower</secondary></indexterm>
+<para><computeroutput>float Fsm::GetPower (<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> reading)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Beregn effekten for alle MPPT&apos;er i en ADC måling. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reading</entry><entry>
+<para>ADC måling for hvilken vi vil finde MMPT effekten </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>float Effekt for samlet MPPT&apos;er i watt </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e"/><section>
+    <title>GetString()</title>
+<indexterm><primary>GetString</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>GetString</secondary></indexterm>
+<para><computeroutput>std::string Fsm::GetString (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">Fsm::State</link> name)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Omdanner State enum til string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>state der ønskes navn på </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>std::string String med navnet på staten </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b"/><section>
+    <title>StateChanger()</title>
+<indexterm><primary>StateChanger</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>StateChanger</secondary></indexterm>
+<para><computeroutput>void Fsm::StateChanger (<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link> target_state)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>target_state</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a9c900414072a45b3cf703e3ea2f37c1b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a9c900414072a45b3cf703e3ea2f37c1b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1adc5296fe861e5e938365b7afd0834950"/><section>
+    <title>ToString()</title>
+<indexterm><primary>ToString</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>ToString</secondary></indexterm>
+<para><computeroutput>std::string Fsm::ToString ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Giver navnet på nuverende state. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_adc5296fe861e5e938365b7afd0834950_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4"/><section>
+    <title>UpState()</title>
+<indexterm><primary>UpState</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>UpState</secondary></indexterm>
+<para><computeroutput>void Fsm::UpState ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Gå en state up. Hvis nuværende state er den højeste, gør intet. </para>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1"/><section>
+    <title>current_state_</title>
+<indexterm><primary>current_state_</primary><secondary>Fsm</secondary></indexterm>
+<indexterm><primary>Fsm</primary><secondary>current_state_</secondary></indexterm>
+<para><computeroutput><link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">Fsm::State</link> Fsm::current_state_<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+lib/FSM/<link linkend="__fsm_8h">Fsm.h</link>lib/FSM/<link linkend="__fsm_8cpp">Fsm.cpp</link></section>
+</section>

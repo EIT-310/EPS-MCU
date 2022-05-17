@@ -1,0 +1,35 @@
+\hypertarget{_n_v_store_8h_source}{}\doxysection{NVStore.\+h}
+\label{_n_v_store_8h_source}\index{lib/NVStore/NVStore.h@{lib/NVStore/NVStore.h}}
+\mbox{\hyperlink{_n_v_store_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 04/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_NV\_STORE\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define EPS\_MCU\_NV\_STORE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}FlashIAPBlockDevice.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}TDBStore.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}mbed.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_n_v_store}{NVStore}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{keyword}{enum} \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\_LOCATION}} \{}
+\DoxyCodeLine{15         \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048}{sm\_state}},}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3}{adc\_read}}}
+\DoxyCodeLine{17     \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d}{write}}(\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\_LOCATION}} key, \textcolor{keywordtype}{void} *value);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f}{read}}(\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\_LOCATION}} key, \textcolor{keywordtype}{void} *value);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99}{GetKeyStr}}(\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\_LOCATION}} name);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_NV\_STORE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,95 @@
+\hypertarget{class_n_v_store}{}\doxysection{NVStore Class Reference}
+\label{class_n_v_store}\index{NVStore@{NVStore}}
+
+
+{\ttfamily \#include $<$NVStore.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\+\_\+\+LOCATION}} \{ \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048}{sm\+\_\+state}}
+, \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3}{adc\+\_\+read}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d}{write}} (\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\+\_\+\+LOCATION}} key, void $\ast$value)
+\item 
+int \mbox{\hyperlink{class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f}{read}} (\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\+\_\+\+LOCATION}} key, void $\ast$value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99}{Get\+Key\+Str}} (\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{DATA\+\_\+\+LOCATION}} name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}\label{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}} 
+\index{NVStore@{NVStore}!DATA\_LOCATION@{DATA\_LOCATION}}
+\index{DATA\_LOCATION@{DATA\_LOCATION}!NVStore@{NVStore}}
+\doxysubsubsection{\texorpdfstring{DATA\_LOCATION}{DATA\_LOCATION}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{NVStore\+::\+DATA\+\_\+\+LOCATION}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sm\_state@{sm\_state}!NVStore@{NVStore}}\index{NVStore@{NVStore}!sm\_state@{sm\_state}}}\mbox{\Hypertarget{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048}\label{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048}} 
+sm\+\_\+state&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{adc\_read@{adc\_read}!NVStore@{NVStore}}\index{NVStore@{NVStore}!adc\_read@{adc\_read}}}\mbox{\Hypertarget{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3}\label{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3}} 
+adc\+\_\+read&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99}\label{class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99}} 
+\index{NVStore@{NVStore}!GetKeyStr@{GetKeyStr}}
+\index{GetKeyStr@{GetKeyStr}!NVStore@{NVStore}}
+\doxysubsubsection{\texorpdfstring{GetKeyStr()}{GetKeyStr()}}
+{\footnotesize\ttfamily std\+::string NVStore\+::\+Get\+Key\+Str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{NVStore\+::\+DATA\+\_\+\+LOCATION}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f}\label{class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f}} 
+\index{NVStore@{NVStore}!read@{read}}
+\index{read@{read}!NVStore@{NVStore}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int NVStore\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{NVStore\+::\+DATA\+\_\+\+LOCATION}}}]{key,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d}\label{class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d}} 
+\index{NVStore@{NVStore}!write@{write}}
+\index{write@{write}!NVStore@{NVStore}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily int NVStore\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_n_v_store_aa8fbe89e926d21201fe3f56ec1bf0527}{NVStore\+::\+DATA\+\_\+\+LOCATION}}}]{key,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+NVStore/\mbox{\hyperlink{_n_v_store_8h}{NVStore.\+h}}\item 
+lib/\+NVStore/\mbox{\hyperlink{_n_v_store_8cpp}{NVStore.\+cpp}}\end{DoxyCompactItemize}

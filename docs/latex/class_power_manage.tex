@@ -1,0 +1,208 @@
+\hypertarget{class_power_manage}{}\doxysection{Power\+Manage Class Reference}
+\label{class_power_manage}\index{PowerManage@{PowerManage}}
+
+
+{\ttfamily \#include $<$Power\+Manage.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} \{ \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}{SUB\+\_\+1}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_power_manage_a0db524d4f8f5ac9a1b22917c81fd2015}{To\+String}} (\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module)
+\begin{DoxyCompactList}\small\item\em Omdanner modul til string med navnet for modulet. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_power_manage_a588ec30ab5aef350697f13706bb24bd1}{Oce\+From\+Isr}} (\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module)
+\begin{DoxyCompactList}\small\item\em Høj prioritetet deaktivering af en power rail ved OCE. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6}{Set\+Override}} (\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module, bool is\+\_\+on)
+\begin{DoxyCompactList}\small\item\em Opdaterer et modul i module\+\_\+override\+\_\+ listen. Og Kalder \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{Write\+Sub\+State()}}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb}{Update\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Henter den nuværende state fra FSM biblioteket og opdaterer enabled\+\_\+modules\+\_\+ listen efter denne. Kalder til sidst \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{Write\+Sub\+State()}}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{Write\+Sub\+State}} ()
+\begin{DoxyCompactList}\small\item\em Opdaterer den endelige tisltand af Power Rails ved at AND\textquotesingle{}e enabled\+\_\+modules\+\_\+ og module\+\_\+override\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_power_manage_a0cc9b04c91f44190fe04e1d749d5d6c6}{enabled\+\_\+modules\+\_\+}} \mbox{[}SUBMODULES\+\_\+\+NUM\mbox{]} = \{true\}
+\item 
+static bool \mbox{\hyperlink{class_power_manage_a07c3547bbb3c11eda2dc67ce1becf09c}{module\+\_\+override\+\_\+}} \mbox{[}SUBMODULES\+\_\+\+NUM\mbox{]} = \{true\}
+\item 
+static Digital\+Out \mbox{\hyperlink{class_power_manage_a7229a54685a11211bd72a96b7e2af2ac}{power\+\_\+rails\+\_\+}} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}\label{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}} 
+\index{PowerManage@{PowerManage}!Modules@{Modules}}
+\index{Modules@{Modules}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{Modules}{Modules}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_1@{SUB\_1}!PowerManage@{PowerManage}}\index{PowerManage@{PowerManage}!SUB\_1@{SUB\_1}}}\mbox{\Hypertarget{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}\label{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}} 
+SUB\+\_\+1&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_power_manage_a588ec30ab5aef350697f13706bb24bd1}\label{class_power_manage_a588ec30ab5aef350697f13706bb24bd1}} 
+\index{PowerManage@{PowerManage}!OceFromIsr@{OceFromIsr}}
+\index{OceFromIsr@{OceFromIsr}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{OceFromIsr()}{OceFromIsr()}}
+{\footnotesize\ttfamily void Power\+Manage\+::\+Oce\+From\+Isr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}}}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Høj prioritetet deaktivering af en power rail ved OCE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Modulet der blev målt OCE på \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a588ec30ab5aef350697f13706bb24bd1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6}\label{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6}} 
+\index{PowerManage@{PowerManage}!SetOverride@{SetOverride}}
+\index{SetOverride@{SetOverride}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{SetOverride()}{SetOverride()}}
+{\footnotesize\ttfamily void Power\+Manage\+::\+Set\+Override (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}}}]{module,  }\item[{bool}]{is\+\_\+on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Opdaterer et modul i module\+\_\+override\+\_\+ listen. Og Kalder \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{Write\+Sub\+State()}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Det modul der skal aktiveres/deaktiveres \\
+\hline
+{\em is\+\_\+on} & false = deaktiver $\vert$ true = aktiver \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_power_manage_a0db524d4f8f5ac9a1b22917c81fd2015}\label{class_power_manage_a0db524d4f8f5ac9a1b22917c81fd2015}} 
+\index{PowerManage@{PowerManage}!ToString@{ToString}}
+\index{ToString@{ToString}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily string Power\+Manage\+::\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}}}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Omdanner modul til string med navnet for modulet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em module} & Det modul der ønskes navn på \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string med navnet for modulet 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a0db524d4f8f5ac9a1b22917c81fd2015_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb}\label{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb}} 
+\index{PowerManage@{PowerManage}!UpdateEnabled@{UpdateEnabled}}
+\index{UpdateEnabled@{UpdateEnabled}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{UpdateEnabled()}{UpdateEnabled()}}
+{\footnotesize\ttfamily void Power\+Manage\+::\+Update\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Henter den nuværende state fra FSM biblioteket og opdaterer enabled\+\_\+modules\+\_\+ listen efter denne. Kalder til sidst \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{Write\+Sub\+State()}}. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_power_manage_a76f09867e77b6f1184ca446fffda9781}\label{class_power_manage_a76f09867e77b6f1184ca446fffda9781}} 
+\index{PowerManage@{PowerManage}!WriteSubState@{WriteSubState}}
+\index{WriteSubState@{WriteSubState}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{WriteSubState()}{WriteSubState()}}
+{\footnotesize\ttfamily void Power\+Manage\+::\+Write\+Sub\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Opdaterer den endelige tisltand af Power Rails ved at AND\textquotesingle{}e enabled\+\_\+modules\+\_\+ og module\+\_\+override\+\_\+. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_power_manage_a76f09867e77b6f1184ca446fffda9781_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_power_manage_a0cc9b04c91f44190fe04e1d749d5d6c6}\label{class_power_manage_a0cc9b04c91f44190fe04e1d749d5d6c6}} 
+\index{PowerManage@{PowerManage}!enabled\_modules\_@{enabled\_modules\_}}
+\index{enabled\_modules\_@{enabled\_modules\_}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{enabled\_modules\_}{enabled\_modules\_}}
+{\footnotesize\ttfamily bool Power\+Manage\+::enabled\+\_\+modules\+\_\+ = \{true\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_power_manage_a07c3547bbb3c11eda2dc67ce1becf09c}\label{class_power_manage_a07c3547bbb3c11eda2dc67ce1becf09c}} 
+\index{PowerManage@{PowerManage}!module\_override\_@{module\_override\_}}
+\index{module\_override\_@{module\_override\_}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{module\_override\_}{module\_override\_}}
+{\footnotesize\ttfamily bool Power\+Manage\+::module\+\_\+override\+\_\+ = \{true\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_power_manage_a7229a54685a11211bd72a96b7e2af2ac}\label{class_power_manage_a7229a54685a11211bd72a96b7e2af2ac}} 
+\index{PowerManage@{PowerManage}!power\_rails\_@{power\_rails\_}}
+\index{power\_rails\_@{power\_rails\_}!PowerManage@{PowerManage}}
+\doxysubsubsection{\texorpdfstring{power\_rails\_}{power\_rails\_}}
+{\footnotesize\ttfamily Digital\+Out Power\+Manage\+::power\+\_\+rails\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    RAIL\_1\_PIN}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Power\+Manage/\mbox{\hyperlink{_power_manage_8h}{Power\+Manage.\+h}}\item 
+lib/\+Power\+Manage/\mbox{\hyperlink{_power_manage_8cpp}{Power\+Manage.\+cpp}}\end{DoxyCompactItemize}

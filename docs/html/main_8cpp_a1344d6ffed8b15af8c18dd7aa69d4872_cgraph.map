@@ -1,0 +1,6 @@
+<map id="UpdateSubs" name="UpdateSubs">
+<area shape="rect" id="node1" title="Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog." alt="" coords="5,31,99,57"/>
+<area shape="rect" id="node2" href="$class_power_manage.html#a6cc478738b54fbbd148122c4ae6e93fb" title="Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne...." alt="" coords="147,31,347,57"/>
+<area shape="rect" id="node3" href="$class_fsm.html#ae746f70aa1624110f8e1967d8bec6dcf" title="Getter for nuværende state." alt="" coords="418,5,569,32"/>
+<area shape="rect" id="node4" href="$class_power_manage.html#a76f09867e77b6f1184ca446fffda9781" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="395,56,592,83"/>
+</map>

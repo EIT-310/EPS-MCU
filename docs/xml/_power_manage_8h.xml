@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_power_manage_8h" kind="file" language="C++">
+    <compoundname>PowerManage.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="_fsm_8h" local="no">Fsm.h</includes>
+    <includes refid="_project_config_8h" local="yes">ProjectConfig.h</includes>
+    <includes refid="_adc_read_8h" local="yes">AdcRead.h</includes>
+    <includedby refid="_interrupt_8h" local="yes">lib/Interrupt/Interrupt.h</includedby>
+    <includedby refid="_power_manage_8cpp" local="yes">lib/PowerManage/PowerManage.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+      </node>
+      <node id="3">
+        <label>Fsm.h</label>
+        <link refid="_fsm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/PowerManage/PowerManage.h</label>
+        <link refid="_power_manage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mbed.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>lib/Interrupt/Interrupt.cpp</label>
+        <link refid="_interrupt_8cpp"/>
+      </node>
+      <node id="2">
+        <label>lib/Interrupt/Interrupt.h</label>
+        <link refid="_interrupt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>lib/PowerManage/PowerManage.cpp</label>
+        <link refid="_power_manage_8cpp"/>
+      </node>
+      <node id="1">
+        <label>lib/PowerManage/PowerManage.h</label>
+        <link refid="_power_manage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_power_manage" prot="public">PowerManage</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>5/2/22.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EPS_MCU_LIB_POWERMANAGE_POWERMANAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPS_MCU_LIB_POWERMANAGE_POWERMANAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_fsm_8h" kindref="compound">Fsm.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_project_config_8h" kindref="compound">ProjectConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_read_8h" kindref="compound">AdcRead.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_power_manage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_power_manage" kindref="compound">PowerManage</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" kindref="member">Modules</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6" kindref="member">SUB_1</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>SUB_2,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>SUB_3,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>SUB_4,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>SUB_5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a0db524d4f8f5ac9a1b22917c81fd2015" kindref="member">ToString</ref>(<ref refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" kindref="member">Modules</ref><sp/>module);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a588ec30ab5aef350697f13706bb24bd1" kindref="member">OceFromIsr</ref>(<ref refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" kindref="member">Modules</ref><sp/>module);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a35279ac0f18272c3c00bddfd1850f3d6" kindref="member">SetOverride</ref>(<ref refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" kindref="member">Modules</ref><sp/>module,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_on);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a6cc478738b54fbbd148122c4ae6e93fb" kindref="member">UpdateEnabled</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a76f09867e77b6f1184ca446fffda9781" kindref="member">WriteSubState</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="class_power_manage_1a0cc9b04c91f44190fe04e1d749d5d6c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a0cc9b04c91f44190fe04e1d749d5d6c6" kindref="member">enabled_modules_</ref>[SUBMODULES_NUM];</highlight></codeline>
+<codeline lineno="32" refid="class_power_manage_1a07c3547bbb3c11eda2dc67ce1becf09c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_power_manage_1a07c3547bbb3c11eda2dc67ce1becf09c" kindref="member">module_override_</ref>[SUBMODULES_NUM];<sp/></highlight><highlight class="comment">//TODO:<sp/>skal<sp/>gemmes<sp/>i<sp/>NVM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_power_manage_1a7229a54685a11211bd72a96b7e2af2ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>DigitalOut<sp/><ref refid="class_power_manage_1a7229a54685a11211bd72a96b7e2af2ac" kindref="member">power_rails_</ref>[1];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EPS_MCU_LIB_POWERMANAGE_POWERMANAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/PowerManage/PowerManage.h"/>
+  </compounddef>
+</doxygen>

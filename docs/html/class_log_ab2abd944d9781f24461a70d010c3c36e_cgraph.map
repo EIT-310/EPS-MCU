@@ -1,0 +1,5 @@
+<map id="Log::Get" name="Log::Get">
+<area shape="rect" id="node1" title="Opretter log beskeden." alt="" coords="5,31,77,57"/>
+<area shape="rect" id="node2" href="$class_log.html#a8079bae56521b384ea87284206223f42" title="Omdanner log neveau til string med navnet for niveauet." alt="" coords="125,5,259,32"/>
+<area shape="rect" id="node3" href="$class_log.html#af14e8b4c37abf6be087c8be1fe395216" title="Omdanner UNIX sekund timestamp til formateret string." alt="" coords="129,56,255,83"/>
+</map>

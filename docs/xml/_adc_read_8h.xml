@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_adc_read_8h" kind="file" language="C++">
+    <compoundname>AdcRead.h</compoundname>
+    <includes refid="_project_config_8h" local="yes">ProjectConfig.h</includes>
+    <includes local="yes">mbed.h</includes>
+    <includedby refid="_adc_read_8cpp" local="yes">lib/AdcRead/AdcRead.cpp</includedby>
+    <includedby refid="_can_com_8cpp" local="yes">lib/CanCom/CanCom.cpp</includedby>
+    <includedby refid="_can_com_8h" local="no">lib/CanCom/CanCom.h</includedby>
+    <includedby refid="_fsm_8h" local="yes">lib/FSM/Fsm.h</includedby>
+    <includedby refid="_power_manage_8h" local="yes">lib/PowerManage/PowerManage.h</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>lib/AdcRead/AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+      </node>
+      <node id="3">
+        <label>mbed.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>lib/AdcRead/AdcRead.cpp</label>
+        <link refid="_adc_read_8cpp"/>
+      </node>
+      <node id="1">
+        <label>lib/AdcRead/AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>lib/CanCom/CanCom.cpp</label>
+        <link refid="_can_com_8cpp"/>
+      </node>
+      <node id="4">
+        <label>lib/CanCom/CanCom.h</label>
+        <link refid="_can_com_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>lib/FSM/Fsm.cpp</label>
+        <link refid="_fsm_8cpp"/>
+      </node>
+      <node id="6">
+        <label>lib/FSM/Fsm.h</label>
+        <link refid="_fsm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>lib/Interrupt/Interrupt.cpp</label>
+        <link refid="_interrupt_8cpp"/>
+      </node>
+      <node id="10">
+        <label>lib/Interrupt/Interrupt.h</label>
+        <link refid="_interrupt_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>lib/PowerManage/PowerManage.cpp</label>
+        <link refid="_power_manage_8cpp"/>
+      </node>
+      <node id="9">
+        <label>lib/PowerManage/PowerManage.h</label>
+        <link refid="_power_manage_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_adc_read" prot="public">AdcRead</innerclass>
+    <innerclass refid="struct_adc_read_1_1adc__reading" prot="public">AdcRead::adc_reading</innerclass>
+    <innerclass refid="struct_adc_read_1_1adc__thread__args" prot="public">AdcRead::adc_thread_args</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>01/04/2022.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_project_config_8h" kindref="compound">ProjectConfig.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_adc_read" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adc_read" kindref="compound">AdcRead</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="class_adc_read_1a579cb1cbc31d93bb202f770492be226d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_adc_read_1a579cb1cbc31d93bb202f770492be226d" kindref="member">AdcRead</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="struct_adc_read_1_1adc__reading" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">adc_reading</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3" kindref="member">bat_v_1</ref>;</highlight></codeline>
+<codeline lineno="17" refid="struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2" kindref="member">bat_i_1</ref>;</highlight></codeline>
+<codeline lineno="18" refid="struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade" kindref="member">mppt_v_1</ref>;</highlight></codeline>
+<codeline lineno="19" refid="struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c" kindref="member">mppt_i_1</ref>;</highlight></codeline>
+<codeline lineno="20" refid="struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910" kindref="member">sub_v_1</ref>;</highlight></codeline>
+<codeline lineno="21" refid="struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2" kindref="member">sub_i_1</ref>;</highlight></codeline>
+<codeline lineno="22" refid="struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" kindref="member">BAT_V_1</ref>,</highlight></codeline>
+<codeline lineno="27" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" kindref="member">BAT_I_1</ref>,</highlight></codeline>
+<codeline lineno="28" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" kindref="member">MPPT_V_1</ref>,</highlight></codeline>
+<codeline lineno="29" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" kindref="member">MPPT_I_1</ref>,</highlight></codeline>
+<codeline lineno="30" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" kindref="member">SUB_V_1</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" kindref="member">SUB_I_1</ref></highlight></codeline>
+<codeline lineno="32" refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" refkind="member"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_adc_read_1_1adc__thread__args" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>AnalogIn<sp/>*<ref refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="36" refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>*<ref refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" kindref="member">dest</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>TODO:<sp/>make<sp/>asynchronous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref><sp/><ref refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" kindref="member">DoRead</ref>();</highlight></codeline>
+<codeline lineno="41" refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>CircularBuffer&lt;adc_reading,<sp/>ADC_BUFFER_SIZE&gt;<sp/><ref refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kindref="member">adc_buffer_</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" kindref="member">ReadU16</ref>(<ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref><sp/>*args);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>AnalogIn<sp/>*<ref refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" kindref="member">GetDevice</ref>(<ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref><sp/>name);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8" kindref="member">ReadFloat</ref>(AnalogIn<sp/>*device);</highlight></codeline>
+<codeline lineno="49" refid="class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref><sp/><ref refid="class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b" kindref="member">adc_list_</ref>[6];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" kindref="member">AsyncADC</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_count);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/AdcRead/AdcRead.h"/>
+  </compounddef>
+</doxygen>

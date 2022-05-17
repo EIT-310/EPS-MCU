@@ -1,0 +1,12 @@
+<map id="NewState" name="NewState">
+<area shape="rect" id="node1" title="Modtager ny måling fra ReadAdc() og bestemmer ny state på baggrund af disse data." alt="" coords="5,81,84,108"/>
+<area shape="rect" id="node2" href="$class_fsm.html#a68a3b3e4232132f9e671eafb4a663af4" title="Bedøm en ny target state på baggrund af ADC måling og kald StateChanger()" alt="" coords="132,56,279,83"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a1344d6ffed8b15af8c18dd7aa69d4872" title="Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog." alt="" coords="159,107,252,133"/>
+<area shape="rect" id="node3" href="$class_fsm.html#a439ed6c66f0b4f982ffa48ce23ade7c1" title="Beregn effekten for alle MPPT&#39;er i en ADC måling." alt="" coords="370,5,483,32"/>
+<area shape="rect" id="node4" href="$class_fsm.html#a9c900414072a45b3cf703e3ea2f37c1b" title="Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state..." alt="" coords="359,56,494,83"/>
+<area shape="rect" id="node5" href="$class_fsm.html#adf20f20a6b2b7472bd718ac0eabbe220" title="Gå en state ned. Hvis nuværende state er den laveste, gør intet." alt="" coords="614,5,733,32"/>
+<area shape="rect" id="node6" href="$class_fsm.html#a0b88cb2000e2c66ec3f4d68b991a10f4" title="Gå en state up. Hvis nuværende state er den højeste, gør intet." alt="" coords="622,56,725,83"/>
+<area shape="rect" id="node8" href="$class_power_manage.html#a6cc478738b54fbbd148122c4ae6e93fb" title="Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne...." alt="" coords="327,107,527,133"/>
+<area shape="rect" id="node9" href="$class_fsm.html#ae746f70aa1624110f8e1967d8bec6dcf" title="Getter for nuværende state." alt="" coords="598,107,749,133"/>
+<area shape="rect" id="node10" href="$class_power_manage.html#a76f09867e77b6f1184ca446fffda9781" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="575,157,772,184"/>
+</map>

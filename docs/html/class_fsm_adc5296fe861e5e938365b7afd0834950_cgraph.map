@@ -1,0 +1,4 @@
+<map id="Fsm::ToString" name="Fsm::ToString">
+<area shape="rect" id="node1" title="Giver navnet på nuverende state." alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node2" href="$class_fsm.html#af5ba98dd1c1080fb9574bac4a4c4ed1e" title="Omdanner State enum til string." alt="" coords="157,5,268,32"/>
+</map>

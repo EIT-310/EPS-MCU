@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_can_com" kind="class" language="C++" prot="public">
+    <compoundname>CanCom</compoundname>
+    <includes refid="_can_com_8h" local="no">CanCom.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CanMessageId</name>
+        <qualifiedname>CanCom::CanMessageId</qualifiedname>
+        <enumvalue id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50" prot="public">
+          <name>CAN_TIME_SYNC</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c" prot="public">
+          <name>CAN_SET_CONFIG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e" prot="public">
+          <name>CAN_GET_CONFIG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" prot="public">
+          <name>CAN_GET_READING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc" prot="public">
+          <name>CAN_LOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="21" column="3" bodyfile="lib/CanCom/CanCom.h" bodystart="21" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CanCom::serialized_buffer_</definition>
+        <argsstring>[send_reading_size *ADC_BUFFER_SIZE]</argsstring>
+        <name>serialized_buffer_</name>
+        <qualifiedname>CanCom::serialized_buffer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="29" column="18" bodyfile="lib/CanCom/CanCom.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" compoundref="_can_com_8cpp" startline="102" endline="114">GetFrameSize</referencedby>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">GetReading</referencedby>
+        <referencedby refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" compoundref="_can_com_8cpp" startline="74" endline="93">SendBuffer</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">SendReadings</referencedby>
+        <referencedby refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" compoundref="_can_com_8cpp" startline="155" endline="160">ShiftBuffer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_no_mutex_c_a_n" kindref="compound">NoMutexCAN</ref> *</type>
+        <definition>NoMutexCAN * CanCom::can_</definition>
+        <argsstring></argsstring>
+        <name>can_</name>
+        <qualifiedname>CanCom::can_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="37" column="21" bodyfile="lib/CanCom/CanCom.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" compoundref="_can_com_8h" startline="17" endline="19">CanCom</referencedby>
+        <referencedby refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" compoundref="_can_com_8cpp" startline="74" endline="93">SendBuffer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CanCom::CanCom</definition>
+        <argsstring>(NoMutexCAN *can)</argsstring>
+        <name>CanCom</name>
+        <qualifiedname>CanCom::CanCom</qualifiedname>
+        <param>
+          <type><ref refid="class_no_mutex_c_a_n" kindref="compound">NoMutexCAN</ref> *</type>
+          <declname>can</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="17" column="3" bodyfile="lib/CanCom/CanCom.h" bodystart="17" bodyend="19"/>
+        <references refid="main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757" compoundref="main_8cpp" startline="27">can</references>
+        <references refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" compoundref="_can_com_8h" startline="37">can_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_can_com_1a22fb622bb2aa27436415898d40e5987f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanCom::SendBuffer</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>SendBuffer</name>
+        <qualifiedname>CanCom::SendBuffer</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antale bytes at sende fra bufferen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="31" column="15" bodyfile="lib/CanCom/CanCom.cpp" bodystart="74" bodyend="93"/>
+        <references refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" compoundref="_can_com_8h" startline="37">can_</references>
+        <references refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" compoundref="_can_com_8h" startline="25">CAN_GET_READING</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
+        <references refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" compoundref="_can_com_8h" startline="29">serialized_buffer_</references>
+        <references refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" compoundref="_can_com_8cpp" startline="155" endline="160">ShiftBuffer</references>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanCom::SendReadings</definition>
+        <argsstring>()</argsstring>
+        <name>SendReadings</name>
+        <qualifiedname>CanCom::SendReadings</qualifiedname>
+        <briefdescription>
+<para>Send alle målinger i CircularBuffer&apos;eren (adc_buffer_) over CAN. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Hver måling i adc_buffer_ enkodes med Google Protobuf structen <emphasis>send_reading og serialiseres. De serialiserede bytes lægges ind i serialized_buffer</emphasis>. Hvis der ikke blev målt på mppt og rails i en given måling sættes has_mppt_x_x og has_sub_x_x bools&apos;ne til False, og protobufs sørger for at serialiseringen fylder mindre. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="33" column="15" bodyfile="lib/CanCom/CanCom.cpp" bodystart="28" bodyend="66"/>
+        <references refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" compoundref="_adc_read_8h" startline="41">AdcRead::adc_buffer_</references>
+        <references refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" compoundref="reading_8pb_8h" startline="15">_send_reading::bat_i_1</references>
+        <references refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" compoundref="reading_8pb_8h" startline="14">_send_reading::bat_v_1</references>
+        <references refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" compoundref="reading_8pb_8h" startline="18">_send_reading::has_mppt_i_1</references>
+        <references refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" compoundref="reading_8pb_8h" startline="16">_send_reading::has_mppt_v_1</references>
+        <references refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" compoundref="reading_8pb_8h" startline="22">_send_reading::has_sub_i_1</references>
+        <references refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" compoundref="reading_8pb_8h" startline="20">_send_reading::has_sub_v_1</references>
+        <references refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" compoundref="reading_8pb_8h" startline="19">_send_reading::mppt_i_1</references>
+        <references refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" compoundref="reading_8pb_8h" startline="17">_send_reading::mppt_v_1</references>
+        <references refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" compoundref="reading_8pb_8h" startline="73">send_reading_fields</references>
+        <references refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" compoundref="_can_com_8cpp" startline="74" endline="93">SendBuffer</references>
+        <references refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" compoundref="_can_com_8h" startline="29">serialized_buffer_</references>
+        <references refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" compoundref="reading_8pb_8h" startline="23">_send_reading::sub_i_1</references>
+        <references refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" compoundref="reading_8pb_8h" startline="21">_send_reading::sub_v_1</references>
+        <references refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" compoundref="reading_8pb_8h" startline="24">_send_reading::timestamp</references>
+        <referencedby refid="main_8cpp_1abedbe52be05e887351f9d26921ff77cf" compoundref="main_8cpp" startline="53" endline="63">CanHandler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_can_com_1ab963975230cc827959cc329b51ce2e24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref></type>
+        <definition>AdcRead::adc_reading CanCom::GetReading</definition>
+        <argsstring>()</argsstring>
+        <name>GetReading</name>
+        <qualifiedname>CanCom::GetReading</qualifiedname>
+        <briefdescription>
+<para>Modtag en enkelt ADC måling fra serialized_buffer_. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref> decoded adc reading</para>
+</simplesect>
+<simplesect kind="note"><para>Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="35" column="31" bodyfile="lib/CanCom/CanCom.cpp" bodystart="123" bodyend="148"/>
+        <references refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" compoundref="reading_8pb_8h" startline="15">_send_reading::bat_i_1</references>
+        <references refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" compoundref="reading_8pb_8h" startline="14">_send_reading::bat_v_1</references>
+        <references refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" compoundref="_can_com_8cpp" startline="102" endline="114">GetFrameSize</references>
+        <references refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" compoundref="reading_8pb_8h" startline="16">_send_reading::has_mppt_v_1</references>
+        <references refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" compoundref="reading_8pb_8h" startline="19">_send_reading::mppt_i_1</references>
+        <references refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" compoundref="reading_8pb_8h" startline="17">_send_reading::mppt_v_1</references>
+        <references refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" compoundref="reading_8pb_8h" startline="73">send_reading_fields</references>
+        <references refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" compoundref="_can_com_8h" startline="29">serialized_buffer_</references>
+        <references refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" compoundref="_can_com_8cpp" startline="155" endline="160">ShiftBuffer</references>
+        <references refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" compoundref="reading_8pb_8h" startline="23">_send_reading::sub_i_1</references>
+        <references refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" compoundref="reading_8pb_8h" startline="21">_send_reading::sub_v_1</references>
+        <references refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" compoundref="reading_8pb_8h" startline="24">_send_reading::timestamp</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t CanCom::GetFrameSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetFrameSize</name>
+        <qualifiedname>CanCom::GetFrameSize</qualifiedname>
+        <briefdescription>
+<para>Find størrelsen af en modtaget Protobuf pakke inden decode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>size_t størrelsen af pakken i bytes</para>
+</simplesect>
+<simplesect kind="note"><para>Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="40" column="17" bodyfile="lib/CanCom/CanCom.cpp" bodystart="102" bodyend="114"/>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473" compoundref="_log_8h" startline="9">LOG_ERROR</references>
+        <references refid="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" compoundref="reading_8pb_8h" startline="77">send_reading_size</references>
+        <references refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" compoundref="_can_com_8h" startline="29">serialized_buffer_</references>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">GetReading</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CanCom::ShiftBuffer</definition>
+        <argsstring>(size_t shift_bytes)</argsstring>
+        <name>ShiftBuffer</name>
+        <qualifiedname>CanCom::ShiftBuffer</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>shift_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Rykker alle bytes i serialized_buffer_ med et antal pladser. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shift_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>antal pladser at rykke pladser i bufferen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/CanCom/CanCom.h" line="41" column="15" bodyfile="lib/CanCom/CanCom.cpp" bodystart="155" bodyend="160"/>
+        <references refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" compoundref="_can_com_8h" startline="29">serialized_buffer_</references>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">GetReading</referencedby>
+        <referencedby refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" compoundref="_can_com_8cpp" startline="74" endline="93">SendBuffer</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>CAN</label>
+      </node>
+      <node id="1">
+        <label>CanCom</label>
+        <link refid="class_can_com"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>can_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NoMutexCAN</label>
+        <link refid="class_no_mutex_c_a_n"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/CanCom/CanCom.h" line="14" column="1" bodyfile="lib/CanCom/CanCom.h" bodystart="14" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" prot="public" virt="non-virtual"><scope>CanCom</scope><name>can_</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CAN_GET_CONFIG</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CAN_GET_READING</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CAN_LOG</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CAN_SET_CONFIG</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CAN_TIME_SYNC</name></member>
+      <member refid="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CanCom</name></member>
+      <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7" prot="public" virt="non-virtual"><scope>CanCom</scope><name>CanMessageId</name></member>
+      <member refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" prot="private" virt="non-virtual"><scope>CanCom</scope><name>GetFrameSize</name></member>
+      <member refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" prot="public" virt="non-virtual"><scope>CanCom</scope><name>GetReading</name></member>
+      <member refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" prot="public" virt="non-virtual"><scope>CanCom</scope><name>SendBuffer</name></member>
+      <member refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" prot="public" virt="non-virtual"><scope>CanCom</scope><name>SendReadings</name></member>
+      <member refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" prot="public" virt="non-virtual"><scope>CanCom</scope><name>serialized_buffer_</name></member>
+      <member refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" prot="private" virt="non-virtual"><scope>CanCom</scope><name>ShiftBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

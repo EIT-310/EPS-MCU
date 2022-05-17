@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct__time__sync" xml:lang="en-US">
+<title>_time_sync Struct Reference</title>
+<indexterm><primary>_time_sync</primary></indexterm>
+<para>
+<computeroutput>#include &lt;reading.pb.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6">current_time</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6"/><section>
+    <title>current_time</title>
+<indexterm><primary>current_time</primary><secondary>_time_sync</secondary></indexterm>
+<indexterm><primary>_time_sync</primary><secondary>current_time</secondary></indexterm>
+<para><computeroutput>uint64_t _time_sync::current_time</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/Protobuf/<link linkend="_reading_8pb_8h">reading.pb.h</link></section>
+</section>

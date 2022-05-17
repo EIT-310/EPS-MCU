@@ -1,0 +1,7 @@
+<map id="AdcRead::ReadU16" name="AdcRead::ReadU16">
+<area shape="rect" id="node1" title="Måler et givent antal gange på et givent device fra adc_thread_args og skriver middelværdi til adc_th..." alt="" coords="599,5,735,32"/>
+<area shape="rect" id="node2" href="$class_adc_read.html#a57f35b9fd598aff98289da19a5edff40" title="Starter et givent antal threads der hver kører ReadU16() med dets givet ADC ben." alt="" coords="404,5,551,32"/>
+<area shape="rect" id="node3" href="$class_adc_read.html#ad802d7cd5058ceb3a039803f8fb18958" title="Kalder AsyncADC med et antal ADC&#39;er på baggrund af nuværende state. Nye måling bliver lagt i Circular..." alt="" coords="227,5,356,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ac595faede462d70c3fb34417f4e984e7" title="Sætter ADC måling igang. Kører hvert 5. sekundt med mindre en vigtigere thread pre&#45;empt&#39;er den...." alt="" coords="104,5,179,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,5,56,32"/>
+</map>

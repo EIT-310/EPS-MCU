@@ -1,0 +1,45 @@
+\hypertarget{_log_8h_source}{}\doxysection{Log.\+h}
+\label{_log_8h_source}\index{lib/Log/Log.h@{lib/Log/Log.h}}
+\mbox{\hyperlink{_log_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 5/2/22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_LIB\_LOG\_LOG\_H\_}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define EPS\_MCU\_LIB\_LOG\_LOG\_H\_}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}mbed.h"{}}}
+\DoxyCodeLine{9 \textcolor{keyword}{enum} \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLogLevel}} \{\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473}{LOG\_ERROR}}, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400}{LOG\_WARNING}}, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}}, \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e}{LOG\_DEBUG}}\};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{enum} \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32}{TLogDevice}} \{}
+\DoxyCodeLine{12   \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a}{LOG\_SERIAL}},}
+\DoxyCodeLine{13   \mbox{\hyperlink{_log_8h_a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f}{LOG\_CAN}}}
+\DoxyCodeLine{14 \};}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_log}{Log}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17  \textcolor{keyword}{public}:}
+\DoxyCodeLine{18   \mbox{\hyperlink{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log}}();}
+\DoxyCodeLine{19   \textcolor{keyword}{static} UnbufferedSerial \mbox{\hyperlink{class_log_aee5656e28873ac8316e29f13e0e50df1}{serial\_}};}
+\DoxyCodeLine{20   \textcolor{keyword}{virtual} \mbox{\hyperlink{class_log_a0fbfda88fbee5027c89f6eb121059360}{\string~Log}}();}
+\DoxyCodeLine{21   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_log_ab2abd944d9781f24461a70d010c3c36e}{Get}}(\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLogLevel}} level, std::string str);}
+\DoxyCodeLine{22  \textcolor{keyword}{public}:}
+\DoxyCodeLine{23   \textcolor{keyword}{static} \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLogLevel}} \mbox{\hyperlink{class_log_aeb290934f14369d2969cd4f50f631d28}{reporting\_level\_}};}
+\DoxyCodeLine{24  \textcolor{keyword}{protected}:}
+\DoxyCodeLine{25   std::string \mbox{\hyperlink{class_log_ab0f16e76380bca22525b102ba0f0eac7}{msg\_}};}
+\DoxyCodeLine{26  \textcolor{keyword}{private}:}
+\DoxyCodeLine{27   \mbox{\hyperlink{class_log_a60fc11c5c263c4bfad3f9561a4881a13}{Log}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_log}{Log}}\&);}
+\DoxyCodeLine{28   \mbox{\hyperlink{class_log}{Log}}\& \mbox{\hyperlink{class_log_a91f9df208ee0515b6403210497d37ee4}{operator =}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_log}{Log}}\&);}
+\DoxyCodeLine{29  \textcolor{keyword}{private}:}
+\DoxyCodeLine{30   \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLogLevel}} \mbox{\hyperlink{class_log_a795b5a43b1b115d41d88149ab86c0967}{message\_level\_}};}
+\DoxyCodeLine{31   \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_log_a8079bae56521b384ea87284206223f42}{EnumToString}}(\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLogLevel}} level);}
+\DoxyCodeLine{32   std::string \mbox{\hyperlink{class_log_af14e8b4c37abf6be087c8be1fe395216}{TimeToString}}(time\_t time);}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define LOG(level, string) \(\backslash\)}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{if ((level) > Log::reporting\_level\_) ; \(\backslash\)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{else Log().Get(level, string)}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_LIB\_LOG\_LOG\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_no_mutex_c_a_n" xml:lang="en-US">
+<title>NoMutexCAN Class Reference</title>
+<indexterm><primary>NoMutexCAN</primary></indexterm>
+<para>
+
+<para>class der overskriver mutex <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock()</link> og <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock()</link> i Mbed. Disse er overflødige ved nucleo STM32 boards. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;NoMutexCAN.h&gt;</computeroutput>
+</para>
+Inheritance diagram for NoMutexCAN:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_no_mutex_c_a_n__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for NoMutexCAN:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_no_mutex_c_a_n__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN</link> (PinName rd, PinName td)</para>
+</listitem>
+            <listitem><para><link linkend="_class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN</link> (PinName rd, PinName td, int hz)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4">~NoMutexCAN</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock</link> () override</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock</link> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>class der overskriver mutex <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock()</link> og <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock()</link> i Mbed. Disse er overflødige ved nucleo STM32 boards. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42"/><section>
+    <title>NoMutexCAN()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>NoMutexCAN</primary><secondary>NoMutexCAN</secondary></indexterm>
+<indexterm><primary>NoMutexCAN</primary><secondary>NoMutexCAN</secondary></indexterm>
+<para><computeroutput>NoMutexCAN::NoMutexCAN (PinName rd, PinName td)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214"/><section>
+    <title>NoMutexCAN()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>NoMutexCAN</primary><secondary>NoMutexCAN</secondary></indexterm>
+<indexterm><primary>NoMutexCAN</primary><secondary>NoMutexCAN</secondary></indexterm>
+<para><computeroutput>NoMutexCAN::NoMutexCAN (PinName rd, PinName td, int hz)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4"/><section>
+    <title>~NoMutexCAN()</title>
+<indexterm><primary>~NoMutexCAN</primary><secondary>NoMutexCAN</secondary></indexterm>
+<indexterm><primary>NoMutexCAN</primary><secondary>~NoMutexCAN</secondary></indexterm>
+<para><computeroutput>virtual NoMutexCAN::~NoMutexCAN ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7"/><section>
+    <title>lock()</title>
+<indexterm><primary>lock</primary><secondary>NoMutexCAN</secondary></indexterm>
+<indexterm><primary>NoMutexCAN</primary><secondary>lock</secondary></indexterm>
+<para><computeroutput>void NoMutexCAN::lock ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150"/><section>
+    <title>unlock()</title>
+<indexterm><primary>unlock</primary><secondary>NoMutexCAN</secondary></indexterm>
+<indexterm><primary>NoMutexCAN</primary><secondary>unlock</secondary></indexterm>
+<para><computeroutput>void NoMutexCAN::unlock ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+lib/NoMutexCAN/<link linkend="__no_mutex_c_a_n_8h">NoMutexCAN.h</link></section>
+</section>

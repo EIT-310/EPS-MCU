@@ -1,0 +1,193 @@
+.TH "Fsm" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Fsm
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Fsm\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBState\fP { \fBEMERGENCY\fP, \fBLOW\fP, \fBMID_LOW\fP, \fBMID\fP, \fBMID_HIGH\fP, \fBHIGH\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFsm\fP (\fBState\fP start_state)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBDetermineState\fP (\fBAdcRead::adc_reading\fP reading)"
+.br
+.RI "Bedøm en ny target state på baggrund af ADC måling og kald \fBStateChanger()\fP "
+.ti -1c
+.RI "static void \fBUpState\fP ()"
+.br
+.RI "Gå en state up\&. Hvis nuværende state er den højeste, gør intet\&. "
+.ti -1c
+.RI "static void \fBDownState\fP ()"
+.br
+.RI "Gå en state ned\&. Hvis nuværende state er den laveste, gør intet\&. "
+.ti -1c
+.RI "static \fBState\fP \fBGetCurrentState\fP ()"
+.br
+.RI "Getter for nuværende state\&. "
+.ti -1c
+.RI "static std::string \fBToString\fP ()"
+.br
+.RI "Giver navnet på nuverende state\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBGetString\fP (\fBState\fP name)"
+.br
+.RI "Omdanner State enum til string\&. "
+.ti -1c
+.RI "static void \fBStateChanger\fP (\fBState\fP target_state)"
+.br
+.RI "Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state\&. "
+.ti -1c
+.RI "static float \fBGetPower\fP (\fBAdcRead::adc_reading\fP reading)"
+.br
+.RI "Beregn effekten for alle MPPT'er i en ADC måling\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBState\fP \fBcurrent_state_\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBFsm::State\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEMERGENCY \fP\fP
+.TP
+\fB\fILOW \fP\fP
+.TP
+\fB\fIMID_LOW \fP\fP
+.TP
+\fB\fIMID \fP\fP
+.TP
+\fB\fIMID_HIGH \fP\fP
+.TP
+\fB\fIHIGH \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Fsm::Fsm (\fBState\fP start_state)\fC [inline]\fP, \fC [explicit]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Fsm::DetermineState (\fBAdcRead::adc_reading\fP reading)\fC [static]\fP"
+
+.PP
+Bedøm en ny target state på baggrund af ADC måling og kald \fBStateChanger()\fP Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer og en target state bliver besluttet ud fra dette\&. Herefter betragtes den samlede effekt fra MPPT'erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes target state med 1\&.
+.PP
+\fBNote\fP
+.RS 4
+Aloritmen er simpel og mest til for at have et eksempel på en algoritme\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreading\fP ADC måling at finde ny state på baggrund af\&. 
+.RE
+.PP
+
+.SS "void Fsm::DownState ()\fC [static]\fP"
+
+.PP
+Gå en state ned\&. Hvis nuværende state er den laveste, gør intet\&. 
+.SS "\fBFsm::State\fP Fsm::GetCurrentState ()\fC [static]\fP"
+
+.PP
+Getter for nuværende state\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBFsm::State\fP 
+.RE
+.PP
+
+.SS "float Fsm::GetPower (\fBAdcRead::adc_reading\fP reading)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Beregn effekten for alle MPPT'er i en ADC måling\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreading\fP ADC måling for hvilken vi vil finde MMPT effekten 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+float Effekt for samlet MPPT'er i watt 
+.RE
+.PP
+
+.SS "std::string Fsm::GetString (\fBFsm::State\fP name)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Omdanner State enum til string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP state der ønskes navn på 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string String med navnet på staten 
+.RE
+.PP
+
+.SS "void Fsm::StateChanger (\fBState\fP target_state)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget_state\fP 
+.RE
+.PP
+
+.SS "std::string Fsm::ToString ()\fC [static]\fP"
+
+.PP
+Giver navnet på nuverende state\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "void Fsm::UpState ()\fC [static]\fP"
+
+.PP
+Gå en state up\&. Hvis nuværende state er den højeste, gør intet\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBFsm::State\fP Fsm::current_state_\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

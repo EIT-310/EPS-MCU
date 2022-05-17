@@ -1,0 +1,153 @@
+.TH "CanCom" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CanCom
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CanCom\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCanMessageId\fP { \fBCAN_TIME_SYNC\fP = 1, \fBCAN_SET_CONFIG\fP, \fBCAN_GET_CONFIG\fP, \fBCAN_GET_READING\fP, \fBCAN_LOG\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCanCom\fP (\fBNoMutexCAN\fP *\fBcan\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBSendBuffer\fP (size_t size)"
+.br
+.RI "Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes\&. "
+.ti -1c
+.RI "static void \fBSendReadings\fP ()"
+.br
+.RI "Send alle målinger i CircularBuffer'eren (adc_buffer_) over CAN\&. "
+.ti -1c
+.RI "static \fBAdcRead::adc_reading\fP \fBGetReading\fP ()"
+.br
+.RI "Modtag en enkelt ADC måling fra serialized_buffer_\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static uint8_t \fBserialized_buffer_\fP [\fBsend_reading_size\fP *\fBADC_BUFFER_SIZE\fP]"
+.br
+.ti -1c
+.RI "static \fBNoMutexCAN\fP * \fBcan_\fP"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBGetFrameSize\fP ()"
+.br
+.RI "Find størrelsen af en modtaget Protobuf pakke inden decode\&. "
+.ti -1c
+.RI "static void \fBShiftBuffer\fP (size_t shift_bytes)"
+.br
+.RI "Rykker alle bytes i serialized_buffer_ med et antal pladser\&. "
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBCanCom::CanMessageId\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICAN_TIME_SYNC \fP\fP
+.TP
+\fB\fICAN_SET_CONFIG \fP\fP
+.TP
+\fB\fICAN_GET_CONFIG \fP\fP
+.TP
+\fB\fICAN_GET_READING \fP\fP
+.TP
+\fB\fICAN_LOG \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CanCom::CanCom (\fBNoMutexCAN\fP * can)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "size_t CanCom::GetFrameSize ()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Find størrelsen af en modtaget Protobuf pakke inden decode\&. 
+.PP
+\fBReturns\fP
+.RS 4
+size_t størrelsen af pakken i bytes
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame 
+.RE
+.PP
+
+.SS "\fBAdcRead::adc_reading\fP CanCom::GetReading ()\fC [static]\fP"
+
+.PP
+Modtag en enkelt ADC måling fra serialized_buffer_\&. 
+.PP
+\fBReturns\fP
+.RS 4
+\fBAdcRead::adc_reading\fP decoded adc reading
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN 
+.RE
+.PP
+
+.SS "void CanCom::SendBuffer (size_t size)\fC [static]\fP"
+
+.PP
+Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Antale bytes at sende fra bufferen 
+.RE
+.PP
+
+.SS "void CanCom::SendReadings ()\fC [static]\fP"
+
+.PP
+Send alle målinger i CircularBuffer'eren (adc_buffer_) over CAN\&. Hver måling i adc_buffer_ enkodes med Google Protobuf structen \fIsend_reading og serialiseres\&. De serialiserede bytes lægges ind i serialized_buffer\fP\&. Hvis der ikke blev målt på mppt og rails i en given måling sættes has_mppt_x_x og has_sub_x_x bools'ne til False, og protobufs sørger for at serialiseringen fylder mindre\&. 
+.SS "void CanCom::ShiftBuffer (size_t shift_bytes)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Rykker alle bytes i serialized_buffer_ med et antal pladser\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshift_bytes\fP antal pladser at rykke pladser i bufferen 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBNoMutexCAN\fP * CanCom::can_\fC [static]\fP"
+
+.SS "uint8_t CanCom::serialized_buffer_\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

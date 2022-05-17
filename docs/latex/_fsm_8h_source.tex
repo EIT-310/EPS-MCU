@@ -1,0 +1,56 @@
+\hypertarget{_fsm_8h_source}{}\doxysection{Fsm.\+h}
+\label{_fsm_8h_source}\index{lib/FSM/Fsm.h@{lib/FSM/Fsm.h}}
+\mbox{\hyperlink{_fsm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 04/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_FSM\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define EPS\_MCU\_FSM\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_project_config_8h}{ProjectConfig.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_adc_read_8h}{AdcRead.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{comment}{//\#include "{}PowerManage.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_fsm}{Fsm}} \{}
+\DoxyCodeLine{14  \textcolor{keyword}{public}:}
+\DoxyCodeLine{15   \textcolor{keyword}{enum} \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db}{EMERGENCY}},}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb}{LOW}},}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9}{MID\_LOW}},}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885}{MID}},}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178}{MID\_HIGH}},}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717}{HIGH}}}
+\DoxyCodeLine{22   \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24   \textcolor{keyword}{explicit} \mbox{\hyperlink{class_fsm_a0707d788017e5a74113c4285c9c748b9}{Fsm}}(\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} start\_state)\{}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}{current\_state\_}} = start\_state;}
+\DoxyCodeLine{26   \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fsm_a68a3b3e4232132f9e671eafb4a663af4}{DetermineState}}(\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{AdcRead::adc\_reading}} reading);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4}{UpState}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fsm_adf20f20a6b2b7472bd718ac0eabbe220}{DownState}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35   \textcolor{keyword}{static} \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \mbox{\hyperlink{class_fsm_ae746f70aa1624110f8e1967d8bec6dcf}{GetCurrentState}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_fsm_adc5296fe861e5e938365b7afd0834950}{ToString}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39  \textcolor{keyword}{private}:}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41   \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e}{GetString}}(\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} name);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \textcolor{keyword}{static} \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \mbox{\hyperlink{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}{current\_state\_}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}{StateChanger}}(\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} target\_state);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47   \textcolor{keyword}{static} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1}{GetPower}}(\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{AdcRead::adc\_reading}} reading);}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_FSM\_H}}
+
+\end{DoxyCode}

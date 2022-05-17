@@ -1,0 +1,8 @@
+<map id="OceIsr::Handle" name="OceIsr::Handle">
+<area shape="rect" id="node1" title="ISR context der deactiverer modulet der blev målt OCE på. Sætter EventHandler() i kø til de ting der ..." alt="" coords="5,56,113,83"/>
+<area shape="rect" id="node2" href="$class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4" title="ISR deferred handler der logger OCE&#39;et og gemmer hvilket ben der blev målt oce på." alt="" coords="179,31,323,57"/>
+<area shape="rect" id="node6" href="$class_power_manage.html#a588ec30ab5aef350697f13706bb24bd1" title="Høj prioritetet deaktivering af en power rail ved OCE." alt="" coords="161,81,341,108"/>
+<area shape="rect" id="node3" href="$class_power_manage.html#a35279ac0f18272c3c00bddfd1850f3d6" title="Opdaterer et modul i module_override_ listen. Og Kalder WriteSubState()." alt="" coords="389,5,568,32"/>
+<area shape="rect" id="node5" href="$class_power_manage.html#a0db524d4f8f5ac9a1b22917c81fd2015" title="Omdanner modul til string med navnet for modulet." alt="" coords="399,56,559,83"/>
+<area shape="rect" id="node4" href="$class_power_manage.html#a76f09867e77b6f1184ca446fffda9781" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="616,5,813,32"/>
+</map>

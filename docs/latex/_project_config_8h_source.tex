@@ -1,0 +1,58 @@
+\hypertarget{_project_config_8h_source}{}\doxysection{Project\+Config.\+h}
+\label{_project_config_8h_source}\index{lib/Config/ProjectConfig.h@{lib/Config/ProjectConfig.h}}
+\mbox{\hyperlink{_project_config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 01/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_LIB\_PROJECT\_CONFIG\_H\_}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define EPS\_MCU\_LIB\_PROJECT\_CONFIG\_H\_}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifdef TARGET\_NUCLEO\_L432KC}}
+\DoxyCodeLine{10 \textcolor{comment}{// PINS}}
+\DoxyCodeLine{11 \textcolor{comment}{//ADC'er}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define BAT\_V\_1\_PIN         A0}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define BAT\_I\_1\_PIN         A1}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define MPPT\_V\_1\_PIN        A2}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define MPPT\_I\_1\_PIN        A3}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define SUB\_V\_1\_PIN         A4}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SUB\_I\_1\_PIN         A5}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define ADC\_NUM\_CHANNELS    6}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{//DIVERSE}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define CAN\_RD\_PIN          D10}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define CAN\_TD\_PIN          D2}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define RAIL\_1\_PIN          D4}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define OCE\_1\_PIN           D11}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define SUBMODULES\_NUM      1}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{comment}{// STATIC CONFIG}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define ADC\_MEASURE\_LOOPS   5}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define ADC\_BUFFER\_SIZE     100}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define VBAT\_MID\_HIGH       4.0f }\textcolor{comment}{//TODO: Ret så det passer med hvad Vref på ADC er}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define VBAT\_MID            3.7f }\textcolor{comment}{//TODO: Ret så det passer med hvad Vref på ADC er}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define VBAT\_MID\_LOW        3.4f }\textcolor{comment}{//TODO: Ret så det passer med hvad Vref på ADC er}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define VBAT\_LOW            3.2f }\textcolor{comment}{//TODO: Ret så det passer med hvad Vref på ADC er}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define VBAT\_EMERGENCY      3.0f }\textcolor{comment}{//TODO: Ret så det passer med hvad Vref på ADC er}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define MPPT\_CURR\_AMP       200.0f}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define MPPT\_SHUNT\_RES      0.02f}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define CAN\_BITRATE         5e5  }\textcolor{comment}{// 1 MHz / 500kHz}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{// MUTABLE CONFIG}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define WATCHDOG\_TIMEOUT    10000  }\textcolor{comment}{//TODO: Evt ret så det giver mening}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define FSM\_START\_STATE     Fsm::MID}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define CRIT\_MPPT\_POW\_SUM   1.0f   }\textcolor{comment}{//TODO: ret så det passer}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{// DEV CONFIG}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define LOG\_LEVEL           LOG\_DEBUG}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define LOG\_COM\_TYPE        SERIAL}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_LIB\_PROJECT\_CONFIG\_H\_}}
+
+\end{DoxyCode}

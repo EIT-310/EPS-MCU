@@ -1,0 +1,4 @@
+<map id="PowerManage::SetOverride" name="PowerManage::SetOverride">
+<area shape="rect" id="node1" title="Opdaterer et modul i module_override_ listen. Og Kalder WriteSubState()." alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$class_power_manage.html#a76f09867e77b6f1184ca446fffda9781" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="232,5,429,32"/>
+</map>

@@ -1,0 +1,190 @@
+\hypertarget{class_log}{}\doxysection{Log Class Reference}
+\label{class_log}\index{Log@{Log}}
+
+
+{\ttfamily \#include $<$Log.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log}} ()
+\item 
+virtual \mbox{\hyperlink{class_log_a0fbfda88fbee5027c89f6eb121059360}{$\sim$\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_log}{Log}}\+:\+: \mbox{\hyperlink{class_log}{Log}} object. Skriver hele beskeden som blev samlet i \mbox{\hyperlink{class_log_ab2abd944d9781f24461a70d010c3c36e}{Log\+::\+Get()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_ab2abd944d9781f24461a70d010c3c36e}{Get}} (\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} level, std\+::string str)
+\begin{DoxyCompactList}\small\item\em Opretter log beskeden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Unbuffered\+Serial \mbox{\hyperlink{class_log_aee5656e28873ac8316e29f13e0e50df1}{serial\+\_\+}}
+\item 
+static \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} \mbox{\hyperlink{class_log_aeb290934f14369d2969cd4f50f631d28}{reporting\+\_\+level\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_log_ab0f16e76380bca22525b102ba0f0eac7}{msg\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_log_a60fc11c5c263c4bfad3f9561a4881a13}{Log}} (const \mbox{\hyperlink{class_log}{Log}} \&)
+\item 
+\mbox{\hyperlink{class_log}{Log}} \& \mbox{\hyperlink{class_log_a91f9df208ee0515b6403210497d37ee4}{operator=}} (const \mbox{\hyperlink{class_log}{Log}} \&)
+\item 
+std\+::string \mbox{\hyperlink{class_log_af14e8b4c37abf6be087c8be1fe395216}{Time\+To\+String}} (time\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Omdanner UNIX sekund timestamp til formateret string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_log_a8079bae56521b384ea87284206223f42}{Enum\+To\+String}} (\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} level)
+\begin{DoxyCompactList}\small\item\em Omdanner log neveau til string med navnet for niveauet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} \mbox{\hyperlink{class_log_a795b5a43b1b115d41d88149ab86c0967}{message\+\_\+level\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}\label{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}} 
+\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Log\+::\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_log_a0fbfda88fbee5027c89f6eb121059360}\label{class_log_a0fbfda88fbee5027c89f6eb121059360}} 
+\index{Log@{Log}!````~Log@{$\sim$Log}}
+\index{````~Log@{$\sim$Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{$\sim$Log()}{~Log()}}
+{\footnotesize\ttfamily Log\+::$\sim$\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_log}{Log}}\+:\+: \mbox{\hyperlink{class_log}{Log}} object. Skriver hele beskeden som blev samlet i \mbox{\hyperlink{class_log_ab2abd944d9781f24461a70d010c3c36e}{Log\+::\+Get()}} 
+
+\mbox{\Hypertarget{class_log_a60fc11c5c263c4bfad3f9561a4881a13}\label{class_log_a60fc11c5c263c4bfad3f9561a4881a13}} 
+\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Log\+::\+Log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_log}{Log}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_log_a8079bae56521b384ea87284206223f42}\label{class_log_a8079bae56521b384ea87284206223f42}} 
+\index{Log@{Log}!EnumToString@{EnumToString}}
+\index{EnumToString@{EnumToString}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{EnumToString()}{EnumToString()}}
+{\footnotesize\ttfamily std\+::string Log\+::\+Enum\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Omdanner log neveau til string med navnet for niveauet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & log niveuet der ønskes navn for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string String med navnet 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_log_a8079bae56521b384ea87284206223f42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_log_ab2abd944d9781f24461a70d010c3c36e}\label{class_log_ab2abd944d9781f24461a70d010c3c36e}} 
+\index{Log@{Log}!Get@{Get}}
+\index{Get@{Get}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily void Log\+::\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}}}]{level,  }\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+
+
+Opretter log beskeden. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & neveau for informationen \\
+\hline
+{\em str} & string med det der skal logges \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_log_ab2abd944d9781f24461a70d010c3c36e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_log_a91f9df208ee0515b6403210497d37ee4}\label{class_log_a91f9df208ee0515b6403210497d37ee4}} 
+\index{Log@{Log}!operator=@{operator=}}
+\index{operator=@{operator=}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_log}{Log}} \& Log\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_log}{Log}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_log_af14e8b4c37abf6be087c8be1fe395216}\label{class_log_af14e8b4c37abf6be087c8be1fe395216}} 
+\index{Log@{Log}!TimeToString@{TimeToString}}
+\index{TimeToString@{TimeToString}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{TimeToString()}{TimeToString()}}
+{\footnotesize\ttfamily std\+::string Log\+::\+Time\+To\+String (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Omdanner UNIX sekund timestamp til formateret string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & UNIX timestamp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string formateret tid 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{class_log_af14e8b4c37abf6be087c8be1fe395216_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_log_a795b5a43b1b115d41d88149ab86c0967}\label{class_log_a795b5a43b1b115d41d88149ab86c0967}} 
+\index{Log@{Log}!message\_level\_@{message\_level\_}}
+\index{message\_level\_@{message\_level\_}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{message\_level\_}{message\_level\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} Log\+::message\+\_\+level\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_log_ab0f16e76380bca22525b102ba0f0eac7}\label{class_log_ab0f16e76380bca22525b102ba0f0eac7}} 
+\index{Log@{Log}!msg\_@{msg\_}}
+\index{msg\_@{msg\_}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{msg\_}{msg\_}}
+{\footnotesize\ttfamily std\+::string Log\+::msg\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_log_aeb290934f14369d2969cd4f50f631d28}\label{class_log_aeb290934f14369d2969cd4f50f631d28}} 
+\index{Log@{Log}!reporting\_level\_@{reporting\_level\_}}
+\index{reporting\_level\_@{reporting\_level\_}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{reporting\_level\_}{reporting\_level\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_log_8h_a2341a2a7c04d08eb40d2cb0b18b0b778}{TLog\+Level}} Log\+::reporting\+\_\+level\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_log_aee5656e28873ac8316e29f13e0e50df1}\label{class_log_aee5656e28873ac8316e29f13e0e50df1}} 
+\index{Log@{Log}!serial\_@{serial\_}}
+\index{serial\_@{serial\_}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{serial\_}{serial\_}}
+{\footnotesize\ttfamily Unbuffered\+Serial Log\+::serial\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Log/\mbox{\hyperlink{_log_8h}{Log.\+h}}\item 
+lib/\+Log/\mbox{\hyperlink{_log_8cpp}{Log.\+cpp}}\end{DoxyCompactItemize}

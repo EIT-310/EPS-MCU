@@ -1,0 +1,91 @@
+\hypertarget{class_no_mutex_c_a_n}{}\doxysection{No\+Mutex\+CAN Class Reference}
+\label{class_no_mutex_c_a_n}\index{NoMutexCAN@{NoMutexCAN}}
+
+
+class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed. Disse er overflødige ved nucleo STM32 boards.  
+
+
+
+
+{\ttfamily \#include $<$No\+Mutex\+CAN.\+h$>$}
+
+
+
+Inheritance diagram for No\+Mutex\+CAN\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{class_no_mutex_c_a_n__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for No\+Mutex\+CAN\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{class_no_mutex_c_a_n__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_no_mutex_c_a_n_acd0e6a2877c46d2c31fd08d8ae98fd42}{No\+Mutex\+CAN}} (Pin\+Name rd, Pin\+Name td)
+\item 
+\mbox{\hyperlink{class_no_mutex_c_a_n_a5e4c8dd42ede5c3c7aed5149eb1af214}{No\+Mutex\+CAN}} (Pin\+Name rd, Pin\+Name td, int hz)
+\item 
+virtual \mbox{\hyperlink{class_no_mutex_c_a_n_acfd94c2e4acc7c5963254f9280ec9aa4}{$\sim$\+No\+Mutex\+CAN}} ()
+\item 
+void \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock}} () override
+\item 
+void \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed. Disse er overflødige ved nucleo STM32 boards. 
+
+\begin{DoxyNote}{Note}
+Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_no_mutex_c_a_n_acd0e6a2877c46d2c31fd08d8ae98fd42}\label{class_no_mutex_c_a_n_acd0e6a2877c46d2c31fd08d8ae98fd42}} 
+\index{NoMutexCAN@{NoMutexCAN}!NoMutexCAN@{NoMutexCAN}}
+\index{NoMutexCAN@{NoMutexCAN}!NoMutexCAN@{NoMutexCAN}}
+\doxysubsubsection{\texorpdfstring{NoMutexCAN()}{NoMutexCAN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily No\+Mutex\+CAN\+::\+No\+Mutex\+CAN (\begin{DoxyParamCaption}\item[{Pin\+Name}]{rd,  }\item[{Pin\+Name}]{td }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_no_mutex_c_a_n_a5e4c8dd42ede5c3c7aed5149eb1af214}\label{class_no_mutex_c_a_n_a5e4c8dd42ede5c3c7aed5149eb1af214}} 
+\index{NoMutexCAN@{NoMutexCAN}!NoMutexCAN@{NoMutexCAN}}
+\index{NoMutexCAN@{NoMutexCAN}!NoMutexCAN@{NoMutexCAN}}
+\doxysubsubsection{\texorpdfstring{NoMutexCAN()}{NoMutexCAN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily No\+Mutex\+CAN\+::\+No\+Mutex\+CAN (\begin{DoxyParamCaption}\item[{Pin\+Name}]{rd,  }\item[{Pin\+Name}]{td,  }\item[{int}]{hz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_no_mutex_c_a_n_acfd94c2e4acc7c5963254f9280ec9aa4}\label{class_no_mutex_c_a_n_acfd94c2e4acc7c5963254f9280ec9aa4}} 
+\index{NoMutexCAN@{NoMutexCAN}!````~NoMutexCAN@{$\sim$NoMutexCAN}}
+\index{````~NoMutexCAN@{$\sim$NoMutexCAN}!NoMutexCAN@{NoMutexCAN}}
+\doxysubsubsection{\texorpdfstring{$\sim$NoMutexCAN()}{~NoMutexCAN()}}
+{\footnotesize\ttfamily virtual No\+Mutex\+CAN\+::$\sim$\+No\+Mutex\+CAN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}\label{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}} 
+\index{NoMutexCAN@{NoMutexCAN}!lock@{lock}}
+\index{lock@{lock}!NoMutexCAN@{NoMutexCAN}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void No\+Mutex\+CAN\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\mbox{\Hypertarget{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}\label{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}} 
+\index{NoMutexCAN@{NoMutexCAN}!unlock@{unlock}}
+\index{unlock@{unlock}!NoMutexCAN@{NoMutexCAN}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void No\+Mutex\+CAN\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+No\+Mutex\+CAN/\mbox{\hyperlink{_no_mutex_c_a_n_8h}{No\+Mutex\+CAN.\+h}}\end{DoxyCompactItemize}

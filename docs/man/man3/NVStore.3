@@ -1,0 +1,57 @@
+.TH "NVStore" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NVStore
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NVStore\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDATA_LOCATION\fP { \fBsm_state\fP, \fBadc_read\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBwrite\fP (\fBDATA_LOCATION\fP key, void *value)"
+.br
+.ti -1c
+.RI "int \fBread\fP (\fBDATA_LOCATION\fP key, void *value)"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBGetKeyStr\fP (\fBDATA_LOCATION\fP name)"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBNVStore::DATA_LOCATION\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIsm_state \fP\fP
+.TP
+\fB\fIadc_read \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string NVStore::GetKeyStr (\fBNVStore::DATA_LOCATION\fP name)\fC [static]\fP, \fC [private]\fP"
+
+.SS "int NVStore::read (\fBNVStore::DATA_LOCATION\fP key, void * value)"
+
+.SS "int NVStore::write (\fBNVStore::DATA_LOCATION\fP key, void * value)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

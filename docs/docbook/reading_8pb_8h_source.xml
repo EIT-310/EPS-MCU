@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reading_8pb_8h_source" xml:lang="en-US">
+<title>reading.pb.h</title>
+<indexterm><primary>lib/Protobuf/reading.pb.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;Automatically&#32;generated&#32;nanopb&#32;header&#32;*/</emphasis>
+2 <emphasis role="comment">/*&#32;Generated&#32;by&#32;nanopb-0.4.6-dev&#32;*/</emphasis>
+3 
+4 <emphasis role="preprocessor">#ifndef&#32;PB_READING_PB_H_INCLUDED</emphasis>
+5 <emphasis role="preprocessor">#define&#32;PB_READING_PB_H_INCLUDED</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;pb.h&gt;</emphasis>
+7 
+8 <emphasis role="preprocessor">#if&#32;PB_PROTO_HEADER_VERSION&#32;!=&#32;40</emphasis>
+9 <emphasis role="preprocessor">#error&#32;Regenerate&#32;this&#32;file&#32;with&#32;the&#32;current&#32;version&#32;of&#32;nanopb&#32;generator.</emphasis>
+10 <emphasis role="preprocessor">#endif</emphasis>
+11 
+12 <emphasis role="comment">/*&#32;Struct&#32;definitions&#32;*/</emphasis>
+13 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct__send__reading">_send_reading</link>&#32;{&#32;
+14 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5">bat_v_1</link>;&#32;
+15 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a">bat_i_1</link>;&#32;
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct__send__reading_1afa611efb561b6bc4e31d88255370be2d">has_mppt_v_1</link>;
+17 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1a37c526be254faf12e6340fce9916635f">mppt_v_1</link>;&#32;
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct__send__reading_1a081204da55c033ebd383b637107f15a8">has_mppt_i_1</link>;
+19 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580">mppt_i_1</link>;&#32;
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct__send__reading_1ab080dfddff3ab608c0108caa65535c58">has_sub_v_1</link>;
+21 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84">sub_v_1</link>;&#32;
+22 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f">has_sub_i_1</link>;
+23 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7">sub_i_1</link>;&#32;
+24 &#32;&#32;&#32;&#32;uint64_t&#32;<link linkend="_struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100">timestamp</link>;&#32;
+25 }&#32;<link linkend="_reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca">send_reading</link>;
+26 
+27 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct__time__sync">_time_sync</link>&#32;{&#32;
+28 &#32;&#32;&#32;&#32;uint64_t&#32;<link linkend="_struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6">current_time</link>;&#32;
+29 }&#32;<link linkend="_reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2">time_sync</link>;
+30 
+31 
+32 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+33 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+34 <emphasis role="preprocessor">#endif</emphasis>
+35 
+36 <emphasis role="comment">/*&#32;Initializer&#32;values&#32;for&#32;message&#32;structs&#32;*/</emphasis>
+37 <emphasis role="preprocessor">#define&#32;send_reading_init_default&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;0}</emphasis>
+38 <emphasis role="preprocessor">#define&#32;time_sync_init_default&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0}</emphasis>
+39 <emphasis role="preprocessor">#define&#32;send_reading_init_zero&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;false,&#32;0,&#32;0}</emphasis>
+40 <emphasis role="preprocessor">#define&#32;time_sync_init_zero&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0}</emphasis>
+41 
+42 <emphasis role="comment">/*&#32;Field&#32;tags&#32;(for&#32;use&#32;in&#32;manual&#32;encoding/decoding)&#32;*/</emphasis>
+43 <emphasis role="preprocessor">#define&#32;send_reading_bat_v_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+44 <emphasis role="preprocessor">#define&#32;send_reading_bat_i_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+45 <emphasis role="preprocessor">#define&#32;send_reading_mppt_v_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+46 <emphasis role="preprocessor">#define&#32;send_reading_mppt_i_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+47 <emphasis role="preprocessor">#define&#32;send_reading_sub_v_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+48 <emphasis role="preprocessor">#define&#32;send_reading_sub_i_1_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+49 <emphasis role="preprocessor">#define&#32;send_reading_timestamp_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+50 <emphasis role="preprocessor">#define&#32;time_sync_current_time_tag&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+51 
+52 <emphasis role="comment">/*&#32;Struct&#32;field&#32;encoding&#32;specification&#32;for&#32;nanopb&#32;*/</emphasis>
+53 <emphasis role="preprocessor">#define&#32;send_reading_FIELDLIST(X,&#32;a)&#32;\</emphasis>
+54 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT32,&#32;&#32;&#32;bat_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1)&#32;\</emphasis>
+55 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT32,&#32;&#32;&#32;bat_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2)&#32;\</emphasis>
+56 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;mppt_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3)&#32;\</emphasis>
+57 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;mppt_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4)&#32;\</emphasis>
+58 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;sub_v_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5)&#32;\</emphasis>
+59 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;OPTIONAL,&#32;UINT32,&#32;&#32;&#32;sub_i_1,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6)&#32;\</emphasis>
+60 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT64,&#32;&#32;&#32;timestamp,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7)</emphasis>
+61 <emphasis role="preprocessor">#define&#32;send_reading_CALLBACK&#32;NULL</emphasis>
+62 <emphasis role="preprocessor">#define&#32;send_reading_DEFAULT&#32;NULL</emphasis>
+63 
+64 <emphasis role="preprocessor">#define&#32;time_sync_FIELDLIST(X,&#32;a)&#32;\</emphasis>
+65 <emphasis role="preprocessor">X(a,&#32;STATIC,&#32;&#32;&#32;REQUIRED,&#32;UINT64,&#32;&#32;&#32;current_time,&#32;&#32;&#32;&#32;&#32;&#32;1)</emphasis>
+66 <emphasis role="preprocessor">#define&#32;time_sync_CALLBACK&#32;NULL</emphasis>
+67 <emphasis role="preprocessor">#define&#32;time_sync_DEFAULT&#32;NULL</emphasis>
+68 
+69 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;pb_msgdesc_t&#32;<link linkend="_reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9">send_reading_msg</link>;
+70 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;pb_msgdesc_t&#32;<link linkend="_reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc">time_sync_msg</link>;
+71 
+72 <emphasis role="comment">/*&#32;Defines&#32;for&#32;backwards&#32;compatibility&#32;with&#32;code&#32;written&#32;before&#32;nanopb-0.4.0&#32;*/</emphasis>
+73 <emphasis role="preprocessor">#define&#32;send_reading_fields&#32;&amp;send_reading_msg</emphasis>
+74 <emphasis role="preprocessor">#define&#32;time_sync_fields&#32;&amp;time_sync_msg</emphasis>
+75 
+76 <emphasis role="comment">/*&#32;Maximum&#32;encoded&#32;size&#32;of&#32;messages&#32;(where&#32;known)&#32;*/</emphasis>
+77 <emphasis role="preprocessor">#define&#32;send_reading_size&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;47</emphasis>
+78 <emphasis role="preprocessor">#define&#32;time_sync_size&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;11</emphasis>
+79 
+80 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+81 }&#32;<emphasis role="comment">/*&#32;extern&#32;&quot;C&quot;&#32;*/</emphasis>
+82 <emphasis role="preprocessor">#endif</emphasis>
+83 
+84 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

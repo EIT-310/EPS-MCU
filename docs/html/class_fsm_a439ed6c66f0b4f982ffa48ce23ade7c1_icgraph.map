@@ -1,0 +1,6 @@
+<map id="Fsm::GetPower" name="Fsm::GetPower">
+<area shape="rect" id="node1" title="Beregn effekten for alle MPPT&#39;er i en ADC måling." alt="" coords="425,5,539,32"/>
+<area shape="rect" id="node2" href="$class_fsm.html#a68a3b3e4232132f9e671eafb4a663af4" title="Bedøm en ny target state på baggrund af ADC måling og kald StateChanger()" alt="" coords="231,5,377,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a3a1208bf880dbc3e596cdd55b5cbd6b0" title="Modtager ny måling fra ReadAdc() og bestemmer ny state på baggrund af disse data." alt="" coords="104,5,183,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,5,56,32"/>
+</map>

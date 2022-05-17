@@ -1,0 +1,7 @@
+<map id="AdcRead::DoRead" name="AdcRead::DoRead">
+<area shape="rect" id="node1" title="Kalder AsyncADC med et antal ADC&#39;er på baggrund af nuværende state. Nye måling bliver lagt i Circular..." alt="" coords="5,56,135,83"/>
+<area shape="rect" id="node2" href="$class_adc_read.html#a57f35b9fd598aff98289da19a5edff40" title="Starter et givent antal threads der hver kører ReadU16() med dets givet ADC ben." alt="" coords="185,31,331,57"/>
+<area shape="rect" id="node5" href="$class_fsm.html#ae746f70aa1624110f8e1967d8bec6dcf" title="Getter for nuværende state." alt="" coords="183,81,333,108"/>
+<area shape="rect" id="node3" href="$class_adc_read.html#a84ffd76ab6ff1d44eb81577b8462e6eb" title="Omdanner AdcName enum til pointer til ny AnalogIn object for respektivt ADC ben." alt="" coords="381,5,524,32"/>
+<area shape="rect" id="node4" href="$class_adc_read.html#a5c281043cc2127409b9d41a73b3c61d3" title="Måler et givent antal gange på et givent device fra adc_thread_args og skriver middelværdi til adc_th..." alt="" coords="385,56,521,83"/>
+</map>

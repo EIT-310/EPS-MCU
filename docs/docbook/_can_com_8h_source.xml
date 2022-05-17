@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__can_com_8h_source" xml:lang="en-US">
+<title>CanCom.h</title>
+<indexterm><primary>lib/CanCom/CanCom.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//</emphasis>
+2 <emphasis role="comment">//&#32;Created&#32;by&#32;EIT-416&#32;on&#32;5/3/22.</emphasis>
+3 <emphasis role="comment">//</emphasis>
+4 
+5 <emphasis role="preprocessor">#ifndef&#32;EPS_MCU_LIB_CANCOM_CANCOM_H_</emphasis>
+6 <emphasis role="preprocessor">#define&#32;EPS_MCU_LIB_CANCOM_CANCOM_H_</emphasis>
+7 
+8 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_reading_8pb_8h">reading.pb.h</link>&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__project_config_8h">ProjectConfig.h</link>&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__adc_read_8h">AdcRead.h</link>&gt;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__no_mutex_c_a_n_8h">NoMutexCAN.h</link>&quot;</emphasis>
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_can_com">CanCom</link>&#32;{
+15 &#32;<emphasis role="keyword">public</emphasis>:
+16 
+17 &#32;&#32;<link linkend="_class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3">CanCom</link>(<link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link>&#32;*<link linkend="_main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757">can</link>){
+18 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f">can_</link>&#32;=&#32;<link linkend="_main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757">can</link>;
+19 &#32;&#32;};
+20 
+21 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7">CanMessageId</link>&#32;{
+22 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50">CAN_TIME_SYNC</link>&#32;=&#32;1,
+23 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c">CAN_SET_CONFIG</link>,
+24 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e">CAN_GET_CONFIG</link>,
+25 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4">CAN_GET_READING</link>,
+26 &#32;&#32;&#32;&#32;<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc">CAN_LOG</link>
+27 &#32;&#32;};
+28 
+29 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;uint8_t&#32;<link linkend="_class_can_com_1a49dd73a42baabac31df9dd9de570a53f">serialized_buffer_</link>[<link linkend="_reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf">send_reading_size</link>&#32;*&#32;<link linkend="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46">ADC_BUFFER_SIZE</link>];
+30 
+31 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_can_com_1a22fb622bb2aa27436415898d40e5987f">SendBuffer</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;size);
+32 
+33 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_can_com_1ad5cc018603f898163b52bcab6db64cf4">SendReadings</link>();
+34 
+35 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;<link linkend="_class_can_com_1ab963975230cc827959cc329b51ce2e24">GetReading</link>();
+36 
+37 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link>&#32;*<link linkend="_class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f">can_</link>;
+38 
+39 &#32;<emphasis role="keyword">private</emphasis>:
+40 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66">GetFrameSize</link>();
+41 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_can_com_1a52c0f42094e4622ee96db13215a3d16e">ShiftBuffer</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;shift_bytes);
+42 };
+43 
+44 
+45 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_LIB_CANCOM_CANCOM_H_</emphasis>
+</programlisting></section>

@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_adc_read" kind="class" language="C++" prot="public">
+    <compoundname>AdcRead</compoundname>
+    <includes refid="_adc_read_8h" local="no">AdcRead.h</includes>
+    <innerclass refid="struct_adc_read_1_1adc__reading" prot="public">AdcRead::adc_reading</innerclass>
+    <innerclass refid="struct_adc_read_1_1adc__thread__args" prot="public">AdcRead::adc_thread_args</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" prot="public" static="no" strong="no">
+        <type></type>
+        <name>AdcName</name>
+        <qualifiedname>AdcRead::AdcName</qualifiedname>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" prot="public">
+          <name>BAT_V_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" prot="public">
+          <name>BAT_I_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" prot="public">
+          <name>MPPT_V_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" prot="public">
+          <name>MPPT_I_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" prot="public">
+          <name>SUB_V_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" prot="public">
+          <name>SUB_I_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="25" column="3" bodyfile="lib/AdcRead/AdcRead.h" bodystart="25" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" prot="public" static="yes" mutable="no">
+        <type>CircularBuffer&lt; <ref refid="struct_adc_read_1_1adc__reading" kindref="compound">adc_reading</ref>, <ref refid="_project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46" kindref="member">ADC_BUFFER_SIZE</ref> &gt;</type>
+        <definition>CircularBuffer&lt; AdcRead::adc_reading, ADC_BUFFER_SIZE &gt; AdcRead::adc_buffer_</definition>
+        <argsstring></argsstring>
+        <name>adc_buffer_</name>
+        <qualifiedname>AdcRead::adc_buffer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="41" column="25" bodyfile="lib/AdcRead/AdcRead.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" compoundref="_adc_read_8cpp" startline="23" endline="55">DoRead</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref></type>
+        <definition>AdcName AdcRead::adc_list_[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>adc_list_</name>
+        <qualifiedname>AdcRead::adc_list_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="49" column="18" bodyfile="lib/AdcRead/AdcRead.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adc_read_1a579cb1cbc31d93bb202f770492be226d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdcRead::AdcRead</definition>
+        <argsstring>()=default</argsstring>
+        <name>AdcRead</name>
+        <qualifiedname>AdcRead::AdcRead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="13" column="3"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref></type>
+        <definition>AdcRead::adc_reading AdcRead::DoRead</definition>
+        <argsstring>()</argsstring>
+        <name>DoRead</name>
+        <qualifiedname>AdcRead::DoRead</qualifiedname>
+        <briefdescription>
+<para>Kalder AsyncADC med et antal ADC&apos;er på baggrund af nuværende state. Nye måling bliver lagt i CircularBuffer&apos;en adc_buffer_. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref> Nye måling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="40" column="31" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="23" bodyend="55"/>
+        <references refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" compoundref="_adc_read_8h" startline="41">adc_buffer_</references>
+        <references refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" compoundref="_adc_read_8cpp" startline="12">adc_read_list</references>
+        <references refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AsyncADC</references>
+        <references refid="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" compoundref="_fsm_8cpp" startline="94" endline="96">Fsm::GetCurrentState</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" compoundref="_fsm_8h" startline="17">Fsm::LOW</references>
+        <referencedby refid="main_8cpp_1ac595faede462d70c3fb34417f4e984e7" compoundref="main_8cpp" startline="125" endline="130">ReadAdc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdcRead::ReadU16</definition>
+        <argsstring>(adc_thread_args *args)</argsstring>
+        <name>ReadU16</name>
+        <qualifiedname>AdcRead::ReadU16</qualifiedname>
+        <param>
+          <type><ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Måler et givent antal gange på et givent device fra <ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref> og skriver middelværdi til <ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref> dest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref> med AnalogIn pointer til devicet og uint16_t pointer til resultatet </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="42" column="15" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="124" bodyend="139"/>
+        <references refid="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" compoundref="_project_config_8h" startline="30">ADC_MEASURE_LOOPS</references>
+        <references refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" compoundref="_adc_read_8h" startline="36">AdcRead::adc_thread_args::dest</references>
+        <references refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" compoundref="_adc_read_8h" startline="35">AdcRead::adc_thread_args::device</references>
+        <referencedby refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AsyncADC</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AnalogIn *</type>
+        <definition>AnalogIn * AdcRead::GetDevice</definition>
+        <argsstring>(AdcName name)</argsstring>
+        <name>GetDevice</name>
+        <qualifiedname>AdcRead::GetDevice</qualifiedname>
+        <param>
+          <type><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Omdanner AdcName enum til pointer til ny AnalogIn object for respektivt ADC ben. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum for det ADC ben der skal måles på </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>AnalogIn* pointer til oprettet device </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="46" column="19" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="89" bodyend="114"/>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" compoundref="_adc_read_8h" startline="27">BAT_I_1</references>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" compoundref="_adc_read_8h" startline="26">BAT_V_1</references>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" compoundref="_adc_read_8h" startline="29">MPPT_I_1</references>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" compoundref="_adc_read_8h" startline="28">MPPT_V_1</references>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" compoundref="_adc_read_8h" startline="31">SUB_I_1</references>
+        <references refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" compoundref="_adc_read_8h" startline="30">SUB_V_1</references>
+        <referencedby refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AsyncADC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>static float AdcRead::ReadFloat</definition>
+        <argsstring>(AnalogIn *device)</argsstring>
+        <name>ReadFloat</name>
+        <qualifiedname>AdcRead::ReadFloat</qualifiedname>
+        <param>
+          <type>AnalogIn *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="48" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdcRead::AsyncADC</definition>
+        <argsstring>(int adc_count)</argsstring>
+        <name>AsyncADC</name>
+        <qualifiedname>AdcRead::AsyncADC</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>adc_count</declname>
+        </param>
+        <briefdescription>
+<para>Starter et givent antal threads der hver kører <ref refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" kindref="member">ReadU16()</ref> med dets givet ADC ben. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adc_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Antal ADC&apos;er at måle på </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.h" line="50" column="15" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="63" bodyend="80"/>
+        <references refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" compoundref="_adc_read_8cpp" startline="12">adc_read_list</references>
+        <references refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" compoundref="_adc_read_8cpp" startline="15">arg_list</references>
+        <references refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" compoundref="_adc_read_8cpp" startline="89" endline="114">GetDevice</references>
+        <references refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" compoundref="_adc_read_8cpp" startline="124" endline="139">ReadU16</references>
+        <references refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" compoundref="_adc_read_8cpp" startline="14">t_adc_read</references>
+        <referencedby refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" compoundref="_adc_read_8cpp" startline="23" endline="55">DoRead</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/AdcRead/AdcRead.h" line="11" column="1" bodyfile="lib/AdcRead/AdcRead.h" bodystart="11" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>adc_buffer_</name></member>
+      <member refid="class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b" prot="private" virt="non-virtual"><scope>AdcRead</scope><name>adc_list_</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>AdcName</name></member>
+      <member refid="class_adc_read_1a579cb1cbc31d93bb202f770492be226d" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>AdcRead</name></member>
+      <member refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" prot="private" virt="non-virtual"><scope>AdcRead</scope><name>AsyncADC</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>BAT_I_1</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>BAT_V_1</name></member>
+      <member refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>DoRead</name></member>
+      <member refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" prot="private" virt="non-virtual"><scope>AdcRead</scope><name>GetDevice</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>MPPT_I_1</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>MPPT_V_1</name></member>
+      <member refid="class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8" prot="private" virt="non-virtual"><scope>AdcRead</scope><name>ReadFloat</name></member>
+      <member refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>ReadU16</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>SUB_I_1</name></member>
+      <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" prot="public" virt="non-virtual"><scope>AdcRead</scope><name>SUB_V_1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

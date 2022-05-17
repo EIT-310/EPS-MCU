@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_e2a9a723b392cd736ad3a68b9081c4d8" kind="dir">
+    <compoundname>lib/AdcRead</compoundname>
+    <innerfile refid="_adc_read_8cpp">AdcRead.cpp</innerfile>
+    <innerfile refid="_adc_read_8h">AdcRead.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/AdcRead/"/>
+  </compounddef>
+</doxygen>

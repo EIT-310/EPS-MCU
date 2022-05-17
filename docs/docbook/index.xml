@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Firmware for EPS MCU on AAUSAT6</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="struct__send__reading.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct__time__sync.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_adc_read_1_1adc__reading.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_adc_read_1_1adc__thread__args.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_adc_read.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_can_com.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_fsm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_log.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_no_mutex_c_a_n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_n_v_store.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_oce_isr.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_power_manage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_adc_read_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_adc_read_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_adc_read_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_can_com_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_can_com_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_can_com_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_project_config_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_project_config_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_fsm_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_fsm_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_fsm_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_interrupt_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_interrupt_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_interrupt_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_log_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_log_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_log_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_no_mutex_c_a_n_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_no_mutex_c_a_n_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_n_v_store_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_n_v_store_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_n_v_store_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_power_manage_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_power_manage_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_power_manage_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reading_8pb_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reading_8pb_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reading_8pb_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

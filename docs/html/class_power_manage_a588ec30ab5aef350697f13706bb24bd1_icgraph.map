@@ -1,0 +1,5 @@
+<map id="PowerManage::OceFromIsr" name="PowerManage::OceFromIsr">
+<area shape="rect" id="node1" title="Høj prioritetet deaktivering af en power rail ved OCE." alt="" coords="316,5,496,32"/>
+<area shape="rect" id="node2" href="$class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd" title="ISR context der deactiverer modulet der blev målt OCE på. Sætter EventHandler() i kø til de ting der ..." alt="" coords="160,5,268,32"/>
+<area shape="rect" id="node3" href="$class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed" title="Construct a new Oce Isr object og attatcher IRQ benet til at køre Handle() ved rise." alt="" coords="5,5,112,32"/>
+</map>

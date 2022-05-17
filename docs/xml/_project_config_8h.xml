@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_project_config_8h" kind="file" language="C++">
+    <compoundname>ProjectConfig.h</compoundname>
+    <includedby refid="_adc_read_8cpp" local="yes">lib/AdcRead/AdcRead.cpp</includedby>
+    <includedby refid="_adc_read_8h" local="yes">lib/AdcRead/AdcRead.h</includedby>
+    <includedby refid="_can_com_8cpp" local="yes">lib/CanCom/CanCom.cpp</includedby>
+    <includedby refid="_can_com_8h" local="no">lib/CanCom/CanCom.h</includedby>
+    <includedby refid="_fsm_8h" local="yes">lib/FSM/Fsm.h</includedby>
+    <includedby refid="_interrupt_8cpp" local="yes">lib/Interrupt/Interrupt.cpp</includedby>
+    <includedby refid="_power_manage_8h" local="yes">lib/PowerManage/PowerManage.h</includedby>
+    <includedby refid="main_8cpp" local="no">src/main.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>lib/AdcRead/AdcRead.cpp</label>
+        <link refid="_adc_read_8cpp"/>
+      </node>
+      <node id="3">
+        <label>lib/AdcRead/AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>lib/CanCom/CanCom.cpp</label>
+        <link refid="_can_com_8cpp"/>
+      </node>
+      <node id="5">
+        <label>lib/CanCom/CanCom.h</label>
+        <link refid="_can_com_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>lib/Config/ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>lib/FSM/Fsm.cpp</label>
+        <link refid="_fsm_8cpp"/>
+      </node>
+      <node id="7">
+        <label>lib/FSM/Fsm.h</label>
+        <link refid="_fsm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>lib/Interrupt/Interrupt.cpp</label>
+        <link refid="_interrupt_8cpp"/>
+      </node>
+      <node id="11">
+        <label>lib/Interrupt/Interrupt.h</label>
+        <link refid="_interrupt_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>lib/PowerManage/PowerManage.cpp</label>
+        <link refid="_power_manage_8cpp"/>
+      </node>
+      <node id="10">
+        <label>lib/PowerManage/PowerManage.h</label>
+        <link refid="_power_manage_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" prot="public" static="no">
+        <name>ADC_MEASURE_LOOPS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="30" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46" prot="public" static="no">
+        <name>ADC_BUFFER_SIZE</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="31" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0" prot="public" static="no">
+        <name>VBAT_MID_HIGH</name>
+        <initializer>4.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="32" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a16895ef5f3300696389ad3deef86d13b" prot="public" static="no">
+        <name>VBAT_MID</name>
+        <initializer>3.7f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="33" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1aee3cf581e7f7e58917247beb957c7db2" prot="public" static="no">
+        <name>VBAT_MID_LOW</name>
+        <initializer>3.4f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="34" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a" prot="public" static="no">
+        <name>VBAT_LOW</name>
+        <initializer>3.2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="35" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1add519ebd457e2957c312c4647885335b" prot="public" static="no">
+        <name>VBAT_EMERGENCY</name>
+        <initializer>3.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="36" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a356819873d8776bc18ae8a9abe850ecc" prot="public" static="no">
+        <name>MPPT_CURR_AMP</name>
+        <initializer>200.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="37" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a" prot="public" static="no">
+        <name>MPPT_SHUNT_RES</name>
+        <initializer>0.02f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="38" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a936618a4fbd892618b0865b86a1fb22c" prot="public" static="no">
+        <name>CAN_BITRATE</name>
+        <initializer>5e5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="39" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1abf89628d486477bd0db5a5890cd38a05" prot="public" static="no">
+        <name>WATCHDOG_TIMEOUT</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="43" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a69780fe091bc441b276e79d89f7acb97" prot="public" static="no">
+        <name>FSM_START_STATE</name>
+        <initializer><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" kindref="member">Fsm::MID</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="44" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1adb533411b6a28c7674a9cac3ac04d922" prot="public" static="no">
+        <name>CRIT_MPPT_POW_SUM</name>
+        <initializer>1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="45" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" prot="public" static="no">
+        <name>LOG_LEVEL</name>
+        <initializer><ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" kindref="member">LOG_DEBUG</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="48" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_project_config_8h_1adf549ab0f4febe7311847223bcb94391" prot="public" static="no">
+        <name>LOG_COM_TYPE</name>
+        <initializer>SERIAL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config/ProjectConfig.h" line="49" column="9" bodyfile="lib/Config/ProjectConfig.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>01/04/2022.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EPS_MCU_LIB_PROJECT_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPS_MCU_LIB_PROJECT_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TARGET_NUCLEO_L432KC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PINS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//ADC&apos;er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAT_V_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAT_I_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPPT_V_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPPT_I_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUB_V_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUB_I_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_NUM_CHANNELS<sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//DIVERSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_RD_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_TD_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAIL_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OCE_1_PIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUBMODULES_NUM<sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STATIC<sp/>CONFIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_MEASURE_LOOPS<sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADC_BUFFER_SIZE<sp/><sp/><sp/><sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VBAT_MID_HIGH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.0f<sp/></highlight><highlight class="comment">//TODO:<sp/>Ret<sp/>så<sp/>det<sp/>passer<sp/>med<sp/>hvad<sp/>Vref<sp/>på<sp/>ADC<sp/>er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="_project_config_8h_1a16895ef5f3300696389ad3deef86d13b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VBAT_MID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.7f<sp/></highlight><highlight class="comment">//TODO:<sp/>Ret<sp/>så<sp/>det<sp/>passer<sp/>med<sp/>hvad<sp/>Vref<sp/>på<sp/>ADC<sp/>er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_project_config_8h_1aee3cf581e7f7e58917247beb957c7db2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VBAT_MID_LOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.4f<sp/></highlight><highlight class="comment">//TODO:<sp/>Ret<sp/>så<sp/>det<sp/>passer<sp/>med<sp/>hvad<sp/>Vref<sp/>på<sp/>ADC<sp/>er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VBAT_LOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.2f<sp/></highlight><highlight class="comment">//TODO:<sp/>Ret<sp/>så<sp/>det<sp/>passer<sp/>med<sp/>hvad<sp/>Vref<sp/>på<sp/>ADC<sp/>er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_project_config_8h_1add519ebd457e2957c312c4647885335b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VBAT_EMERGENCY<sp/><sp/><sp/><sp/><sp/><sp/>3.0f<sp/></highlight><highlight class="comment">//TODO:<sp/>Ret<sp/>så<sp/>det<sp/>passer<sp/>med<sp/>hvad<sp/>Vref<sp/>på<sp/>ADC<sp/>er</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_project_config_8h_1a356819873d8776bc18ae8a9abe850ecc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPPT_CURR_AMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/>200.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPPT_SHUNT_RES<sp/><sp/><sp/><sp/><sp/><sp/>0.02f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_project_config_8h_1a936618a4fbd892618b0865b86a1fb22c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAN_BITRATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5e5<sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>MHz<sp/>/<sp/>500kHz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MUTABLE<sp/>CONFIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_project_config_8h_1abf89628d486477bd0db5a5890cd38a05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WATCHDOG_TIMEOUT<sp/><sp/><sp/><sp/>10000<sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Evt<sp/>ret<sp/>så<sp/>det<sp/>giver<sp/>mening</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_project_config_8h_1a69780fe091bc441b276e79d89f7acb97" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FSM_START_STATE<sp/><sp/><sp/><sp/><sp/>Fsm::MID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_project_config_8h_1adb533411b6a28c7674a9cac3ac04d922" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRIT_MPPT_POW_SUM<sp/><sp/><sp/>1.0f<sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>ret<sp/>så<sp/>det<sp/>passer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEV<sp/>CONFIG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_project_config_8h_1adf549ab0f4febe7311847223bcb94391" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_COM_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EPS_MCU_LIB_PROJECT_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="lib/Config/ProjectConfig.h"/>
+  </compounddef>
+</doxygen>

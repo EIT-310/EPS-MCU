@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_adc_read_8cpp" kind="file" language="C++">
+    <compoundname>AdcRead.cpp</compoundname>
+    <includes refid="_adc_read_8h" local="yes">AdcRead.h</includes>
+    <includes refid="_project_config_8h" local="yes">../Config/ProjectConfig.h</includes>
+    <includes local="no">mbed.h</includes>
+    <includes local="no">rtos.h</includes>
+    <includes refid="_fsm_8h" local="yes">Fsm.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>lib/AdcRead/AdcRead.cpp</label>
+        <link refid="_adc_read_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AdcRead.h</label>
+        <link refid="_adc_read_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ProjectConfig.h</label>
+        <link refid="_project_config_8h"/>
+      </node>
+      <node id="6">
+        <label>Fsm.h</label>
+        <link refid="_fsm_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mbed.h</label>
+      </node>
+      <node id="5">
+        <label>rtos.h</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t adc_read_list[ADC_NUM_CHANNELS]</definition>
+        <argsstring>[ADC_NUM_CHANNELS]</argsstring>
+        <name>adc_read_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.cpp" line="12" column="10" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AdcRead::AsyncADC</referencedby>
+        <referencedby refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" compoundref="_adc_read_8cpp" startline="23" endline="55">AdcRead::DoRead</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" prot="public" static="no" mutable="no">
+        <type>Thread *</type>
+        <definition>Thread* t_adc_read[ADC_NUM_CHANNELS]</definition>
+        <argsstring>[ADC_NUM_CHANNELS]</argsstring>
+        <name>t_adc_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.cpp" line="14" column="8" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AdcRead::AsyncADC</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">AdcRead::adc_thread_args</ref></type>
+        <definition>AdcRead::adc_thread_args arg_list[ADC_NUM_CHANNELS]</definition>
+        <argsstring>[ADC_NUM_CHANNELS]</argsstring>
+        <name>arg_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/AdcRead/AdcRead.cpp" line="15" column="26" bodyfile="lib/AdcRead/AdcRead.cpp" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" compoundref="_adc_read_8cpp" startline="63" endline="80">AdcRead::AsyncADC</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>EIT-416<sp/>on<sp/>01/04/2022.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_adc_read_8h" kindref="compound">AdcRead.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Config/ProjectConfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mbed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rtos.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_fsm_8h" kindref="compound">Fsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">CircularBuffer&lt;AdcRead::adc_reading,<sp/>ADC_BUFFER_SIZE&gt;<sp/><ref refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kindref="member">AdcRead::adc_buffer_</ref>;</highlight></codeline>
+<codeline lineno="12" refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[ADC_NUM_CHANNELS];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" refkind="member"><highlight class="normal">Thread<sp/>*<ref refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kindref="member">t_adc_read</ref>[ADC_NUM_CHANNELS];</highlight></codeline>
+<codeline lineno="15" refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" refkind="member"><highlight class="normal"><ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">AdcRead::adc_thread_args</ref><sp/><ref refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" kindref="member">arg_list</ref>[ADC_NUM_CHANNELS];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" refkind="member"><highlight class="normal"><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref><sp/><ref refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" kindref="member">AdcRead::DoRead</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">Fsm::State</ref><sp/>current_state<sp/>=<sp/><ref refid="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" kindref="member">Fsm::GetCurrentState</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">adc_reading</ref><sp/>new_read{};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_state<sp/>&gt;<sp/><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" kindref="member">Fsm::LOW</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_count<sp/>=<sp/>ADC_NUM_CHANNELS;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" kindref="member">AsyncADC</ref>(adc_count);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>new_read<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[0],</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[1],</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[2],</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[3],</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[4],</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[5],</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time(NULL)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_count<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" kindref="member">AsyncADC</ref>(adc_count);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>new_read<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[0],</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[1],</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time(NULL)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kindref="member">adc_buffer_</ref>.push(new_read);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_read;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" kindref="member">AdcRead::AsyncADC</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>adc_count)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>adc_count;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" kindref="member">arg_list</ref>[i]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" kindref="member">GetDevice</ref>((<ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcName</ref>)<sp/>i),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kindref="member">adc_read_list</ref>[i]</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kindref="member">t_adc_read</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Thread();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kindref="member">t_adc_read</ref>[i]-&gt;start(callback(<ref refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" kindref="member">ReadU16</ref>,<sp/>&amp;<ref refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" kindref="member">arg_list</ref>[i]));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>adc_count;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kindref="member">t_adc_read</ref>[i]-&gt;join();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>adc_count;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kindref="member">t_adc_read</ref>[i];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" refkind="member"><highlight class="normal">AnalogIn<sp/>*<ref refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" kindref="member">AdcRead::GetDevice</ref>(<ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kindref="member">AdcRead::AdcName</ref><sp/>name)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>AnalogIn<sp/>*device_ptr;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(name)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" kindref="member">BAT_V_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(BAT_V_1_PIN);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" kindref="member">BAT_I_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(BAT_I_1_PIN);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" kindref="member">MPPT_V_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(MPPT_V_1_PIN);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" kindref="member">MPPT_I_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(MPPT_I_1_PIN);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" kindref="member">SUB_V_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(SUB_V_1_PIN);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" kindref="member">SUB_I_1</ref>:device_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AnalogIn(SUB_I_1_PIN);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>device_ptr;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" kindref="member">AdcRead::ReadU16</ref>(<ref refid="struct_adc_read_1_1adc__thread__args" kindref="compound">adc_thread_args</ref><sp/>*args)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" kindref="member">ADC_MEASURE_LOOPS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>adc_mutex.lock();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>(float)<sp/>args-&gt;<ref refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" kindref="member">device</ref>-&gt;read_u16()<sp/>/<sp/>(float)<sp/><ref refid="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" kindref="member">ADC_MEASURE_LOOPS</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>adc_mutex.unlock();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>args-&gt;<ref refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>*args-&gt;<ref refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" kindref="member">dest</ref><sp/>=<sp/>(uint16_t)<sp/>sum;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lib/AdcRead/AdcRead.cpp"/>
+  </compounddef>
+</doxygen>

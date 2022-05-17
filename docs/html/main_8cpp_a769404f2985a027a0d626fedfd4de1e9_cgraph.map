@@ -1,0 +1,8 @@
+<map id="Setup" name="Setup">
+<area shape="rect" id="node1" title="Køres en enkelt gang når systemet starter." alt="" coords="5,56,61,83"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a5c7452bc8a6f648db67fe952474d73de" title="Starter Watchdog hvis timeout er for langt sættes den istedet til den længste tilladte værdi." alt="" coords="155,5,264,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a9da7aec02ec673a8b5ecdf4510f106c1" title=" " alt="" coords="158,56,261,83"/>
+<area shape="rect" id="node4" href="$class_power_manage.html#a6cc478738b54fbbd148122c4ae6e93fb" title="Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne...." alt="" coords="109,107,309,133"/>
+<area shape="rect" id="node5" href="$class_fsm.html#ae746f70aa1624110f8e1967d8bec6dcf" title="Getter for nuværende state." alt="" coords="381,81,531,108"/>
+<area shape="rect" id="node6" href="$class_power_manage.html#a76f09867e77b6f1184ca446fffda9781" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="357,132,555,159"/>
+</map>

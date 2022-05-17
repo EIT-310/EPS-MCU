@@ -1,0 +1,6 @@
+<map id="CanTimeSync" name="CanTimeSync">
+<area shape="rect" id="node1" title="ISR deferred handler for at decode time sync package og opdatere RTC med den modtagede værdi." alt="" coords="375,5,477,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#abedbe52be05e887351f9d26921ff77cf" title="ISR deferred handler der reagerer på flag fra OnCanRec()" alt="" coords="237,5,327,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ad5d56d2ac5d86036b8a7931d829e6082" title="ISR deferred handler til at beslutte handling på baggrund af CAN framets ID." alt="" coords="104,5,189,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,5,56,32"/>
+</map>

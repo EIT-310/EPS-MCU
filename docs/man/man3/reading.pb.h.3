@@ -1,0 +1,182 @@
+.TH "lib/Protobuf/reading.pb.h" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/Protobuf/reading.pb.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <pb\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_send_reading\fP"
+.br
+.ti -1c
+.RI "struct \fB_time_sync\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBsend_reading_init_default\fP   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_init_default\fP   {0}"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_init_zero\fP   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_init_zero\fP   {0}"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_bat_v_1_tag\fP   1"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_bat_i_1_tag\fP   2"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_mppt_v_1_tag\fP   3"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_mppt_i_1_tag\fP   4"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_sub_v_1_tag\fP   5"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_sub_i_1_tag\fP   6"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_timestamp_tag\fP   7"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_current_time_tag\fP   1"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_FIELDLIST\fP(X,  a)"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_CALLBACK\fP   NULL"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_DEFAULT\fP   NULL"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_FIELDLIST\fP(X,  a)   X(a, STATIC,   REQUIRED, UINT64,   current_time,      1)"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_CALLBACK\fP   NULL"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_DEFAULT\fP   NULL"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_fields\fP   &\fBsend_reading_msg\fP"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_fields\fP   &\fBtime_sync_msg\fP"
+.br
+.ti -1c
+.RI "#define \fBsend_reading_size\fP   47"
+.br
+.ti -1c
+.RI "#define \fBtime_sync_size\fP   11"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB_send_reading\fP \fBsend_reading\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_time_sync\fP \fBtime_sync\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const pb_msgdesc_t \fBsend_reading_msg\fP"
+.br
+.ti -1c
+.RI "const pb_msgdesc_t \fBtime_sync_msg\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define send_reading_bat_i_1_tag   2"
+
+.SS "#define send_reading_bat_v_1_tag   1"
+
+.SS "#define send_reading_CALLBACK   NULL"
+
+.SS "#define send_reading_DEFAULT   NULL"
+
+.SS "#define send_reading_FIELDLIST(X, a)"
+\fBValue:\fP
+.PP
+.nf
+X(a, STATIC,   REQUIRED, UINT32,   bat_v_1,           1) \
+X(a, STATIC,   REQUIRED, UINT32,   bat_i_1,           2) \
+X(a, STATIC,   OPTIONAL, UINT32,   mppt_v_1,          3) \
+X(a, STATIC,   OPTIONAL, UINT32,   mppt_i_1,          4) \
+X(a, STATIC,   OPTIONAL, UINT32,   sub_v_1,           5) \
+X(a, STATIC,   OPTIONAL, UINT32,   sub_i_1,           6) \
+X(a, STATIC,   REQUIRED, UINT64,   timestamp,         7)
+.fi
+.SS "#define send_reading_fields   &\fBsend_reading_msg\fP"
+
+.SS "#define send_reading_init_default   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}"
+
+.SS "#define send_reading_init_zero   {0, 0, false, 0, false, 0, false, 0, false, 0, 0}"
+
+.SS "#define send_reading_mppt_i_1_tag   4"
+
+.SS "#define send_reading_mppt_v_1_tag   3"
+
+.SS "#define send_reading_size   47"
+
+.SS "#define send_reading_sub_i_1_tag   6"
+
+.SS "#define send_reading_sub_v_1_tag   5"
+
+.SS "#define send_reading_timestamp_tag   7"
+
+.SS "#define time_sync_CALLBACK   NULL"
+
+.SS "#define time_sync_current_time_tag   1"
+
+.SS "#define time_sync_DEFAULT   NULL"
+
+.SS "#define time_sync_FIELDLIST(X, a)   X(a, STATIC,   REQUIRED, UINT64,   current_time,      1)"
+
+.SS "#define time_sync_fields   &\fBtime_sync_msg\fP"
+
+.SS "#define time_sync_init_default   {0}"
+
+.SS "#define time_sync_init_zero   {0}"
+
+.SS "#define time_sync_size   11"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fB_send_reading\fP \fBsend_reading\fP"
+
+.SS "typedef struct \fB_time_sync\fP \fBtime_sync\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const pb_msgdesc_t send_reading_msg\fC [extern]\fP"
+
+.SS "const pb_msgdesc_t time_sync_msg\fC [extern]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

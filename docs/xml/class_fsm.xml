@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_fsm" kind="class" language="C++" prot="public">
+    <compoundname>Fsm</compoundname>
+    <includes refid="_fsm_8h" local="no">Fsm.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>State</name>
+        <qualifiedname>Fsm::State</qualifiedname>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" prot="public">
+          <name>EMERGENCY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" prot="public">
+          <name>LOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" prot="public">
+          <name>MID_LOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" prot="public">
+          <name>MID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" prot="public">
+          <name>MID_HIGH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" prot="public">
+          <name>HIGH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="15" column="3" bodyfile="lib/FSM/Fsm.h" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">State</ref></type>
+        <definition>Fsm::State Fsm::current_state_</definition>
+        <argsstring></argsstring>
+        <name>current_state_</name>
+        <qualifiedname>Fsm::current_state_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="43" column="16" bodyfile="lib/FSM/Fsm.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220" compoundref="_fsm_8cpp" startline="70" endline="86">DownState</referencedby>
+        <referencedby refid="class_fsm_1a0707d788017e5a74113c4285c9c748b9" compoundref="_fsm_8h" startline="24" endline="26">Fsm</referencedby>
+        <referencedby refid="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" compoundref="_fsm_8cpp" startline="94" endline="96">GetCurrentState</referencedby>
+        <referencedby refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" compoundref="_fsm_8cpp" startline="153" endline="159">StateChanger</referencedby>
+        <referencedby refid="class_fsm_1adc5296fe861e5e938365b7afd0834950" compoundref="_fsm_8cpp" startline="38" endline="40">ToString</referencedby>
+        <referencedby refid="class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4" compoundref="_fsm_8cpp" startline="47" endline="63">UpState</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fsm_1a0707d788017e5a74113c4285c9c748b9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Fsm::Fsm</definition>
+        <argsstring>(State start_state)</argsstring>
+        <name>Fsm</name>
+        <qualifiedname>Fsm::Fsm</qualifiedname>
+        <param>
+          <type><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">State</ref></type>
+          <declname>start_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="24" column="12" bodyfile="lib/FSM/Fsm.h" bodystart="24" bodyend="26"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fsm::DetermineState</definition>
+        <argsstring>(AdcRead::adc_reading reading)</argsstring>
+        <name>DetermineState</name>
+        <qualifiedname>Fsm::DetermineState</qualifiedname>
+        <param>
+          <type><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref></type>
+          <declname>reading</declname>
+        </param>
+        <briefdescription>
+<para>Bedøm en ny target state på baggrund af ADC måling og kald <ref refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" kindref="member">StateChanger()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer og en target state bliver besluttet ud fra dette. Herefter betragtes den samlede effekt fra MPPT&apos;erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes target state med 1.</para>
+<para><simplesect kind="note"><para>Aloritmen er simpel og mest til for at have et eksempel på en algoritme.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC måling at finde ny state på baggrund af. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="29" column="15" bodyfile="lib/FSM/Fsm.cpp" bodystart="111" bodyend="145"/>
+        <references refid="struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3" compoundref="_adc_read_8h" startline="16">AdcRead::adc_reading::bat_v_1</references>
+        <references refid="_project_config_8h_1adb533411b6a28c7674a9cac3ac04d922" compoundref="_project_config_8h" startline="45">CRIT_MPPT_POW_SUM</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" compoundref="_fsm_8h" startline="16">EMERGENCY</references>
+        <references refid="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" compoundref="_fsm_8cpp" startline="168" endline="187">GetPower</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" compoundref="_fsm_8h" startline="21">HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" compoundref="_fsm_8h" startline="17">LOW</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" compoundref="_fsm_8h" startline="19">MID</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" compoundref="_fsm_8h" startline="20">MID_HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" compoundref="_fsm_8h" startline="18">MID_LOW</references>
+        <references refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" compoundref="_fsm_8cpp" startline="153" endline="159">StateChanger</references>
+        <references refid="_project_config_8h_1add519ebd457e2957c312c4647885335b" compoundref="_project_config_8h" startline="36">VBAT_EMERGENCY</references>
+        <references refid="_project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a" compoundref="_project_config_8h" startline="35">VBAT_LOW</references>
+        <references refid="_project_config_8h_1a16895ef5f3300696389ad3deef86d13b" compoundref="_project_config_8h" startline="33">VBAT_MID</references>
+        <references refid="_project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0" compoundref="_project_config_8h" startline="32">VBAT_MID_HIGH</references>
+        <references refid="_project_config_8h_1aee3cf581e7f7e58917247beb957c7db2" compoundref="_project_config_8h" startline="34">VBAT_MID_LOW</references>
+        <referencedby refid="main_8cpp_1a3a1208bf880dbc3e596cdd55b5cbd6b0" compoundref="main_8cpp" startline="137" endline="150">NewState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fsm::UpState</definition>
+        <argsstring>()</argsstring>
+        <name>UpState</name>
+        <qualifiedname>Fsm::UpState</qualifiedname>
+        <briefdescription>
+<para>Gå en state up. Hvis nuværende state er den højeste, gør intet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="31" column="15" bodyfile="lib/FSM/Fsm.cpp" bodystart="47" bodyend="63"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" compoundref="_fsm_8h" startline="16">EMERGENCY</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" compoundref="_fsm_8h" startline="21">HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" compoundref="_fsm_8h" startline="17">LOW</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" compoundref="_fsm_8h" startline="19">MID</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" compoundref="_fsm_8h" startline="20">MID_HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" compoundref="_fsm_8h" startline="18">MID_LOW</references>
+        <referencedby refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" compoundref="_fsm_8cpp" startline="153" endline="159">StateChanger</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fsm::DownState</definition>
+        <argsstring>()</argsstring>
+        <name>DownState</name>
+        <qualifiedname>Fsm::DownState</qualifiedname>
+        <briefdescription>
+<para>Gå en state ned. Hvis nuværende state er den laveste, gør intet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="33" column="15" bodyfile="lib/FSM/Fsm.cpp" bodystart="70" bodyend="86"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" compoundref="_fsm_8h" startline="16">EMERGENCY</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" compoundref="_fsm_8h" startline="21">HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" compoundref="_fsm_8h" startline="17">LOW</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" compoundref="_fsm_8h" startline="19">MID</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" compoundref="_fsm_8h" startline="20">MID_HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" compoundref="_fsm_8h" startline="18">MID_LOW</references>
+        <referencedby refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" compoundref="_fsm_8cpp" startline="153" endline="159">StateChanger</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">State</ref></type>
+        <definition>Fsm::State Fsm::GetCurrentState</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentState</name>
+        <qualifiedname>Fsm::GetCurrentState</qualifiedname>
+        <briefdescription>
+<para>Getter for nuværende state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">Fsm::State</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="35" column="16" bodyfile="lib/FSM/Fsm.cpp" bodystart="94" bodyend="96"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+        <referencedby refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" compoundref="_adc_read_8cpp" startline="23" endline="55">AdcRead::DoRead</referencedby>
+        <referencedby refid="class_power_manage_1a6cc478738b54fbbd148122c4ae6e93fb" compoundref="_power_manage_8cpp" startline="20" endline="65">PowerManage::UpdateEnabled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1adc5296fe861e5e938365b7afd0834950" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Fsm::ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <qualifiedname>Fsm::ToString</qualifiedname>
+        <briefdescription>
+<para>Giver navnet på nuverende state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="37" column="22" bodyfile="lib/FSM/Fsm.cpp" bodystart="38" bodyend="40"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+        <references refid="class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e" compoundref="_fsm_8cpp" startline="14" endline="31">GetString</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Fsm::GetString</definition>
+        <argsstring>(State name)</argsstring>
+        <name>GetString</name>
+        <qualifiedname>Fsm::GetString</qualifiedname>
+        <param>
+          <type><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">State</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Omdanner State enum til string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state der ønskes navn på </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string String med navnet på staten </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="41" column="22" bodyfile="lib/FSM/Fsm.cpp" bodystart="14" bodyend="31"/>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" compoundref="_fsm_8h" startline="16">EMERGENCY</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" compoundref="_fsm_8h" startline="21">HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" compoundref="_fsm_8h" startline="17">LOW</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" compoundref="_fsm_8h" startline="19">MID</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" compoundref="_fsm_8h" startline="20">MID_HIGH</references>
+        <references refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" compoundref="_fsm_8h" startline="18">MID_LOW</references>
+        <referencedby refid="class_fsm_1adc5296fe861e5e938365b7afd0834950" compoundref="_fsm_8cpp" startline="38" endline="40">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fsm::StateChanger</definition>
+        <argsstring>(State target_state)</argsstring>
+        <name>StateChanger</name>
+        <qualifiedname>Fsm::StateChanger</qualifiedname>
+        <param>
+          <type><ref refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kindref="member">State</ref></type>
+          <declname>target_state</declname>
+        </param>
+        <briefdescription>
+<para>Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="45" column="15" bodyfile="lib/FSM/Fsm.cpp" bodystart="153" bodyend="159"/>
+        <references refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" compoundref="_fsm_8h" startline="43">current_state_</references>
+        <references refid="class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220" compoundref="_fsm_8cpp" startline="70" endline="86">DownState</references>
+        <references refid="class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4" compoundref="_fsm_8cpp" startline="47" endline="63">UpState</references>
+        <referencedby refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" compoundref="_fsm_8cpp" startline="111" endline="145">DetermineState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Fsm::GetPower</definition>
+        <argsstring>(AdcRead::adc_reading reading)</argsstring>
+        <name>GetPower</name>
+        <qualifiedname>Fsm::GetPower</qualifiedname>
+        <param>
+          <type><ref refid="struct_adc_read_1_1adc__reading" kindref="compound">AdcRead::adc_reading</ref></type>
+          <declname>reading</declname>
+        </param>
+        <briefdescription>
+<para>Beregn effekten for alle MPPT&apos;er i en ADC måling. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reading</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ADC måling for hvilken vi vil finde MMPT effekten </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float Effekt for samlet MPPT&apos;er i watt </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM/Fsm.h" line="47" column="16" bodyfile="lib/FSM/Fsm.cpp" bodystart="168" bodyend="187"/>
+        <references refid="_project_config_8h_1a356819873d8776bc18ae8a9abe850ecc" compoundref="_project_config_8h" startline="37">MPPT_CURR_AMP</references>
+        <references refid="struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c" compoundref="_adc_read_8h" startline="19">AdcRead::adc_reading::mppt_i_1</references>
+        <references refid="_project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a" compoundref="_project_config_8h" startline="38">MPPT_SHUNT_RES</references>
+        <references refid="struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade" compoundref="_adc_read_8h" startline="18">AdcRead::adc_reading::mppt_v_1</references>
+        <referencedby refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" compoundref="_fsm_8cpp" startline="111" endline="145">DetermineState</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/FSM/Fsm.h" line="13" column="1" bodyfile="lib/FSM/Fsm.h" bodystart="13" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" prot="private" virt="non-virtual"><scope>Fsm</scope><name>current_state_</name></member>
+      <member refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" prot="public" virt="non-virtual"><scope>Fsm</scope><name>DetermineState</name></member>
+      <member refid="class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220" prot="public" virt="non-virtual"><scope>Fsm</scope><name>DownState</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" prot="public" virt="non-virtual"><scope>Fsm</scope><name>EMERGENCY</name></member>
+      <member refid="class_fsm_1a0707d788017e5a74113c4285c9c748b9" prot="public" virt="non-virtual"><scope>Fsm</scope><name>Fsm</name></member>
+      <member refid="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" prot="public" virt="non-virtual"><scope>Fsm</scope><name>GetCurrentState</name></member>
+      <member refid="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" prot="private" virt="non-virtual"><scope>Fsm</scope><name>GetPower</name></member>
+      <member refid="class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e" prot="private" virt="non-virtual"><scope>Fsm</scope><name>GetString</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" prot="public" virt="non-virtual"><scope>Fsm</scope><name>HIGH</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" prot="public" virt="non-virtual"><scope>Fsm</scope><name>LOW</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" prot="public" virt="non-virtual"><scope>Fsm</scope><name>MID</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" prot="public" virt="non-virtual"><scope>Fsm</scope><name>MID_HIGH</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" prot="public" virt="non-virtual"><scope>Fsm</scope><name>MID_LOW</name></member>
+      <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" prot="public" virt="non-virtual"><scope>Fsm</scope><name>State</name></member>
+      <member refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" prot="private" virt="non-virtual"><scope>Fsm</scope><name>StateChanger</name></member>
+      <member refid="class_fsm_1adc5296fe861e5e938365b7afd0834950" prot="public" virt="non-virtual"><scope>Fsm</scope><name>ToString</name></member>
+      <member refid="class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4" prot="public" virt="non-virtual"><scope>Fsm</scope><name>UpState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

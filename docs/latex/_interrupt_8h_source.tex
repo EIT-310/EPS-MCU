@@ -1,0 +1,44 @@
+\hypertarget{_interrupt_8h_source}{}\doxysection{Interrupt.\+h}
+\label{_interrupt_8h_source}\index{lib/Interrupt/Interrupt.h@{lib/Interrupt/Interrupt.h}}
+\mbox{\hyperlink{_interrupt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 12/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_no_mutex_c_a_n_8h}{NoMutexCAN.h}}>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}mbed.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{reading_8pb_8h}{reading.pb.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}pb\_decode.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}rtos.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_INTERRUPT\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define EPS\_MCU\_INTERRUPT\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_INTERRUPT\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_power_manage_8h}{PowerManage.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_oce_isr}{OceIsr}} \{}
+\DoxyCodeLine{16  \textcolor{keyword}{public}:}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{26   \mbox{\hyperlink{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}{OceIsr}}(PinName irq\_pin, EventQueue *queue, \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{PowerManage::Modules}} module) : \mbox{\hyperlink{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}{interrupt\_}}(irq\_pin, OpenDrainPullDown)\{}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_oce_isr_a11a4dbe4b507081b37311a7030669dcd}{module\_}} = module;}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}{irq\_happened\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_oce_isr_ad0e768edf4a6e92d1dbfd80fcfa9e127}{queue\_}} = queue;}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}{interrupt\_}}.rise(callback(\textcolor{keyword}{this}, \&\mbox{\hyperlink{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}{OceIsr::Handle}}));}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keyword}{static} EventQueue *\mbox{\hyperlink{class_oce_isr_ad0e768edf4a6e92d1dbfd80fcfa9e127}{queue\_}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}{Handle}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39  \textcolor{keyword}{private}:}
+\DoxyCodeLine{40   \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{PowerManage::Modules}} \mbox{\hyperlink{class_oce_isr_a11a4dbe4b507081b37311a7030669dcd}{module\_}};}
+\DoxyCodeLine{41   InterruptIn \mbox{\hyperlink{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}{interrupt\_}};}
+\DoxyCodeLine{42   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}{irq\_happened\_}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}{EventHandler}}();}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+
+\end{DoxyCode}

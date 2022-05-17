@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__log_8h_source" xml:lang="en-US">
+<title>Log.h</title>
+<indexterm><primary>lib/Log/Log.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//</emphasis>
+2 <emphasis role="comment">//&#32;Created&#32;by&#32;EIT-416&#32;on&#32;5/2/22.</emphasis>
+3 <emphasis role="comment">//</emphasis>
+4 
+5 <emphasis role="preprocessor">#ifndef&#32;EPS_MCU_LIB_LOG_LOG_H_</emphasis>
+6 <emphasis role="preprocessor">#define&#32;EPS_MCU_LIB_LOG_LOG_H_</emphasis>
+7 
+8 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
+9 <emphasis role="keyword">enum</emphasis>&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778">TLogLevel</link>&#32;{<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</link>,&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400">LOG_WARNING</link>,&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</link>,&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</link>};
+10 
+11 <emphasis role="keyword">enum</emphasis>&#32;<link linkend="__log_8h_1a9d9309be0597ea1250b5fe6f70e31c32">TLogDevice</link>&#32;{
+12 &#32;&#32;<link linkend="__log_8h_1a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a">LOG_SERIAL</link>,
+13 &#32;&#32;<link linkend="__log_8h_1a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f">LOG_CAN</link>
+14 };
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_log">Log</link>
+16 {
+17 &#32;<emphasis role="keyword">public</emphasis>:
+18 &#32;&#32;<link linkend="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe">Log</link>();
+19 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;UnbufferedSerial&#32;<link linkend="_class_log_1aee5656e28873ac8316e29f13e0e50df1">serial_</link>;
+20 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_log_1a0fbfda88fbee5027c89f6eb121059360">~Log</link>();
+21 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_log_1ab2abd944d9781f24461a70d010c3c36e">Get</link>(<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778">TLogLevel</link>&#32;level,&#32;std::string&#32;str);
+22 &#32;<emphasis role="keyword">public</emphasis>:
+23 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778">TLogLevel</link>&#32;<link linkend="_class_log_1aeb290934f14369d2969cd4f50f631d28">reporting_level_</link>;
+24 &#32;<emphasis role="keyword">protected</emphasis>:
+25 &#32;&#32;std::string&#32;<link linkend="_class_log_1ab0f16e76380bca22525b102ba0f0eac7">msg_</link>;
+26 &#32;<emphasis role="keyword">private</emphasis>:
+27 &#32;&#32;<link linkend="_class_log_1a60fc11c5c263c4bfad3f9561a4881a13">Log</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_log">Log</link>&amp;);
+28 &#32;&#32;<link linkend="_class_log">Log</link>&amp;&#32;<link linkend="_class_log_1a91f9df208ee0515b6403210497d37ee4">operator =</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_log">Log</link>&amp;);
+29 &#32;<emphasis role="keyword">private</emphasis>:
+30 &#32;&#32;<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778">TLogLevel</link>&#32;<link linkend="_class_log_1a795b5a43b1b115d41d88149ab86c0967">message_level_</link>;
+31 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_log_1a8079bae56521b384ea87284206223f42">EnumToString</link>(<link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778">TLogLevel</link>&#32;level);
+32 &#32;&#32;std::string&#32;<link linkend="_class_log_1af14e8b4c37abf6be087c8be1fe395216">TimeToString</link>(time_t&#32;time);
+33 };
+34 
+35 <emphasis role="preprocessor">#define&#32;LOG(level,&#32;string)&#32;\</emphasis>
+36 <emphasis role="preprocessor">if&#32;((level)&#32;&gt;&#32;Log::reporting_level_)&#32;;&#32;\</emphasis>
+37 <emphasis role="preprocessor">else&#32;Log().Get(level,&#32;string)</emphasis>
+38 
+39 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_LIB_LOG_LOG_H_</emphasis>
+</programlisting></section>

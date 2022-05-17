@@ -1,0 +1,4 @@
+<map id="CanCom::GetFrameSize" name="CanCom::GetFrameSize">
+<area shape="rect" id="node1" title="Find størrelsen af en modtaget Protobuf pakke inden decode." alt="" coords="201,5,365,32"/>
+<area shape="rect" id="node2" href="$class_can_com.html#ab963975230cc827959cc329b51ce2e24" title="Modtag en enkelt ADC måling fra serialized_buffer_." alt="" coords="5,5,153,32"/>
+</map>

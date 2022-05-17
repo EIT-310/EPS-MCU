@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__power_manage_8h" xml:lang="en-US">
+<title>lib/PowerManage/PowerManage.h File Reference</title>
+<indexterm><primary>lib/PowerManage/PowerManage.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;
+#include &lt;Fsm.h&gt;
+#include &quot;ProjectConfig.h&quot;
+#include &quot;AdcRead.h&quot;
+</programlisting>Include dependency graph for PowerManage.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_power_manage_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_power_manage_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_power_manage">PowerManage</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

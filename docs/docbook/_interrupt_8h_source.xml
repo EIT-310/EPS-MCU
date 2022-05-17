@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__interrupt_8h_source" xml:lang="en-US">
+<title>Interrupt.h</title>
+<indexterm><primary>lib/Interrupt/Interrupt.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//</emphasis>
+2 <emphasis role="comment">//&#32;Created&#32;by&#32;EIT-416&#32;on&#32;12/04/2022.</emphasis>
+3 <emphasis role="comment">//</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="__no_mutex_c_a_n_8h">NoMutexCAN.h</link>&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_reading_8pb_8h">reading.pb.h</link>&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;pb_decode.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;rtos.h&quot;</emphasis>
+9 <emphasis role="preprocessor">#ifndef&#32;EPS_MCU_INTERRUPT_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;EPS_MCU_INTERRUPT_H</emphasis>
+11 
+12 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_INTERRUPT_H</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__power_manage_8h">PowerManage.h</link>&quot;</emphasis>
+14 
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_oce_isr">OceIsr</link>&#32;{
+16 &#32;<emphasis role="keyword">public</emphasis>:
+17 
+26 &#32;&#32;<link linkend="_class_oce_isr_1abd0bd9698e93dadc3356baaf6366f4ed">OceIsr</link>(PinName&#32;irq_pin,&#32;EventQueue&#32;*queue,&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;module)&#32;:&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>(irq_pin,&#32;OpenDrainPullDown){
+27 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>&#32;=&#32;module;
+28 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+29 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>&#32;=&#32;queue;
+30 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>.rise(callback(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</link>));
+31 
+32 &#32;&#32;}
+33 
+34 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;EventQueue&#32;*<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>;
+35 
+36 
+37 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">Handle</link>();
+38 
+39 &#32;<emphasis role="keyword">private</emphasis>:
+40 &#32;&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>;
+41 &#32;&#32;InterruptIn&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>;
+42 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>;
+43 
+44 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4">EventHandler</link>();
+45 };
+46 
+</programlisting></section>

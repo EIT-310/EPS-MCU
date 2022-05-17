@@ -1,0 +1,5 @@
+<map id="CanCom::GetReading" name="CanCom::GetReading">
+<area shape="rect" id="node1" title="Modtag en enkelt ADC måling fra serialized_buffer_." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$class_can_com.html#a50b026d2f14b2be6d5a4cf98b210ce66" title="Find størrelsen af en modtaget Protobuf pakke inden decode." alt="" coords="201,5,365,32"/>
+<area shape="rect" id="node3" href="$class_can_com.html#a52c0f42094e4622ee96db13215a3d16e" title="Rykker alle bytes i serialized_buffer_ med et antal pladser." alt="" coords="214,56,353,83"/>
+</map>

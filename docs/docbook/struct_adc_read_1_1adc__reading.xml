@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_adc_read_1_1adc__reading" xml:lang="en-US">
+<title>AdcRead::adc_reading Struct Reference</title>
+<indexterm><primary>AdcRead::adc_reading</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AdcRead.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3">bat_v_1</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2">bat_i_1</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade">mppt_v_1</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c">mppt_i_1</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910">sub_v_1</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2">sub_i_1</link></para>
+</listitem>
+            <listitem><para>time_t <link linkend="_struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09">timestamp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2"/><section>
+    <title>bat_i_1</title>
+<indexterm><primary>bat_i_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>bat_i_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::bat_i_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3"/><section>
+    <title>bat_v_1</title>
+<indexterm><primary>bat_v_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>bat_v_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::bat_v_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c"/><section>
+    <title>mppt_i_1</title>
+<indexterm><primary>mppt_i_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>mppt_i_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::mppt_i_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade"/><section>
+    <title>mppt_v_1</title>
+<indexterm><primary>mppt_v_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>mppt_v_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::mppt_v_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2"/><section>
+    <title>sub_i_1</title>
+<indexterm><primary>sub_i_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>sub_i_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::sub_i_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910"/><section>
+    <title>sub_v_1</title>
+<indexterm><primary>sub_v_1</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>sub_v_1</secondary></indexterm>
+<para><computeroutput>uint16_t AdcRead::adc_reading::sub_v_1</computeroutput></para></section>
+<anchor xml:id="_struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>AdcRead::adc_reading</secondary></indexterm>
+<indexterm><primary>AdcRead::adc_reading</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>time_t AdcRead::adc_reading::timestamp</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+lib/AdcRead/<link linkend="__adc_read_8h">AdcRead.h</link></section>
+</section>

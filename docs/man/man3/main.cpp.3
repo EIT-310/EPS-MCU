@@ -1,0 +1,216 @@
+.TH "src/main.cpp" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'mbed\&.h'\fP
+.br
+\fC#include 'Fsm\&.h'\fP
+.br
+\fC#include 'NVStore\&.h'\fP
+.br
+\fC#include 'AdcRead\&.h'\fP
+.br
+\fC#include 'mbed_stats\&.h'\fP
+.br
+\fC#include <ProjectConfig\&.h>\fP
+.br
+\fC#include 'Interrupt\&.h'\fP
+.br
+\fC#include 'PowerManage\&.h'\fP
+.br
+\fC#include 'Log\&.h'\fP
+.br
+\fC#include 'CanCom\&.h'\fP
+.br
+\fC#include 'reading\&.pb\&.h'\fP
+.br
+\fC#include 'NoMutexCAN\&.h'\fP
+.br
+\fC#include 'rtos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Thread \fBt_can_handler\fP (osPriorityNormal, OS_STACK_SIZE, nullptr,'CAN Handler')"
+.br
+.ti -1c
+.RI "Thread \fBt_ISR_handler\fP (osPriorityISR, 1024, nullptr, 'OCE Handler')"
+.br
+.ti -1c
+.RI "Thread \fBt_adc_main\fP (osPriorityNormal, 1024, nullptr,'ADC Handler')"
+.br
+.ti -1c
+.RI "Thread \fBt_state_subs\fP (osPriorityNormal, 1024, nullptr,'State Updater')"
+.br
+.ti -1c
+.RI "\fBOceIsr\fP \fBoce1\fP (OCE_1_PIN, &\fBIsrQueue\fP, \fBPowerManage::SUB_1\fP)"
+.br
+.ti -1c
+.RI "void \fBReadAdc\fP ()"
+.br
+.RI "Sætter ADC måling igang\&. Kører hvert 5\&. sekundt med mindre en vigtigere thread pre-empt'er den\&. Lægger den nye måling i kø til \fBNewState()\fP "
+.ti -1c
+.RI "void \fBUpdateSubs\fP ()"
+.br
+.RI "Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog\&. "
+.ti -1c
+.RI "void \fBStartWatchdog\fP ()"
+.br
+.RI "Starter Watchdog hvis timeout er for langt sættes den istedet til den længste tilladte værdi\&. "
+.ti -1c
+.RI "void \fBCanTimeSync\fP ()"
+.br
+.RI "ISR deferred handler for at decode time sync package og opdatere RTC med den modtagede værdi\&. "
+.ti -1c
+.RI "void \fBCanHandler\fP ()"
+.br
+.RI "ISR deferred handler der reagerer på flag fra \fBOnCanRec()\fP "
+.ti -1c
+.RI "void \fBOnCanRec\fP ()"
+.br
+.RI "ISR deferred handler til at beslutte handling på baggrund af CAN framets ID\&. "
+.ti -1c
+.RI "void \fBSetup\fP ()"
+.br
+.RI "Køres en enkelt gang når systemet starter\&. "
+.ti -1c
+.RI "void \fBNewState\fP ()"
+.br
+.RI "Modtager ny måling fra \fBReadAdc()\fP og bestemmer ny state på baggrund af disse data\&. "
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "Sætter threads igang og sover\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBFsm\fP \fBfsm\fP (\fBFSM_START_STATE\fP)"
+.br
+.ti -1c
+.RI "EventQueue \fBIsrQueue\fP"
+.br
+.ti -1c
+.RI "EventQueue \fBAdcQueue\fP"
+.br
+.ti -1c
+.RI "\fBNoMutexCAN\fP \fBcan\fP (CAN_RD_PIN, CAN_TD_PIN, \fBCAN_BITRATE\fP)"
+.br
+.ti -1c
+.RI "Watchdog & \fBwatchdog\fP = Watchdog::get_instance()"
+.br
+.ti -1c
+.RI "CANMessage \fBcan_time_sync\fP"
+.br
+.ti -1c
+.RI "CANMessage \fBcan_req\fP"
+.br
+.ti -1c
+.RI "Ticker \fBadc_ticker\fP"
+.br
+.ti -1c
+.RI "Mail< \fBAdcRead::adc_reading\fP, 8 > \fBadc_mail\fP"
+.br
+.ti -1c
+.RI "bool \fBcan_time_isr\fP"
+.br
+.ti -1c
+.RI "bool \fBcan_req_isr\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void CanHandler ()"
+
+.PP
+ISR deferred handler der reagerer på flag fra \fBOnCanRec()\fP 
+.PP
+\fBNote\fP
+.RS 4
+Lettere overflødig og lævn fra tidligere metode uden brug af EventQueue 
+.RE
+.PP
+
+.SS "void CanTimeSync ()"
+
+.PP
+ISR deferred handler for at decode time sync package og opdatere RTC med den modtagede værdi\&. 
+.SS "int main ()"
+
+.PP
+Sætter threads igang og sover\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int standard 
+.RE
+.PP
+
+.SS "void NewState ()"
+
+.PP
+Modtager ny måling fra \fBReadAdc()\fP og bestemmer ny state på baggrund af disse data\&. 
+.SS "\fBOceIsr\fP oce1 (OCE_1_PIN, & IsrQueue, \fBPowerManage::SUB_1\fP)"
+
+.SS "void OnCanRec ()"
+
+.PP
+ISR deferred handler til at beslutte handling på baggrund af CAN framets ID\&. 
+.SS "void ReadAdc ()"
+
+.PP
+Sætter ADC måling igang\&. Kører hvert 5\&. sekundt med mindre en vigtigere thread pre-empt'er den\&. Lægger den nye måling i kø til \fBNewState()\fP 
+.SS "void Setup ()"
+
+.PP
+Køres en enkelt gang når systemet starter\&. 
+.SS "void StartWatchdog ()"
+
+.PP
+Starter Watchdog hvis timeout er for langt sættes den istedet til den længste tilladte værdi\&. 
+.SS "Thread t_adc_main (osPriorityNormal, 1024, nullptr, 'ADC Handler')"
+
+.SS "Thread t_can_handler (osPriorityNormal, OS_STACK_SIZE, nullptr, 'CAN Handler')"
+
+.SS "Thread t_ISR_handler (osPriorityISR, 1024, nullptr, 'OCE Handler')"
+
+.SS "Thread t_state_subs (osPriorityNormal, 1024, nullptr, 'State Updater')"
+
+.SS "void UpdateSubs ()"
+
+.PP
+Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "Mail<\fBAdcRead::adc_reading\fP, 8> adc_mail"
+
+.SS "Ticker adc_ticker"
+
+.SS "EventQueue AdcQueue"
+
+.SS "\fBCanCom\fP cancom & can (CAN_RD_PIN, CAN_TD_PIN, \fBCAN_BITRATE\fP)"
+
+.SS "CANMessage can_req"
+
+.SS "bool can_req_isr"
+
+.SS "bool can_time_isr"
+
+.SS "CANMessage can_time_sync"
+
+.SS "\fBFsm\fP fsm(\fBFSM_START_STATE\fP) (\fBFSM_START_STATE\fP)"
+
+.SS "EventQueue IsrQueue"
+
+.SS "Watchdog& watchdog = Watchdog::get_instance()"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

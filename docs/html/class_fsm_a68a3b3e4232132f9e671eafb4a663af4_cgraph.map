@@ -1,0 +1,7 @@
+<map id="Fsm::DetermineState" name="Fsm::DetermineState">
+<area shape="rect" id="node1" title="Bedøm en ny target state på baggrund af ADC måling og kald StateChanger()" alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$class_fsm.html#a439ed6c66f0b4f982ffa48ce23ade7c1" title="Beregn effekten for alle MPPT&#39;er i en ADC måling." alt="" coords="211,5,324,32"/>
+<area shape="rect" id="node3" href="$class_fsm.html#a9c900414072a45b3cf703e3ea2f37c1b" title="Incrementer eller decrementer current_state, alt efter om den er lavere eller højere end target_state..." alt="" coords="200,56,335,83"/>
+<area shape="rect" id="node4" href="$class_fsm.html#adf20f20a6b2b7472bd718ac0eabbe220" title="Gå en state ned. Hvis nuværende state er den laveste, gør intet." alt="" coords="383,31,501,57"/>
+<area shape="rect" id="node5" href="$class_fsm.html#a0b88cb2000e2c66ec3f4d68b991a10f4" title="Gå en state up. Hvis nuværende state er den højeste, gør intet." alt="" coords="391,81,493,108"/>
+</map>

@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.4" xml:lang="en-US">
+  <compound refid="struct__send__reading" kind="struct"><name>_send_reading</name>
+    <member refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" kind="variable"><name>bat_v_1</name></member>
+    <member refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" kind="variable"><name>bat_i_1</name></member>
+    <member refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" kind="variable"><name>has_mppt_v_1</name></member>
+    <member refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" kind="variable"><name>mppt_v_1</name></member>
+    <member refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" kind="variable"><name>has_mppt_i_1</name></member>
+    <member refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" kind="variable"><name>mppt_i_1</name></member>
+    <member refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" kind="variable"><name>has_sub_v_1</name></member>
+    <member refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" kind="variable"><name>sub_v_1</name></member>
+    <member refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" kind="variable"><name>has_sub_i_1</name></member>
+    <member refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" kind="variable"><name>sub_i_1</name></member>
+    <member refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" kind="variable"><name>timestamp</name></member>
+  </compound>
+  <compound refid="struct__time__sync" kind="struct"><name>_time_sync</name>
+    <member refid="struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6" kind="variable"><name>current_time</name></member>
+  </compound>
+  <compound refid="struct_adc_read_1_1adc__reading" kind="struct"><name>AdcRead::adc_reading</name>
+    <member refid="struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3" kind="variable"><name>bat_v_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2" kind="variable"><name>bat_i_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade" kind="variable"><name>mppt_v_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c" kind="variable"><name>mppt_i_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910" kind="variable"><name>sub_v_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2" kind="variable"><name>sub_i_1</name></member>
+    <member refid="struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09" kind="variable"><name>timestamp</name></member>
+  </compound>
+  <compound refid="struct_adc_read_1_1adc__thread__args" kind="struct"><name>AdcRead::adc_thread_args</name>
+    <member refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" kind="variable"><name>device</name></member>
+    <member refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" kind="variable"><name>dest</name></member>
+  </compound>
+  <compound refid="class_adc_read" kind="class"><name>AdcRead</name>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156" kind="enum"><name>AdcName</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d" kind="enumvalue"><name>BAT_V_1</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6" kind="enumvalue"><name>BAT_I_1</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8" kind="enumvalue"><name>MPPT_V_1</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff" kind="enumvalue"><name>MPPT_I_1</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00" kind="enumvalue"><name>SUB_V_1</name></member>
+    <member refid="class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201" kind="enumvalue"><name>SUB_I_1</name></member>
+    <member refid="class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396" kind="variable"><name>adc_buffer_</name></member>
+    <member refid="class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b" kind="variable"><name>adc_list_</name></member>
+    <member refid="class_adc_read_1a579cb1cbc31d93bb202f770492be226d" kind="function"><name>AdcRead</name></member>
+    <member refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" kind="function"><name>DoRead</name></member>
+    <member refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" kind="function"><name>ReadU16</name></member>
+    <member refid="class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb" kind="function"><name>GetDevice</name></member>
+    <member refid="class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8" kind="function"><name>ReadFloat</name></member>
+    <member refid="class_adc_read_1a57f35b9fd598aff98289da19a5edff40" kind="function"><name>AsyncADC</name></member>
+  </compound>
+  <compound refid="class_can_com" kind="class"><name>CanCom</name>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7" kind="enum"><name>CanMessageId</name></member>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50" kind="enumvalue"><name>CAN_TIME_SYNC</name></member>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c" kind="enumvalue"><name>CAN_SET_CONFIG</name></member>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e" kind="enumvalue"><name>CAN_GET_CONFIG</name></member>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" kind="enumvalue"><name>CAN_GET_READING</name></member>
+    <member refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc" kind="enumvalue"><name>CAN_LOG</name></member>
+    <member refid="class_can_com_1a49dd73a42baabac31df9dd9de570a53f" kind="variable"><name>serialized_buffer_</name></member>
+    <member refid="class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f" kind="variable"><name>can_</name></member>
+    <member refid="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" kind="function"><name>CanCom</name></member>
+    <member refid="class_can_com_1a22fb622bb2aa27436415898d40e5987f" kind="function"><name>SendBuffer</name></member>
+    <member refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" kind="function"><name>SendReadings</name></member>
+    <member refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" kind="function"><name>GetReading</name></member>
+    <member refid="class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66" kind="function"><name>GetFrameSize</name></member>
+    <member refid="class_can_com_1a52c0f42094e4622ee96db13215a3d16e" kind="function"><name>ShiftBuffer</name></member>
+  </compound>
+  <compound refid="class_fsm" kind="class"><name>Fsm</name>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f" kind="enum"><name>State</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db" kind="enumvalue"><name>EMERGENCY</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb" kind="enumvalue"><name>LOW</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9" kind="enumvalue"><name>MID_LOW</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885" kind="enumvalue"><name>MID</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178" kind="enumvalue"><name>MID_HIGH</name></member>
+    <member refid="class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717" kind="enumvalue"><name>HIGH</name></member>
+    <member refid="class_fsm_1a21c5bd7d7af36c2140574e40853b1da1" kind="variable"><name>current_state_</name></member>
+    <member refid="class_fsm_1a0707d788017e5a74113c4285c9c748b9" kind="function"><name>Fsm</name></member>
+    <member refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" kind="function"><name>DetermineState</name></member>
+    <member refid="class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4" kind="function"><name>UpState</name></member>
+    <member refid="class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220" kind="function"><name>DownState</name></member>
+    <member refid="class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf" kind="function"><name>GetCurrentState</name></member>
+    <member refid="class_fsm_1adc5296fe861e5e938365b7afd0834950" kind="function"><name>ToString</name></member>
+    <member refid="class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e" kind="function"><name>GetString</name></member>
+    <member refid="class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b" kind="function"><name>StateChanger</name></member>
+    <member refid="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" kind="function"><name>GetPower</name></member>
+  </compound>
+  <compound refid="class_log" kind="class"><name>Log</name>
+    <member refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" kind="variable"><name>serial_</name></member>
+    <member refid="class_log_1aeb290934f14369d2969cd4f50f631d28" kind="variable"><name>reporting_level_</name></member>
+    <member refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" kind="variable"><name>msg_</name></member>
+    <member refid="class_log_1a795b5a43b1b115d41d88149ab86c0967" kind="variable"><name>message_level_</name></member>
+    <member refid="class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe" kind="function"><name>Log</name></member>
+    <member refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" kind="function"><name>~Log</name></member>
+    <member refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" kind="function"><name>Get</name></member>
+    <member refid="class_log_1a60fc11c5c263c4bfad3f9561a4881a13" kind="function"><name>Log</name></member>
+    <member refid="class_log_1a91f9df208ee0515b6403210497d37ee4" kind="function"><name>operator=</name></member>
+    <member refid="class_log_1af14e8b4c37abf6be087c8be1fe395216" kind="function"><name>TimeToString</name></member>
+    <member refid="class_log_1a8079bae56521b384ea87284206223f42" kind="function"><name>EnumToString</name></member>
+  </compound>
+  <compound refid="class_no_mutex_c_a_n" kind="class"><name>NoMutexCAN</name>
+    <member refid="class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42" kind="function"><name>NoMutexCAN</name></member>
+    <member refid="class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214" kind="function"><name>NoMutexCAN</name></member>
+    <member refid="class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4" kind="function"><name>~NoMutexCAN</name></member>
+    <member refid="class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7" kind="function"><name>lock</name></member>
+    <member refid="class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150" kind="function"><name>unlock</name></member>
+  </compound>
+  <compound refid="class_n_v_store" kind="class"><name>NVStore</name>
+    <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kind="enum"><name>DATA_LOCATION</name></member>
+    <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" kind="enumvalue"><name>sm_state</name></member>
+    <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" kind="enumvalue"><name>adc_read</name></member>
+    <member refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" kind="function"><name>write</name></member>
+    <member refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" kind="function"><name>read</name></member>
+    <member refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" kind="function"><name>GetKeyStr</name></member>
+  </compound>
+  <compound refid="class_oce_isr" kind="class"><name>OceIsr</name>
+    <member refid="class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127" kind="variable"><name>queue_</name></member>
+    <member refid="class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd" kind="variable"><name>module_</name></member>
+    <member refid="class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca" kind="variable"><name>interrupt_</name></member>
+    <member refid="class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7" kind="variable"><name>irq_happened_</name></member>
+    <member refid="class_oce_isr_1abd0bd9698e93dadc3356baaf6366f4ed" kind="function"><name>OceIsr</name></member>
+    <member refid="class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd" kind="function"><name>Handle</name></member>
+    <member refid="class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4" kind="function"><name>EventHandler</name></member>
+  </compound>
+  <compound refid="class_power_manage" kind="class"><name>PowerManage</name>
+    <member refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e" kind="enum"><name>Modules</name></member>
+    <member refid="class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6" kind="enumvalue"><name>SUB_1</name></member>
+    <member refid="class_power_manage_1a0cc9b04c91f44190fe04e1d749d5d6c6" kind="variable"><name>enabled_modules_</name></member>
+    <member refid="class_power_manage_1a07c3547bbb3c11eda2dc67ce1becf09c" kind="variable"><name>module_override_</name></member>
+    <member refid="class_power_manage_1a7229a54685a11211bd72a96b7e2af2ac" kind="variable"><name>power_rails_</name></member>
+    <member refid="class_power_manage_1a0db524d4f8f5ac9a1b22917c81fd2015" kind="function"><name>ToString</name></member>
+    <member refid="class_power_manage_1a588ec30ab5aef350697f13706bb24bd1" kind="function"><name>OceFromIsr</name></member>
+    <member refid="class_power_manage_1a35279ac0f18272c3c00bddfd1850f3d6" kind="function"><name>SetOverride</name></member>
+    <member refid="class_power_manage_1a6cc478738b54fbbd148122c4ae6e93fb" kind="function"><name>UpdateEnabled</name></member>
+    <member refid="class_power_manage_1a76f09867e77b6f1184ca446fffda9781" kind="function"><name>WriteSubState</name></member>
+  </compound>
+  <compound refid="_adc_read_8cpp" kind="file"><name>AdcRead.cpp</name>
+    <member refid="_adc_read_8cpp_1ab80436562c076722bec925a029dcefa6" kind="variable"><name>adc_read_list</name></member>
+    <member refid="_adc_read_8cpp_1abb8f1cdfd5a3cb248a4542bf976a2697" kind="variable"><name>t_adc_read</name></member>
+    <member refid="_adc_read_8cpp_1aa916527f44c4b2b6a45d336faaf12a8a" kind="variable"><name>arg_list</name></member>
+  </compound>
+  <compound refid="_adc_read_8h" kind="file"><name>AdcRead.h</name>
+  </compound>
+  <compound refid="_can_com_8cpp" kind="file"><name>CanCom.cpp</name>
+  </compound>
+  <compound refid="_can_com_8h" kind="file"><name>CanCom.h</name>
+  </compound>
+  <compound refid="_project_config_8h" kind="file"><name>ProjectConfig.h</name>
+    <member refid="_project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4" kind="define"><name>ADC_MEASURE_LOOPS</name></member>
+    <member refid="_project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46" kind="define"><name>ADC_BUFFER_SIZE</name></member>
+    <member refid="_project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0" kind="define"><name>VBAT_MID_HIGH</name></member>
+    <member refid="_project_config_8h_1a16895ef5f3300696389ad3deef86d13b" kind="define"><name>VBAT_MID</name></member>
+    <member refid="_project_config_8h_1aee3cf581e7f7e58917247beb957c7db2" kind="define"><name>VBAT_MID_LOW</name></member>
+    <member refid="_project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a" kind="define"><name>VBAT_LOW</name></member>
+    <member refid="_project_config_8h_1add519ebd457e2957c312c4647885335b" kind="define"><name>VBAT_EMERGENCY</name></member>
+    <member refid="_project_config_8h_1a356819873d8776bc18ae8a9abe850ecc" kind="define"><name>MPPT_CURR_AMP</name></member>
+    <member refid="_project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a" kind="define"><name>MPPT_SHUNT_RES</name></member>
+    <member refid="_project_config_8h_1a936618a4fbd892618b0865b86a1fb22c" kind="define"><name>CAN_BITRATE</name></member>
+    <member refid="_project_config_8h_1abf89628d486477bd0db5a5890cd38a05" kind="define"><name>WATCHDOG_TIMEOUT</name></member>
+    <member refid="_project_config_8h_1a69780fe091bc441b276e79d89f7acb97" kind="define"><name>FSM_START_STATE</name></member>
+    <member refid="_project_config_8h_1adb533411b6a28c7674a9cac3ac04d922" kind="define"><name>CRIT_MPPT_POW_SUM</name></member>
+    <member refid="_project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" kind="define"><name>LOG_LEVEL</name></member>
+    <member refid="_project_config_8h_1adf549ab0f4febe7311847223bcb94391" kind="define"><name>LOG_COM_TYPE</name></member>
+  </compound>
+  <compound refid="_fsm_8cpp" kind="file"><name>Fsm.cpp</name>
+  </compound>
+  <compound refid="_fsm_8h" kind="file"><name>Fsm.h</name>
+  </compound>
+  <compound refid="_interrupt_8cpp" kind="file"><name>Interrupt.cpp</name>
+  </compound>
+  <compound refid="_interrupt_8h" kind="file"><name>Interrupt.h</name>
+  </compound>
+  <compound refid="_log_8cpp" kind="file"><name>Log.cpp</name>
+  </compound>
+  <compound refid="_log_8h" kind="file"><name>Log.h</name>
+    <member refid="_log_8h_1a45213472c513e9160481979a237b50fe" kind="define"><name>LOG</name></member>
+    <member refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778" kind="enum"><name>TLogLevel</name></member>
+    <member refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473" kind="enumvalue"><name>LOG_ERROR</name></member>
+    <member refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400" kind="enumvalue"><name>LOG_WARNING</name></member>
+    <member refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837" kind="enumvalue"><name>LOG_INFO</name></member>
+    <member refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" kind="enumvalue"><name>LOG_DEBUG</name></member>
+    <member refid="_log_8h_1a9d9309be0597ea1250b5fe6f70e31c32" kind="enum"><name>TLogDevice</name></member>
+    <member refid="_log_8h_1a9d9309be0597ea1250b5fe6f70e31c32afaae04b7ff16347c1236d83113fe827a" kind="enumvalue"><name>LOG_SERIAL</name></member>
+    <member refid="_log_8h_1a9d9309be0597ea1250b5fe6f70e31c32a854a22c1c382f9b7a93bf8e556191c5f" kind="enumvalue"><name>LOG_CAN</name></member>
+  </compound>
+  <compound refid="_no_mutex_c_a_n_8h" kind="file"><name>NoMutexCAN.h</name>
+  </compound>
+  <compound refid="_n_v_store_8cpp" kind="file"><name>NVStore.cpp</name>
+    <member refid="_n_v_store_8cpp_1a096d1aa03aa095f7e4649f45327f110c" kind="variable"><name>bd</name></member>
+  </compound>
+  <compound refid="_n_v_store_8h" kind="file"><name>NVStore.h</name>
+  </compound>
+  <compound refid="_power_manage_8cpp" kind="file"><name>PowerManage.cpp</name>
+  </compound>
+  <compound refid="_power_manage_8h" kind="file"><name>PowerManage.h</name>
+  </compound>
+  <compound refid="reading_8pb_8c" kind="file"><name>reading.pb.c</name>
+  </compound>
+  <compound refid="reading_8pb_8h" kind="file"><name>reading.pb.h</name>
+    <member refid="reading_8pb_8h_1a4058268ee72bbec5d2cc62f7c707d435" kind="define"><name>send_reading_init_default</name></member>
+    <member refid="reading_8pb_8h_1ae72ccdf58f4ef4cb5eeffa0b9a0baf33" kind="define"><name>time_sync_init_default</name></member>
+    <member refid="reading_8pb_8h_1a3f63f16043c0f49d4ea5a87ebbf5cdfc" kind="define"><name>send_reading_init_zero</name></member>
+    <member refid="reading_8pb_8h_1a8e8a6d974595ca8ad8f52cb5bc28f4ab" kind="define"><name>time_sync_init_zero</name></member>
+    <member refid="reading_8pb_8h_1a8f0771dbc96b99905b4047cbc5bdce5f" kind="define"><name>send_reading_bat_v_1_tag</name></member>
+    <member refid="reading_8pb_8h_1abeaecdf915ceea5ae507abb48b7b9fc9" kind="define"><name>send_reading_bat_i_1_tag</name></member>
+    <member refid="reading_8pb_8h_1aa939d4d037926848233cd58b8d7c2889" kind="define"><name>send_reading_mppt_v_1_tag</name></member>
+    <member refid="reading_8pb_8h_1a47467bc4eff500d40d6b5580444c2959" kind="define"><name>send_reading_mppt_i_1_tag</name></member>
+    <member refid="reading_8pb_8h_1a5d816d0cddb07321182f9461c6d48acf" kind="define"><name>send_reading_sub_v_1_tag</name></member>
+    <member refid="reading_8pb_8h_1a36d2a5d125271470f4dfd7928fd1415d" kind="define"><name>send_reading_sub_i_1_tag</name></member>
+    <member refid="reading_8pb_8h_1a770eae91f2e4c337e7316d875eeec28a" kind="define"><name>send_reading_timestamp_tag</name></member>
+    <member refid="reading_8pb_8h_1a4dd0422217daf32064298a0b023d7ee4" kind="define"><name>time_sync_current_time_tag</name></member>
+    <member refid="reading_8pb_8h_1a9e4081362476d7a454f8bcd531c5d946" kind="define"><name>send_reading_FIELDLIST</name></member>
+    <member refid="reading_8pb_8h_1adccd0cc3cfa5b4545a4c87ef58e4c797" kind="define"><name>send_reading_CALLBACK</name></member>
+    <member refid="reading_8pb_8h_1a9379f9778bb3402ff975151e77dfc31d" kind="define"><name>send_reading_DEFAULT</name></member>
+    <member refid="reading_8pb_8h_1af2e2902c5db1646d7e3d801504e33b74" kind="define"><name>time_sync_FIELDLIST</name></member>
+    <member refid="reading_8pb_8h_1abb8f58e69bade1aeae18bbd0cd669a92" kind="define"><name>time_sync_CALLBACK</name></member>
+    <member refid="reading_8pb_8h_1a39d27e3c8d544e8a3e417c9e27e24fe8" kind="define"><name>time_sync_DEFAULT</name></member>
+    <member refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" kind="define"><name>send_reading_fields</name></member>
+    <member refid="reading_8pb_8h_1a600c302fd20ee5bafbbf504dcc13f7ba" kind="define"><name>time_sync_fields</name></member>
+    <member refid="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" kind="define"><name>send_reading_size</name></member>
+    <member refid="reading_8pb_8h_1a8f4c787fe64e1ef8c91196eb417d62f0" kind="define"><name>time_sync_size</name></member>
+    <member refid="reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca" kind="typedef"><name>send_reading</name></member>
+    <member refid="reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2" kind="typedef"><name>time_sync</name></member>
+    <member refid="reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9" kind="variable"><name>send_reading_msg</name></member>
+    <member refid="reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc" kind="variable"><name>time_sync_msg</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a9f4267ec33e4521e3429fe3c8d933a04" kind="variable"><name>fsm</name></member>
+    <member refid="main_8cpp_1a6ee6423ec42a45faf59c779d64ecad25" kind="variable"><name>IsrQueue</name></member>
+    <member refid="main_8cpp_1a63a2d7bfab07ad56bcc616708e1311d8" kind="variable"><name>AdcQueue</name></member>
+    <member refid="main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757" kind="variable"><name>can</name></member>
+    <member refid="main_8cpp_1a415458cba5bf50c42f8bd5c9548cc237" kind="variable"><name>watchdog</name></member>
+    <member refid="main_8cpp_1a6455c2bdd533574c68e203f7d1e3265d" kind="variable"><name>can_time_sync</name></member>
+    <member refid="main_8cpp_1ac8fa5b302ff73f9e90ee35405b112748" kind="variable"><name>can_req</name></member>
+    <member refid="main_8cpp_1adaedeffa9cd68dc76b50e18ac30de0a9" kind="variable"><name>adc_ticker</name></member>
+    <member refid="main_8cpp_1a98c8c86c1543fd5370047f525d0a1f31" kind="variable"><name>adc_mail</name></member>
+    <member refid="main_8cpp_1a16cedde881cfcbc26c9fb4f2ff54e033" kind="variable"><name>can_time_isr</name></member>
+    <member refid="main_8cpp_1aff54455fc158126cb45ff4d8c55fa910" kind="variable"><name>can_req_isr</name></member>
+    <member refid="main_8cpp_1a8088721061b22d3a703b809282db158a" kind="function"><name>t_can_handler</name></member>
+    <member refid="main_8cpp_1a9da7aec02ec673a8b5ecdf4510f106c1" kind="function"><name>t_ISR_handler</name></member>
+    <member refid="main_8cpp_1a3954245cb9a4c741ae774426178b1817" kind="function"><name>t_adc_main</name></member>
+    <member refid="main_8cpp_1aa4f4ec1bad01c8e84c6122eccfb9bbe7" kind="function"><name>t_state_subs</name></member>
+    <member refid="main_8cpp_1a6c214e618015d093ba8590729563c33c" kind="function"><name>oce1</name></member>
+    <member refid="main_8cpp_1ac595faede462d70c3fb34417f4e984e7" kind="function"><name>ReadAdc</name></member>
+    <member refid="main_8cpp_1a1344d6ffed8b15af8c18dd7aa69d4872" kind="function"><name>UpdateSubs</name></member>
+    <member refid="main_8cpp_1a5c7452bc8a6f648db67fe952474d73de" kind="function"><name>StartWatchdog</name></member>
+    <member refid="main_8cpp_1a051cb0babede35842fcb4822fe9102f7" kind="function"><name>CanTimeSync</name></member>
+    <member refid="main_8cpp_1abedbe52be05e887351f9d26921ff77cf" kind="function"><name>CanHandler</name></member>
+    <member refid="main_8cpp_1ad5d56d2ac5d86036b8a7931d829e6082" kind="function"><name>OnCanRec</name></member>
+    <member refid="main_8cpp_1a769404f2985a027a0d626fedfd4de1e9" kind="function"><name>Setup</name></member>
+    <member refid="main_8cpp_1a3a1208bf880dbc3e596cdd55b5cbd6b0" kind="function"><name>NewState</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_e2a9a723b392cd736ad3a68b9081c4d8" kind="dir"><name>lib/AdcRead</name>
+  </compound>
+  <compound refid="dir_814e929dd25486b1cca1fc1abeb715c3" kind="dir"><name>lib/CanCom</name>
+  </compound>
+  <compound refid="dir_5bbdcc428926e051a1bf54edc21cb6ca" kind="dir"><name>lib/Config</name>
+  </compound>
+  <compound refid="dir_31237f92b8b9d677562a3db09de06fa4" kind="dir"><name>lib/FSM</name>
+  </compound>
+  <compound refid="dir_d469b9f68f36bf0bf3a423fc2ddfbf53" kind="dir"><name>lib/Interrupt</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_65cb71248861d6a88a9791ad15d2fb5e" kind="dir"><name>lib/Log</name>
+  </compound>
+  <compound refid="dir_b5079d239d69424b12cbf1127e0450cf" kind="dir"><name>lib/NoMutexCAN</name>
+  </compound>
+  <compound refid="dir_3bc5e1520659d296fe62012dd7ab5f2e" kind="dir"><name>lib/NVStore</name>
+  </compound>
+  <compound refid="dir_0ca69a72104b64c2eda3ccf18f1d34fa" kind="dir"><name>lib/PowerManage</name>
+  </compound>
+  <compound refid="dir_fb3e8aad3633b1d34213800d9eeeac21" kind="dir"><name>lib/Protobuf</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

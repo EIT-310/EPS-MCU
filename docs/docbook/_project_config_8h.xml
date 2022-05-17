@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__project_config_8h" xml:lang="en-US">
+<title>lib/Config/ProjectConfig.h File Reference</title>
+<indexterm><primary>lib/Config/ProjectConfig.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_project_config_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4">ADC_MEASURE_LOOPS</link>   5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46">ADC_BUFFER_SIZE</link>   100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0">VBAT_MID_HIGH</link>   4.0f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a16895ef5f3300696389ad3deef86d13b">VBAT_MID</link>   3.7f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1aee3cf581e7f7e58917247beb957c7db2">VBAT_MID_LOW</link>   3.4f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a">VBAT_LOW</link>   3.2f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1add519ebd457e2957c312c4647885335b">VBAT_EMERGENCY</link>   3.0f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a356819873d8776bc18ae8a9abe850ecc">MPPT_CURR_AMP</link>   200.0f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a">MPPT_SHUNT_RES</link>   0.02f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a936618a4fbd892618b0865b86a1fb22c">CAN_BITRATE</link>   5e5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1abf89628d486477bd0db5a5890cd38a05">WATCHDOG_TIMEOUT</link>   10000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a69780fe091bc441b276e79d89f7acb97">FSM_START_STATE</link>   <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885">Fsm::MID</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1adb533411b6a28c7674a9cac3ac04d922">CRIT_MPPT_POW_SUM</link>   1.0f</para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05">LOG_LEVEL</link>   <link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__project_config_8h_1adf549ab0f4febe7311847223bcb94391">LOG_COM_TYPE</link>   SERIAL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46"/><section>
+    <title>ADC_BUFFER_SIZE</title>
+<indexterm><primary>ADC_BUFFER_SIZE</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>ADC_BUFFER_SIZE</secondary></indexterm>
+<para><computeroutput>#define ADC_BUFFER_SIZE   100</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1afa546faa1d2f16eea74b654e7c4cc4a4"/><section>
+    <title>ADC_MEASURE_LOOPS</title>
+<indexterm><primary>ADC_MEASURE_LOOPS</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>ADC_MEASURE_LOOPS</secondary></indexterm>
+<para><computeroutput>#define ADC_MEASURE_LOOPS   5</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a936618a4fbd892618b0865b86a1fb22c"/><section>
+    <title>CAN_BITRATE</title>
+<indexterm><primary>CAN_BITRATE</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>CAN_BITRATE</secondary></indexterm>
+<para><computeroutput>#define CAN_BITRATE   5e5</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1adb533411b6a28c7674a9cac3ac04d922"/><section>
+    <title>CRIT_MPPT_POW_SUM</title>
+<indexterm><primary>CRIT_MPPT_POW_SUM</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>CRIT_MPPT_POW_SUM</secondary></indexterm>
+<para><computeroutput>#define CRIT_MPPT_POW_SUM   1.0f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a69780fe091bc441b276e79d89f7acb97"/><section>
+    <title>FSM_START_STATE</title>
+<indexterm><primary>FSM_START_STATE</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>FSM_START_STATE</secondary></indexterm>
+<para><computeroutput>#define FSM_START_STATE   <link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885">Fsm::MID</link></computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1adf549ab0f4febe7311847223bcb94391"/><section>
+    <title>LOG_COM_TYPE</title>
+<indexterm><primary>LOG_COM_TYPE</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>LOG_COM_TYPE</secondary></indexterm>
+<para><computeroutput>#define LOG_COM_TYPE   SERIAL</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05"/><section>
+    <title>LOG_LEVEL</title>
+<indexterm><primary>LOG_LEVEL</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>LOG_LEVEL</secondary></indexterm>
+<para><computeroutput>#define LOG_LEVEL   <link linkend="__log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</link></computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a356819873d8776bc18ae8a9abe850ecc"/><section>
+    <title>MPPT_CURR_AMP</title>
+<indexterm><primary>MPPT_CURR_AMP</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>MPPT_CURR_AMP</secondary></indexterm>
+<para><computeroutput>#define MPPT_CURR_AMP   200.0f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a93ce15b95b918ccf8e9a05ce39477c7a"/><section>
+    <title>MPPT_SHUNT_RES</title>
+<indexterm><primary>MPPT_SHUNT_RES</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>MPPT_SHUNT_RES</secondary></indexterm>
+<para><computeroutput>#define MPPT_SHUNT_RES   0.02f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1add519ebd457e2957c312c4647885335b"/><section>
+    <title>VBAT_EMERGENCY</title>
+<indexterm><primary>VBAT_EMERGENCY</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>VBAT_EMERGENCY</secondary></indexterm>
+<para><computeroutput>#define VBAT_EMERGENCY   3.0f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a1375ce211406c4ae876c2d2568bd4c3a"/><section>
+    <title>VBAT_LOW</title>
+<indexterm><primary>VBAT_LOW</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>VBAT_LOW</secondary></indexterm>
+<para><computeroutput>#define VBAT_LOW   3.2f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1a16895ef5f3300696389ad3deef86d13b"/><section>
+    <title>VBAT_MID</title>
+<indexterm><primary>VBAT_MID</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>VBAT_MID</secondary></indexterm>
+<para><computeroutput>#define VBAT_MID   3.7f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1ad7d6f5576329a55c83efa1478c6472f0"/><section>
+    <title>VBAT_MID_HIGH</title>
+<indexterm><primary>VBAT_MID_HIGH</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>VBAT_MID_HIGH</secondary></indexterm>
+<para><computeroutput>#define VBAT_MID_HIGH   4.0f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1aee3cf581e7f7e58917247beb957c7db2"/><section>
+    <title>VBAT_MID_LOW</title>
+<indexterm><primary>VBAT_MID_LOW</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>VBAT_MID_LOW</secondary></indexterm>
+<para><computeroutput>#define VBAT_MID_LOW   3.4f</computeroutput></para></section>
+<anchor xml:id="__project_config_8h_1abf89628d486477bd0db5a5890cd38a05"/><section>
+    <title>WATCHDOG_TIMEOUT</title>
+<indexterm><primary>WATCHDOG_TIMEOUT</primary><secondary>ProjectConfig.h</secondary></indexterm>
+<indexterm><primary>ProjectConfig.h</primary><secondary>WATCHDOG_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define WATCHDOG_TIMEOUT   10000</computeroutput></para></section>
+</section>
+</section>

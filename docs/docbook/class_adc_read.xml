@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_adc_read" xml:lang="en-US">
+<title>AdcRead Class Reference</title>
+<indexterm><primary>AdcRead</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AdcRead.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_adc_read_1_1adc__reading">adc_reading</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link> { 
+<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d">BAT_V_1</link>
+, <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6">BAT_I_1</link>
+, <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8">MPPT_V_1</link>
+, <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff">MPPT_I_1</link>
+, 
+<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00">SUB_V_1</link>
+, <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201">SUB_I_1</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_adc_read_1a579cb1cbc31d93bb202f770492be226d">AdcRead</link> ()=default</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> <link linkend="_class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958">DoRead</link> ()</para>
+
+<para>Kalder AsyncADC med et antal ADC&apos;er på baggrund af nuværende state. Nye måling bliver lagt i CircularBuffer&apos;en adc_buffer_. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3">ReadU16</link> (<link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> *args)</para>
+
+<para>Måler et givent antal gange på et givent device fra <link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> og skriver middelværdi til <link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> dest. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static CircularBuffer&lt; <link linkend="_struct_adc_read_1_1adc__reading">adc_reading</link>, <link linkend="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46">ADC_BUFFER_SIZE</link> &gt; <link linkend="_class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396">adc_buffer_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static AnalogIn * <link linkend="_class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb">GetDevice</link> (<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link> name)</para>
+
+<para>Omdanner AdcName enum til pointer til ny AnalogIn object for respektivt ADC ben. </para>
+</listitem>
+            <listitem><para>static float <link linkend="_class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8">ReadFloat</link> (AnalogIn *device)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_adc_read_1a57f35b9fd598aff98289da19a5edff40">AsyncADC</link> (int adc_count)</para>
+
+<para>Starter et givent antal threads der hver kører <link linkend="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3">ReadU16()</link> med dets givet ADC ben. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link> <link linkend="_class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b">adc_list_</link> [6]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156"/><section>
+    <title>AdcName</title>
+<indexterm><primary>AdcName</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>AdcName</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcRead::AdcName</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BAT_V_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>BAT_V_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d"/>BAT_V_1</entry><entry></entry></row><row><entry><indexterm><primary>BAT_I_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>BAT_I_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6"/>BAT_I_1</entry><entry></entry></row><row><entry><indexterm><primary>MPPT_V_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>MPPT_V_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8"/>MPPT_V_1</entry><entry></entry></row><row><entry><indexterm><primary>MPPT_I_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>MPPT_I_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff"/>MPPT_I_1</entry><entry></entry></row><row><entry><indexterm><primary>SUB_V_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>SUB_V_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00"/>SUB_V_1</entry><entry></entry></row><row><entry><indexterm><primary>SUB_I_1</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>SUB_I_1</secondary></indexterm>
+<anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201"/>SUB_I_1</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_adc_read_1a579cb1cbc31d93bb202f770492be226d"/><section>
+    <title>AdcRead()</title>
+<indexterm><primary>AdcRead</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>AdcRead</secondary></indexterm>
+<para><computeroutput>AdcRead::AdcRead ( )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_adc_read_1a57f35b9fd598aff98289da19a5edff40"/><section>
+    <title>AsyncADC()</title>
+<indexterm><primary>AsyncADC</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>AsyncADC</secondary></indexterm>
+<para><computeroutput>void AdcRead::AsyncADC (int adc_count)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Starter et givent antal threads der hver kører <link linkend="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3">ReadU16()</link> med dets givet ADC ben. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>adc_count</entry><entry>
+<para>Antal ADC&apos;er at måle på </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_a57f35b9fd598aff98289da19a5edff40_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_a57f35b9fd598aff98289da19a5edff40_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958"/><section>
+    <title>DoRead()</title>
+<indexterm><primary>DoRead</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>DoRead</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> AdcRead::DoRead ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Kalder AsyncADC med et antal ADC&apos;er på baggrund af nuværende state. Nye måling bliver lagt i CircularBuffer&apos;en adc_buffer_. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> Nye måling </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_ad802d7cd5058ceb3a039803f8fb18958_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_ad802d7cd5058ceb3a039803f8fb18958_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb"/><section>
+    <title>GetDevice()</title>
+<indexterm><primary>GetDevice</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>GetDevice</secondary></indexterm>
+<para><computeroutput>AnalogIn * AdcRead::GetDevice (<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcRead::AdcName</link> name)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Omdanner AdcName enum til pointer til ny AnalogIn object for respektivt ADC ben. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>enum for det ADC ben der skal måles på </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>AnalogIn* pointer til oprettet device </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_a84ffd76ab6ff1d44eb81577b8462e6eb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8"/><section>
+    <title>ReadFloat()</title>
+<indexterm><primary>ReadFloat</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>ReadFloat</secondary></indexterm>
+<para><computeroutput>static float AdcRead::ReadFloat (AnalogIn * device)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3"/><section>
+    <title>ReadU16()</title>
+<indexterm><primary>ReadU16</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>ReadU16</secondary></indexterm>
+<para><computeroutput>void AdcRead::ReadU16 (<link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> * args)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Måler et givent antal gange på et givent device fra <link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> og skriver middelværdi til <link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> dest. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para><link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link> med AnalogIn pointer til devicet og uint16_t pointer til resultatet </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_adc_read_a5c281043cc2127409b9d41a73b3c61d3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396"/><section>
+    <title>adc_buffer_</title>
+<indexterm><primary>adc_buffer_</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>adc_buffer_</secondary></indexterm>
+<para><computeroutput>CircularBuffer&lt; <link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>, <link linkend="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46">ADC_BUFFER_SIZE</link> &gt; AdcRead::adc_buffer_<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b"/><section>
+    <title>adc_list_</title>
+<indexterm><primary>adc_list_</primary><secondary>AdcRead</secondary></indexterm>
+<indexterm><primary>AdcRead</primary><secondary>adc_list_</secondary></indexterm>
+<para><computeroutput><link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link> AdcRead::adc_list_[6]<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+lib/AdcRead/<link linkend="__adc_read_8h">AdcRead.h</link>lib/AdcRead/<link linkend="__adc_read_8cpp">AdcRead.cpp</link></section>
+</section>

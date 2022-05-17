@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct__send__reading" kind="struct" language="C++" prot="public">
+    <compoundname>_send_reading</compoundname>
+    <includes refid="reading_8pb_8h" local="no">reading.pb.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::bat_v_1</definition>
+        <argsstring></argsstring>
+        <name>bat_v_1</name>
+        <qualifiedname>_send_reading::bat_v_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="14" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::bat_i_1</definition>
+        <argsstring></argsstring>
+        <name>bat_i_1</name>
+        <qualifiedname>_send_reading::bat_i_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="15" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _send_reading::has_mppt_v_1</definition>
+        <argsstring></argsstring>
+        <name>has_mppt_v_1</name>
+        <qualifiedname>_send_reading::has_mppt_v_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="16" column="10" bodyfile="lib/Protobuf/reading.pb.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a37c526be254faf12e6340fce9916635f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::mppt_v_1</definition>
+        <argsstring></argsstring>
+        <name>mppt_v_1</name>
+        <qualifiedname>_send_reading::mppt_v_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="17" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a081204da55c033ebd383b637107f15a8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _send_reading::has_mppt_i_1</definition>
+        <argsstring></argsstring>
+        <name>has_mppt_i_1</name>
+        <qualifiedname>_send_reading::has_mppt_i_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="18" column="10" bodyfile="lib/Protobuf/reading.pb.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::mppt_i_1</definition>
+        <argsstring></argsstring>
+        <name>mppt_i_1</name>
+        <qualifiedname>_send_reading::mppt_i_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="19" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _send_reading::has_sub_v_1</definition>
+        <argsstring></argsstring>
+        <name>has_sub_v_1</name>
+        <qualifiedname>_send_reading::has_sub_v_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="20" column="10" bodyfile="lib/Protobuf/reading.pb.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::sub_v_1</definition>
+        <argsstring></argsstring>
+        <name>sub_v_1</name>
+        <qualifiedname>_send_reading::sub_v_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="21" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _send_reading::has_sub_i_1</definition>
+        <argsstring></argsstring>
+        <name>has_sub_i_1</name>
+        <qualifiedname>_send_reading::has_sub_i_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="22" column="10" bodyfile="lib/Protobuf/reading.pb.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _send_reading::sub_i_1</definition>
+        <argsstring></argsstring>
+        <name>sub_i_1</name>
+        <qualifiedname>_send_reading::sub_i_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="23" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t _send_reading::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <qualifiedname>_send_reading::timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="24" column="14" bodyfile="lib/Protobuf/reading.pb.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_can_com_1ab963975230cc827959cc329b51ce2e24" compoundref="_can_com_8cpp" startline="123" endline="148">CanCom::GetReading</referencedby>
+        <referencedby refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/Protobuf/reading.pb.h" line="13" column="1" bodyfile="lib/Protobuf/reading.pb.h" bodystart="13" bodyend="25"/>
+    <listofallmembers>
+      <member refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>bat_i_1</name></member>
+      <member refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>bat_v_1</name></member>
+      <member refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>has_mppt_i_1</name></member>
+      <member refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>has_mppt_v_1</name></member>
+      <member refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>has_sub_i_1</name></member>
+      <member refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>has_sub_v_1</name></member>
+      <member refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>mppt_i_1</name></member>
+      <member refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>mppt_v_1</name></member>
+      <member refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>sub_i_1</name></member>
+      <member refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>sub_v_1</name></member>
+      <member refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" prot="public" virt="non-virtual"><scope>_send_reading</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

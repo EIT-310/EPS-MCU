@@ -1,0 +1,12 @@
+<map id="PowerManage::WriteSubState" name="PowerManage::WriteSubState">
+<area shape="rect" id="node1" title="Opdaterer den endelige tisltand af Power Rails ved at AND&#39;e enabled_modules_ og module_override_." alt="" coords="756,31,953,57"/>
+<area shape="rect" id="node2" href="$class_power_manage.html#a35279ac0f18272c3c00bddfd1850f3d6" title="Opdaterer et modul i module_override_ listen. Og Kalder WriteSubState()." alt="" coords="519,5,697,32"/>
+<area shape="rect" id="node6" href="$class_power_manage.html#a6cc478738b54fbbd148122c4ae6e93fb" title="Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne...." alt="" coords="508,56,708,83"/>
+<area shape="rect" id="node3" href="$class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4" title="ISR deferred handler der logger OCE&#39;et og gemmer hvilket ben der blev målt oce på." alt="" coords="316,5,460,32"/>
+<area shape="rect" id="node4" href="$class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd" title="ISR context der deactiverer modulet der blev målt OCE på. Sætter EventHandler() i kø til de ting der ..." alt="" coords="160,5,268,32"/>
+<area shape="rect" id="node5" href="$class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed" title="Construct a new Oce Isr object og attatcher IRQ benet til at køre Handle() ved rise." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a769404f2985a027a0d626fedfd4de1e9" title="Køres en enkelt gang når systemet starter." alt="" coords="186,56,242,83"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#a1344d6ffed8b15af8c18dd7aa69d4872" title="Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog." alt="" coords="341,107,435,133"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="33,81,84,108"/>
+<area shape="rect" id="node10" href="$main_8cpp.html#a3a1208bf880dbc3e596cdd55b5cbd6b0" title="Modtager ny måling fra ReadAdc() og bestemmer ny state på baggrund af disse data." alt="" coords="175,107,253,133"/>
+</map>

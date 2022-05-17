@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerdir refid="dir_e2a9a723b392cd736ad3a68b9081c4d8">lib/AdcRead</innerdir>
+    <innerdir refid="dir_814e929dd25486b1cca1fc1abeb715c3">lib/CanCom</innerdir>
+    <innerdir refid="dir_5bbdcc428926e051a1bf54edc21cb6ca">lib/Config</innerdir>
+    <innerdir refid="dir_31237f92b8b9d677562a3db09de06fa4">lib/FSM</innerdir>
+    <innerdir refid="dir_d469b9f68f36bf0bf3a423fc2ddfbf53">lib/Interrupt</innerdir>
+    <innerdir refid="dir_65cb71248861d6a88a9791ad15d2fb5e">lib/Log</innerdir>
+    <innerdir refid="dir_b5079d239d69424b12cbf1127e0450cf">lib/NoMutexCAN</innerdir>
+    <innerdir refid="dir_3bc5e1520659d296fe62012dd7ab5f2e">lib/NVStore</innerdir>
+    <innerdir refid="dir_0ca69a72104b64c2eda3ccf18f1d34fa">lib/PowerManage</innerdir>
+    <innerdir refid="dir_fb3e8aad3633b1d34213800d9eeeac21">lib/Protobuf</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/"/>
+  </compounddef>
+</doxygen>

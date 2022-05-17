@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__adc_read_8h" xml:lang="en-US">
+<title>lib/AdcRead/AdcRead.h File Reference</title>
+<indexterm><primary>lib/AdcRead/AdcRead.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;ProjectConfig.h&quot;
+#include &quot;mbed.h&quot;
+</programlisting>Include dependency graph for AdcRead.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_adc_read_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_adc_read_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_adc_read">AdcRead</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_adc_read_1_1adc__thread__args">AdcRead::adc_thread_args</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

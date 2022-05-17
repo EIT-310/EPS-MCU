@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__project_config_8h_source" xml:lang="en-US">
+<title>ProjectConfig.h</title>
+<indexterm><primary>lib/Config/ProjectConfig.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//</emphasis>
+2 <emphasis role="comment">//&#32;Created&#32;by&#32;EIT-416&#32;on&#32;01/04/2022.</emphasis>
+3 <emphasis role="comment">//</emphasis>
+4 
+5 <emphasis role="preprocessor">#ifndef&#32;EPS_MCU_LIB_PROJECT_CONFIG_H_</emphasis>
+6 <emphasis role="preprocessor">#define&#32;EPS_MCU_LIB_PROJECT_CONFIG_H_</emphasis>
+7 
+8 
+9 <emphasis role="preprocessor">#ifdef&#32;TARGET_NUCLEO_L432KC</emphasis>
+10 <emphasis role="comment">//&#32;PINS</emphasis>
+11 <emphasis role="comment">//ADC&apos;er</emphasis>
+12 <emphasis role="preprocessor">#define&#32;BAT_V_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A0</emphasis>
+13 <emphasis role="preprocessor">#define&#32;BAT_I_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A1</emphasis>
+14 <emphasis role="preprocessor">#define&#32;MPPT_V_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A2</emphasis>
+15 <emphasis role="preprocessor">#define&#32;MPPT_I_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A3</emphasis>
+16 <emphasis role="preprocessor">#define&#32;SUB_V_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A4</emphasis>
+17 <emphasis role="preprocessor">#define&#32;SUB_I_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A5</emphasis>
+18 <emphasis role="preprocessor">#define&#32;ADC_NUM_CHANNELS&#32;&#32;&#32;&#32;6</emphasis>
+19 
+20 <emphasis role="comment">//DIVERSE</emphasis>
+21 <emphasis role="preprocessor">#define&#32;CAN_RD_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;D10</emphasis>
+22 <emphasis role="preprocessor">#define&#32;CAN_TD_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;D2</emphasis>
+23 <emphasis role="preprocessor">#define&#32;RAIL_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;D4</emphasis>
+24 <emphasis role="preprocessor">#define&#32;OCE_1_PIN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;D11</emphasis>
+25 <emphasis role="preprocessor">#define&#32;SUBMODULES_NUM&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+26 
+27 <emphasis role="preprocessor">#endif</emphasis>
+28 
+29 <emphasis role="comment">//&#32;STATIC&#32;CONFIG</emphasis>
+30 <emphasis role="preprocessor">#define&#32;ADC_MEASURE_LOOPS&#32;&#32;&#32;5</emphasis>
+31 <emphasis role="preprocessor">#define&#32;ADC_BUFFER_SIZE&#32;&#32;&#32;&#32;&#32;100</emphasis>
+32 <emphasis role="preprocessor">#define&#32;VBAT_MID_HIGH&#32;&#32;&#32;&#32;&#32;&#32;&#32;4.0f&#32;</emphasis><emphasis role="comment">//TODO:&#32;Ret&#32;så&#32;det&#32;passer&#32;med&#32;hvad&#32;Vref&#32;på&#32;ADC&#32;er</emphasis>
+33 <emphasis role="preprocessor">#define&#32;VBAT_MID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3.7f&#32;</emphasis><emphasis role="comment">//TODO:&#32;Ret&#32;så&#32;det&#32;passer&#32;med&#32;hvad&#32;Vref&#32;på&#32;ADC&#32;er</emphasis>
+34 <emphasis role="preprocessor">#define&#32;VBAT_MID_LOW&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3.4f&#32;</emphasis><emphasis role="comment">//TODO:&#32;Ret&#32;så&#32;det&#32;passer&#32;med&#32;hvad&#32;Vref&#32;på&#32;ADC&#32;er</emphasis>
+35 <emphasis role="preprocessor">#define&#32;VBAT_LOW&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3.2f&#32;</emphasis><emphasis role="comment">//TODO:&#32;Ret&#32;så&#32;det&#32;passer&#32;med&#32;hvad&#32;Vref&#32;på&#32;ADC&#32;er</emphasis>
+36 <emphasis role="preprocessor">#define&#32;VBAT_EMERGENCY&#32;&#32;&#32;&#32;&#32;&#32;3.0f&#32;</emphasis><emphasis role="comment">//TODO:&#32;Ret&#32;så&#32;det&#32;passer&#32;med&#32;hvad&#32;Vref&#32;på&#32;ADC&#32;er</emphasis>
+37 <emphasis role="preprocessor">#define&#32;MPPT_CURR_AMP&#32;&#32;&#32;&#32;&#32;&#32;&#32;200.0f</emphasis>
+38 <emphasis role="preprocessor">#define&#32;MPPT_SHUNT_RES&#32;&#32;&#32;&#32;&#32;&#32;0.02f</emphasis>
+39 <emphasis role="preprocessor">#define&#32;CAN_BITRATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5e5&#32;&#32;</emphasis><emphasis role="comment">//&#32;1&#32;MHz&#32;/&#32;500kHz</emphasis>
+40 
+41 
+42 <emphasis role="comment">//&#32;MUTABLE&#32;CONFIG</emphasis>
+43 <emphasis role="preprocessor">#define&#32;WATCHDOG_TIMEOUT&#32;&#32;&#32;&#32;10000&#32;&#32;</emphasis><emphasis role="comment">//TODO:&#32;Evt&#32;ret&#32;så&#32;det&#32;giver&#32;mening</emphasis>
+44 <emphasis role="preprocessor">#define&#32;FSM_START_STATE&#32;&#32;&#32;&#32;&#32;Fsm::MID</emphasis>
+45 <emphasis role="preprocessor">#define&#32;CRIT_MPPT_POW_SUM&#32;&#32;&#32;1.0f&#32;&#32;&#32;</emphasis><emphasis role="comment">//TODO:&#32;ret&#32;så&#32;det&#32;passer</emphasis>
+46 
+47 <emphasis role="comment">//&#32;DEV&#32;CONFIG</emphasis>
+48 <emphasis role="preprocessor">#define&#32;LOG_LEVEL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LOG_DEBUG</emphasis>
+49 <emphasis role="preprocessor">#define&#32;LOG_COM_TYPE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SERIAL</emphasis>
+50 
+51 
+52 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_LIB_PROJECT_CONFIG_H_</emphasis>
+</programlisting></section>

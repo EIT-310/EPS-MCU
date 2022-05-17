@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_log" kind="class" language="C++" prot="public">
+    <compoundname>Log</compoundname>
+    <includes refid="_log_8h" local="no">Log.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_log_1aee5656e28873ac8316e29f13e0e50df1" prot="public" static="yes" mutable="no">
+        <type>UnbufferedSerial</type>
+        <definition>UnbufferedSerial Log::serial_</definition>
+        <argsstring></argsstring>
+        <name>serial_</name>
+        <qualifiedname>Log::serial_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="19" column="27" bodyfile="lib/Log/Log.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1a769404f2985a027a0d626fedfd4de1e9" compoundref="main_8cpp" startline="87" endline="96">Setup</referencedby>
+        <referencedby refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" compoundref="_log_8cpp" startline="30" endline="32">~Log</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_log_1aeb290934f14369d2969cd4f50f631d28" prot="public" static="yes" mutable="no">
+        <type><ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778" kindref="member">TLogLevel</ref></type>
+        <definition>TLogLevel Log::reporting_level_</definition>
+        <argsstring></argsstring>
+        <name>reporting_level_</name>
+        <qualifiedname>Log::reporting_level_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="23" column="20" bodyfile="lib/Log/Log.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1a769404f2985a027a0d626fedfd4de1e9" compoundref="main_8cpp" startline="87" endline="96">Setup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_log_1ab0f16e76380bca22525b102ba0f0eac7" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Log::msg_</definition>
+        <argsstring></argsstring>
+        <name>msg_</name>
+        <qualifiedname>Log::msg_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="25" column="15" bodyfile="lib/Log/Log.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
+        <referencedby refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" compoundref="_log_8cpp" startline="30" endline="32">~Log</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_log_1a795b5a43b1b115d41d88149ab86c0967" prot="private" static="no" mutable="no">
+        <type><ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778" kindref="member">TLogLevel</ref></type>
+        <definition>TLogLevel Log::message_level_</definition>
+        <argsstring></argsstring>
+        <name>message_level_</name>
+        <qualifiedname>Log::message_level_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="30" column="13" bodyfile="lib/Log/Log.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Log::Log</definition>
+        <argsstring>()</argsstring>
+        <name>Log</name>
+        <qualifiedname>Log::Log</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="18" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_1a0fbfda88fbee5027c89f6eb121059360" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Log::~Log</definition>
+        <argsstring>()</argsstring>
+        <name>~Log</name>
+        <qualifiedname>Log::~Log</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="class_log" kindref="compound">Log</ref>:: <ref refid="class_log" kindref="compound">Log</ref> object. Skriver hele beskeden som blev samlet i <ref refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" kindref="member">Log::Get()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="20" column="11" bodyfile="lib/Log/Log.cpp" bodystart="30" bodyend="32"/>
+        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="25">msg_</references>
+        <references refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" compoundref="_log_8h" startline="19">serial_</references>
+      </memberdef>
+      <memberdef kind="function" id="class_log_1ab2abd944d9781f24461a70d010c3c36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Log::Get</definition>
+        <argsstring>(TLogLevel level, std::string str)</argsstring>
+        <name>Get</name>
+        <qualifiedname>Log::Get</qualifiedname>
+        <param>
+          <type><ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778" kindref="member">TLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Opretter log beskeden. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>neveau for informationen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string med det der skal logges </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="21" column="8" bodyfile="lib/Log/Log.cpp" bodystart="19" bodyend="24"/>
+        <references refid="class_log_1a8079bae56521b384ea87284206223f42" compoundref="_log_8cpp" startline="41" endline="52">EnumToString</references>
+        <references refid="class_log_1a795b5a43b1b115d41d88149ab86c0967" compoundref="_log_8h" startline="30">message_level_</references>
+        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="25">msg_</references>
+        <references refid="class_log_1af14e8b4c37abf6be087c8be1fe395216" compoundref="_log_8cpp" startline="60" endline="65">TimeToString</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_log_1a60fc11c5c263c4bfad3f9561a4881a13" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Log::Log</definition>
+        <argsstring>(const Log &amp;)</argsstring>
+        <name>Log</name>
+        <qualifiedname>Log::Log</qualifiedname>
+        <param>
+          <type>const <ref refid="class_log" kindref="compound">Log</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="27" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_1a91f9df208ee0515b6403210497d37ee4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_log" kindref="compound">Log</ref> &amp;</type>
+        <definition>Log &amp; Log::operator=</definition>
+        <argsstring>(const Log &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Log::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_log" kindref="compound">Log</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="28" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_log_1af14e8b4c37abf6be087c8be1fe395216" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Log::TimeToString</definition>
+        <argsstring>(time_t time)</argsstring>
+        <name>TimeToString</name>
+        <qualifiedname>Log::TimeToString</qualifiedname>
+        <param>
+          <type>time_t</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Omdanner UNIX sekund timestamp til formateret string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNIX timestamp </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string formateret tid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="32" column="15" bodyfile="lib/Log/Log.cpp" bodystart="60" bodyend="65"/>
+        <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_log_1a8079bae56521b384ea87284206223f42" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>std::string Log::EnumToString</definition>
+        <argsstring>(TLogLevel level)</argsstring>
+        <name>EnumToString</name>
+        <qualifiedname>Log::EnumToString</qualifiedname>
+        <param>
+          <type><ref refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778" kindref="member">TLogLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Omdanner log neveau til string med navnet for niveauet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>log niveuet der ønskes navn for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string String med navnet </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Log/Log.h" line="31" column="17" bodyfile="lib/Log/Log.cpp" bodystart="41" bodyend="52"/>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473" compoundref="_log_8h" startline="9">LOG_ERROR</references>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837" compoundref="_log_8h" startline="9">LOG_INFO</references>
+        <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400" compoundref="_log_8h" startline="9">LOG_WARNING</references>
+        <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/Log/Log.h" line="15" column="1" bodyfile="lib/Log/Log.h" bodystart="16" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_log_1a8079bae56521b384ea87284206223f42" prot="private" virt="non-virtual"><scope>Log</scope><name>EnumToString</name></member>
+      <member refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" prot="public" virt="non-virtual"><scope>Log</scope><name>Get</name></member>
+      <member refid="class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe" prot="public" virt="non-virtual"><scope>Log</scope><name>Log</name></member>
+      <member refid="class_log_1a60fc11c5c263c4bfad3f9561a4881a13" prot="private" virt="non-virtual"><scope>Log</scope><name>Log</name></member>
+      <member refid="class_log_1a795b5a43b1b115d41d88149ab86c0967" prot="private" virt="non-virtual"><scope>Log</scope><name>message_level_</name></member>
+      <member refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" prot="protected" virt="non-virtual"><scope>Log</scope><name>msg_</name></member>
+      <member refid="class_log_1a91f9df208ee0515b6403210497d37ee4" prot="private" virt="non-virtual"><scope>Log</scope><name>operator=</name></member>
+      <member refid="class_log_1aeb290934f14369d2969cd4f50f631d28" prot="public" virt="non-virtual"><scope>Log</scope><name>reporting_level_</name></member>
+      <member refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" prot="public" virt="non-virtual"><scope>Log</scope><name>serial_</name></member>
+      <member refid="class_log_1af14e8b4c37abf6be087c8be1fe395216" prot="private" virt="non-virtual"><scope>Log</scope><name>TimeToString</name></member>
+      <member refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" prot="public" virt="virtual"><scope>Log</scope><name>~Log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

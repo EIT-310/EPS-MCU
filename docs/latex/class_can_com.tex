@@ -1,0 +1,245 @@
+\hypertarget{class_can_com}{}\doxysection{Can\+Com Class Reference}
+\label{class_can_com}\index{CanCom@{CanCom}}
+
+
+{\ttfamily \#include $<$Can\+Com.\+h$>$}
+
+
+
+Collaboration diagram for Can\+Com\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{class_can_com__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}{Can\+Message\+Id}} \{ \newline
+\mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50}{CAN\+\_\+\+TIME\+\_\+\+SYNC}} = 1
+, \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c}{CAN\+\_\+\+SET\+\_\+\+CONFIG}}
+, \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e}{CAN\+\_\+\+GET\+\_\+\+CONFIG}}
+, \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4}{CAN\+\_\+\+GET\+\_\+\+READING}}
+, \newline
+\mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc}{CAN\+\_\+\+LOG}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_can_com_a71c4eb082e8abbb9e06a7b0afaf58fb3}{Can\+Com}} (\mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}} $\ast$\mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_can_com_a22fb622bb2aa27436415898d40e5987f}{Send\+Buffer}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_can_com_ad5cc018603f898163b52bcab6db64cf4}{Send\+Readings}} ()
+\begin{DoxyCompactList}\small\item\em Send alle målinger i Circular\+Buffer\textquotesingle{}eren (adc\+\_\+buffer\+\_\+) over CAN. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} \mbox{\hyperlink{class_can_com_ab963975230cc827959cc329b51ce2e24}{Get\+Reading}} ()
+\begin{DoxyCompactList}\small\item\em Modtag en enkelt ADC måling fra serialized\+\_\+buffer\+\_\+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{class_can_com_a49dd73a42baabac31df9dd9de570a53f}{serialized\+\_\+buffer\+\_\+}} \mbox{[}\mbox{\hyperlink{reading_8pb_8h_ac6cdff9ed5c1eb33a22a8982ce2a66bf}{send\+\_\+reading\+\_\+size}} $\ast$\mbox{\hyperlink{_project_config_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\item 
+static \mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}} $\ast$ \mbox{\hyperlink{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}{can\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66}{Get\+Frame\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Find størrelsen af en modtaget Protobuf pakke inden decode. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_can_com_a52c0f42094e4622ee96db13215a3d16e}{Shift\+Buffer}} (size\+\_\+t shift\+\_\+bytes)
+\begin{DoxyCompactList}\small\item\em Rykker alle bytes i serialized\+\_\+buffer\+\_\+ med et antal pladser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}} 
+\index{CanCom@{CanCom}!CanMessageId@{CanMessageId}}
+\index{CanMessageId@{CanMessageId}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{CanMessageId}{CanMessageId}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}{Can\+Com\+::\+Can\+Message\+Id}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_TIME\_SYNC@{CAN\_TIME\_SYNC}!CanCom@{CanCom}}\index{CanCom@{CanCom}!CAN\_TIME\_SYNC@{CAN\_TIME\_SYNC}}}\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50}} 
+CAN\+\_\+\+TIME\+\_\+\+SYNC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_SET\_CONFIG@{CAN\_SET\_CONFIG}!CanCom@{CanCom}}\index{CanCom@{CanCom}!CAN\_SET\_CONFIG@{CAN\_SET\_CONFIG}}}\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c}} 
+CAN\+\_\+\+SET\+\_\+\+CONFIG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_GET\_CONFIG@{CAN\_GET\_CONFIG}!CanCom@{CanCom}}\index{CanCom@{CanCom}!CAN\_GET\_CONFIG@{CAN\_GET\_CONFIG}}}\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e}} 
+CAN\+\_\+\+GET\+\_\+\+CONFIG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_GET\_READING@{CAN\_GET\_READING}!CanCom@{CanCom}}\index{CanCom@{CanCom}!CAN\_GET\_READING@{CAN\_GET\_READING}}}\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4}} 
+CAN\+\_\+\+GET\+\_\+\+READING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_LOG@{CAN\_LOG}!CanCom@{CanCom}}\index{CanCom@{CanCom}!CAN\_LOG@{CAN\_LOG}}}\mbox{\Hypertarget{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc}\label{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc}} 
+CAN\+\_\+\+LOG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_can_com_a71c4eb082e8abbb9e06a7b0afaf58fb3}\label{class_can_com_a71c4eb082e8abbb9e06a7b0afaf58fb3}} 
+\index{CanCom@{CanCom}!CanCom@{CanCom}}
+\index{CanCom@{CanCom}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{CanCom()}{CanCom()}}
+{\footnotesize\ttfamily Can\+Com\+::\+Can\+Com (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}} $\ast$}]{can }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66}\label{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66}} 
+\index{CanCom@{CanCom}!GetFrameSize@{GetFrameSize}}
+\index{GetFrameSize@{GetFrameSize}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{GetFrameSize()}{GetFrameSize()}}
+{\footnotesize\ttfamily size\+\_\+t Can\+Com\+::\+Get\+Frame\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Find størrelsen af en modtaget Protobuf pakke inden decode. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t størrelsen af pakken i bytes
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_can_com_ab963975230cc827959cc329b51ce2e24}\label{class_can_com_ab963975230cc827959cc329b51ce2e24}} 
+\index{CanCom@{CanCom}!GetReading@{GetReading}}
+\index{GetReading@{GetReading}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{GetReading()}{GetReading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} Can\+Com\+::\+Get\+Reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modtag en enkelt ADC måling fra serialized\+\_\+buffer\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} decoded adc reading
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_ab963975230cc827959cc329b51ce2e24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_can_com_a22fb622bb2aa27436415898d40e5987f}\label{class_can_com_a22fb622bb2aa27436415898d40e5987f}} 
+\index{CanCom@{CanCom}!SendBuffer@{SendBuffer}}
+\index{SendBuffer@{SendBuffer}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{SendBuffer()}{SendBuffer()}}
+{\footnotesize\ttfamily void Can\+Com\+::\+Send\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Antale bytes at sende fra bufferen \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_can_com_a22fb622bb2aa27436415898d40e5987f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_a22fb622bb2aa27436415898d40e5987f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_can_com_ad5cc018603f898163b52bcab6db64cf4}\label{class_can_com_ad5cc018603f898163b52bcab6db64cf4}} 
+\index{CanCom@{CanCom}!SendReadings@{SendReadings}}
+\index{SendReadings@{SendReadings}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{SendReadings()}{SendReadings()}}
+{\footnotesize\ttfamily void Can\+Com\+::\+Send\+Readings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Send alle målinger i Circular\+Buffer\textquotesingle{}eren (adc\+\_\+buffer\+\_\+) over CAN. 
+
+Hver måling i adc\+\_\+buffer\+\_\+ enkodes med Google Protobuf structen {\itshape send\+\_\+reading og serialiseres. De serialiserede bytes lægges ind i serialized\+\_\+buffer}. Hvis der ikke blev målt på mppt og rails i en given måling sættes has\+\_\+mppt\+\_\+x\+\_\+x og has\+\_\+sub\+\_\+x\+\_\+x bools\textquotesingle{}ne til False, og protobufs sørger for at serialiseringen fylder mindre. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_ad5cc018603f898163b52bcab6db64cf4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_ad5cc018603f898163b52bcab6db64cf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_can_com_a52c0f42094e4622ee96db13215a3d16e}\label{class_can_com_a52c0f42094e4622ee96db13215a3d16e}} 
+\index{CanCom@{CanCom}!ShiftBuffer@{ShiftBuffer}}
+\index{ShiftBuffer@{ShiftBuffer}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{ShiftBuffer()}{ShiftBuffer()}}
+{\footnotesize\ttfamily void Can\+Com\+::\+Shift\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{shift\+\_\+bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Rykker alle bytes i serialized\+\_\+buffer\+\_\+ med et antal pladser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift\+\_\+bytes} & antal pladser at rykke pladser i bufferen \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_can_com_a52c0f42094e4622ee96db13215a3d16e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}\label{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}} 
+\index{CanCom@{CanCom}!can\_@{can\_}}
+\index{can\_@{can\_}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{can\_}{can\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}} $\ast$ Can\+Com\+::can\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_can_com_a49dd73a42baabac31df9dd9de570a53f}\label{class_can_com_a49dd73a42baabac31df9dd9de570a53f}} 
+\index{CanCom@{CanCom}!serialized\_buffer\_@{serialized\_buffer\_}}
+\index{serialized\_buffer\_@{serialized\_buffer\_}!CanCom@{CanCom}}
+\doxysubsubsection{\texorpdfstring{serialized\_buffer\_}{serialized\_buffer\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Can\+Com\+::serialized\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Can\+Com/\mbox{\hyperlink{_can_com_8h}{Can\+Com.\+h}}\item 
+lib/\+Can\+Com/\mbox{\hyperlink{_can_com_8cpp}{Can\+Com.\+cpp}}\end{DoxyCompactItemize}

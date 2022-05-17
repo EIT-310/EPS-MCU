@@ -1,0 +1,91 @@
+.TH "OceIsr" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OceIsr
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Interrupt\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOceIsr\fP (PinName irq_pin, EventQueue *queue, \fBPowerManage::Modules\fP module)"
+.br
+.RI "Construct a new Oce Isr object og attatcher IRQ benet til at køre \fBHandle()\fP ved rise\&. "
+.ti -1c
+.RI "void \fBHandle\fP ()"
+.br
+.RI "ISR context der deactiverer modulet der blev målt OCE på\&. Sætter \fBEventHandler()\fP i kø til de ting der skal foregå uden for ISR kontekst\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static EventQueue * \fBqueue_\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBEventHandler\fP ()"
+.br
+.RI "ISR deferred handler der logger OCE'et og gemmer hvilket ben der blev målt oce på\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPowerManage::Modules\fP \fBmodule_\fP"
+.br
+.ti -1c
+.RI "InterruptIn \fBinterrupt_\fP"
+.br
+.ti -1c
+.RI "bool \fBirq_happened_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "OceIsr::OceIsr (PinName irq_pin, EventQueue * queue, \fBPowerManage::Modules\fP module)\fC [inline]\fP"
+
+.PP
+Construct a new Oce Isr object og attatcher IRQ benet til at køre \fBHandle()\fP ved rise\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIirq_pin\fP Benet der går høj ved OCE for det givet modul 
+.br
+\fIqueue\fP EventQueue til at håndtere ISR deferred events 
+.br
+\fImodule\fP Modulet der ønskes at måle OCE på 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void OceIsr::EventHandler ()\fC [private]\fP"
+
+.PP
+ISR deferred handler der logger OCE'et og gemmer hvilket ben der blev målt oce på\&. 
+.SS "void OceIsr::Handle ()"
+
+.PP
+ISR context der deactiverer modulet der blev målt OCE på\&. Sætter \fBEventHandler()\fP i kø til de ting der skal foregå uden for ISR kontekst\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "InterruptIn OceIsr::interrupt_\fC [private]\fP"
+
+.SS "bool OceIsr::irq_happened_\fC [private]\fP"
+
+.SS "\fBPowerManage::Modules\fP OceIsr::module_\fC [private]\fP"
+
+.SS "EventQueue * OceIsr::queue_\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

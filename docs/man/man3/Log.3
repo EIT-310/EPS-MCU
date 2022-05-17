@@ -1,0 +1,144 @@
+.TH "Log" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Log
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Log\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLog\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Log\fP ()"
+.br
+.RI "Destroy the \fBLog\fP:: \fBLog\fP object\&. Skriver hele beskeden som blev samlet i \fBLog::Get()\fP "
+.ti -1c
+.RI "void \fBGet\fP (\fBTLogLevel\fP level, std::string str)"
+.br
+.RI "Opretter log beskeden\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static UnbufferedSerial \fBserial_\fP"
+.br
+.ti -1c
+.RI "static \fBTLogLevel\fP \fBreporting_level_\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmsg_\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLog\fP (const \fBLog\fP &)"
+.br
+.ti -1c
+.RI "\fBLog\fP & \fBoperator=\fP (const \fBLog\fP &)"
+.br
+.ti -1c
+.RI "std::string \fBTimeToString\fP (time_t time)"
+.br
+.RI "Omdanner UNIX sekund timestamp til formateret string\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBEnumToString\fP (\fBTLogLevel\fP level)"
+.br
+.RI "Omdanner log neveau til string med navnet for niveauet\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTLogLevel\fP \fBmessage_level_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Log::Log ()\fC [default]\fP"
+
+.SS "Log::~Log ()\fC [virtual]\fP"
+
+.PP
+Destroy the \fBLog\fP:: \fBLog\fP object\&. Skriver hele beskeden som blev samlet i \fBLog::Get()\fP 
+.SS "Log::Log (const \fBLog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string Log::EnumToString (\fBTLogLevel\fP level)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Omdanner log neveau til string med navnet for niveauet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlevel\fP log niveuet der ønskes navn for 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string String med navnet 
+.RE
+.PP
+
+.SS "void Log::Get (\fBTLogLevel\fP level, std::string str)"
+
+.PP
+Opretter log beskeden\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlevel\fP neveau for informationen 
+.br
+\fIstr\fP string med det der skal logges 
+.RE
+.PP
+
+.SS "\fBLog\fP & Log::operator= (const \fBLog\fP &)\fC [private]\fP"
+
+.SS "std::string Log::TimeToString (time_t time)\fC [private]\fP"
+
+.PP
+Omdanner UNIX sekund timestamp til formateret string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP UNIX timestamp 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string formateret tid 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTLogLevel\fP Log::message_level_\fC [private]\fP"
+
+.SS "std::string Log::msg_\fC [protected]\fP"
+
+.SS "\fBTLogLevel\fP Log::reporting_level_\fC [static]\fP"
+
+.SS "UnbufferedSerial Log::serial_\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

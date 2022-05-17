@@ -1,0 +1,308 @@
+\hypertarget{class_fsm}{}\doxysection{Fsm Class Reference}
+\label{class_fsm}\index{Fsm@{Fsm}}
+
+
+{\ttfamily \#include $<$Fsm.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \{ \newline
+\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db}{EMERGENCY}}
+, \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb}{LOW}}
+, \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9}{MID\+\_\+\+LOW}}
+, \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885}{MID}}
+, \newline
+\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178}{MID\+\_\+\+HIGH}}
+, \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717}{HIGH}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fsm_a0707d788017e5a74113c4285c9c748b9}{Fsm}} (\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} start\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_fsm_a68a3b3e4232132f9e671eafb4a663af4}{Determine\+State}} (\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} reading)
+\begin{DoxyCompactList}\small\item\em Bedøm en ny target state på baggrund af ADC måling og kald \mbox{\hyperlink{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}{State\+Changer()}} \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4}{Up\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gå en state up. Hvis nuværende state er den højeste, gør intet. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_fsm_adf20f20a6b2b7472bd718ac0eabbe220}{Down\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gå en state ned. Hvis nuværende state er den laveste, gør intet. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \mbox{\hyperlink{class_fsm_ae746f70aa1624110f8e1967d8bec6dcf}{Get\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em Getter for nuværende state. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_fsm_adc5296fe861e5e938365b7afd0834950}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Giver navnet på nuverende state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e}{Get\+String}} (\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} name)
+\begin{DoxyCompactList}\small\item\em Omdanner State enum til string. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}{State\+Changer}} (\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} target\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Incrementer eller decrementer current\+\_\+state, alt efter om den er lavere eller højere end target\+\_\+state. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1}{Get\+Power}} (\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} reading)
+\begin{DoxyCompactList}\small\item\em Beregn effekten for alle MPPT\textquotesingle{}er i en ADC måling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \mbox{\hyperlink{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}{current\+\_\+state\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}} 
+\index{Fsm@{Fsm}!State@{State}}
+\index{State@{State}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{Fsm\+::\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EMERGENCY@{EMERGENCY}!Fsm@{Fsm}}\index{Fsm@{Fsm}!EMERGENCY@{EMERGENCY}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db}} 
+EMERGENCY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW@{LOW}!Fsm@{Fsm}}\index{Fsm@{Fsm}!LOW@{LOW}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb}} 
+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MID\_LOW@{MID\_LOW}!Fsm@{Fsm}}\index{Fsm@{Fsm}!MID\_LOW@{MID\_LOW}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9}} 
+MID\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MID@{MID}!Fsm@{Fsm}}\index{Fsm@{Fsm}!MID@{MID}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885}} 
+MID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MID\_HIGH@{MID\_HIGH}!Fsm@{Fsm}}\index{Fsm@{Fsm}!MID\_HIGH@{MID\_HIGH}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178}} 
+MID\+\_\+\+HIGH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH@{HIGH}!Fsm@{Fsm}}\index{Fsm@{Fsm}!HIGH@{HIGH}}}\mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717}} 
+HIGH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fsm_a0707d788017e5a74113c4285c9c748b9}\label{class_fsm_a0707d788017e5a74113c4285c9c748b9}} 
+\index{Fsm@{Fsm}!Fsm@{Fsm}}
+\index{Fsm@{Fsm}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{Fsm()}{Fsm()}}
+{\footnotesize\ttfamily Fsm\+::\+Fsm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}}}]{start\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fsm_a68a3b3e4232132f9e671eafb4a663af4}\label{class_fsm_a68a3b3e4232132f9e671eafb4a663af4}} 
+\index{Fsm@{Fsm}!DetermineState@{DetermineState}}
+\index{DetermineState@{DetermineState}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{DetermineState()}{DetermineState()}}
+{\footnotesize\ttfamily void Fsm\+::\+Determine\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}}}]{reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Bedøm en ny target state på baggrund af ADC måling og kald \mbox{\hyperlink{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}{State\+Changer()}} 
+
+Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer og en target state bliver besluttet ud fra dette. Herefter betragtes den samlede effekt fra MPPT\textquotesingle{}erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes target state med 1.
+
+\begin{DoxyNote}{Note}
+Aloritmen er simpel og mest til for at have et eksempel på en algoritme.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em reading} & ADC måling at finde ny state på baggrund af. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_a68a3b3e4232132f9e671eafb4a663af4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_a68a3b3e4232132f9e671eafb4a663af4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_adf20f20a6b2b7472bd718ac0eabbe220}\label{class_fsm_adf20f20a6b2b7472bd718ac0eabbe220}} 
+\index{Fsm@{Fsm}!DownState@{DownState}}
+\index{DownState@{DownState}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{DownState()}{DownState()}}
+{\footnotesize\ttfamily void Fsm\+::\+Down\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gå en state ned. Hvis nuværende state er den laveste, gør intet. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_adf20f20a6b2b7472bd718ac0eabbe220_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_ae746f70aa1624110f8e1967d8bec6dcf}\label{class_fsm_ae746f70aa1624110f8e1967d8bec6dcf}} 
+\index{Fsm@{Fsm}!GetCurrentState@{GetCurrentState}}
+\index{GetCurrentState@{GetCurrentState}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{GetCurrentState()}{GetCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{Fsm\+::\+State}} Fsm\+::\+Get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Getter for nuværende state. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{Fsm\+::\+State}} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_ae746f70aa1624110f8e1967d8bec6dcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1}\label{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1}} 
+\index{Fsm@{Fsm}!GetPower@{GetPower}}
+\index{GetPower@{GetPower}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{GetPower()}{GetPower()}}
+{\footnotesize\ttfamily float Fsm\+::\+Get\+Power (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}}}]{reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Beregn effekten for alle MPPT\textquotesingle{}er i en ADC måling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reading} & ADC måling for hvilken vi vil finde MMPT effekten \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Effekt for samlet MPPT\textquotesingle{}er i watt 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e}\label{class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e}} 
+\index{Fsm@{Fsm}!GetString@{GetString}}
+\index{GetString@{GetString}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{GetString()}{GetString()}}
+{\footnotesize\ttfamily std\+::string Fsm\+::\+Get\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{Fsm\+::\+State}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Omdanner State enum til string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & state der ønskes navn på \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string String med navnet på staten 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_fsm_af5ba98dd1c1080fb9574bac4a4c4ed1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}\label{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b}} 
+\index{Fsm@{Fsm}!StateChanger@{StateChanger}}
+\index{StateChanger@{StateChanger}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{StateChanger()}{StateChanger()}}
+{\footnotesize\ttfamily void Fsm\+::\+State\+Changer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}}}]{target\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Incrementer eller decrementer current\+\_\+state, alt efter om den er lavere eller højere end target\+\_\+state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+state} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_adc5296fe861e5e938365b7afd0834950}\label{class_fsm_adc5296fe861e5e938365b7afd0834950}} 
+\index{Fsm@{Fsm}!ToString@{ToString}}
+\index{ToString@{ToString}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string Fsm\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Giver navnet på nuverende state. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_fsm_adc5296fe861e5e938365b7afd0834950_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4}\label{class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4}} 
+\index{Fsm@{Fsm}!UpState@{UpState}}
+\index{UpState@{UpState}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{UpState()}{UpState()}}
+{\footnotesize\ttfamily void Fsm\+::\+Up\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gå en state up. Hvis nuværende state er den højeste, gør intet. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fsm_a0b88cb2000e2c66ec3f4d68b991a10f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}\label{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}} 
+\index{Fsm@{Fsm}!current\_state\_@{current\_state\_}}
+\index{current\_state\_@{current\_state\_}!Fsm@{Fsm}}
+\doxysubsubsection{\texorpdfstring{current\_state\_}{current\_state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{Fsm\+::\+State}} Fsm\+::current\+\_\+state\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+FSM/\mbox{\hyperlink{_fsm_8h}{Fsm.\+h}}\item 
+lib/\+FSM/\mbox{\hyperlink{_fsm_8cpp}{Fsm.\+cpp}}\end{DoxyCompactItemize}

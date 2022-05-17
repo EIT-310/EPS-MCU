@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_0ca69a72104b64c2eda3ccf18f1d34fa" xml:lang="en-US">
+<title>lib/PowerManage Directory Reference</title>
+<indexterm><primary>lib/PowerManage Directory Reference</primary></indexterm>
+Directory dependency graph for PowerManage:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_0ca69a72104b64c2eda3ccf18f1d34fa_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__power_manage_8cpp">PowerManage.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__power_manage_8h">PowerManage.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

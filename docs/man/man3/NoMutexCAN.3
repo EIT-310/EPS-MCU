@@ -1,0 +1,62 @@
+.TH "NoMutexCAN" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NoMutexCAN \- class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed\&. Disse er overflødige ved nucleo STM32 boards\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <NoMutexCAN\&.h>\fP
+.PP
+Inherits CAN\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNoMutexCAN\fP (PinName rd, PinName td)"
+.br
+.ti -1c
+.RI "\fBNoMutexCAN\fP (PinName rd, PinName td, int hz)"
+.br
+.ti -1c
+.RI "virtual \fB~NoMutexCAN\fP ()"
+.br
+.ti -1c
+.RI "void \fBlock\fP () override"
+.br
+.ti -1c
+.RI "void \fBunlock\fP () override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed\&. Disse er overflødige ved nucleo STM32 boards\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NoMutexCAN::NoMutexCAN (PinName rd, PinName td)\fC [inline]\fP"
+
+.SS "NoMutexCAN::NoMutexCAN (PinName rd, PinName td, int hz)\fC [inline]\fP"
+
+.SS "virtual NoMutexCAN::~NoMutexCAN ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void NoMutexCAN::lock ()\fC [inline]\fP, \fC [override]\fP"
+
+.SS "void NoMutexCAN::unlock ()\fC [inline]\fP, \fC [override]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

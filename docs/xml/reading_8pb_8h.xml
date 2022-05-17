@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="reading_8pb_8h" kind="file" language="C++">
+    <compoundname>reading.pb.h</compoundname>
+    <includes local="no">pb.h</includes>
+    <includedby refid="_can_com_8cpp" local="yes">lib/CanCom/CanCom.cpp</includedby>
+    <includedby refid="_can_com_8h" local="no">lib/CanCom/CanCom.h</includedby>
+    <includedby refid="_interrupt_8h" local="yes">lib/Interrupt/Interrupt.h</includedby>
+    <includedby refid="reading_8pb_8c" local="yes">lib/Protobuf/reading.pb.c</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>lib/Protobuf/reading.pb.h</label>
+        <link refid="reading_8pb_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pb.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>lib/CanCom/CanCom.cpp</label>
+        <link refid="_can_com_8cpp"/>
+      </node>
+      <node id="3">
+        <label>lib/CanCom/CanCom.h</label>
+        <link refid="_can_com_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>lib/Interrupt/Interrupt.cpp</label>
+        <link refid="_interrupt_8cpp"/>
+      </node>
+      <node id="5">
+        <label>lib/Interrupt/Interrupt.h</label>
+        <link refid="_interrupt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>lib/Protobuf/reading.pb.c</label>
+        <link refid="reading_8pb_8c"/>
+      </node>
+      <node id="1">
+        <label>lib/Protobuf/reading.pb.h</label>
+        <link refid="reading_8pb_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__send__reading" prot="public">_send_reading</innerclass>
+    <innerclass refid="struct__time__sync" prot="public">_time_sync</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="reading_8pb_8h_1a4058268ee72bbec5d2cc62f7c707d435" prot="public" static="no">
+        <name>send_reading_init_default</name>
+        <initializer>{0, 0, false, 0, false, 0, false, 0, false, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="37" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1ae72ccdf58f4ef4cb5eeffa0b9a0baf33" prot="public" static="no">
+        <name>time_sync_init_default</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="38" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a3f63f16043c0f49d4ea5a87ebbf5cdfc" prot="public" static="no">
+        <name>send_reading_init_zero</name>
+        <initializer>{0, 0, false, 0, false, 0, false, 0, false, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="39" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a8e8a6d974595ca8ad8f52cb5bc28f4ab" prot="public" static="no">
+        <name>time_sync_init_zero</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="40" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a8f0771dbc96b99905b4047cbc5bdce5f" prot="public" static="no">
+        <name>send_reading_bat_v_1_tag</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="43" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1abeaecdf915ceea5ae507abb48b7b9fc9" prot="public" static="no">
+        <name>send_reading_bat_i_1_tag</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="44" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1aa939d4d037926848233cd58b8d7c2889" prot="public" static="no">
+        <name>send_reading_mppt_v_1_tag</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="45" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a47467bc4eff500d40d6b5580444c2959" prot="public" static="no">
+        <name>send_reading_mppt_i_1_tag</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="46" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a5d816d0cddb07321182f9461c6d48acf" prot="public" static="no">
+        <name>send_reading_sub_v_1_tag</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="47" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a36d2a5d125271470f4dfd7928fd1415d" prot="public" static="no">
+        <name>send_reading_sub_i_1_tag</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="48" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a770eae91f2e4c337e7316d875eeec28a" prot="public" static="no">
+        <name>send_reading_timestamp_tag</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="49" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a4dd0422217daf32064298a0b023d7ee4" prot="public" static="no">
+        <name>time_sync_current_time_tag</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="50" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a9e4081362476d7a454f8bcd531c5d946" prot="public" static="no">
+        <name>send_reading_FIELDLIST</name>
+        <param><defname>X</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>X(a, STATIC,   REQUIRED, UINT32,   bat_v_1,           1) \
+X(a, STATIC,   REQUIRED, UINT32,   bat_i_1,           2) \
+X(a, STATIC,   OPTIONAL, UINT32,   mppt_v_1,          3) \
+X(a, STATIC,   OPTIONAL, UINT32,   mppt_i_1,          4) \
+X(a, STATIC,   OPTIONAL, UINT32,   sub_v_1,           5) \
+X(a, STATIC,   OPTIONAL, UINT32,   sub_i_1,           6) \
+X(a, STATIC,   REQUIRED, UINT64,   timestamp,         7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="53" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1adccd0cc3cfa5b4545a4c87ef58e4c797" prot="public" static="no">
+        <name>send_reading_CALLBACK</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="61" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a9379f9778bb3402ff975151e77dfc31d" prot="public" static="no">
+        <name>send_reading_DEFAULT</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="62" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1af2e2902c5db1646d7e3d801504e33b74" prot="public" static="no">
+        <name>time_sync_FIELDLIST</name>
+        <param><defname>X</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>X(a, STATIC,   REQUIRED, UINT64,   current_time,      1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="64" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1abb8f58e69bade1aeae18bbd0cd669a92" prot="public" static="no">
+        <name>time_sync_CALLBACK</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="66" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a39d27e3c8d544e8a3e417c9e27e24fe8" prot="public" static="no">
+        <name>time_sync_DEFAULT</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="67" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" prot="public" static="no">
+        <name>send_reading_fields</name>
+        <initializer>&amp;<ref refid="reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9" kindref="member">send_reading_msg</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="73" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a600c302fd20ee5bafbbf504dcc13f7ba" prot="public" static="no">
+        <name>time_sync_fields</name>
+        <initializer>&amp;<ref refid="reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc" kindref="member">time_sync_msg</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="74" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" prot="public" static="no">
+        <name>send_reading_size</name>
+        <initializer>47</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="77" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reading_8pb_8h_1a8f4c787fe64e1ef8c91196eb417d62f0" prot="public" static="no">
+        <name>time_sync_size</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="78" column="9" bodyfile="lib/Protobuf/reading.pb.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca" prot="public" static="no">
+        <type>struct <ref refid="struct__send__reading" kindref="compound">_send_reading</ref></type>
+        <definition>typedef struct _send_reading send_reading</definition>
+        <argsstring></argsstring>
+        <name>send_reading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="25" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2" prot="public" static="no">
+        <type>struct <ref refid="struct__time__sync" kindref="compound">_time_sync</ref></type>
+        <definition>typedef struct _time_sync time_sync</definition>
+        <argsstring></argsstring>
+        <name>time_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="29" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9" prot="public" static="no" mutable="no">
+        <type>const pb_msgdesc_t</type>
+        <definition>const pb_msgdesc_t send_reading_msg</definition>
+        <argsstring></argsstring>
+        <name>send_reading_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="69" column="27" declfile="lib/Protobuf/reading.pb.h" declline="69" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc" prot="public" static="no" mutable="no">
+        <type>const pb_msgdesc_t</type>
+        <definition>const pb_msgdesc_t time_sync_msg</definition>
+        <argsstring></argsstring>
+        <name>time_sync_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Protobuf/reading.pb.h" line="70" column="27" declfile="lib/Protobuf/reading.pb.h" declline="70" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Automatically<sp/>generated<sp/>nanopb<sp/>header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Generated<sp/>by<sp/>nanopb-0.4.6-dev<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PB_READING_PB_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PB_READING_PB_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pb.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PB_PROTO_HEADER_VERSION<sp/>!=<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Regenerate<sp/>this<sp/>file<sp/>with<sp/>the<sp/>current<sp/>version<sp/>of<sp/>nanopb<sp/>generator.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Struct<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="struct__send__reading" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__send__reading" kindref="compound">_send_reading</ref><sp/>{<sp/></highlight></codeline>
+<codeline lineno="14" refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1a6bc681f20c3b19b964fa875894f7f5b5" kindref="member">bat_v_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="15" refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1a740ad9d456b359286373b6048a0f2d1a" kindref="member">bat_i_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="16" refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__send__reading_1afa611efb561b6bc4e31d88255370be2d" kindref="member">has_mppt_v_1</ref>;</highlight></codeline>
+<codeline lineno="17" refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1a37c526be254faf12e6340fce9916635f" kindref="member">mppt_v_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="18" refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__send__reading_1a081204da55c033ebd383b637107f15a8" kindref="member">has_mppt_i_1</ref>;</highlight></codeline>
+<codeline lineno="19" refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1af3d535fc27448f2c4756e3bb6a7eb580" kindref="member">mppt_i_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="20" refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__send__reading_1ab080dfddff3ab608c0108caa65535c58" kindref="member">has_sub_v_1</ref>;</highlight></codeline>
+<codeline lineno="21" refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1ae6f0639d2f13525236cd4a7675d6ca84" kindref="member">sub_v_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="22" refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__send__reading_1a461e43bd378d57298cc3cd05a3b9342f" kindref="member">has_sub_i_1</ref>;</highlight></codeline>
+<codeline lineno="23" refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__send__reading_1a92be81f6e7e916b9908c90c3620ddaf7" kindref="member">sub_i_1</ref>;<sp/></highlight></codeline>
+<codeline lineno="24" refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct__send__reading_1a009b549cfb4bb20d176c68f2167e1100" kindref="member">timestamp</ref>;<sp/></highlight></codeline>
+<codeline lineno="25" refid="reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca" refkind="member"><highlight class="normal">}<sp/><ref refid="reading_8pb_8h_1a825a37ef6fce716c40e2f9a1201c73ca" kindref="member">send_reading</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct__time__sync" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__time__sync" kindref="compound">_time_sync</ref><sp/>{<sp/></highlight></codeline>
+<codeline lineno="28" refid="struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct__time__sync_1ab31a0cceb2a784fb21b0727848a355c6" kindref="member">current_time</ref>;<sp/></highlight></codeline>
+<codeline lineno="29" refid="reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2" refkind="member"><highlight class="normal">}<sp/><ref refid="reading_8pb_8h_1af18106acf5707d5b5205c0df96edb6f2" kindref="member">time_sync</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Initializer<sp/>values<sp/>for<sp/>message<sp/>structs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="reading_8pb_8h_1a4058268ee72bbec5d2cc62f7c707d435" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_init_default<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>0}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="reading_8pb_8h_1ae72ccdf58f4ef4cb5eeffa0b9a0baf33" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_init_default<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="reading_8pb_8h_1a3f63f16043c0f49d4ea5a87ebbf5cdfc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_init_zero<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>false,<sp/>0,<sp/>0}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="reading_8pb_8h_1a8e8a6d974595ca8ad8f52cb5bc28f4ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_init_zero<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Field<sp/>tags<sp/>(for<sp/>use<sp/>in<sp/>manual<sp/>encoding/decoding)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="reading_8pb_8h_1a8f0771dbc96b99905b4047cbc5bdce5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_bat_v_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="reading_8pb_8h_1abeaecdf915ceea5ae507abb48b7b9fc9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_bat_i_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="reading_8pb_8h_1aa939d4d037926848233cd58b8d7c2889" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_mppt_v_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="reading_8pb_8h_1a47467bc4eff500d40d6b5580444c2959" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_mppt_i_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="reading_8pb_8h_1a5d816d0cddb07321182f9461c6d48acf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_sub_v_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="reading_8pb_8h_1a36d2a5d125271470f4dfd7928fd1415d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_sub_i_1_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="reading_8pb_8h_1a770eae91f2e4c337e7316d875eeec28a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_timestamp_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="reading_8pb_8h_1a4dd0422217daf32064298a0b023d7ee4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_current_time_tag<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Struct<sp/>field<sp/>encoding<sp/>specification<sp/>for<sp/>nanopb<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="reading_8pb_8h_1a9e4081362476d7a454f8bcd531c5d946" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_FIELDLIST(X,<sp/>a)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>REQUIRED,<sp/>UINT32,<sp/><sp/><sp/>bat_v_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1)<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>REQUIRED,<sp/>UINT32,<sp/><sp/><sp/>bat_i_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>OPTIONAL,<sp/>UINT32,<sp/><sp/><sp/>mppt_v_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3)<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>OPTIONAL,<sp/>UINT32,<sp/><sp/><sp/>mppt_i_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4)<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>OPTIONAL,<sp/>UINT32,<sp/><sp/><sp/>sub_v_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5)<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>OPTIONAL,<sp/>UINT32,<sp/><sp/><sp/>sub_i_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6)<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>REQUIRED,<sp/>UINT64,<sp/><sp/><sp/>timestamp,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="reading_8pb_8h_1adccd0cc3cfa5b4545a4c87ef58e4c797" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_CALLBACK<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="reading_8pb_8h_1a9379f9778bb3402ff975151e77dfc31d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_DEFAULT<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="reading_8pb_8h_1af2e2902c5db1646d7e3d801504e33b74" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_FIELDLIST(X,<sp/>a)<sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor">X(a,<sp/>STATIC,<sp/><sp/><sp/>REQUIRED,<sp/>UINT64,<sp/><sp/><sp/>current_time,<sp/><sp/><sp/><sp/><sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="reading_8pb_8h_1abb8f58e69bade1aeae18bbd0cd669a92" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_CALLBACK<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="reading_8pb_8h_1a39d27e3c8d544e8a3e417c9e27e24fe8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_DEFAULT<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pb_msgdesc_t<sp/><ref refid="reading_8pb_8h_1ae11c65c230428b6a0dccacbbf58e7ee9" kindref="member">send_reading_msg</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pb_msgdesc_t<sp/><ref refid="reading_8pb_8h_1ac1d0791d053b40cd6c5a9214e28ff8bc" kindref="member">time_sync_msg</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Defines<sp/>for<sp/>backwards<sp/>compatibility<sp/>with<sp/>code<sp/>written<sp/>before<sp/>nanopb-0.4.0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="reading_8pb_8h_1a0107e15a20884f3abe22028fe7cdce2c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_fields<sp/>&amp;send_reading_msg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="reading_8pb_8h_1a600c302fd20ee5bafbbf504dcc13f7ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_fields<sp/>&amp;time_sync_msg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Maximum<sp/>encoded<sp/>size<sp/>of<sp/>messages<sp/>(where<sp/>known)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>send_reading_size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="reading_8pb_8h_1a8f4c787fe64e1ef8c91196eb417d62f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>time_sync_size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="lib/Protobuf/reading.pb.h"/>
+  </compounddef>
+</doxygen>

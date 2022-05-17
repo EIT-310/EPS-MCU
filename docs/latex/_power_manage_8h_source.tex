@@ -1,0 +1,43 @@
+\hypertarget{_power_manage_8h_source}{}\doxysection{Power\+Manage.\+h}
+\label{_power_manage_8h_source}\index{lib/PowerManage/PowerManage.h@{lib/PowerManage/PowerManage.h}}
+\mbox{\hyperlink{_power_manage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by EIT-\/416 on 5/2/22.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef EPS\_MCU\_LIB\_POWERMANAGE\_POWERMANAGE\_H\_}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define EPS\_MCU\_LIB\_POWERMANAGE\_POWERMANAGE\_H\_}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_fsm_8h}{Fsm.h}}>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_project_config_8h}{ProjectConfig.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_adc_read_8h}{AdcRead.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_power_manage}{PowerManage}} \{}
+\DoxyCodeLine{14  \textcolor{keyword}{public}:}
+\DoxyCodeLine{15   \textcolor{keyword}{enum} \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}{SUB\_1}},}
+\DoxyCodeLine{17 \textcolor{comment}{//    SUB\_2,}}
+\DoxyCodeLine{18 \textcolor{comment}{//    SUB\_3,}}
+\DoxyCodeLine{19 \textcolor{comment}{//    SUB\_4,}}
+\DoxyCodeLine{20 \textcolor{comment}{//    SUB\_5}}
+\DoxyCodeLine{21   \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24   \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_power_manage_a0db524d4f8f5ac9a1b22917c81fd2015}{ToString}}(\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module);}
+\DoxyCodeLine{25   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_power_manage_a588ec30ab5aef350697f13706bb24bd1}{OceFromIsr}}(\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module);}
+\DoxyCodeLine{26   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_power_manage_a35279ac0f18272c3c00bddfd1850f3d6}{SetOverride}}(\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Modules}} module, \textcolor{keywordtype}{bool} is\_on);}
+\DoxyCodeLine{27   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_power_manage_a6cc478738b54fbbd148122c4ae6e93fb}{UpdateEnabled}}();}
+\DoxyCodeLine{28   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_power_manage_a76f09867e77b6f1184ca446fffda9781}{WriteSubState}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30  \textcolor{keyword}{private}:}
+\DoxyCodeLine{31   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_power_manage_a0cc9b04c91f44190fe04e1d749d5d6c6}{enabled\_modules\_}}[SUBMODULES\_NUM];}
+\DoxyCodeLine{32   \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_power_manage_a07c3547bbb3c11eda2dc67ce1becf09c}{module\_override\_}}[SUBMODULES\_NUM]; \textcolor{comment}{//TODO: skal gemmes i NVM}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keyword}{static} DigitalOut \mbox{\hyperlink{class_power_manage_a7229a54685a11211bd72a96b7e2af2ac}{power\_rails\_}}[1];}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_LIB\_POWERMANAGE\_POWERMANAGE\_H\_}}
+
+\end{DoxyCode}

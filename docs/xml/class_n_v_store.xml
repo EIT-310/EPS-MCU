@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_n_v_store" kind="class" language="C++" prot="public">
+    <compoundname>NVStore</compoundname>
+    <includes refid="_n_v_store_8h" local="no">NVStore.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DATA_LOCATION</name>
+        <qualifiedname>NVStore::DATA_LOCATION</qualifiedname>
+        <enumvalue id="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" prot="public">
+          <name>sm_state</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" prot="public">
+          <name>adc_read</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NVStore/NVStore.h" line="14" column="5" bodyfile="lib/NVStore/NVStore.h" bodystart="14" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NVStore::write</definition>
+        <argsstring>(DATA_LOCATION key, void *value)</argsstring>
+        <name>write</name>
+        <qualifiedname>NVStore::write</qualifiedname>
+        <param>
+          <type><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NVStore/NVStore.h" line="19" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="24" bodyend="53"/>
+        <references refid="_n_v_store_8cpp_1a096d1aa03aa095f7e4649f45327f110c" compoundref="_n_v_store_8cpp" startline="7">bd</references>
+        <references refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" compoundref="_n_v_store_8cpp" startline="11" endline="22">GetKeyStr</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NVStore::read</definition>
+        <argsstring>(DATA_LOCATION key, void *value)</argsstring>
+        <name>read</name>
+        <qualifiedname>NVStore::read</qualifiedname>
+        <param>
+          <type><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NVStore/NVStore.h" line="21" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="54" bodyend="83"/>
+        <references refid="_n_v_store_8cpp_1a096d1aa03aa095f7e4649f45327f110c" compoundref="_n_v_store_8cpp" startline="7">bd</references>
+        <references refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" compoundref="_n_v_store_8cpp" startline="11" endline="22">GetKeyStr</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string NVStore::GetKeyStr</definition>
+        <argsstring>(DATA_LOCATION name)</argsstring>
+        <name>GetKeyStr</name>
+        <qualifiedname>NVStore::GetKeyStr</qualifiedname>
+        <param>
+          <type><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/NVStore/NVStore.h" line="24" column="24" bodyfile="lib/NVStore/NVStore.cpp" bodystart="11" bodyend="22"/>
+        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" compoundref="_n_v_store_8h" startline="16">adc_read</references>
+        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" compoundref="_n_v_store_8h" startline="15">sm_state</references>
+        <referencedby refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" compoundref="_n_v_store_8cpp" startline="54" endline="83">read</referencedby>
+        <referencedby refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" compoundref="_n_v_store_8cpp" startline="24" endline="53">write</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/NVStore/NVStore.h" line="12" column="1" bodyfile="lib/NVStore/NVStore.h" bodystart="12" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" prot="public" virt="non-virtual"><scope>NVStore</scope><name>adc_read</name></member>
+      <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" prot="public" virt="non-virtual"><scope>NVStore</scope><name>DATA_LOCATION</name></member>
+      <member refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" prot="private" virt="non-virtual"><scope>NVStore</scope><name>GetKeyStr</name></member>
+      <member refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" prot="public" virt="non-virtual"><scope>NVStore</scope><name>read</name></member>
+      <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" prot="public" virt="non-virtual"><scope>NVStore</scope><name>sm_state</name></member>
+      <member refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" prot="public" virt="non-virtual"><scope>NVStore</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,9 @@
+<map id="CanCom::ShiftBuffer" name="CanCom::ShiftBuffer">
+<area shape="rect" id="node1" title="Rykker alle bytes i serialized_buffer_ med et antal pladser." alt="" coords="783,31,921,57"/>
+<area shape="rect" id="node2" href="$class_can_com.html#ab963975230cc827959cc329b51ce2e24" title="Modtag en enkelt ADC måling fra serialized_buffer_." alt="" coords="587,5,735,32"/>
+<area shape="rect" id="node3" href="$class_can_com.html#a22fb622bb2aa27436415898d40e5987f" title="Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes." alt="" coords="589,56,732,83"/>
+<area shape="rect" id="node4" href="$class_can_com.html#ad5cc018603f898163b52bcab6db64cf4" title="Send alle målinger i CircularBuffer&#39;eren (adc_buffer_) over CAN." alt="" coords="375,56,539,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#abedbe52be05e887351f9d26921ff77cf" title="ISR deferred handler der reagerer på flag fra OnCanRec()" alt="" coords="237,56,327,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ad5d56d2ac5d86036b8a7931d829e6082" title="ISR deferred handler til at beslutte handling på baggrund af CAN framets ID." alt="" coords="104,56,189,83"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,56,56,83"/>
+</map>

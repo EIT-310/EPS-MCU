@@ -1,0 +1,149 @@
+\hypertarget{class_oce_isr}{}\doxysection{Oce\+Isr Class Reference}
+\label{class_oce_isr}\index{OceIsr@{OceIsr}}
+
+
+{\ttfamily \#include $<$Interrupt.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}{Oce\+Isr}} (Pin\+Name irq\+\_\+pin, Event\+Queue $\ast$queue, \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}} module)
+\begin{DoxyCompactList}\small\item\em Construct a new Oce Isr object og attatcher IRQ benet til at køre \mbox{\hyperlink{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}{Handle()}} ved rise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}{Handle}} ()
+\begin{DoxyCompactList}\small\item\em ISR context der deactiverer modulet der blev målt OCE på. Sætter \mbox{\hyperlink{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}{Event\+Handler()}} i kø til de ting der skal foregå uden for ISR kontekst. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Event\+Queue $\ast$ \mbox{\hyperlink{class_oce_isr_ad0e768edf4a6e92d1dbfd80fcfa9e127}{queue\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}{Event\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em ISR deferred handler der logger OCE\textquotesingle{}et og gemmer hvilket ben der blev målt oce på. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}} \mbox{\hyperlink{class_oce_isr_a11a4dbe4b507081b37311a7030669dcd}{module\+\_\+}}
+\item 
+Interrupt\+In \mbox{\hyperlink{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}{interrupt\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}{irq\+\_\+happened\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}\label{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}} 
+\index{OceIsr@{OceIsr}!OceIsr@{OceIsr}}
+\index{OceIsr@{OceIsr}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{OceIsr()}{OceIsr()}}
+{\footnotesize\ttfamily Oce\+Isr\+::\+Oce\+Isr (\begin{DoxyParamCaption}\item[{Pin\+Name}]{irq\+\_\+pin,  }\item[{Event\+Queue $\ast$}]{queue,  }\item[{\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}}}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Oce Isr object og attatcher IRQ benet til at køre \mbox{\hyperlink{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}{Handle()}} ved rise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em irq\+\_\+pin} & Benet der går høj ved OCE for det givet modul \\
+\hline
+{\em queue} & Event\+Queue til at håndtere ISR deferred events \\
+\hline
+{\em module} & Modulet der ønskes at måle OCE på \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}\label{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}} 
+\index{OceIsr@{OceIsr}!EventHandler@{EventHandler}}
+\index{EventHandler@{EventHandler}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{EventHandler()}{EventHandler()}}
+{\footnotesize\ttfamily void Oce\+Isr\+::\+Event\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ISR deferred handler der logger OCE\textquotesingle{}et og gemmer hvilket ben der blev målt oce på. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}\label{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd}} 
+\index{OceIsr@{OceIsr}!Handle@{Handle}}
+\index{Handle@{Handle}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily void Oce\+Isr\+::\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ISR context der deactiverer modulet der blev målt OCE på. Sætter \mbox{\hyperlink{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}{Event\+Handler()}} i kø til de ting der skal foregå uden for ISR kontekst. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_oce_isr_abe5229c9af4bf9870d7afc6386b8f3dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}\label{class_oce_isr_afbc9d7adc6bc5e928aef1193db0ef8ca}} 
+\index{OceIsr@{OceIsr}!interrupt\_@{interrupt\_}}
+\index{interrupt\_@{interrupt\_}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{interrupt\_}{interrupt\_}}
+{\footnotesize\ttfamily Interrupt\+In Oce\+Isr\+::interrupt\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}\label{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}} 
+\index{OceIsr@{OceIsr}!irq\_happened\_@{irq\_happened\_}}
+\index{irq\_happened\_@{irq\_happened\_}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{irq\_happened\_}{irq\_happened\_}}
+{\footnotesize\ttfamily bool Oce\+Isr\+::irq\+\_\+happened\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_oce_isr_a11a4dbe4b507081b37311a7030669dcd}\label{class_oce_isr_a11a4dbe4b507081b37311a7030669dcd}} 
+\index{OceIsr@{OceIsr}!module\_@{module\_}}
+\index{module\_@{module\_}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{module\_}{module\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292e}{Power\+Manage\+::\+Modules}} Oce\+Isr\+::module\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_oce_isr_ad0e768edf4a6e92d1dbfd80fcfa9e127}\label{class_oce_isr_ad0e768edf4a6e92d1dbfd80fcfa9e127}} 
+\index{OceIsr@{OceIsr}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!OceIsr@{OceIsr}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily Event\+Queue $\ast$ Oce\+Isr\+::queue\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Interrupt/\mbox{\hyperlink{_interrupt_8h}{Interrupt.\+h}}\item 
+lib/\+Interrupt/\mbox{\hyperlink{_interrupt_8cpp}{Interrupt.\+cpp}}\end{DoxyCompactItemize}

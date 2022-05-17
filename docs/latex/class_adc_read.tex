@@ -1,0 +1,239 @@
+\hypertarget{class_adc_read}{}\doxysection{Adc\+Read Class Reference}
+\label{class_adc_read}\index{AdcRead@{AdcRead}}
+
+
+{\ttfamily \#include $<$Adc\+Read.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{adc\+\_\+reading}}
+\item 
+struct \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Name}} \{ \newline
+\mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d}{BAT\+\_\+\+V\+\_\+1}}
+, \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6}{BAT\+\_\+\+I\+\_\+1}}
+, \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8}{MPPT\+\_\+\+V\+\_\+1}}
+, \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff}{MPPT\+\_\+\+I\+\_\+1}}
+, \newline
+\mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00}{SUB\+\_\+\+V\+\_\+1}}
+, \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201}{SUB\+\_\+\+I\+\_\+1}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_adc_read_a579cb1cbc31d93bb202f770492be226d}{Adc\+Read}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} \mbox{\hyperlink{class_adc_read_ad802d7cd5058ceb3a039803f8fb18958}{Do\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Kalder Async\+ADC med et antal ADC\textquotesingle{}er på baggrund af nuværende state. Nye måling bliver lagt i Circular\+Buffer\textquotesingle{}en adc\+\_\+buffer\+\_\+. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3}{Read\+U16}} (\mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} $\ast$args)
+\begin{DoxyCompactList}\small\item\em Måler et givent antal gange på et givent device fra \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} og skriver middelværdi til \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} dest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Circular\+Buffer$<$ \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{adc\+\_\+reading}}, \mbox{\hyperlink{_project_config_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}} $>$ \mbox{\hyperlink{class_adc_read_a8dabbeef3eb6bfdd423008eac1e05396}{adc\+\_\+buffer\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Analog\+In $\ast$ \mbox{\hyperlink{class_adc_read_a84ffd76ab6ff1d44eb81577b8462e6eb}{Get\+Device}} (\mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Name}} name)
+\begin{DoxyCompactList}\small\item\em Omdanner Adc\+Name enum til pointer til ny Analog\+In object for respektivt ADC ben. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_adc_read_a5c030af9eeb9c42c58f682e3eaf94bc8}{Read\+Float}} (Analog\+In $\ast$device)
+\item 
+static void \mbox{\hyperlink{class_adc_read_a57f35b9fd598aff98289da19a5edff40}{Async\+ADC}} (int adc\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Starter et givent antal threads der hver kører \mbox{\hyperlink{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3}{Read\+U16()}} med dets givet ADC ben. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Name}} \mbox{\hyperlink{class_adc_read_ac8bac3748533ac7d2663909c917ffb7b}{adc\+\_\+list\+\_\+}} \mbox{[}6\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}} 
+\index{AdcRead@{AdcRead}!AdcName@{AdcName}}
+\index{AdcName@{AdcName}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{AdcName}{AdcName}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Read\+::\+Adc\+Name}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_V\_1@{BAT\_V\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!BAT\_V\_1@{BAT\_V\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d}} 
+BAT\+\_\+\+V\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAT\_I\_1@{BAT\_I\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!BAT\_I\_1@{BAT\_I\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6}} 
+BAT\+\_\+\+I\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MPPT\_V\_1@{MPPT\_V\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!MPPT\_V\_1@{MPPT\_V\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8}} 
+MPPT\+\_\+\+V\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MPPT\_I\_1@{MPPT\_I\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!MPPT\_I\_1@{MPPT\_I\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff}} 
+MPPT\+\_\+\+I\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_V\_1@{SUB\_V\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!SUB\_V\_1@{SUB\_V\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00}} 
+SUB\+\_\+\+V\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB\_I\_1@{SUB\_I\_1}!AdcRead@{AdcRead}}\index{AdcRead@{AdcRead}!SUB\_I\_1@{SUB\_I\_1}}}\mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201}} 
+SUB\+\_\+\+I\+\_\+1&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_adc_read_a579cb1cbc31d93bb202f770492be226d}\label{class_adc_read_a579cb1cbc31d93bb202f770492be226d}} 
+\index{AdcRead@{AdcRead}!AdcRead@{AdcRead}}
+\index{AdcRead@{AdcRead}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{AdcRead()}{AdcRead()}}
+{\footnotesize\ttfamily Adc\+Read\+::\+Adc\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_adc_read_a57f35b9fd598aff98289da19a5edff40}\label{class_adc_read_a57f35b9fd598aff98289da19a5edff40}} 
+\index{AdcRead@{AdcRead}!AsyncADC@{AsyncADC}}
+\index{AsyncADC@{AsyncADC}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{AsyncADC()}{AsyncADC()}}
+{\footnotesize\ttfamily void Adc\+Read\+::\+Async\+ADC (\begin{DoxyParamCaption}\item[{int}]{adc\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Starter et givent antal threads der hver kører \mbox{\hyperlink{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3}{Read\+U16()}} med dets givet ADC ben. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adc\+\_\+count} & Antal ADC\textquotesingle{}er at måle på \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_adc_read_a57f35b9fd598aff98289da19a5edff40_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_adc_read_a57f35b9fd598aff98289da19a5edff40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adc_read_ad802d7cd5058ceb3a039803f8fb18958}\label{class_adc_read_ad802d7cd5058ceb3a039803f8fb18958}} 
+\index{AdcRead@{AdcRead}!DoRead@{DoRead}}
+\index{DoRead@{DoRead}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{DoRead()}{DoRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} Adc\+Read\+::\+Do\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Kalder Async\+ADC med et antal ADC\textquotesingle{}er på baggrund af nuværende state. Nye måling bliver lagt i Circular\+Buffer\textquotesingle{}en adc\+\_\+buffer\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} Nye måling 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_adc_read_ad802d7cd5058ceb3a039803f8fb18958_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_adc_read_ad802d7cd5058ceb3a039803f8fb18958_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adc_read_a84ffd76ab6ff1d44eb81577b8462e6eb}\label{class_adc_read_a84ffd76ab6ff1d44eb81577b8462e6eb}} 
+\index{AdcRead@{AdcRead}!GetDevice@{GetDevice}}
+\index{GetDevice@{GetDevice}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{GetDevice()}{GetDevice()}}
+{\footnotesize\ttfamily Analog\+In $\ast$ Adc\+Read\+::\+Get\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Read\+::\+Adc\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Omdanner Adc\+Name enum til pointer til ny Analog\+In object for respektivt ADC ben. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & enum for det ADC ben der skal måles på \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Analog\+In$\ast$ pointer til oprettet device 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_adc_read_a84ffd76ab6ff1d44eb81577b8462e6eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_adc_read_a5c030af9eeb9c42c58f682e3eaf94bc8}\label{class_adc_read_a5c030af9eeb9c42c58f682e3eaf94bc8}} 
+\index{AdcRead@{AdcRead}!ReadFloat@{ReadFloat}}
+\index{ReadFloat@{ReadFloat}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{ReadFloat()}{ReadFloat()}}
+{\footnotesize\ttfamily static float Adc\+Read\+::\+Read\+Float (\begin{DoxyParamCaption}\item[{Analog\+In $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3}\label{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3}} 
+\index{AdcRead@{AdcRead}!ReadU16@{ReadU16}}
+\index{ReadU16@{ReadU16}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{ReadU16()}{ReadU16()}}
+{\footnotesize\ttfamily void Adc\+Read\+::\+Read\+U16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} $\ast$}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Måler et givent antal gange på et givent device fra \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} og skriver middelværdi til \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} med Analog\+In pointer til devicet og uint16\+\_\+t pointer til resultatet \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_adc_read_a5c281043cc2127409b9d41a73b3c61d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_adc_read_a8dabbeef3eb6bfdd423008eac1e05396}\label{class_adc_read_a8dabbeef3eb6bfdd423008eac1e05396}} 
+\index{AdcRead@{AdcRead}!adc\_buffer\_@{adc\_buffer\_}}
+\index{adc\_buffer\_@{adc\_buffer\_}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{adc\_buffer\_}{adc\_buffer\_}}
+{\footnotesize\ttfamily Circular\+Buffer$<$ \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}}, \mbox{\hyperlink{_project_config_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\+\_\+\+BUFFER\+\_\+\+SIZE}} $>$ Adc\+Read\+::adc\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_adc_read_ac8bac3748533ac7d2663909c917ffb7b}\label{class_adc_read_ac8bac3748533ac7d2663909c917ffb7b}} 
+\index{AdcRead@{AdcRead}!adc\_list\_@{adc\_list\_}}
+\index{adc\_list\_@{adc\_list\_}!AdcRead@{AdcRead}}
+\doxysubsubsection{\texorpdfstring{adc\_list\_}{adc\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Name}} Adc\+Read\+::adc\+\_\+list\+\_\+\mbox{[}6\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\+Adc\+Read/\mbox{\hyperlink{_adc_read_8h}{Adc\+Read.\+h}}\item 
+lib/\+Adc\+Read/\mbox{\hyperlink{_adc_read_8cpp}{Adc\+Read.\+cpp}}\end{DoxyCompactItemize}

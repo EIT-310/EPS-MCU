@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5bbdcc428926e051a1bf54edc21cb6ca" xml:lang="en-US">
+<title>lib/Config Directory Reference</title>
+<indexterm><primary>lib/Config Directory Reference</primary></indexterm>
+Directory dependency graph for Config:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_5bbdcc428926e051a1bf54edc21cb6ca_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__project_config_8h">ProjectConfig.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

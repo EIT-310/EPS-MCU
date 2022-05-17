@@ -1,0 +1,10 @@
+<map id="Fsm::GetCurrentState" name="Fsm::GetCurrentState">
+<area shape="rect" id="node1" title="Getter for nuværende state." alt="" coords="620,31,771,57"/>
+<area shape="rect" id="node2" href="$class_adc_read.html#ad802d7cd5058ceb3a039803f8fb18958" title="Kalder AsyncADC med et antal ADC&#39;er på baggrund af nuværende state. Nye måling bliver lagt i Circular..." alt="" coords="407,5,537,32"/>
+<area shape="rect" id="node5" href="$class_power_manage.html#a6cc478738b54fbbd148122c4ae6e93fb" title="Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne...." alt="" coords="372,56,572,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ac595faede462d70c3fb34417f4e984e7" title="Sætter ADC måling igang. Kører hvert 5. sekundt med mindre en vigtigere thread pre&#45;empt&#39;er den...." alt="" coords="240,5,315,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a769404f2985a027a0d626fedfd4de1e9" title="Køres en enkelt gang når systemet starter." alt="" coords="115,56,171,83"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a1344d6ffed8b15af8c18dd7aa69d4872" title="Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog." alt="" coords="231,107,324,133"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a3a1208bf880dbc3e596cdd55b5cbd6b0" title="Modtager ny måling fra ReadAdc() og bestemmer ny state på baggrund af disse data." alt="" coords="104,107,183,133"/>
+</map>

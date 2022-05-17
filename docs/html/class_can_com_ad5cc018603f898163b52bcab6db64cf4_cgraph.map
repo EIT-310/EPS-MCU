@@ -1,0 +1,5 @@
+<map id="CanCom::SendReadings" name="CanCom::SendReadings">
+<area shape="rect" id="node1" title="Send alle målinger i CircularBuffer&#39;eren (adc_buffer_) over CAN." alt="" coords="5,5,169,32"/>
+<area shape="rect" id="node2" href="$class_can_com.html#a22fb622bb2aa27436415898d40e5987f" title="Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes." alt="" coords="217,5,360,32"/>
+<area shape="rect" id="node3" href="$class_can_com.html#a52c0f42094e4622ee96db13215a3d16e" title="Rykker alle bytes i serialized_buffer_ med et antal pladser." alt="" coords="408,5,547,32"/>
+</map>

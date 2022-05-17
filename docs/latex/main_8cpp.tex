@@ -1,0 +1,407 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Fsm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}NVStore.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Adc\+Read.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mbed\+\_\+stats.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Project\+Config.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Power\+Manage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Can\+Com.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reading.\+pb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}No\+Mutex\+CAN.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtos.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Thread \mbox{\hyperlink{main_8cpp_a8088721061b22d3a703b809282db158a}{t\+\_\+can\+\_\+handler}} (os\+Priority\+Normal, OS\+\_\+\+STACK\+\_\+\+SIZE, nullptr,\char`\"{}CAN Handler\char`\"{})
+\item 
+Thread \mbox{\hyperlink{main_8cpp_a9da7aec02ec673a8b5ecdf4510f106c1}{t\+\_\+\+ISR\+\_\+handler}} (os\+Priority\+ISR, 1024, nullptr, \char`\"{}OCE Handler\char`\"{})
+\item 
+Thread \mbox{\hyperlink{main_8cpp_a3954245cb9a4c741ae774426178b1817}{t\+\_\+adc\+\_\+main}} (os\+Priority\+Normal, 1024, nullptr,\char`\"{}ADC Handler\char`\"{})
+\item 
+Thread \mbox{\hyperlink{main_8cpp_aa4f4ec1bad01c8e84c6122eccfb9bbe7}{t\+\_\+state\+\_\+subs}} (os\+Priority\+Normal, 1024, nullptr,\char`\"{}State Updater\char`\"{})
+\item 
+\mbox{\hyperlink{class_oce_isr}{Oce\+Isr}} \mbox{\hyperlink{main_8cpp_a6c214e618015d093ba8590729563c33c}{oce1}} (OCE\+\_\+1\+\_\+\+PIN, \&\mbox{\hyperlink{main_8cpp_a6ee6423ec42a45faf59c779d64ecad25}{Isr\+Queue}}, \mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}{Power\+Manage\+::\+SUB\+\_\+1}})
+\item 
+void \mbox{\hyperlink{main_8cpp_ac595faede462d70c3fb34417f4e984e7}{Read\+Adc}} ()
+\begin{DoxyCompactList}\small\item\em Sætter ADC måling igang. Kører hvert 5. sekundt med mindre en vigtigere thread pre-\/empt\textquotesingle{}er den. Lægger den nye måling i kø til \mbox{\hyperlink{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0}{New\+State()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1344d6ffed8b15af8c18dd7aa69d4872}{Update\+Subs}} ()
+\begin{DoxyCompactList}\small\item\em Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a5c7452bc8a6f648db67fe952474d73de}{Start\+Watchdog}} ()
+\begin{DoxyCompactList}\small\item\em Starter Watchdog hvis timeout er for langt sættes den istedet til den længste tilladte værdi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a051cb0babede35842fcb4822fe9102f7}{Can\+Time\+Sync}} ()
+\begin{DoxyCompactList}\small\item\em ISR deferred handler for at decode time sync package og opdatere RTC med den modtagede værdi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_abedbe52be05e887351f9d26921ff77cf}{Can\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em ISR deferred handler der reagerer på flag fra \mbox{\hyperlink{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082}{On\+Can\+Rec()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082}{On\+Can\+Rec}} ()
+\begin{DoxyCompactList}\small\item\em ISR deferred handler til at beslutte handling på baggrund af CAN framets ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a769404f2985a027a0d626fedfd4de1e9}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Køres en enkelt gang når systemet starter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0}{New\+State}} ()
+\begin{DoxyCompactList}\small\item\em Modtager ny måling fra \mbox{\hyperlink{main_8cpp_ac595faede462d70c3fb34417f4e984e7}{Read\+Adc()}} og bestemmer ny state på baggrund af disse data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Sætter threads igang og sover. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fsm}{Fsm}} \mbox{\hyperlink{main_8cpp_a9f4267ec33e4521e3429fe3c8d933a04}{fsm}} (\mbox{\hyperlink{_project_config_8h_a69780fe091bc441b276e79d89f7acb97}{FSM\+\_\+\+START\+\_\+\+STATE}})
+\item 
+Event\+Queue \mbox{\hyperlink{main_8cpp_a6ee6423ec42a45faf59c779d64ecad25}{Isr\+Queue}}
+\item 
+Event\+Queue \mbox{\hyperlink{main_8cpp_a63a2d7bfab07ad56bcc616708e1311d8}{Adc\+Queue}}
+\item 
+\mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}} \mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}} (CAN\+\_\+\+RD\+\_\+\+PIN, CAN\+\_\+\+TD\+\_\+\+PIN, \mbox{\hyperlink{_project_config_8h_a936618a4fbd892618b0865b86a1fb22c}{CAN\+\_\+\+BITRATE}})
+\item 
+Watchdog \& \mbox{\hyperlink{main_8cpp_a415458cba5bf50c42f8bd5c9548cc237}{watchdog}} = Watchdog\+::get\+\_\+instance()
+\item 
+CANMessage \mbox{\hyperlink{main_8cpp_a6455c2bdd533574c68e203f7d1e3265d}{can\+\_\+time\+\_\+sync}}
+\item 
+CANMessage \mbox{\hyperlink{main_8cpp_ac8fa5b302ff73f9e90ee35405b112748}{can\+\_\+req}}
+\item 
+Ticker \mbox{\hyperlink{main_8cpp_adaedeffa9cd68dc76b50e18ac30de0a9}{adc\+\_\+ticker}}
+\item 
+Mail$<$ \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}}, 8 $>$ \mbox{\hyperlink{main_8cpp_a98c8c86c1543fd5370047f525d0a1f31}{adc\+\_\+mail}}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a16cedde881cfcbc26c9fb4f2ff54e033}{can\+\_\+time\+\_\+isr}}
+\item 
+bool \mbox{\hyperlink{main_8cpp_aff54455fc158126cb45ff4d8c55fa910}{can\+\_\+req\+\_\+isr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_abedbe52be05e887351f9d26921ff77cf}\label{main_8cpp_abedbe52be05e887351f9d26921ff77cf}} 
+\index{main.cpp@{main.cpp}!CanHandler@{CanHandler}}
+\index{CanHandler@{CanHandler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CanHandler()}{CanHandler()}}
+{\footnotesize\ttfamily void Can\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ISR deferred handler der reagerer på flag fra \mbox{\hyperlink{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082}{On\+Can\+Rec()}} 
+
+\begin{DoxyNote}{Note}
+Lettere overflødig og lævn fra tidligere metode uden brug af Event\+Queue 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_abedbe52be05e887351f9d26921ff77cf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{main_8cpp_abedbe52be05e887351f9d26921ff77cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a051cb0babede35842fcb4822fe9102f7}\label{main_8cpp_a051cb0babede35842fcb4822fe9102f7}} 
+\index{main.cpp@{main.cpp}!CanTimeSync@{CanTimeSync}}
+\index{CanTimeSync@{CanTimeSync}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CanTimeSync()}{CanTimeSync()}}
+{\footnotesize\ttfamily void Can\+Time\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ISR deferred handler for at decode time sync package og opdatere RTC med den modtagede værdi. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a051cb0babede35842fcb4822fe9102f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sætter threads igang og sover. 
+
+\begin{DoxyReturn}{Returns}
+int standard 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0}\label{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0}} 
+\index{main.cpp@{main.cpp}!NewState@{NewState}}
+\index{NewState@{NewState}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{NewState()}{NewState()}}
+{\footnotesize\ttfamily void New\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modtager ny måling fra \mbox{\hyperlink{main_8cpp_ac595faede462d70c3fb34417f4e984e7}{Read\+Adc()}} og bestemmer ny state på baggrund af disse data. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a6c214e618015d093ba8590729563c33c}\label{main_8cpp_a6c214e618015d093ba8590729563c33c}} 
+\index{main.cpp@{main.cpp}!oce1@{oce1}}
+\index{oce1@{oce1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{oce1()}{oce1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_oce_isr}{Oce\+Isr}} oce1 (\begin{DoxyParamCaption}\item[{OCE\+\_\+1\+\_\+\+PIN}]{,  }\item[{\&}]{Isr\+Queue,  }\item[{\mbox{\hyperlink{class_power_manage_a1f54cee055bd53d7a4e29f04d86e292eab2f595058775d24b388a331e4cef6bd6}{Power\+Manage\+::\+SUB\+\_\+1}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082}\label{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082}} 
+\index{main.cpp@{main.cpp}!OnCanRec@{OnCanRec}}
+\index{OnCanRec@{OnCanRec}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{OnCanRec()}{OnCanRec()}}
+{\footnotesize\ttfamily void On\+Can\+Rec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ISR deferred handler til at beslutte handling på baggrund af CAN framets ID. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{main_8cpp_ad5d56d2ac5d86036b8a7931d829e6082_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_ac595faede462d70c3fb34417f4e984e7}\label{main_8cpp_ac595faede462d70c3fb34417f4e984e7}} 
+\index{main.cpp@{main.cpp}!ReadAdc@{ReadAdc}}
+\index{ReadAdc@{ReadAdc}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadAdc()}{ReadAdc()}}
+{\footnotesize\ttfamily void Read\+Adc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sætter ADC måling igang. Kører hvert 5. sekundt med mindre en vigtigere thread pre-\/empt\textquotesingle{}er den. Lægger den nye måling i kø til \mbox{\hyperlink{main_8cpp_a3a1208bf880dbc3e596cdd55b5cbd6b0}{New\+State()}} 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ac595faede462d70c3fb34417f4e984e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{main_8cpp_ac595faede462d70c3fb34417f4e984e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a769404f2985a027a0d626fedfd4de1e9}\label{main_8cpp_a769404f2985a027a0d626fedfd4de1e9}} 
+\index{main.cpp@{main.cpp}!Setup@{Setup}}
+\index{Setup@{Setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Køres en enkelt gang når systemet starter. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a769404f2985a027a0d626fedfd4de1e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{main_8cpp_a769404f2985a027a0d626fedfd4de1e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a5c7452bc8a6f648db67fe952474d73de}\label{main_8cpp_a5c7452bc8a6f648db67fe952474d73de}} 
+\index{main.cpp@{main.cpp}!StartWatchdog@{StartWatchdog}}
+\index{StartWatchdog@{StartWatchdog}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{StartWatchdog()}{StartWatchdog()}}
+{\footnotesize\ttfamily void Start\+Watchdog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starter Watchdog hvis timeout er for langt sættes den istedet til den længste tilladte værdi. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{main_8cpp_a5c7452bc8a6f648db67fe952474d73de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a3954245cb9a4c741ae774426178b1817}\label{main_8cpp_a3954245cb9a4c741ae774426178b1817}} 
+\index{main.cpp@{main.cpp}!t\_adc\_main@{t\_adc\_main}}
+\index{t\_adc\_main@{t\_adc\_main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{t\_adc\_main()}{t\_adc\_main()}}
+{\footnotesize\ttfamily Thread t\+\_\+adc\+\_\+main (\begin{DoxyParamCaption}\item[{os\+Priority\+Normal}]{,  }\item[{1024}]{,  }\item[{nullptr}]{,  }\item[{\char`\"{}ADC Handler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{main_8cpp_a3954245cb9a4c741ae774426178b1817_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a8088721061b22d3a703b809282db158a}\label{main_8cpp_a8088721061b22d3a703b809282db158a}} 
+\index{main.cpp@{main.cpp}!t\_can\_handler@{t\_can\_handler}}
+\index{t\_can\_handler@{t\_can\_handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{t\_can\_handler()}{t\_can\_handler()}}
+{\footnotesize\ttfamily Thread t\+\_\+can\+\_\+handler (\begin{DoxyParamCaption}\item[{os\+Priority\+Normal}]{,  }\item[{OS\+\_\+\+STACK\+\_\+\+SIZE}]{,  }\item[{nullptr}]{,  }\item[{\char`\"{}CAN Handler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a9da7aec02ec673a8b5ecdf4510f106c1}\label{main_8cpp_a9da7aec02ec673a8b5ecdf4510f106c1}} 
+\index{main.cpp@{main.cpp}!t\_ISR\_handler@{t\_ISR\_handler}}
+\index{t\_ISR\_handler@{t\_ISR\_handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{t\_ISR\_handler()}{t\_ISR\_handler()}}
+{\footnotesize\ttfamily Thread t\+\_\+\+ISR\+\_\+handler (\begin{DoxyParamCaption}\item[{os\+Priority\+ISR}]{,  }\item[{1024}]{,  }\item[{nullptr}]{,  }\item[{\char`\"{}OCE Handler\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{main_8cpp_a9da7aec02ec673a8b5ecdf4510f106c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_aa4f4ec1bad01c8e84c6122eccfb9bbe7}\label{main_8cpp_aa4f4ec1bad01c8e84c6122eccfb9bbe7}} 
+\index{main.cpp@{main.cpp}!t\_state\_subs@{t\_state\_subs}}
+\index{t\_state\_subs@{t\_state\_subs}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{t\_state\_subs()}{t\_state\_subs()}}
+{\footnotesize\ttfamily Thread t\+\_\+state\+\_\+subs (\begin{DoxyParamCaption}\item[{os\+Priority\+Normal}]{,  }\item[{1024}]{,  }\item[{nullptr}]{,  }\item[{\char`\"{}State Updater\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{main_8cpp_aa4f4ec1bad01c8e84c6122eccfb9bbe7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a1344d6ffed8b15af8c18dd7aa69d4872}\label{main_8cpp_a1344d6ffed8b15af8c18dd7aa69d4872}} 
+\index{main.cpp@{main.cpp}!UpdateSubs@{UpdateSubs}}
+\index{UpdateSubs@{UpdateSubs}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{UpdateSubs()}{UpdateSubs()}}
+{\footnotesize\ttfamily void Update\+Subs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Opdaterer de aktiverede moduler på baggrund af ny state og kicker watchdog. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a1344d6ffed8b15af8c18dd7aa69d4872_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{main_8cpp_a1344d6ffed8b15af8c18dd7aa69d4872_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a98c8c86c1543fd5370047f525d0a1f31}\label{main_8cpp_a98c8c86c1543fd5370047f525d0a1f31}} 
+\index{main.cpp@{main.cpp}!adc\_mail@{adc\_mail}}
+\index{adc\_mail@{adc\_mail}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{adc\_mail}{adc\_mail}}
+{\footnotesize\ttfamily Mail$<$\mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}}, 8$>$ adc\+\_\+mail}
+
+\mbox{\Hypertarget{main_8cpp_adaedeffa9cd68dc76b50e18ac30de0a9}\label{main_8cpp_adaedeffa9cd68dc76b50e18ac30de0a9}} 
+\index{main.cpp@{main.cpp}!adc\_ticker@{adc\_ticker}}
+\index{adc\_ticker@{adc\_ticker}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{adc\_ticker}{adc\_ticker}}
+{\footnotesize\ttfamily Ticker adc\+\_\+ticker}
+
+\mbox{\Hypertarget{main_8cpp_a63a2d7bfab07ad56bcc616708e1311d8}\label{main_8cpp_a63a2d7bfab07ad56bcc616708e1311d8}} 
+\index{main.cpp@{main.cpp}!AdcQueue@{AdcQueue}}
+\index{AdcQueue@{AdcQueue}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{AdcQueue}{AdcQueue}}
+{\footnotesize\ttfamily Event\+Queue Adc\+Queue}
+
+\mbox{\Hypertarget{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}\label{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}} 
+\index{main.cpp@{main.cpp}!can@{can}}
+\index{can@{can}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_can_com}{Can\+Com}} cancom \& can (\begin{DoxyParamCaption}\item[{CAN\+\_\+\+RD\+\_\+\+PIN}]{,  }\item[{CAN\+\_\+\+TD\+\_\+\+PIN}]{,  }\item[{\mbox{\hyperlink{_project_config_8h_a936618a4fbd892618b0865b86a1fb22c}{CAN\+\_\+\+BITRATE}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_ac8fa5b302ff73f9e90ee35405b112748}\label{main_8cpp_ac8fa5b302ff73f9e90ee35405b112748}} 
+\index{main.cpp@{main.cpp}!can\_req@{can\_req}}
+\index{can\_req@{can\_req}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{can\_req}{can\_req}}
+{\footnotesize\ttfamily CANMessage can\+\_\+req}
+
+\mbox{\Hypertarget{main_8cpp_aff54455fc158126cb45ff4d8c55fa910}\label{main_8cpp_aff54455fc158126cb45ff4d8c55fa910}} 
+\index{main.cpp@{main.cpp}!can\_req\_isr@{can\_req\_isr}}
+\index{can\_req\_isr@{can\_req\_isr}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{can\_req\_isr}{can\_req\_isr}}
+{\footnotesize\ttfamily bool can\+\_\+req\+\_\+isr}
+
+\mbox{\Hypertarget{main_8cpp_a16cedde881cfcbc26c9fb4f2ff54e033}\label{main_8cpp_a16cedde881cfcbc26c9fb4f2ff54e033}} 
+\index{main.cpp@{main.cpp}!can\_time\_isr@{can\_time\_isr}}
+\index{can\_time\_isr@{can\_time\_isr}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{can\_time\_isr}{can\_time\_isr}}
+{\footnotesize\ttfamily bool can\+\_\+time\+\_\+isr}
+
+\mbox{\Hypertarget{main_8cpp_a6455c2bdd533574c68e203f7d1e3265d}\label{main_8cpp_a6455c2bdd533574c68e203f7d1e3265d}} 
+\index{main.cpp@{main.cpp}!can\_time\_sync@{can\_time\_sync}}
+\index{can\_time\_sync@{can\_time\_sync}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{can\_time\_sync}{can\_time\_sync}}
+{\footnotesize\ttfamily CANMessage can\+\_\+time\+\_\+sync}
+
+\mbox{\Hypertarget{main_8cpp_a9f4267ec33e4521e3429fe3c8d933a04}\label{main_8cpp_a9f4267ec33e4521e3429fe3c8d933a04}} 
+\index{main.cpp@{main.cpp}!fsm@{fsm}}
+\index{fsm@{fsm}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{fsm}{fsm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fsm}{Fsm}} fsm(\mbox{\hyperlink{_project_config_8h_a69780fe091bc441b276e79d89f7acb97}{FSM\+\_\+\+START\+\_\+\+STATE}}) (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_project_config_8h_a69780fe091bc441b276e79d89f7acb97}{FSM\+\_\+\+START\+\_\+\+STATE}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a6ee6423ec42a45faf59c779d64ecad25}\label{main_8cpp_a6ee6423ec42a45faf59c779d64ecad25}} 
+\index{main.cpp@{main.cpp}!IsrQueue@{IsrQueue}}
+\index{IsrQueue@{IsrQueue}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{IsrQueue}{IsrQueue}}
+{\footnotesize\ttfamily Event\+Queue Isr\+Queue}
+
+\mbox{\Hypertarget{main_8cpp_a415458cba5bf50c42f8bd5c9548cc237}\label{main_8cpp_a415458cba5bf50c42f8bd5c9548cc237}} 
+\index{main.cpp@{main.cpp}!watchdog@{watchdog}}
+\index{watchdog@{watchdog}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{watchdog}{watchdog}}
+{\footnotesize\ttfamily Watchdog\& watchdog = Watchdog\+::get\+\_\+instance()}
+

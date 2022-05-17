@@ -1,0 +1,132 @@
+.TH "PowerManage" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PowerManage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PowerManage\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBModules\fP { \fBSUB_1\fP }"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBToString\fP (\fBModules\fP module)"
+.br
+.RI "Omdanner modul til string med navnet for modulet\&. "
+.ti -1c
+.RI "static void \fBOceFromIsr\fP (\fBModules\fP module)"
+.br
+.RI "Høj prioritetet deaktivering af en power rail ved OCE\&. "
+.ti -1c
+.RI "static void \fBSetOverride\fP (\fBModules\fP module, bool is_on)"
+.br
+.RI "Opdaterer et modul i module_override_ listen\&. Og Kalder \fBWriteSubState()\fP\&. "
+.ti -1c
+.RI "static void \fBUpdateEnabled\fP ()"
+.br
+.RI "Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne\&. Kalder til sidst \fBWriteSubState()\fP\&. "
+.ti -1c
+.RI "static void \fBWriteSubState\fP ()"
+.br
+.RI "Opdaterer den endelige tisltand af Power Rails ved at AND'e enabled_modules_ og module_override_\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBenabled_modules_\fP [SUBMODULES_NUM] = {true}"
+.br
+.ti -1c
+.RI "static bool \fBmodule_override_\fP [SUBMODULES_NUM] = {true}"
+.br
+.ti -1c
+.RI "static DigitalOut \fBpower_rails_\fP [1]"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBPowerManage::Modules\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISUB_1 \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "void PowerManage::OceFromIsr (\fBPowerManage::Modules\fP module)\fC [static]\fP"
+
+.PP
+Høj prioritetet deaktivering af en power rail ved OCE\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodule\fP Modulet der blev målt OCE på 
+.RE
+.PP
+
+.SS "void PowerManage::SetOverride (\fBPowerManage::Modules\fP module, bool is_on)\fC [static]\fP"
+
+.PP
+Opdaterer et modul i module_override_ listen\&. Og Kalder \fBWriteSubState()\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodule\fP Det modul der skal aktiveres/deaktiveres 
+.br
+\fIis_on\fP false = deaktiver | true = aktiver 
+.RE
+.PP
+
+.SS "string PowerManage::ToString (\fBPowerManage::Modules\fP module)\fC [static]\fP"
+
+.PP
+Omdanner modul til string med navnet for modulet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodule\fP Det modul der ønskes navn på 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string med navnet for modulet 
+.RE
+.PP
+
+.SS "void PowerManage::UpdateEnabled ()\fC [static]\fP"
+
+.PP
+Henter den nuværende state fra FSM biblioteket og opdaterer enabled_modules_ listen efter denne\&. Kalder til sidst \fBWriteSubState()\fP\&. 
+.SS "void PowerManage::WriteSubState ()\fC [static]\fP"
+
+.PP
+Opdaterer den endelige tisltand af Power Rails ved at AND'e enabled_modules_ og module_override_\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool PowerManage::enabled_modules_ = {true}\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool PowerManage::module_override_ = {true}\fC [static]\fP, \fC [private]\fP"
+
+.SS "DigitalOut PowerManage::power_rails_\fC [static]\fP, \fC [private]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+= {
+    RAIL_1_PIN
+}
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.

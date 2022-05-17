@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_65cb71248861d6a88a9791ad15d2fb5e" xml:lang="en-US">
+<title>lib/Log Directory Reference</title>
+<indexterm><primary>lib/Log Directory Reference</primary></indexterm>
+Directory dependency graph for Log:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_65cb71248861d6a88a9791ad15d2fb5e_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__log_8cpp">Log.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__log_8h">Log.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

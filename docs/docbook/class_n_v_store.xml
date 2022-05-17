@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_n_v_store" xml:lang="en-US">
+<title>NVStore Class Reference</title>
+<indexterm><primary>NVStore</primary></indexterm>
+<para>
+<computeroutput>#include &lt;NVStore.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link> { <link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048">sm_state</link>
+, <link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3">adc_read</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d">write</link> (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link> key, void *value)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f">read</link> (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link> key, void *value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99">GetKeyStr</link> (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link> name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527"/><section>
+    <title>DATA_LOCATION</title>
+<indexterm><primary>DATA_LOCATION</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>DATA_LOCATION</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">NVStore::DATA_LOCATION</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>sm_state</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>sm_state</secondary></indexterm>
+<anchor xml:id="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048"/>sm_state</entry><entry></entry></row><row><entry><indexterm><primary>adc_read</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>adc_read</secondary></indexterm>
+<anchor xml:id="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3"/>adc_read</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99"/><section>
+    <title>GetKeyStr()</title>
+<indexterm><primary>GetKeyStr</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>GetKeyStr</secondary></indexterm>
+<para><computeroutput>std::string NVStore::GetKeyStr (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">NVStore::DATA_LOCATION</link> name)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_n_v_store_a5a555fc5b6f58da3cdfceabb686f9b99_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>int NVStore::read (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">NVStore::DATA_LOCATION</link> key, void * value)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_n_v_store_a080bcfbb3da6a970a87d0439727aa79f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>NVStore</secondary></indexterm>
+<indexterm><primary>NVStore</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>int NVStore::write (<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">NVStore::DATA_LOCATION</link> key, void * value)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_n_v_store_aaa5fece7bfc80d4afbb243c72ca0da3d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+lib/NVStore/<link linkend="__n_v_store_8h">NVStore.h</link>lib/NVStore/<link linkend="__n_v_store_8cpp">NVStore.cpp</link></section>
+</section>

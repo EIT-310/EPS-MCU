@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_can_com" xml:lang="en-US">
+<title>CanCom Class Reference</title>
+<indexterm><primary>CanCom</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CanCom.h&gt;</computeroutput>
+</para>
+Collaboration diagram for CanCom:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7">CanMessageId</link> { 
+<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50">CAN_TIME_SYNC</link> = 1
+, <link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c">CAN_SET_CONFIG</link>
+, <link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e">CAN_GET_CONFIG</link>
+, <link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4">CAN_GET_READING</link>
+, 
+<link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc">CAN_LOG</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3">CanCom</link> (<link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link> *<link linkend="_main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757">can</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_can_com_1a22fb622bb2aa27436415898d40e5987f">SendBuffer</link> (size_t size)</para>
+
+<para>Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_can_com_1ad5cc018603f898163b52bcab6db64cf4">SendReadings</link> ()</para>
+
+<para>Send alle målinger i CircularBuffer&apos;eren (adc_buffer_) over CAN. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> <link linkend="_class_can_com_1ab963975230cc827959cc329b51ce2e24">GetReading</link> ()</para>
+
+<para>Modtag en enkelt ADC måling fra serialized_buffer_. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static uint8_t <link linkend="_class_can_com_1a49dd73a42baabac31df9dd9de570a53f">serialized_buffer_</link> [<link linkend="_reading_8pb_8h_1ac6cdff9ed5c1eb33a22a8982ce2a66bf">send_reading_size</link> *<link linkend="__project_config_8h_1a602abb8ec84dcb3b6f854a738310ea46">ADC_BUFFER_SIZE</link>]</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link> * <link linkend="_class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f">can_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static size_t <link linkend="_class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66">GetFrameSize</link> ()</para>
+
+<para>Find størrelsen af en modtaget Protobuf pakke inden decode. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_can_com_1a52c0f42094e4622ee96db13215a3d16e">ShiftBuffer</link> (size_t shift_bytes)</para>
+
+<para>Rykker alle bytes i serialized_buffer_ med et antal pladser. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7"/><section>
+    <title>CanMessageId</title>
+<indexterm><primary>CanMessageId</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CanMessageId</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7">CanCom::CanMessageId</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CAN_TIME_SYNC</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CAN_TIME_SYNC</secondary></indexterm>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50"/>CAN_TIME_SYNC</entry><entry></entry></row><row><entry><indexterm><primary>CAN_SET_CONFIG</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CAN_SET_CONFIG</secondary></indexterm>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c"/>CAN_SET_CONFIG</entry><entry></entry></row><row><entry><indexterm><primary>CAN_GET_CONFIG</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CAN_GET_CONFIG</secondary></indexterm>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e"/>CAN_GET_CONFIG</entry><entry></entry></row><row><entry><indexterm><primary>CAN_GET_READING</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CAN_GET_READING</secondary></indexterm>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4"/>CAN_GET_READING</entry><entry></entry></row><row><entry><indexterm><primary>CAN_LOG</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CAN_LOG</secondary></indexterm>
+<anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc"/>CAN_LOG</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3"/><section>
+    <title>CanCom()</title>
+<indexterm><primary>CanCom</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>CanCom</secondary></indexterm>
+<para><computeroutput>CanCom::CanCom (<link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link> * can)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_can_com_1a50b026d2f14b2be6d5a4cf98b210ce66"/><section>
+    <title>GetFrameSize()</title>
+<indexterm><primary>GetFrameSize</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>GetFrameSize</secondary></indexterm>
+<para><computeroutput>size_t CanCom::GetFrameSize ( )<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Find størrelsen af en modtaget Protobuf pakke inden decode. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>size_t størrelsen af pakken i bytes</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_can_com_1ab963975230cc827959cc329b51ce2e24"/><section>
+    <title>GetReading()</title>
+<indexterm><primary>GetReading</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>GetReading</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> CanCom::GetReading ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Modtag en enkelt ADC måling fra serialized_buffer_. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para><link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link> decoded adc reading</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_ab963975230cc827959cc329b51ce2e24_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_can_com_1a22fb622bb2aa27436415898d40e5987f"/><section>
+    <title>SendBuffer()</title>
+<indexterm><primary>SendBuffer</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>SendBuffer</secondary></indexterm>
+<para><computeroutput>void CanCom::SendBuffer (size_t size)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>Antale bytes at sende fra bufferen </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_a22fb622bb2aa27436415898d40e5987f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_a22fb622bb2aa27436415898d40e5987f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_can_com_1ad5cc018603f898163b52bcab6db64cf4"/><section>
+    <title>SendReadings()</title>
+<indexterm><primary>SendReadings</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>SendReadings</secondary></indexterm>
+<para><computeroutput>void CanCom::SendReadings ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Send alle målinger i CircularBuffer&apos;eren (adc_buffer_) over CAN. </para>
+</para>
+
+<para>Hver måling i adc_buffer_ enkodes med Google Protobuf structen <emphasis>send_reading og serialiseres. De serialiserede bytes lægges ind i serialized_buffer</emphasis>. Hvis der ikke blev målt på mppt og rails i en given måling sættes has_mppt_x_x og has_sub_x_x bools&apos;ne til False, og protobufs sørger for at serialiseringen fylder mindre. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_ad5cc018603f898163b52bcab6db64cf4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_ad5cc018603f898163b52bcab6db64cf4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_can_com_1a52c0f42094e4622ee96db13215a3d16e"/><section>
+    <title>ShiftBuffer()</title>
+<indexterm><primary>ShiftBuffer</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>ShiftBuffer</secondary></indexterm>
+<para><computeroutput>void CanCom::ShiftBuffer (size_t shift_bytes)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para><para>
+
+<para>Rykker alle bytes i serialized_buffer_ med et antal pladser. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>shift_bytes</entry><entry>
+<para>antal pladser at rykke pladser i bufferen </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_can_com_a52c0f42094e4622ee96db13215a3d16e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_can_com_1a4d88c814922cc6b409c0fa300ba5f39f"/><section>
+    <title>can_</title>
+<indexterm><primary>can_</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>can_</secondary></indexterm>
+<para><computeroutput><link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link> * CanCom::can_<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_can_com_1a49dd73a42baabac31df9dd9de570a53f"/><section>
+    <title>serialized_buffer_</title>
+<indexterm><primary>serialized_buffer_</primary><secondary>CanCom</secondary></indexterm>
+<indexterm><primary>CanCom</primary><secondary>serialized_buffer_</secondary></indexterm>
+<para><computeroutput>uint8_t CanCom::serialized_buffer_<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+lib/CanCom/<link linkend="__can_com_8h">CanCom.h</link>lib/CanCom/<link linkend="__can_com_8cpp">CanCom.cpp</link></section>
+</section>

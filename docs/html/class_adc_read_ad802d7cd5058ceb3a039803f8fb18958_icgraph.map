@@ -1,0 +1,5 @@
+<map id="AdcRead::DoRead" name="AdcRead::DoRead">
+<area shape="rect" id="node1" title="Kalder AsyncADC med et antal ADC&#39;er på baggrund af nuværende state. Nye måling bliver lagt i Circular..." alt="" coords="227,5,356,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ac595faede462d70c3fb34417f4e984e7" title="Sætter ADC måling igang. Kører hvert 5. sekundt med mindre en vigtigere thread pre&#45;empt&#39;er den...." alt="" coords="104,5,179,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Sætter threads igang og sover." alt="" coords="5,5,56,32"/>
+</map>

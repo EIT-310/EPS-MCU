@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_0ca69a72104b64c2eda3ccf18f1d34fa" kind="dir">
+    <compoundname>lib/PowerManage</compoundname>
+    <innerfile refid="_power_manage_8cpp">PowerManage.cpp</innerfile>
+    <innerfile refid="_power_manage_8h">PowerManage.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/PowerManage/"/>
+  </compounddef>
+</doxygen>

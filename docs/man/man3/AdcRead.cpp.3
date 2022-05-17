@@ -1,0 +1,43 @@
+.TH "lib/AdcRead/AdcRead.cpp" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lib/AdcRead/AdcRead.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'AdcRead\&.h'\fP
+.br
+\fC#include '\&.\&./Config/ProjectConfig\&.h'\fP
+.br
+\fC#include <mbed\&.h>\fP
+.br
+\fC#include <rtos\&.h>\fP
+.br
+\fC#include 'Fsm\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBadc_read_list\fP [ADC_NUM_CHANNELS]"
+.br
+.ti -1c
+.RI "Thread * \fBt_adc_read\fP [ADC_NUM_CHANNELS]"
+.br
+.ti -1c
+.RI "\fBAdcRead::adc_thread_args\fP \fBarg_list\fP [ADC_NUM_CHANNELS]"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "uint16_t adc_read_list[ADC_NUM_CHANNELS]"
+
+.SS "\fBAdcRead::adc_thread_args\fP arg_list[ADC_NUM_CHANNELS]"
+
+.SS "Thread* t_adc_read[ADC_NUM_CHANNELS]"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.
