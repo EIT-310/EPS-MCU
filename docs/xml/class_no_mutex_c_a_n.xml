@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="40" column="3" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="40" bodyend="40"/>
+        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="41" column="3" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="41" column="3" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="41" bodyend="41"/>
+        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="42" column="3" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="42" column="11" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="42" bodyend="42"/>
+        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="43" column="11" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="43" column="8" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="43" bodyend="43"/>
+        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="44" column="8" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -93,11 +93,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="44" column="8" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="44" bodyend="44"/>
+        <location file="lib/NoMutexCAN/NoMutexCAN.h" line="45" column="8" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="45" bodyend="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>class der overskriver mutex <ref refid="class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7" kindref="member">lock()</ref> og <ref refid="class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150" kindref="member">unlock()</ref> i Mbed. Disse er overflødige ved nucleo STM32 boards. </para>
+<para>class der overskriver mutex <ref refid="class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7" kindref="member">lock()</ref> og <ref refid="class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150" kindref="member">unlock()</ref> i Mbed CAN. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context. </para>
     </briefdescription>
     <detaileddescription>
 <para><simplesect kind="note"><para>Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere. </para>
@@ -126,7 +126,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="lib/NoMutexCAN/NoMutexCAN.h" line="38" column="1" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="38" bodyend="45"/>
+    <location file="lib/NoMutexCAN/NoMutexCAN.h" line="39" column="1" bodyfile="lib/NoMutexCAN/NoMutexCAN.h" bodystart="39" bodyend="46"/>
     <listofallmembers>
       <member refid="class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7" prot="public" virt="non-virtual"><scope>NoMutexCAN</scope><name>lock</name></member>
       <member refid="class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42" prot="public" virt="non-virtual"><scope>NoMutexCAN</scope><name>NoMutexCAN</name></member>

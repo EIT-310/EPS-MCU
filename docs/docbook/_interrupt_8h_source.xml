@@ -16,28 +16,28 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 12 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_INTERRUPT_H</emphasis>
 13 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__power_manage_8h">PowerManage.h</link>&quot;</emphasis>
 14 
-15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_oce_isr">OceIsr</link>&#32;{
-16 &#32;<emphasis role="keyword">public</emphasis>:
-17 
-26 &#32;&#32;<link linkend="_class_oce_isr_1abd0bd9698e93dadc3356baaf6366f4ed">OceIsr</link>(PinName&#32;irq_pin,&#32;EventQueue&#32;*queue,&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;module)&#32;:&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>(irq_pin,&#32;OpenDrainPullDown){
-27 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>&#32;=&#32;module;
-28 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
-29 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>&#32;=&#32;queue;
-30 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>.rise(callback(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</link>));
-31 
-32 &#32;&#32;}
-33 
-34 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;EventQueue&#32;*<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>;
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_oce_isr">OceIsr</link>&#32;{
+20 &#32;<emphasis role="keyword">public</emphasis>:
+21 
+30 &#32;&#32;<link linkend="_class_oce_isr_1abd0bd9698e93dadc3356baaf6366f4ed">OceIsr</link>(PinName&#32;irq_pin,&#32;EventQueue&#32;*queue,&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;module)&#32;:&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>(irq_pin,&#32;OpenDrainPullDown){
+31 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>&#32;=&#32;module;
+32 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+33 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>&#32;=&#32;queue;
+34 &#32;&#32;&#32;&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>.rise(callback(<emphasis role="keyword">this</emphasis>,&#32;&amp;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</link>));
 35 
-36 
-37 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">Handle</link>();
-38 
-39 &#32;<emphasis role="keyword">private</emphasis>:
-40 &#32;&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>;
-41 &#32;&#32;InterruptIn&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>;
-42 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>;
-43 
-44 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4">EventHandler</link>();
-45 };
-46 
+36 &#32;&#32;}
+37 
+38 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;EventQueue&#32;*<link linkend="_class_oce_isr_1ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</link>;
+39 
+40 
+41 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1abe5229c9af4bf9870d7afc6386b8f3dd">Handle</link>();
+42 
+43 &#32;<emphasis role="keyword">private</emphasis>:
+44 &#32;&#32;<link linkend="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</link>&#32;<link linkend="_class_oce_isr_1a11a4dbe4b507081b37311a7030669dcd">module_</link>;
+45 &#32;&#32;InterruptIn&#32;<link linkend="_class_oce_isr_1afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</link>;
+46 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_oce_isr_1a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</link>;
+47 
+48 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_oce_isr_1ade771fb3d9a5727648e73a0c8b22f7a4">EventHandler</link>();
+49 };
+50 
 </programlisting></section>

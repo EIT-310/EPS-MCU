@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Firmware for EPS MCU on AAUSAT6: lib/Interrupt/Interrupt.h Source File</title>
+<title>EPS MCU: lib/Interrupt/Interrupt.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,9 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="aausat.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Firmware for EPS MCU on AAUSAT6
+   <div id="projectname">EPS MCU
    </div>
+   <div id="projectbrief">Firmware for EPS MCU on AAUSAT6</div>
   </td>
  </tr>
  </tbody>
@@ -99,41 +101,41 @@ $(document).ready(function(){initNavTree('_interrupt_8h_source.html',''); initRe
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif </span><span class="comment">//EPS_MCU_INTERRUPT_H</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_power_manage_8h.html">PowerManage.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_oce_isr.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_oce_isr.html">OceIsr</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">   26</a></span>  <a class="code hl_function" href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">OceIsr</a>(PinName irq_pin, EventQueue *queue, <a class="code hl_enumeration" href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a> module) : <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>(irq_pin, OpenDrainPullDown){</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_variable" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">module_</a> = module;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_variable" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</a> = queue;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>.rise(callback(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</a>));</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">   34</a></span>  <span class="keyword">static</span> EventQueue *<a class="code hl_variable" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_oce_isr.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_oce_isr.html">OceIsr</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">   30</a></span>  <a class="code hl_function" href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">OceIsr</a>(PinName irq_pin, EventQueue *queue, <a class="code hl_enumeration" href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a> module) : <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>(irq_pin, OpenDrainPullDown){</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">module_</a> = module;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</a> = queue;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>.rise(callback(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</a>));</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd">Handle</a>();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">   40</a></span>  <a class="code hl_enumeration" href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a> <a class="code hl_variable" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">module_</a>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">   41</a></span>  InterruptIn <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">   42</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4">EventHandler</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">   38</a></span>  <span class="keyword">static</span> EventQueue *<a class="code hl_variable" href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">queue_</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd">Handle</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">   44</a></span>  <a class="code hl_enumeration" href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a> <a class="code hl_variable" href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">module_</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">   45</a></span>  InterruptIn <a class="code hl_variable" href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">interrupt_</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">   46</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">irq_happened_</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4">EventHandler</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="ttc" id="a_no_mutex_c_a_n_8h_html"><div class="ttname"><a href="_no_mutex_c_a_n_8h.html">NoMutexCAN.h</a></div></div>
 <div class="ttc" id="a_power_manage_8h_html"><div class="ttname"><a href="_power_manage_8h.html">PowerManage.h</a></div></div>
-<div class="ttc" id="aclass_oce_isr_html"><div class="ttname"><a href="class_oce_isr.html">OceIsr</a></div><div class="ttdef"><b>Definition:</b> Interrupt.h:15</div></div>
-<div class="ttc" id="aclass_oce_isr_html_a11a4dbe4b507081b37311a7030669dcd"><div class="ttname"><a href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">OceIsr::module_</a></div><div class="ttdeci">PowerManage::Modules module_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:40</div></div>
-<div class="ttc" id="aclass_oce_isr_html_a773eec2da6d20c6c9c8d9ffaec710ab7"><div class="ttname"><a href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">OceIsr::irq_happened_</a></div><div class="ttdeci">bool irq_happened_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:42</div></div>
-<div class="ttc" id="aclass_oce_isr_html_abd0bd9698e93dadc3356baaf6366f4ed"><div class="ttname"><a href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">OceIsr::OceIsr</a></div><div class="ttdeci">OceIsr(PinName irq_pin, EventQueue *queue, PowerManage::Modules module)</div><div class="ttdoc">Construct a new Oce Isr object og attatcher IRQ benet til at køre Handle() ved rise.</div><div class="ttdef"><b>Definition:</b> Interrupt.h:26</div></div>
+<div class="ttc" id="aclass_oce_isr_html"><div class="ttname"><a href="class_oce_isr.html">OceIsr</a></div><div class="ttdoc">Håndtering af OCE interrupt.</div><div class="ttdef"><b>Definition:</b> Interrupt.h:19</div></div>
+<div class="ttc" id="aclass_oce_isr_html_a11a4dbe4b507081b37311a7030669dcd"><div class="ttname"><a href="class_oce_isr.html#a11a4dbe4b507081b37311a7030669dcd">OceIsr::module_</a></div><div class="ttdeci">PowerManage::Modules module_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:44</div></div>
+<div class="ttc" id="aclass_oce_isr_html_a773eec2da6d20c6c9c8d9ffaec710ab7"><div class="ttname"><a href="class_oce_isr.html#a773eec2da6d20c6c9c8d9ffaec710ab7">OceIsr::irq_happened_</a></div><div class="ttdeci">bool irq_happened_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:46</div></div>
+<div class="ttc" id="aclass_oce_isr_html_abd0bd9698e93dadc3356baaf6366f4ed"><div class="ttname"><a href="class_oce_isr.html#abd0bd9698e93dadc3356baaf6366f4ed">OceIsr::OceIsr</a></div><div class="ttdeci">OceIsr(PinName irq_pin, EventQueue *queue, PowerManage::Modules module)</div><div class="ttdoc">Construct a new Oce Isr object og attatcher IRQ benet til at køre Handle() ved rise.</div><div class="ttdef"><b>Definition:</b> Interrupt.h:30</div></div>
 <div class="ttc" id="aclass_oce_isr_html_abe5229c9af4bf9870d7afc6386b8f3dd"><div class="ttname"><a href="class_oce_isr.html#abe5229c9af4bf9870d7afc6386b8f3dd">OceIsr::Handle</a></div><div class="ttdeci">void Handle()</div><div class="ttdoc">ISR context der deactiverer modulet der blev målt OCE på. Sætter EventHandler() i kø til de ting der ...</div><div class="ttdef"><b>Definition:</b> Interrupt.cpp:18</div></div>
-<div class="ttc" id="aclass_oce_isr_html_ad0e768edf4a6e92d1dbfd80fcfa9e127"><div class="ttname"><a href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">OceIsr::queue_</a></div><div class="ttdeci">static EventQueue * queue_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:34</div></div>
+<div class="ttc" id="aclass_oce_isr_html_ad0e768edf4a6e92d1dbfd80fcfa9e127"><div class="ttname"><a href="class_oce_isr.html#ad0e768edf4a6e92d1dbfd80fcfa9e127">OceIsr::queue_</a></div><div class="ttdeci">static EventQueue * queue_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:38</div></div>
 <div class="ttc" id="aclass_oce_isr_html_ade771fb3d9a5727648e73a0c8b22f7a4"><div class="ttname"><a href="class_oce_isr.html#ade771fb3d9a5727648e73a0c8b22f7a4">OceIsr::EventHandler</a></div><div class="ttdeci">void EventHandler()</div><div class="ttdoc">ISR deferred handler der logger OCE'et og gemmer hvilket ben der blev målt oce på.</div><div class="ttdef"><b>Definition:</b> Interrupt.cpp:29</div></div>
-<div class="ttc" id="aclass_oce_isr_html_afbc9d7adc6bc5e928aef1193db0ef8ca"><div class="ttname"><a href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">OceIsr::interrupt_</a></div><div class="ttdeci">InterruptIn interrupt_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:41</div></div>
-<div class="ttc" id="aclass_power_manage_html_a1f54cee055bd53d7a4e29f04d86e292e"><div class="ttname"><a href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a></div><div class="ttdeci">Modules</div><div class="ttdef"><b>Definition:</b> PowerManage.h:15</div></div>
+<div class="ttc" id="aclass_oce_isr_html_afbc9d7adc6bc5e928aef1193db0ef8ca"><div class="ttname"><a href="class_oce_isr.html#afbc9d7adc6bc5e928aef1193db0ef8ca">OceIsr::interrupt_</a></div><div class="ttdeci">InterruptIn interrupt_</div><div class="ttdef"><b>Definition:</b> Interrupt.h:45</div></div>
+<div class="ttc" id="aclass_power_manage_html_a1f54cee055bd53d7a4e29f04d86e292e"><div class="ttname"><a href="class_power_manage.html#a1f54cee055bd53d7a4e29f04d86e292e">PowerManage::Modules</a></div><div class="ttdeci">Modules</div><div class="ttdef"><b>Definition:</b> PowerManage.h:21</div></div>
 <div class="ttc" id="areading_8pb_8h_html"><div class="ttname"><a href="reading_8pb_8h.html">reading.pb.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

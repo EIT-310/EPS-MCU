@@ -26,7 +26,7 @@ This graph shows which files directly or indirectly include this file:<para>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link></para>
 
-<para>class der overskriver mutex <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock()</link> og <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock()</link> i Mbed. Disse er overflødige ved nucleo STM32 boards. </para>
+<para>class der overskriver mutex <link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock()</link> og <link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock()</link> i Mbed CAN. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

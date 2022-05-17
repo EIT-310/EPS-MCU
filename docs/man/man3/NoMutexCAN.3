@@ -1,8 +1,8 @@
-.TH "NoMutexCAN" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.TH "NoMutexCAN" 3 "Tue May 17 2022" "EPS MCU" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-NoMutexCAN \- class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed\&. Disse er overflødige ved nucleo STM32 boards\&.  
+NoMutexCAN \- class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed CAN\&. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context\&.  
 
 .SH SYNOPSIS
 .br
@@ -32,7 +32,7 @@ Inherits CAN\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed\&. Disse er overflødige ved nucleo STM32 boards\&. 
+class der overskriver mutex \fBlock()\fP og \fBunlock()\fP i Mbed CAN\&. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context\&. 
 
 
 .PP
@@ -59,4 +59,4 @@ Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handle
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.
+Generated automatically by Doxygen for EPS MCU from the source code\&.

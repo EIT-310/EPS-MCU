@@ -25,6 +25,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_log">Log</link></para>
+
+<para>Simpel <link linkend="_class_log">Log</link> class der kan logge med LOG(LOG_LEVEL, &quot;string at printe&quot;) </para>
 </listitem>
         </itemizedlist>
 </simplesect>

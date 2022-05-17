@@ -26,6 +26,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_adc_read">AdcRead</link></para>
+
+<para>Læser og gemmer ADC målinger. </para>
 </listitem>
             <listitem><para>struct <link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link></para>
 </listitem>

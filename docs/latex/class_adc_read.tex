@@ -2,6 +2,11 @@
 \label{class_adc_read}\index{AdcRead@{AdcRead}}
 
 
+Læser og gemmer ADC målinger.  
+
+
+
+
 {\ttfamily \#include $<$Adc\+Read.\+h$>$}
 
 \doxysubsection*{Classes}
@@ -56,6 +61,9 @@ static void \mbox{\hyperlink{class_adc_read_a57f35b9fd598aff98289da19a5edff40}{A
 static \mbox{\hyperlink{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}{Adc\+Name}} \mbox{\hyperlink{class_adc_read_ac8bac3748533ac7d2663909c917ffb7b}{adc\+\_\+list\+\_\+}} \mbox{[}6\mbox{]}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Læser og gemmer ADC målinger. 
 
 \doxysubsection{Member Enumeration Documentation}
 \mbox{\Hypertarget{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}\label{class_adc_read_aa56759cbf7c903dd1fdf96ff64fb7156}} 
@@ -117,16 +125,14 @@ Starter et givent antal threads der hver kører \mbox{\hyperlink{class_adc_read_
 {\em adc\+\_\+count} & Antal ADC\textquotesingle{}er at måle på \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=333pt]{class_adc_read_a57f35b9fd598aff98289da19a5edff40_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -146,8 +152,7 @@ Kalder Async\+ADC med et antal ADC\textquotesingle{}er på baggrund af nuværend
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{Adc\+Read\+::adc\+\_\+reading}} Nye måling 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,8 +184,7 @@ Omdanner Adc\+Name enum til pointer til ny Analog\+In object for respektivt ADC 
 \begin{DoxyReturn}{Returns}
 Analog\+In$\ast$ pointer til oprettet device 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -208,8 +212,7 @@ Måler et givent antal gange på et givent device fra \mbox{\hyperlink{struct_ad
 {\em args} & \mbox{\hyperlink{struct_adc_read_1_1adc__thread__args}{adc\+\_\+thread\+\_\+args}} med Analog\+In pointer til devicet og uint16\+\_\+t pointer til resultatet \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

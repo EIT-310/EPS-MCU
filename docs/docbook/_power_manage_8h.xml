@@ -28,6 +28,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_power_manage">PowerManage</link></para>
+
+<para>Aktivering og deaktivering af powerrails på baggrund af OCE og state. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

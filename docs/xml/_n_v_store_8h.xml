@@ -69,24 +69,24 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TDBStore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="class_n_v_store" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_n_v_store" kindref="compound">NVStore</ref><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>{</highlight></codeline>
-<codeline lineno="15" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" kindref="member">sm_state</ref>,</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" kindref="member">adc_read</ref></highlight></codeline>
-<codeline lineno="17" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" kindref="member">write</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" kindref="member">read</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" kindref="member">GetKeyStr</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>name);</highlight></codeline>
+<codeline lineno="17" refid="class_n_v_store" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_n_v_store" kindref="compound">NVStore</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" kindref="member">sm_state</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" kindref="member">adc_read</ref></highlight></codeline>
+<codeline lineno="22" refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" kindref="member">write</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" kindref="member">read</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EPS_MCU_NV_STORE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" kindref="member">GetKeyStr</ref>(<ref refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" kindref="member">DATA_LOCATION</ref><sp/>name);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//EPS_MCU_NV_STORE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="lib/NVStore/NVStore.h"/>
   </compounddef>

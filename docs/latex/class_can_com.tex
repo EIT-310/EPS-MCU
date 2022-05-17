@@ -2,6 +2,11 @@
 \label{class_can_com}\index{CanCom@{CanCom}}
 
 
+Modtagning og afsendelse af data over CAN.  
+
+
+
+
 {\ttfamily \#include $<$Can\+Com.\+h$>$}
 
 
@@ -53,6 +58,14 @@ static size\+\_\+t \mbox{\hyperlink{class_can_com_a50b026d2f14b2be6d5a4cf98b210c
 \begin{DoxyCompactList}\small\item\em Find størrelsen af en modtaget Protobuf pakke inden decode. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_can_com_a52c0f42094e4622ee96db13215a3d16e}{Shift\+Buffer}} (size\+\_\+t shift\+\_\+bytes)
 \begin{DoxyCompactList}\small\item\em Rykker alle bytes i serialized\+\_\+buffer\+\_\+ med et antal pladser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modtagning og afsendelse af data over CAN. 
+
+\begin{DoxyNote}{Note}
+Hånterer ikke rent faktisk modtagelse af CAN da dette gøres i \mbox{\hyperlink{main_8cpp}{main.\+cpp}} 
+\end{DoxyNote}
 
 
 \doxysubsection{Member Enumeration Documentation}
@@ -112,8 +125,7 @@ size\+\_\+t størrelsen af pakken i bytes
 \begin{DoxyNote}{Note}
 Anvdendes ikke da vi ikke modtager pakker der fylder mere end 1 CAN frame 
 \end{DoxyNote}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,8 +148,7 @@ Modtag en enkelt ADC måling fra serialized\+\_\+buffer\+\_\+.
 \begin{DoxyNote}{Note}
 Anvdendes ikke da vi ikke modtager ADC målinger igennem CAN 
 \end{DoxyNote}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,8 +170,7 @@ Sender fra serializeret buffer over CAN ved at dele hvert frame op i 8 bytes.
 {\em size} & Antale bytes at sende fra bufferen \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -184,8 +194,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Send alle målinger i Circular\+Buffer\textquotesingle{}eren (adc\+\_\+buffer\+\_\+) over CAN. 
 
-Hver måling i adc\+\_\+buffer\+\_\+ enkodes med Google Protobuf structen {\itshape send\+\_\+reading og serialiseres. De serialiserede bytes lægges ind i serialized\+\_\+buffer}. Hvis der ikke blev målt på mppt og rails i en given måling sættes has\+\_\+mppt\+\_\+x\+\_\+x og has\+\_\+sub\+\_\+x\+\_\+x bools\textquotesingle{}ne til False, og protobufs sørger for at serialiseringen fylder mindre. Here is the call graph for this function\+:
-\nopagebreak
+Hver måling i adc\+\_\+buffer\+\_\+ enkodes med Google Protobuf structen {\itshape send\+\_\+reading og serialiseres. De serialiserede bytes lægges ind i serialized\+\_\+buffer}. Hvis der ikke blev målt på mppt og rails i en given måling sættes has\+\_\+mppt\+\_\+x\+\_\+x og has\+\_\+sub\+\_\+x\+\_\+x bools\textquotesingle{}ne til False, og protobufs sørger for at serialiseringen fylder mindre. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,8 +223,7 @@ Rykker alle bytes i serialized\+\_\+buffer\+\_\+ med et antal pladser.
 {\em shift\+\_\+bytes} & antal pladser at rykke pladser i bufferen \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

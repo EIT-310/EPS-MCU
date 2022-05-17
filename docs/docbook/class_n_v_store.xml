@@ -3,6 +3,11 @@
 <title>NVStore Class Reference</title>
 <indexterm><primary>NVStore</primary></indexterm>
 <para>
+
+<para>Static calss for skrivning og læsning fra Non Volatile Memory på MCU&apos;en. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;NVStore.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -30,6 +35,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Static calss for skrivning og læsning fra Non Volatile Memory på MCU&apos;en. </para>
+</section>
 <section>
 <title>Member Enumeration Documentation</title>
 <anchor xml:id="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527"/><section>

@@ -2,7 +2,7 @@
 \label{class_no_mutex_c_a_n}\index{NoMutexCAN@{NoMutexCAN}}
 
 
-class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed. Disse er overflødige ved nucleo STM32 boards.  
+class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed CAN. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context.  
 
 
 
@@ -43,7 +43,7 @@ void \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{un
 
 
 \doxysubsection{Detailed Description}
-class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed. Disse er overflødige ved nucleo STM32 boards. 
+class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed CAN. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context. 
 
 \begin{DoxyNote}{Note}
 Det er overflødig at bruge denne overskrivelse da vi bruger ISR deferred handlers, så handlers ikke bliver kørt i ISR kontekst længere. 

@@ -28,6 +28,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_n_v_store">NVStore</link></para>
+
+<para>Static calss for skrivning og læsning fra Non Volatile Memory på MCU&apos;en. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

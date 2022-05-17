@@ -3,6 +3,11 @@
 <title>AdcRead Class Reference</title>
 <indexterm><primary>AdcRead</primary></indexterm>
 <para>
+
+<para>Læser og gemmer ADC målinger. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;AdcRead.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -78,6 +83,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Læser og gemmer ADC målinger. </para>
+</section>
 <section>
 <title>Member Enumeration Documentation</title>
 <anchor xml:id="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156"/><section>

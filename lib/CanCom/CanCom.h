@@ -11,6 +11,13 @@
 #include "mbed.h"
 #include "NoMutexCAN.h"
 
+/**
+ * @brief Modtagning og afsendelse af data over CAN.
+ * 
+ * @note Hånterer ikke rent faktisk modtagelse af CAN 
+ *       da dette gøres i main.cpp
+ * 
+ */
 class CanCom {
  public:
 

@@ -13,22 +13,22 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 9 <emphasis role="preprocessor">#include&#32;&quot;TDBStore.h&quot;</emphasis>
 10 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
 11 
-12 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_n_v_store">NVStore</link>&#32;{
-13 <emphasis role="keyword">public</emphasis>:
-14 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;{
-15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048">sm_state</link>,
-16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3">adc_read</link>
-17 &#32;&#32;&#32;&#32;};
-18 
-19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d">write</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;key,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*value);
-20 
-21 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f">read</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;key,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*value);
-22 
-23 <emphasis role="keyword">private</emphasis>:
-24 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99">GetKeyStr</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;name);
+17 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_n_v_store">NVStore</link>&#32;{
+18 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;{
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048">sm_state</link>,
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3">adc_read</link>
+22 &#32;&#32;&#32;&#32;};
+23 
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d">write</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;key,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*value);
 25 
-26 };
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f">read</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;key,&#32;<emphasis role="keywordtype">void</emphasis>&#32;*value);
 27 
-28 
-29 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_NV_STORE_H</emphasis>
+28 <emphasis role="keyword">private</emphasis>:
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99">GetKeyStr</link>(<link linkend="_class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527">DATA_LOCATION</link>&#32;name);
+30 
+31 };
+32 
+33 
+34 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_NV_STORE_H</emphasis>
 </programlisting></section>

@@ -3,6 +3,11 @@
 <title>CanCom Class Reference</title>
 <indexterm><primary>CanCom</primary></indexterm>
 <para>
+
+<para>Modtagning og afsendelse af data over CAN. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;CanCom.h&gt;</computeroutput>
 </para>
 Collaboration diagram for CanCom:<para>
@@ -74,6 +79,19 @@ Collaboration diagram for CanCom:<para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Modtagning og afsendelse af data over CAN. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>Hånterer ikke rent faktisk modtagelse af CAN da dette gøres i <link linkend="_main_8cpp">main.cpp</link> </para>
+</note>
+</para>
+</section>
 <section>
 <title>Member Enumeration Documentation</title>
 <anchor xml:id="_class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7"/><section>

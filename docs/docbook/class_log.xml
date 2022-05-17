@@ -3,6 +3,11 @@
 <title>Log Class Reference</title>
 <indexterm><primary>Log</primary></indexterm>
 <para>
+
+<para>Simpel <link linkend="_class_log">Log</link> class der kan logge med LOG(LOG_LEVEL, &quot;string at printe&quot;) </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;Log.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -65,6 +70,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Simpel <link linkend="_class_log">Log</link> class der kan logge med LOG(LOG_LEVEL, &quot;string at printe&quot;) </para>
+</section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
 <anchor xml:id="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe"/><section>

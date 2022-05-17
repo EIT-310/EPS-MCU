@@ -220,7 +220,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/main.cpp" line="18" column="12" bodyfile="src/main.cpp" bodystart="27" bodyend="-1"/>
-        <referencedby refid="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" compoundref="_can_com_8h" startline="17" endline="19">CanCom::CanCom</referencedby>
+        <referencedby refid="class_can_com_1a71c4eb082e8abbb9e06a7b0afaf58fb3" compoundref="_can_com_8h" startline="24" endline="26">CanCom::CanCom</referencedby>
         <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="173" endline="185">main</referencedby>
         <referencedby refid="main_8cpp_1ad5d56d2ac5d86036b8a7931d829e6082" compoundref="main_8cpp" startline="69" endline="80">OnCanRec</referencedby>
       </memberdef>
@@ -471,7 +471,7 @@
         <location file="src/main.cpp" line="125" column="6" bodyfile="src/main.cpp" bodystart="125" bodyend="130" declfile="src/main.cpp" declline="30" declcolumn="6"/>
         <references refid="main_8cpp_1a98c8c86c1543fd5370047f525d0a1f31" compoundref="main_8cpp" startline="28">adc_mail</references>
         <references refid="class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958" compoundref="_adc_read_8cpp" startline="23" endline="55">AdcRead::DoRead</references>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="173" endline="185">main</referencedby>
       </memberdef>
@@ -488,7 +488,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/main.cpp" line="158" column="6" bodyfile="src/main.cpp" bodystart="158" bodyend="165" declfile="src/main.cpp" declline="31" declcolumn="6"/>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <references refid="class_power_manage_1a6cc478738b54fbbd148122c4ae6e93fb" compoundref="_power_manage_8cpp" startline="20" endline="65">PowerManage::UpdateEnabled</references>
         <references refid="main_8cpp_1a415458cba5bf50c42f8bd5c9548cc237" compoundref="main_8cpp" startline="19">watchdog</references>
@@ -507,7 +507,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/main.cpp" line="104" column="6" bodyfile="src/main.cpp" bodystart="104" bodyend="116" declfile="src/main.cpp" declline="32" declcolumn="6"/>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a8f6fe15bfe15104da6d1b360194a5400" compoundref="_log_8h" startline="9">LOG_WARNING</references>
         <references refid="main_8cpp_1a415458cba5bf50c42f8bd5c9548cc237" compoundref="main_8cpp" startline="19">watchdog</references>
@@ -551,7 +551,7 @@
         <references refid="main_8cpp_1aff54455fc158126cb45ff4d8c55fa910" compoundref="main_8cpp" startline="29">can_req_isr</references>
         <references refid="main_8cpp_1a16cedde881cfcbc26c9fb4f2ff54e033" compoundref="main_8cpp" startline="29">can_time_isr</references>
         <references refid="main_8cpp_1a051cb0babede35842fcb4822fe9102f7" compoundref="main_8cpp" startline="38" endline="44">CanTimeSync</references>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <references refid="class_can_com_1ad5cc018603f898163b52bcab6db64cf4" compoundref="_can_com_8cpp" startline="28" endline="66">CanCom::SendReadings</references>
         <referencedby refid="main_8cpp_1ad5d56d2ac5d86036b8a7931d829e6082" compoundref="main_8cpp" startline="69" endline="80">OnCanRec</referencedby>
@@ -570,11 +570,11 @@
         </inbodydescription>
         <location file="src/main.cpp" line="69" column="6" bodyfile="src/main.cpp" bodystart="69" bodyend="80"/>
         <references refid="main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757" compoundref="main_8cpp" startline="27">can</references>
-        <references refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" compoundref="_can_com_8h" startline="25">CanCom::CAN_GET_READING</references>
+        <references refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4" compoundref="_can_com_8h" startline="32">CanCom::CAN_GET_READING</references>
         <references refid="main_8cpp_1ac8fa5b302ff73f9e90ee35405b112748" compoundref="main_8cpp" startline="20">can_req</references>
         <references refid="main_8cpp_1aff54455fc158126cb45ff4d8c55fa910" compoundref="main_8cpp" startline="29">can_req_isr</references>
         <references refid="main_8cpp_1a16cedde881cfcbc26c9fb4f2ff54e033" compoundref="main_8cpp" startline="29">can_time_isr</references>
-        <references refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50" compoundref="_can_com_8h" startline="22">CanCom::CAN_TIME_SYNC</references>
+        <references refid="class_can_com_1a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50" compoundref="_can_com_8h" startline="29">CanCom::CAN_TIME_SYNC</references>
         <references refid="main_8cpp_1a6455c2bdd533574c68e203f7d1e3265d" compoundref="main_8cpp" startline="20">can_time_sync</references>
         <references refid="main_8cpp_1abedbe52be05e887351f9d26921ff77cf" compoundref="main_8cpp" startline="53" endline="63">CanHandler</references>
         <references refid="main_8cpp_1a6ee6423ec42a45faf59c779d64ecad25" compoundref="main_8cpp" startline="16">IsrQueue</references>
@@ -595,8 +595,8 @@
         <location file="src/main.cpp" line="87" column="6" bodyfile="src/main.cpp" bodystart="87" bodyend="96"/>
         <references refid="main_8cpp_1a6ee6423ec42a45faf59c779d64ecad25" compoundref="main_8cpp" startline="16">IsrQueue</references>
         <references refid="_project_config_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" compoundref="_project_config_8h" startline="48">LOG_LEVEL</references>
-        <references refid="class_log_1aeb290934f14369d2969cd4f50f631d28" compoundref="_log_8h" startline="23">Log::reporting_level_</references>
-        <references refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" compoundref="_log_8h" startline="19">Log::serial_</references>
+        <references refid="class_log_1aeb290934f14369d2969cd4f50f631d28" compoundref="_log_8h" startline="27">Log::reporting_level_</references>
+        <references refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" compoundref="_log_8h" startline="23">Log::serial_</references>
         <references refid="main_8cpp_1a5c7452bc8a6f648db67fe952474d73de" compoundref="main_8cpp" startline="104" endline="116">StartWatchdog</references>
         <references refid="main_8cpp_1a9da7aec02ec673a8b5ecdf4510f106c1">t_ISR_handler</references>
         <references refid="class_power_manage_1a6cc478738b54fbbd148122c4ae6e93fb" compoundref="_power_manage_8cpp" startline="20" endline="65">PowerManage::UpdateEnabled</references>
@@ -617,7 +617,7 @@
         <location file="src/main.cpp" line="137" column="6" bodyfile="src/main.cpp" bodystart="137" bodyend="150"/>
         <references refid="main_8cpp_1a98c8c86c1543fd5370047f525d0a1f31" compoundref="main_8cpp" startline="28">adc_mail</references>
         <references refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" compoundref="_fsm_8cpp" startline="111" endline="145">Fsm::DetermineState</references>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <references refid="main_8cpp_1a1344d6ffed8b15af8c18dd7aa69d4872" compoundref="main_8cpp" startline="158" endline="165">UpdateSubs</references>
         <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="173" endline="185">main</referencedby>
@@ -641,7 +641,7 @@
         <references refid="main_8cpp_1adaedeffa9cd68dc76b50e18ac30de0a9" compoundref="main_8cpp" startline="25">adc_ticker</references>
         <references refid="main_8cpp_1a63a2d7bfab07ad56bcc616708e1311d8" compoundref="main_8cpp" startline="17">AdcQueue</references>
         <references refid="main_8cpp_1a0ed0a336fad3c78ff60cde0dc0ba0757" compoundref="main_8cpp" startline="27">can</references>
-        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="35">LOG</references>
+        <references refid="_log_8h_1a45213472c513e9160481979a237b50fe" compoundref="_log_8h" startline="39">LOG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837" compoundref="_log_8h" startline="9">LOG_INFO</references>
         <references refid="main_8cpp_1a3a1208bf880dbc3e596cdd55b5cbd6b0" compoundref="main_8cpp" startline="137" endline="150">NewState</references>
         <references refid="main_8cpp_1ad5d56d2ac5d86036b8a7931d829e6082" compoundref="main_8cpp" startline="69" endline="80">OnCanRec</references>

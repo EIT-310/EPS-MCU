@@ -3,6 +3,11 @@
 <title>Fsm Class Reference</title>
 <indexterm><primary>Fsm</primary></indexterm>
 <para>
+
+<para>Finite State Machine class der håndterer nuverende state og ændring af denne. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;Fsm.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -76,6 +81,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Finite State Machine class der håndterer nuverende state og ændring af denne. </para>
+</section>
 <section>
 <title>Member Enumeration Documentation</title>
 <anchor xml:id="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f"/><section>

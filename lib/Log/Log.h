@@ -12,6 +12,10 @@ enum TLogDevice {
   LOG_SERIAL,
   LOG_CAN
 };
+/**
+ * @brief Simpel Log class der kan logge med LOG(LOG_LEVEL, "string at printe")
+ * 
+ */
 class Log
 {
  public:

@@ -2,6 +2,11 @@
 \label{class_oce_isr}\index{OceIsr@{OceIsr}}
 
 
+Håndtering af OCE interrupt.  
+
+
+
+
 {\ttfamily \#include $<$Interrupt.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -32,6 +37,9 @@ bool \mbox{\hyperlink{class_oce_isr_a773eec2da6d20c6c9c8d9ffaec710ab7}{irq\+\_\+
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Håndtering af OCE interrupt. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}\label{class_oce_isr_abd0bd9698e93dadc3356baaf6366f4ed}} 
 \index{OceIsr@{OceIsr}!OceIsr@{OceIsr}}
@@ -52,8 +60,7 @@ Construct a new Oce Isr object og attatcher IRQ benet til at køre \mbox{\hyperl
 {\em module} & Modulet der ønskes at måle OCE på \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -73,16 +80,14 @@ Here is the call graph for this function\+:
 
 ISR deferred handler der logger OCE\textquotesingle{}et og gemmer hvilket ben der blev målt oce på. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,8 +104,7 @@ Here is the caller graph for this function\+:
 
 ISR context der deactiverer modulet der blev målt OCE på. Sætter \mbox{\hyperlink{class_oce_isr_ade771fb3d9a5727648e73a0c8b22f7a4}{Event\+Handler()}} i kø til de ting der skal foregå uden for ISR kontekst. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

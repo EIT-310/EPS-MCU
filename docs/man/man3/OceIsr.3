@@ -1,8 +1,9 @@
-.TH "OceIsr" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.TH "OceIsr" 3 "Tue May 17 2022" "EPS MCU" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-OceIsr
+OceIsr \- Håndtering af OCE interrupt\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -48,6 +49,9 @@ OceIsr
 .RI "bool \fBirq_happened_\fP"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Håndtering af OCE interrupt\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "OceIsr::OceIsr (PinName irq_pin, EventQueue * queue, \fBPowerManage::Modules\fP module)\fC [inline]\fP"
@@ -88,4 +92,4 @@ ISR context der deactiverer modulet der blev målt OCE på\&. Sætter \fBEventHa
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.
+Generated automatically by Doxygen for EPS MCU from the source code\&.

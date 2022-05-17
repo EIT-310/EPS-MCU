@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="19" column="27" bodyfile="lib/Log/Log.h" bodystart="19" bodyend="-1"/>
+        <location file="lib/Log/Log.h" line="23" column="27" bodyfile="lib/Log/Log.h" bodystart="23" bodyend="-1"/>
         <referencedby refid="main_8cpp_1a769404f2985a027a0d626fedfd4de1e9" compoundref="main_8cpp" startline="87" endline="96">Setup</referencedby>
         <referencedby refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" compoundref="_log_8cpp" startline="30" endline="32">~Log</referencedby>
       </memberdef>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="23" column="20" bodyfile="lib/Log/Log.h" bodystart="23" bodyend="-1"/>
+        <location file="lib/Log/Log.h" line="27" column="20" bodyfile="lib/Log/Log.h" bodystart="27" bodyend="-1"/>
         <referencedby refid="main_8cpp_1a769404f2985a027a0d626fedfd4de1e9" compoundref="main_8cpp" startline="87" endline="96">Setup</referencedby>
       </memberdef>
       </sectiondef>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="25" column="15" bodyfile="lib/Log/Log.h" bodystart="25" bodyend="-1"/>
+        <location file="lib/Log/Log.h" line="29" column="15" bodyfile="lib/Log/Log.h" bodystart="29" bodyend="-1"/>
         <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
         <referencedby refid="class_log_1a0fbfda88fbee5027c89f6eb121059360" compoundref="_log_8cpp" startline="30" endline="32">~Log</referencedby>
       </memberdef>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="30" column="13" bodyfile="lib/Log/Log.h" bodystart="30" bodyend="-1"/>
+        <location file="lib/Log/Log.h" line="34" column="13" bodyfile="lib/Log/Log.h" bodystart="34" bodyend="-1"/>
         <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
       </memberdef>
       </sectiondef>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="18" column="3"/>
+        <location file="lib/Log/Log.h" line="22" column="3"/>
       </memberdef>
       <memberdef kind="function" id="class_log_1a0fbfda88fbee5027c89f6eb121059360" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -99,9 +99,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="20" column="11" bodyfile="lib/Log/Log.cpp" bodystart="30" bodyend="32"/>
-        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="25">msg_</references>
-        <references refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" compoundref="_log_8h" startline="19">serial_</references>
+        <location file="lib/Log/Log.h" line="24" column="11" bodyfile="lib/Log/Log.cpp" bodystart="30" bodyend="32"/>
+        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="29">msg_</references>
+        <references refid="class_log_1aee5656e28873ac8316e29f13e0e50df1" compoundref="_log_8h" startline="23">serial_</references>
       </memberdef>
       <memberdef kind="function" id="class_log_1ab2abd944d9781f24461a70d010c3c36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,10 +142,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="21" column="8" bodyfile="lib/Log/Log.cpp" bodystart="19" bodyend="24"/>
+        <location file="lib/Log/Log.h" line="25" column="8" bodyfile="lib/Log/Log.cpp" bodystart="19" bodyend="24"/>
         <references refid="class_log_1a8079bae56521b384ea87284206223f42" compoundref="_log_8cpp" startline="41" endline="52">EnumToString</references>
-        <references refid="class_log_1a795b5a43b1b115d41d88149ab86c0967" compoundref="_log_8h" startline="30">message_level_</references>
-        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="25">msg_</references>
+        <references refid="class_log_1a795b5a43b1b115d41d88149ab86c0967" compoundref="_log_8h" startline="34">message_level_</references>
+        <references refid="class_log_1ab0f16e76380bca22525b102ba0f0eac7" compoundref="_log_8h" startline="29">msg_</references>
         <references refid="class_log_1af14e8b4c37abf6be087c8be1fe395216" compoundref="_log_8cpp" startline="60" endline="65">TimeToString</references>
       </memberdef>
       </sectiondef>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="27" column="3"/>
+        <location file="lib/Log/Log.h" line="31" column="3"/>
       </memberdef>
       <memberdef kind="function" id="class_log_1a91f9df208ee0515b6403210497d37ee4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_log" kindref="compound">Log</ref> &amp;</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="28" column="7"/>
+        <location file="lib/Log/Log.h" line="32" column="7"/>
       </memberdef>
       <memberdef kind="function" id="class_log_1af14e8b4c37abf6be087c8be1fe395216" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="32" column="15" bodyfile="lib/Log/Log.cpp" bodystart="60" bodyend="65"/>
+        <location file="lib/Log/Log.h" line="36" column="15" bodyfile="lib/Log/Log.cpp" bodystart="60" bodyend="65"/>
         <referencedby refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" compoundref="_log_8cpp" startline="19" endline="24">Get</referencedby>
       </memberdef>
       </sectiondef>
@@ -247,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/Log/Log.h" line="31" column="17" bodyfile="lib/Log/Log.cpp" bodystart="41" bodyend="52"/>
+        <location file="lib/Log/Log.h" line="35" column="17" bodyfile="lib/Log/Log.cpp" bodystart="41" bodyend="52"/>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778ab9f002c6ffbfd511da8090213227454e" compoundref="_log_8h" startline="9">LOG_DEBUG</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a230506cce5c68c3bac5a821c42ed3473" compoundref="_log_8h" startline="9">LOG_ERROR</references>
         <references refid="_log_8h_1a2341a2a7c04d08eb40d2cb0b18b0b778a6e98ff471e3ce6c4ef2d75c37ee51837" compoundref="_log_8h" startline="9">LOG_INFO</references>
@@ -256,10 +256,11 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Simpel <ref refid="class_log" kindref="compound">Log</ref> class der kan logge med LOG(LOG_LEVEL, &quot;string at printe&quot;) </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="lib/Log/Log.h" line="15" column="1" bodyfile="lib/Log/Log.h" bodystart="16" bodyend="33"/>
+    <location file="lib/Log/Log.h" line="19" column="1" bodyfile="lib/Log/Log.h" bodystart="20" bodyend="37"/>
     <listofallmembers>
       <member refid="class_log_1a8079bae56521b384ea87284206223f42" prot="private" virt="non-virtual"><scope>Log</scope><name>EnumToString</name></member>
       <member refid="class_log_1ab2abd944d9781f24461a70d010c3c36e" prot="public" virt="non-virtual"><scope>Log</scope><name>Get</name></member>

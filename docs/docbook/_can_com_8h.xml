@@ -29,6 +29,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_can_com">CanCom</link></para>
+
+<para>Modtagning og afsendelse af data over CAN. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

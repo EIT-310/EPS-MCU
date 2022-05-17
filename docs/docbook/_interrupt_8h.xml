@@ -30,6 +30,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_oce_isr">OceIsr</link></para>
+
+<para>Håndtering af OCE interrupt. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

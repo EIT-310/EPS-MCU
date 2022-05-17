@@ -8,8 +8,12 @@
 #include <string>
 #include "ProjectConfig.h"
 #include "AdcRead.h"
-//#include "PowerManage.h"
 
+/**
+ * @brief Finite State Machine class der håndterer nuverende 
+ *        state og ændring af denne.
+ * 
+ */
 class Fsm {
  public:
   enum State {

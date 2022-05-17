@@ -15,37 +15,37 @@
 \DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}mbed.h"{}}}
 \DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_no_mutex_c_a_n_8h}{NoMutexCAN.h}}"{}}}
 \DoxyCodeLine{13 }
-\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_can_com}{CanCom}} \{}
-\DoxyCodeLine{15  \textcolor{keyword}{public}:}
-\DoxyCodeLine{16 }
-\DoxyCodeLine{17   \mbox{\hyperlink{class_can_com_a71c4eb082e8abbb9e06a7b0afaf58fb3}{CanCom}}(\mbox{\hyperlink{class_no_mutex_c_a_n}{NoMutexCAN}} *\mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}})\{}
-\DoxyCodeLine{18     \mbox{\hyperlink{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}{can\_}} = \mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}};}
-\DoxyCodeLine{19   \};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21   \textcolor{keyword}{enum} \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}{CanMessageId}} \{}
-\DoxyCodeLine{22     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50}{CAN\_TIME\_SYNC}} = 1,}
-\DoxyCodeLine{23     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c}{CAN\_SET\_CONFIG}},}
-\DoxyCodeLine{24     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e}{CAN\_GET\_CONFIG}},}
-\DoxyCodeLine{25     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4}{CAN\_GET\_READING}},}
-\DoxyCodeLine{26     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc}{CAN\_LOG}}}
-\DoxyCodeLine{27   \};}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{29   \textcolor{keyword}{static} uint8\_t \mbox{\hyperlink{class_can_com_a49dd73a42baabac31df9dd9de570a53f}{serialized\_buffer\_}}[\mbox{\hyperlink{reading_8pb_8h_ac6cdff9ed5c1eb33a22a8982ce2a66bf}{send\_reading\_size}} * \mbox{\hyperlink{_project_config_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\_BUFFER\_SIZE}}];}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_a22fb622bb2aa27436415898d40e5987f}{SendBuffer}}(\textcolor{keywordtype}{size\_t} size);}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_ad5cc018603f898163b52bcab6db64cf4}{SendReadings}}();}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35   \textcolor{keyword}{static} \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{AdcRead::adc\_reading}} \mbox{\hyperlink{class_can_com_ab963975230cc827959cc329b51ce2e24}{GetReading}}();}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37   \textcolor{keyword}{static} \mbox{\hyperlink{class_no_mutex_c_a_n}{NoMutexCAN}} *\mbox{\hyperlink{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}{can\_}};}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39  \textcolor{keyword}{private}:}
-\DoxyCodeLine{40   \textcolor{keyword}{static} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66}{GetFrameSize}}();}
-\DoxyCodeLine{41   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_a52c0f42094e4622ee96db13215a3d16e}{ShiftBuffer}}(\textcolor{keywordtype}{size\_t} shift\_bytes);}
-\DoxyCodeLine{42 \};}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_can_com}{CanCom}} \{}
+\DoxyCodeLine{22  \textcolor{keyword}{public}:}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24   \mbox{\hyperlink{class_can_com_a71c4eb082e8abbb9e06a7b0afaf58fb3}{CanCom}}(\mbox{\hyperlink{class_no_mutex_c_a_n}{NoMutexCAN}} *\mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}})\{}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}{can\_}} = \mbox{\hyperlink{main_8cpp_a0ed0a336fad3c78ff60cde0dc0ba0757}{can}};}
+\DoxyCodeLine{26   \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \textcolor{keyword}{enum} \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7}{CanMessageId}} \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a4339db1a5ddb8376463676d939baeb50}{CAN\_TIME\_SYNC}} = 1,}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a18bbb1a02a2300a612dad69faa2f320c}{CAN\_SET\_CONFIG}},}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ac66dff4c7e2dafd4fb02a0e1a9452c6e}{CAN\_GET\_CONFIG}},}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7a30e6d10fcb5e05f9db8ae29bfff705e4}{CAN\_GET\_READING}},}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_can_com_a7787f4671b34026b7da18d0f4a5bdaf7ad4f07f9719d558c65f466a789e3a52fc}{CAN\_LOG}}}
+\DoxyCodeLine{34   \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36   \textcolor{keyword}{static} uint8\_t \mbox{\hyperlink{class_can_com_a49dd73a42baabac31df9dd9de570a53f}{serialized\_buffer\_}}[\mbox{\hyperlink{reading_8pb_8h_ac6cdff9ed5c1eb33a22a8982ce2a66bf}{send\_reading\_size}} * \mbox{\hyperlink{_project_config_8h_a602abb8ec84dcb3b6f854a738310ea46}{ADC\_BUFFER\_SIZE}}];}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_a22fb622bb2aa27436415898d40e5987f}{SendBuffer}}(\textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_ad5cc018603f898163b52bcab6db64cf4}{SendReadings}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \textcolor{keyword}{static} \mbox{\hyperlink{struct_adc_read_1_1adc__reading}{AdcRead::adc\_reading}} \mbox{\hyperlink{class_can_com_ab963975230cc827959cc329b51ce2e24}{GetReading}}();}
 \DoxyCodeLine{43 }
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_LIB\_CANCOM\_CANCOM\_H\_}}
+\DoxyCodeLine{44   \textcolor{keyword}{static} \mbox{\hyperlink{class_no_mutex_c_a_n}{NoMutexCAN}} *\mbox{\hyperlink{class_can_com_a4d88c814922cc6b409c0fa300ba5f39f}{can\_}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46  \textcolor{keyword}{private}:}
+\DoxyCodeLine{47   \textcolor{keyword}{static} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_can_com_a50b026d2f14b2be6d5a4cf98b210ce66}{GetFrameSize}}();}
+\DoxyCodeLine{48   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_com_a52c0f42094e4622ee96db13215a3d16e}{ShiftBuffer}}(\textcolor{keywordtype}{size\_t} shift\_bytes);}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//EPS\_MCU\_LIB\_CANCOM\_CANCOM\_H\_}}
 
 \end{DoxyCode}

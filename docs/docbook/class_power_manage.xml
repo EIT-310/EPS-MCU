@@ -3,6 +3,11 @@
 <title>PowerManage Class Reference</title>
 <indexterm><primary>PowerManage</primary></indexterm>
 <para>
+
+<para>Aktivering og deaktivering af powerrails på baggrund af OCE og state. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;PowerManage.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -49,6 +54,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Aktivering og deaktivering af powerrails på baggrund af OCE og state. </para>
+</section>
 <section>
 <title>Member Enumeration Documentation</title>
 <anchor xml:id="_class_power_manage_1a1f54cee055bd53d7a4e29f04d86e292e"/><section>

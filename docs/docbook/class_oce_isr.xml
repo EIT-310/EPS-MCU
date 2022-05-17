@@ -3,6 +3,11 @@
 <title>OceIsr Class Reference</title>
 <indexterm><primary>OceIsr</primary></indexterm>
 <para>
+
+<para>Håndtering af OCE interrupt. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;Interrupt.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -45,6 +50,11 @@
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Håndtering af OCE interrupt. </para>
+</section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
 <anchor xml:id="_class_oce_isr_1abd0bd9698e93dadc3356baaf6366f4ed"/><section>

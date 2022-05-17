@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Firmware for EPS MCU on AAUSAT6", "index.html", [
+  [ "EPS MCU", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

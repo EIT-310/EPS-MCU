@@ -1,8 +1,9 @@
-.TH "CanCom" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.TH "CanCom" 3 "Tue May 17 2022" "EPS MCU" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-CanCom
+CanCom \- Modtagning og afsendelse af data over CAN\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -60,6 +61,18 @@ CanCom
 .br
 .RI "Rykker alle bytes i serialized_buffer_ med et antal pladser\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Modtagning og afsendelse af data over CAN\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+Hånterer ikke rent faktisk modtagelse af CAN da dette gøres i \fBmain\&.cpp\fP 
+.RE
+.PP
+
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBCanCom::CanMessageId\fP"
@@ -150,4 +163,4 @@ Rykker alle bytes i serialized_buffer_ med et antal pladser\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.
+Generated automatically by Doxygen for EPS MCU from the source code\&.

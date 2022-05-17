@@ -12,6 +12,10 @@
 #endif //EPS_MCU_INTERRUPT_H
 #include "PowerManage.h"
 
+/**
+ * @brief Håndtering af OCE interrupt
+ * 
+ */
 class OceIsr {
  public:
 

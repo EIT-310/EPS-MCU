@@ -9,6 +9,11 @@
 #include "TDBStore.h"
 #include "mbed.h"
 
+/**
+ * @brief Static calss for skrivning og læsning fra Non Volatile Memory
+ *        på MCU'en
+ * 
+ */
 class NVStore {
 public:
     enum DATA_LOCATION {

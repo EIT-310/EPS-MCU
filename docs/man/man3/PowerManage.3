@@ -1,8 +1,9 @@
-.TH "PowerManage" 3 "Tue May 17 2022" "Firmware for EPS MCU on AAUSAT6" \" -*- nroff -*-
+.TH "PowerManage" 3 "Tue May 17 2022" "EPS MCU" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-PowerManage
+PowerManage \- Aktivering og deaktivering af powerrails på baggrund af OCE og state\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -52,6 +53,9 @@ PowerManage
 .RI "static DigitalOut \fBpower_rails_\fP [1]"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+Aktivering og deaktivering af powerrails på baggrund af OCE og state\&. 
 .SH "Member Enumeration Documentation"
 .PP 
 .SS "enum \fBPowerManage::Modules\fP"
@@ -129,4 +133,4 @@ Opdaterer den endelige tisltand af Power Rails ved at AND'e enabled_modules_ og 
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for Firmware for EPS MCU on AAUSAT6 from the source code\&.
+Generated automatically by Doxygen for EPS MCU from the source code\&.

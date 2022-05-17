@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NVStore/NVStore.h" line="14" column="5" bodyfile="lib/NVStore/NVStore.h" bodystart="14" bodyend="17"/>
+        <location file="lib/NVStore/NVStore.h" line="19" column="5" bodyfile="lib/NVStore/NVStore.h" bodystart="19" bodyend="22"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NVStore/NVStore.h" line="19" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="24" bodyend="53"/>
+        <location file="lib/NVStore/NVStore.h" line="24" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="24" bodyend="53"/>
         <references refid="_n_v_store_8cpp_1a096d1aa03aa095f7e4649f45327f110c" compoundref="_n_v_store_8cpp" startline="7">bd</references>
         <references refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" compoundref="_n_v_store_8cpp" startline="11" endline="22">GetKeyStr</references>
       </memberdef>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NVStore/NVStore.h" line="21" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="54" bodyend="83"/>
+        <location file="lib/NVStore/NVStore.h" line="26" column="9" bodyfile="lib/NVStore/NVStore.cpp" bodystart="54" bodyend="83"/>
         <references refid="_n_v_store_8cpp_1a096d1aa03aa095f7e4649f45327f110c" compoundref="_n_v_store_8cpp" startline="7">bd</references>
         <references refid="class_n_v_store_1a5a555fc5b6f58da3cdfceabb686f9b99" compoundref="_n_v_store_8cpp" startline="11" endline="22">GetKeyStr</references>
       </memberdef>
@@ -98,18 +98,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/NVStore/NVStore.h" line="24" column="24" bodyfile="lib/NVStore/NVStore.cpp" bodystart="11" bodyend="22"/>
-        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" compoundref="_n_v_store_8h" startline="16">adc_read</references>
-        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" compoundref="_n_v_store_8h" startline="15">sm_state</references>
+        <location file="lib/NVStore/NVStore.h" line="29" column="24" bodyfile="lib/NVStore/NVStore.cpp" bodystart="11" bodyend="22"/>
+        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" compoundref="_n_v_store_8h" startline="21">adc_read</references>
+        <references refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a91c79781e57ff2e61fa4ee60c29f5048" compoundref="_n_v_store_8h" startline="20">sm_state</references>
         <referencedby refid="class_n_v_store_1a080bcfbb3da6a970a87d0439727aa79f" compoundref="_n_v_store_8cpp" startline="54" endline="83">read</referencedby>
         <referencedby refid="class_n_v_store_1aaa5fece7bfc80d4afbb243c72ca0da3d" compoundref="_n_v_store_8cpp" startline="24" endline="53">write</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Static calss for skrivning og læsning fra Non Volatile Memory på MCU&apos;en. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="lib/NVStore/NVStore.h" line="12" column="1" bodyfile="lib/NVStore/NVStore.h" bodystart="12" bodyend="26"/>
+    <location file="lib/NVStore/NVStore.h" line="17" column="1" bodyfile="lib/NVStore/NVStore.h" bodystart="17" bodyend="31"/>
     <listofallmembers>
       <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527a55281ef34ed66c3694d6a997aa6691a3" prot="public" virt="non-virtual"><scope>NVStore</scope><name>adc_read</name></member>
       <member refid="class_n_v_store_1aa8fbe89e926d21201fe3f56ec1bf0527" prot="public" virt="non-virtual"><scope>NVStore</scope><name>DATA_LOCATION</name></member>

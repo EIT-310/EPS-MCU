@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="35" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="35" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="40" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="40" bodyend="-1"/>
         <referencedby refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" compoundref="_adc_read_8cpp" startline="124" endline="139">AdcRead::ReadU16</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" prot="public" static="no" mutable="no">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="36" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="36" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="41" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="41" bodyend="-1"/>
         <referencedby refid="class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3" compoundref="_adc_read_8cpp" startline="124" endline="139">AdcRead::ReadU16</referencedby>
       </memberdef>
       </sectiondef>
@@ -39,7 +39,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="lib/AdcRead/AdcRead.h" line="34" column="3" bodyfile="lib/AdcRead/AdcRead.h" bodystart="34" bodyend="37"/>
+    <location file="lib/AdcRead/AdcRead.h" line="39" column="3" bodyfile="lib/AdcRead/AdcRead.h" bodystart="39" bodyend="42"/>
     <listofallmembers>
       <member refid="struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a" prot="public" virt="non-virtual"><scope>AdcRead::adc_thread_args</scope><name>dest</name></member>
       <member refid="struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600" prot="public" virt="non-virtual"><scope>AdcRead::adc_thread_args</scope><name>device</name></member>

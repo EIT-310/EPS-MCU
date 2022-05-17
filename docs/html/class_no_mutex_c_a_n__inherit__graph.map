@@ -1,4 +1,4 @@
 <map id="NoMutexCAN" name="NoMutexCAN">
-<area shape="rect" id="node1" title="class der overskriver mutex lock() og unlock() i Mbed. Disse er overflødige ved nucleo STM32 boards." alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node1" title="class der overskriver mutex lock() og unlock() i Mbed CAN. denne er overflødige ved nucleo STM32 boar..." alt="" coords="5,80,107,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="31,5,81,32"/>
 </map>

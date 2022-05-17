@@ -12,47 +12,47 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 8 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__project_config_8h">ProjectConfig.h</link>&quot;</emphasis>
 9 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
 10 
-11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_adc_read">AdcRead</link>&#32;{
-12 &#32;<emphasis role="keyword">public</emphasis>:
-13 &#32;&#32;<link linkend="_class_adc_read_1a579cb1cbc31d93bb202f770492be226d">AdcRead</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
-14 
-15 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_adc_read_1_1adc__reading">adc_reading</link>&#32;{
-16 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3">bat_v_1</link>;
-17 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2">bat_i_1</link>;
-18 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade">mppt_v_1</link>;
-19 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c">mppt_i_1</link>;
-20 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910">sub_v_1</link>;
-21 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2">sub_i_1</link>;
-22 &#32;&#32;&#32;&#32;time_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09">timestamp</link>;
-23 &#32;&#32;};
-24 
-25 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;{
-26 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d">BAT_V_1</link>,
-27 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6">BAT_I_1</link>,
-28 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8">MPPT_V_1</link>,
-29 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff">MPPT_I_1</link>,
-30 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00">SUB_V_1</link>,
-31 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201">SUB_I_1</link>
-32 &#32;&#32;};
-33 
-34 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link>&#32;{
-35 &#32;&#32;&#32;&#32;AnalogIn&#32;*<link linkend="_struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600">device</link>;
-36 &#32;&#32;&#32;&#32;uint16_t&#32;*<link linkend="_struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a">dest</link>;
+16 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_adc_read">AdcRead</link>&#32;{
+17 &#32;<emphasis role="keyword">public</emphasis>:
+18 &#32;&#32;<link linkend="_class_adc_read_1a579cb1cbc31d93bb202f770492be226d">AdcRead</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+19 
+20 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_adc_read_1_1adc__reading">adc_reading</link>&#32;{
+21 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3">bat_v_1</link>;
+22 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2">bat_i_1</link>;
+23 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade">mppt_v_1</link>;
+24 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c">mppt_i_1</link>;
+25 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910">sub_v_1</link>;
+26 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2">sub_i_1</link>;
+27 &#32;&#32;&#32;&#32;time_t&#32;<link linkend="_struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09">timestamp</link>;
+28 &#32;&#32;};
+29 
+30 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;{
+31 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ae0a70d9f30f321972d098a539d51925d">BAT_V_1</link>,
+32 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aecc58fcce338597de28230e210d10af6">BAT_I_1</link>,
+33 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156ab1c96e6932551af893207aa43ddaada8">MPPT_V_1</link>,
+34 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156af6c32e8a3469d2f664b4b0da386989ff">MPPT_I_1</link>,
+35 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156aa1a8df69eb30a62bc16159652fff7d00">SUB_V_1</link>,
+36 &#32;&#32;&#32;&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156a4d3dd103cce7e6377beabfdc9ff0c201">SUB_I_1</link>
 37 &#32;&#32;};
 38 
-39 <emphasis role="comment">//&#32;&#32;TODO:&#32;make&#32;asynchronous</emphasis>
-40 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;<link linkend="_class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958">DoRead</link>();
-41 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;CircularBuffer&lt;adc_reading,&#32;ADC_BUFFER_SIZE&gt;&#32;<link linkend="_class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396">adc_buffer_</link>;
-42 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3">ReadU16</link>(<link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link>&#32;*args);
+39 &#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link>&#32;{
+40 &#32;&#32;&#32;&#32;AnalogIn&#32;*<link linkend="_struct_adc_read_1_1adc__thread__args_1a0121f486288431a8bd907db53bb14600">device</link>;
+41 &#32;&#32;&#32;&#32;uint16_t&#32;*<link linkend="_struct_adc_read_1_1adc__thread__args_1a207cc944905fd5237abe01118a7dc60a">dest</link>;
+42 &#32;&#32;};
 43 
-44 &#32;<emphasis role="keyword">private</emphasis>:
-45 
-46 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;AnalogIn&#32;*<link linkend="_class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb">GetDevice</link>(<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;name);
-47 
-48 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8">ReadFloat</link>(AnalogIn&#32;*device);
-49 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;<link linkend="_class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b">adc_list_</link>[6];
-50 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_adc_read_1a57f35b9fd598aff98289da19a5edff40">AsyncADC</link>(<emphasis role="keywordtype">int</emphasis>&#32;adc_count);
-51 };
+44 <emphasis role="comment">//&#32;&#32;TODO:&#32;make&#32;asynchronous</emphasis>
+45 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;<link linkend="_class_adc_read_1ad802d7cd5058ceb3a039803f8fb18958">DoRead</link>();
+46 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;CircularBuffer&lt;adc_reading,&#32;ADC_BUFFER_SIZE&gt;&#32;<link linkend="_class_adc_read_1a8dabbeef3eb6bfdd423008eac1e05396">adc_buffer_</link>;
+47 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_adc_read_1a5c281043cc2127409b9d41a73b3c61d3">ReadU16</link>(<link linkend="_struct_adc_read_1_1adc__thread__args">adc_thread_args</link>&#32;*args);
+48 
+49 &#32;<emphasis role="keyword">private</emphasis>:
+50 
+51 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;AnalogIn&#32;*<link linkend="_class_adc_read_1a84ffd76ab6ff1d44eb81577b8462e6eb">GetDevice</link>(<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;name);
 52 
-53 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_</emphasis>
+53 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_adc_read_1a5c030af9eeb9c42c58f682e3eaf94bc8">ReadFloat</link>(AnalogIn&#32;*device);
+54 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_adc_read_1aa56759cbf7c903dd1fdf96ff64fb7156">AdcName</link>&#32;<link linkend="_class_adc_read_1ac8bac3748533ac7d2663909c917ffb7b">adc_list_</link>[6];
+55 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_adc_read_1a57f35b9fd598aff98289da19a5edff40">AsyncADC</link>(<emphasis role="keywordtype">int</emphasis>&#32;adc_count);
+56 };
+57 
+58 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_INCLUDE_ADC_READ_ADC_READ_H_</emphasis>
 </programlisting></section>

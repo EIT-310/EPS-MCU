@@ -31,14 +31,14 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 27 
 28 <emphasis role="preprocessor">#include&#32;&quot;mbed.h&quot;</emphasis>
 29 
-38 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link>:&#32;<emphasis role="keyword">public</emphasis>&#32;CAN&#32;{
-39 &#32;<emphasis role="keyword">public</emphasis>:
-40 &#32;&#32;<link linkend="_class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN</link>(PinName&#32;rd,&#32;PinName&#32;td):&#32;CAN(rd,&#32;td)&#32;{}
-41 &#32;&#32;<link linkend="_class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN</link>(PinName&#32;rd,&#32;PinName&#32;td,&#32;<emphasis role="keywordtype">int</emphasis>&#32;hz):&#32;CAN(rd,&#32;td,&#32;hz)&#32;{}
-42 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4">~NoMutexCAN</link>()&#32;{};
-43 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{};
-44 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{};
-45 };
-46 
-47 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;NOMUTEXCAN_H</emphasis>
+39 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_no_mutex_c_a_n">NoMutexCAN</link>:&#32;<emphasis role="keyword">public</emphasis>&#32;CAN&#32;{
+40 &#32;<emphasis role="keyword">public</emphasis>:
+41 &#32;&#32;<link linkend="_class_no_mutex_c_a_n_1acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN</link>(PinName&#32;rd,&#32;PinName&#32;td):&#32;CAN(rd,&#32;td)&#32;{}
+42 &#32;&#32;<link linkend="_class_no_mutex_c_a_n_1a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN</link>(PinName&#32;rd,&#32;PinName&#32;td,&#32;<emphasis role="keywordtype">int</emphasis>&#32;hz):&#32;CAN(rd,&#32;td,&#32;hz)&#32;{}
+43 &#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1acfd94c2e4acc7c5963254f9280ec9aa4">~NoMutexCAN</link>()&#32;{};
+44 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1ad2cedc74343700fa8dac2988a8e315e7">lock</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{};
+45 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_no_mutex_c_a_n_1a1f537c5cf689a212cf0845e52f8d2150">unlock</link>()<emphasis role="keyword">&#32;override&#32;</emphasis>{};
+46 };
+47 
+48 <emphasis role="preprocessor">#endif&#32;&#32;</emphasis><emphasis role="comment">//&#32;NOMUTEXCAN_H</emphasis>
 </programlisting></section>

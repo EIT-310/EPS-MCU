@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Firmware for EPS MCU on AAUSAT6: lib/NoMutexCAN/NoMutexCAN.h Source File</title>
+<title>EPS MCU: lib/NoMutexCAN/NoMutexCAN.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,9 +24,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="aausat.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Firmware for EPS MCU on AAUSAT6
+   <div id="projectname">EPS MCU
    </div>
+   <div id="projectbrief">Firmware for EPS MCU on AAUSAT6</div>
   </td>
  </tr>
  </tbody>
@@ -114,22 +116,22 @@ $(document).ready(function(){initNavTree('_no_mutex_c_a_n_8h_source.html',''); i
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;mbed.h&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_no_mutex_c_a_n.html">NoMutexCAN</a>: <span class="keyword">public</span> CAN {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">   40</a></span>  <a class="code hl_function" href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN</a>(PinName rd, PinName td): CAN(rd, td) {}</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">   41</a></span>  <a class="code hl_function" href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN</a>(PinName rd, PinName td, <span class="keywordtype">int</span> hz): CAN(rd, td, hz) {}</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">   42</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">~NoMutexCAN</a>() {};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">   43</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">lock</a>()<span class="keyword"> override </span>{};</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">   44</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">unlock</a>()<span class="keyword"> override </span>{};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif  </span><span class="comment">// NOMUTEXCAN_H</span></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html"><div class="ttname"><a href="class_no_mutex_c_a_n.html">NoMutexCAN</a></div><div class="ttdoc">class der overskriver mutex lock() og unlock() i Mbed. Disse er overflødige ved nucleo STM32 boards.</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:38</div></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html_a1f537c5cf689a212cf0845e52f8d2150"><div class="ttname"><a href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">NoMutexCAN::unlock</a></div><div class="ttdeci">void unlock() override</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:44</div></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html_a5e4c8dd42ede5c3c7aed5149eb1af214"><div class="ttname"><a href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN::NoMutexCAN</a></div><div class="ttdeci">NoMutexCAN(PinName rd, PinName td, int hz)</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:41</div></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html_acd0e6a2877c46d2c31fd08d8ae98fd42"><div class="ttname"><a href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN::NoMutexCAN</a></div><div class="ttdeci">NoMutexCAN(PinName rd, PinName td)</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:40</div></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html_acfd94c2e4acc7c5963254f9280ec9aa4"><div class="ttname"><a href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">NoMutexCAN::~NoMutexCAN</a></div><div class="ttdeci">virtual ~NoMutexCAN()</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:42</div></div>
-<div class="ttc" id="aclass_no_mutex_c_a_n_html_ad2cedc74343700fa8dac2988a8e315e7"><div class="ttname"><a href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">NoMutexCAN::lock</a></div><div class="ttdeci">void lock() override</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:43</div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="class_no_mutex_c_a_n.html">NoMutexCAN</a>: <span class="keyword">public</span> CAN {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">   41</a></span>  <a class="code hl_function" href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN</a>(PinName rd, PinName td): CAN(rd, td) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">   42</a></span>  <a class="code hl_function" href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN</a>(PinName rd, PinName td, <span class="keywordtype">int</span> hz): CAN(rd, td, hz) {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">   43</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">~NoMutexCAN</a>() {};</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">   44</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">lock</a>()<span class="keyword"> override </span>{};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">   45</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">unlock</a>()<span class="keyword"> override </span>{};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif  </span><span class="comment">// NOMUTEXCAN_H</span></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html"><div class="ttname"><a href="class_no_mutex_c_a_n.html">NoMutexCAN</a></div><div class="ttdoc">class der overskriver mutex lock() og unlock() i Mbed CAN. denne er overflødige ved nucleo STM32 boar...</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:39</div></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html_a1f537c5cf689a212cf0845e52f8d2150"><div class="ttname"><a href="class_no_mutex_c_a_n.html#a1f537c5cf689a212cf0845e52f8d2150">NoMutexCAN::unlock</a></div><div class="ttdeci">void unlock() override</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:45</div></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html_a5e4c8dd42ede5c3c7aed5149eb1af214"><div class="ttname"><a href="class_no_mutex_c_a_n.html#a5e4c8dd42ede5c3c7aed5149eb1af214">NoMutexCAN::NoMutexCAN</a></div><div class="ttdeci">NoMutexCAN(PinName rd, PinName td, int hz)</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:42</div></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html_acd0e6a2877c46d2c31fd08d8ae98fd42"><div class="ttname"><a href="class_no_mutex_c_a_n.html#acd0e6a2877c46d2c31fd08d8ae98fd42">NoMutexCAN::NoMutexCAN</a></div><div class="ttdeci">NoMutexCAN(PinName rd, PinName td)</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:41</div></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html_acfd94c2e4acc7c5963254f9280ec9aa4"><div class="ttname"><a href="class_no_mutex_c_a_n.html#acfd94c2e4acc7c5963254f9280ec9aa4">NoMutexCAN::~NoMutexCAN</a></div><div class="ttdeci">virtual ~NoMutexCAN()</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:43</div></div>
+<div class="ttc" id="aclass_no_mutex_c_a_n_html_ad2cedc74343700fa8dac2988a8e315e7"><div class="ttname"><a href="class_no_mutex_c_a_n.html#ad2cedc74343700fa8dac2988a8e315e7">NoMutexCAN::lock</a></div><div class="ttdeci">void lock() override</div><div class="ttdef"><b>Definition:</b> NoMutexCAN.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -27,6 +27,8 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_fsm">Fsm</link></para>
+
+<para>Finite State Machine class der håndterer nuverende state og ændring af denne. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

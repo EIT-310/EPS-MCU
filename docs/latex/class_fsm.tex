@@ -2,6 +2,11 @@
 \label{class_fsm}\index{Fsm@{Fsm}}
 
 
+Finite State Machine class der håndterer nuverende state og ændring af denne.  
+
+
+
+
 {\ttfamily \#include $<$Fsm.\+h$>$}
 
 \doxysubsection*{Public Types}
@@ -50,6 +55,9 @@ static float \mbox{\hyperlink{class_fsm_a439ed6c66f0b4f982ffa48ce23ade7c1}{Get\+
 static \mbox{\hyperlink{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}{State}} \mbox{\hyperlink{class_fsm_a21c5bd7d7af36c2140574e40853b1da1}{current\+\_\+state\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Finite State Machine class der håndterer nuverende state og ændring af denne. 
 
 \doxysubsection{Member Enumeration Documentation}
 \mbox{\Hypertarget{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}\label{class_fsm_ad0c69faa4ed46c1979d5805025a73c7f}} 
@@ -116,8 +124,7 @@ Aloritmen er simpel og mest til for at have et eksempel på en algoritme.
 {\em reading} & ADC måling at finde ny state på baggrund af. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -141,8 +148,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Gå en state ned. Hvis nuværende state er den laveste, gør intet. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -187,8 +193,7 @@ Beregn effekten for alle MPPT\textquotesingle{}er i en ADC måling.
 \begin{DoxyReturn}{Returns}
 float Effekt for samlet MPPT\textquotesingle{}er i watt 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -213,8 +218,7 @@ Omdanner State enum til string.
 \begin{DoxyReturn}{Returns}
 std\+::string String med navnet på staten 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -236,16 +240,14 @@ Incrementer eller decrementer current\+\_\+state, alt efter om den er lavere ell
 {\em target\+\_\+state} & \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=306pt]{class_fsm_a9c900414072a45b3cf703e3ea2f37c1b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -265,8 +267,7 @@ Giver navnet på nuverende state.
 \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,8 +284,7 @@ Here is the call graph for this function\+:
 
 Gå en state up. Hvis nuværende state er den højeste, gør intet. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

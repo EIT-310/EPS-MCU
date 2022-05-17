@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="16" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="16" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="21" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="21" bodyend="-1"/>
         <referencedby refid="class_fsm_1a68a3b3e4232132f9e671eafb4a663af4" compoundref="_fsm_8cpp" startline="111" endline="145">Fsm::DetermineState</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2" prot="public" static="no" mutable="no">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="17" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="17" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="22" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1ab9f14a16f037e487612758fc326deade" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="18" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="18" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="23" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="23" bodyend="-1"/>
         <referencedby refid="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" compoundref="_fsm_8cpp" startline="168" endline="187">Fsm::GetPower</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1a8018b35399d7aa04d30765a72b67cf0c" prot="public" static="no" mutable="no">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="19" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="19" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="24" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="24" bodyend="-1"/>
         <referencedby refid="class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1" compoundref="_fsm_8cpp" startline="168" endline="187">Fsm::GetPower</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1a76790da28f284d3def69b8187568d910" prot="public" static="no" mutable="no">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="20" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="20" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="25" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1a7cd923745e0e3a36701048a4b457d5a2" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="21" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="21" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="26" column="14" bodyfile="lib/AdcRead/AdcRead.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_adc_read_1_1adc__reading_1a93bd5f75d5eee6a2d07978e072bacc09" prot="public" static="no" mutable="no">
         <type>time_t</type>
@@ -103,14 +103,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="lib/AdcRead/AdcRead.h" line="22" column="12" bodyfile="lib/AdcRead/AdcRead.h" bodystart="22" bodyend="-1"/>
+        <location file="lib/AdcRead/AdcRead.h" line="27" column="12" bodyfile="lib/AdcRead/AdcRead.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="lib/AdcRead/AdcRead.h" line="15" column="3" bodyfile="lib/AdcRead/AdcRead.h" bodystart="15" bodyend="23"/>
+    <location file="lib/AdcRead/AdcRead.h" line="20" column="3" bodyfile="lib/AdcRead/AdcRead.h" bodystart="20" bodyend="28"/>
     <listofallmembers>
       <member refid="struct_adc_read_1_1adc__reading_1a379a1cb99d5bb1da7f0568502d7ac7a2" prot="public" virt="non-virtual"><scope>AdcRead::adc_reading</scope><name>bat_i_1</name></member>
       <member refid="struct_adc_read_1_1adc__reading_1a597d7ec3b28d7eecc27cbe720f3ec4b3" prot="public" virt="non-virtual"><scope>AdcRead::adc_reading</scope><name>bat_v_1</name></member>

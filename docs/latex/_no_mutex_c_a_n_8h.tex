@@ -19,4 +19,4 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_no_mutex_c_a_n}{No\+Mutex\+CAN}}
-\begin{DoxyCompactList}\small\item\em class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed. Disse er overflødige ved nucleo STM32 boards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em class der overskriver mutex \mbox{\hyperlink{class_no_mutex_c_a_n_ad2cedc74343700fa8dac2988a8e315e7}{lock()}} og \mbox{\hyperlink{class_no_mutex_c_a_n_a1f537c5cf689a212cf0845e52f8d2150}{unlock()}} i Mbed CAN. denne er overflødige ved nucleo STM32 boards, og er slået for at kunne læse fra CAN i ISR context. \end{DoxyCompactList}\end{DoxyCompactItemize}

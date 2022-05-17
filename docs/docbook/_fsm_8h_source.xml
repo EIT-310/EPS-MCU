@@ -12,44 +12,43 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 8 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
 9 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__project_config_8h">ProjectConfig.h</link>&quot;</emphasis>
 10 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__adc_read_8h">AdcRead.h</link>&quot;</emphasis>
-11 <emphasis role="comment">//#include&#32;&quot;PowerManage.h&quot;</emphasis>
-12 
-13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_fsm">Fsm</link>&#32;{
-14 &#32;<emphasis role="keyword">public</emphasis>:
-15 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;{
-16 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db">EMERGENCY</link>,
-17 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb">LOW</link>,
-18 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9">MID_LOW</link>,
-19 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885">MID</link>,
-20 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178">MID_HIGH</link>,
-21 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717">HIGH</link>
-22 &#32;&#32;};
-23 
-24 &#32;&#32;<emphasis role="keyword">explicit</emphasis>&#32;<link linkend="_class_fsm_1a0707d788017e5a74113c4285c9c748b9">Fsm</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;start_state){
-25 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1">current_state_</link>&#32;=&#32;start_state;
-26 &#32;&#32;}
+11 
+17 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_fsm">Fsm</link>&#32;{
+18 &#32;<emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;{
+20 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa47531bc72c617715ab8f53eaf58042db">EMERGENCY</link>,
+21 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fac99fa18cf7d54cb89d1f15f1aa3ea4bb">LOW</link>,
+22 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa4094f80f4a0f6371d5a1ff0ee805c1b9">MID_LOW</link>,
+23 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa5165a901be203c3d267a24a0f5aeb885">MID</link>,
+24 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa84952d64d0eb5023d83af25fb98b4178">MID_HIGH</link>,
+25 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7fa1944af602d37dee5f9ea8a484ccca717">HIGH</link>
+26 &#32;&#32;};
 27 
-28 
-29 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a68a3b3e4232132f9e671eafb4a663af4">DetermineState</link>(<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;reading);
-30 
-31 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4">UpState</link>();
+28 &#32;&#32;<emphasis role="keyword">explicit</emphasis>&#32;<link linkend="_class_fsm_1a0707d788017e5a74113c4285c9c748b9">Fsm</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;start_state){
+29 &#32;&#32;&#32;&#32;<link linkend="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1">current_state_</link>&#32;=&#32;start_state;
+30 &#32;&#32;}
+31 
 32 
-33 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220">DownState</link>();
+33 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a68a3b3e4232132f9e671eafb4a663af4">DetermineState</link>(<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;reading);
 34 
-35 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;<link linkend="_class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf">GetCurrentState</link>();
+35 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a0b88cb2000e2c66ec3f4d68b991a10f4">UpState</link>();
 36 
-37 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_fsm_1adc5296fe861e5e938365b7afd0834950">ToString</link>();
+37 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1adf20f20a6b2b7472bd718ac0eabbe220">DownState</link>();
 38 
-39 &#32;<emphasis role="keyword">private</emphasis>:
+39 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;<link linkend="_class_fsm_1ae746f70aa1624110f8e1967d8bec6dcf">GetCurrentState</link>();
 40 
-41 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e">GetString</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;name);
+41 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_fsm_1adc5296fe861e5e938365b7afd0834950">ToString</link>();
 42 
-43 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;<link linkend="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1">current_state_</link>;
+43 &#32;<emphasis role="keyword">private</emphasis>:
 44 
-45 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b">StateChanger</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;target_state);
+45 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;std::string&#32;<link linkend="_class_fsm_1af5ba98dd1c1080fb9574bac4a4c4ed1e">GetString</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;name);
 46 
-47 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1">GetPower</link>(<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;reading);
-48 };
-49 
-50 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_FSM_H</emphasis>
+47 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;<link linkend="_class_fsm_1a21c5bd7d7af36c2140574e40853b1da1">current_state_</link>;
+48 
+49 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_fsm_1a9c900414072a45b3cf703e3ea2f37c1b">StateChanger</link>(<link linkend="_class_fsm_1ad0c69faa4ed46c1979d5805025a73c7f">State</link>&#32;target_state);
+50 
+51 &#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_fsm_1a439ed6c66f0b4f982ffa48ce23ade7c1">GetPower</link>(<link linkend="_struct_adc_read_1_1adc__reading">AdcRead::adc_reading</link>&#32;reading);
+52 };
+53 
+54 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//EPS_MCU_FSM_H</emphasis>
 </programlisting></section>

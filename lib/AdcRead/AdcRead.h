@@ -8,6 +8,11 @@
 #include "ProjectConfig.h"
 #include "mbed.h"
 
+/**
+ * @brief Læser og gemmer ADC målinger.
+ * 
+ */
+
 class AdcRead {
  public:
   AdcRead() = default;

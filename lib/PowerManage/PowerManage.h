@@ -10,6 +10,12 @@
 #include "ProjectConfig.h"
 #include "AdcRead.h"
 
+/**
+ * @brief Aktivering og deaktivering af powerrails 
+ *        på baggrund af OCE og state.
+ * 
+ */
+
 class PowerManage {
  public:
   enum Modules {
