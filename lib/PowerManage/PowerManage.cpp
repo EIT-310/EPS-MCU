@@ -5,10 +5,10 @@
 #include "Fsm.h"
 #include "PowerManage.h"
 
-bool PowerManage::enabled_modules_[SUBMODULES_NUM];
-bool PowerManage::module_override_[SUBMODULES_NUM];
+bool PowerManage::enabled_modules_[SUBMODULES_NUM] = {true};
+bool PowerManage::module_override_[SUBMODULES_NUM] = {true};
 DigitalOut PowerManage::power_rails_[] = {
-    DigitalOut(RAIL_1_PIN)
+    RAIL_1_PIN
 };
 
 void PowerManage::UpdateEnabled() {
@@ -59,7 +59,6 @@ void PowerManage::UpdateEnabled() {
 }
 void PowerManage::SetOverride(PowerManage::Modules module, bool is_on) {
   switch (module) {
-
     case SUB_1:module_override_[0] = is_on;
       break;
 //    case SUB_2:
@@ -87,4 +86,7 @@ void PowerManage::WriteSubState() {
   for (int i = 0; i < SUBMODULES_NUM; i++) {
     power_rails_[i].write(enabled_modules_[i] and module_override_[i]);
   }
+}
+void PowerManage::OceFromIsr(PowerManage::Modules module) {
+  power_rails_[module].write(false);
 }

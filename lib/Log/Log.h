@@ -17,6 +17,7 @@ class Log
 {
  public:
   Log();
+  static UnbufferedSerial serial_;
   virtual ~Log();
 //  void Get(TLogLevel level = LOG_INFO, const std::string& msg);
   void Get(TLogLevel level, std::string str);
