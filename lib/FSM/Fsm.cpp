@@ -98,7 +98,7 @@ Fsm::State Fsm::GetCurrentState() {
 /**
  * @brief Bedøm en ny target state på baggrund af ADC måling og kald StateChanger()
  * 
- * Batterispændingen bliver sammenlignet med forskællige arbitære spændingsniveauer
+ * Batterispændingen bliver sammenlignet med forskellige arbitære spændingsniveauer
  * og en target state bliver besluttet ud fra dette. Herefter betragtes den samlede 
  * effekt fra MPPT'erne, og hvis denne ikke overstiger et arbitrært niveau, sænkes 
  * target state med 1. 
